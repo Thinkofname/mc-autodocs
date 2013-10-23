@@ -1,16 +1,16 @@
 class PacketClientbound15 {
     public void read(Buffer buffer)
     {
-        a = buffer.readInt();
-        b = buffer.readShort();
-        c = buffer.readShort();
-        d = buffer.readShort();
+        super.a(buffer);
+        b = buffer.readByte();
+        c = buffer.readByte();
+        d = buffer.readByte();
     }
     public void write(Buffer buffer)
     {
-        buffer.writeInt(a);
-        buffer.writeShort(b);
-        buffer.writeShort(c);
-        buffer.writeShort(d);
+        super.b(buffer);
+        buffer.writeByte(b);
+        buffer.writeByte(c);
+        buffer.writeByte(d);
     }
 }

@@ -1,16 +1,20 @@
 class PacketClientbound18 {
     public void read(Buffer buffer)
     {
-        super.a(buffer);
-        b = buffer.readByte();
-        c = buffer.readByte();
-        d = buffer.readByte();
+        a = buffer.readInt();
+        b = buffer.readInt();
+        c = buffer.readInt();
+        d = buffer.readInt();
+        e = buffer.readByte();
+        f = buffer.readByte();
     }
     public void write(Buffer buffer)
     {
-        super.b(buffer);
-        buffer.writeByte(b);
-        buffer.writeByte(c);
-        buffer.writeByte(d);
+        buffer.writeInt(a);
+        buffer.writeInt(b);
+        buffer.writeInt(c);
+        buffer.writeInt(d);
+        buffer.writeByte(e);
+        buffer.writeByte(f);
     }
 }

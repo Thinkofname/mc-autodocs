@@ -3,14 +3,14 @@ class PacketServerbound00 {
     {
         a = buffer.readVarInt();
         b = buffer.readString(255);
-        c = buffer.readVarInt();
+        c = buffer.readUnsignedShort();
         d = ee.a(buffer.readVarInt());
     }
     public void write(Buffer buffer)
     {
         buffer.writeVarInt(a);
         buffer.writeString(b);
-        buffer.writeVarInt(c);
+        buffer.writeShort(c);
         buffer.writeVarInt(d.c());
     }
 }

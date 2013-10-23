@@ -1,19 +1,21 @@
 class PacketClientbound33 {
     public void read(Buffer buffer)
     {
-        a = buffer.readByte();
-        short word0 = buffer.readShort();
-        b = new abj[word0];
-        for(int i = 0; i < word0; i++)
-            b[i] = buffer.readSlot();
+        a = buffer.readInt();
+        b = buffer.readShort();
+        c = buffer.readInt();
+        d = new String[4];
+        for(int i = 0; i < 4; i++)
+            d[i] = buffer.readString(15);
 
     }
     public void write(Buffer buffer)
     {
-        buffer.writeByte(a);
-        buffer.writeShort(b.length);
-        for(int i = 0; i < b.length; i++)
-            buffer.writeSlot(b[i]);
+        buffer.writeInt(a);
+        buffer.writeShort(b);
+        buffer.writeInt(c);
+        for(int i = 0; i < 4; i++)
+            buffer.writeString(d[i]);
 
     }
 }

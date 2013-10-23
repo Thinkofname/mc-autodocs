@@ -1,12 +1,10 @@
 class PacketClientbound40 {
     public void read(Buffer buffer)
     {
-        a = buffer.readByte();
-        b = buffer.readString(16);
+        a = ez.a(buffer.readString(32767));
     }
     public void write(Buffer buffer)
     {
-        buffer.writeByte(a);
-        buffer.writeString(b);
+        buffer.writeString(ez.a(a));
     }
 }

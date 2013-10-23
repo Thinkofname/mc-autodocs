@@ -1,16 +1,14 @@
 class PacketClientbound16 {
     public void read(Buffer buffer)
     {
-        a = new int[buffer.readByte()];
-        for(int i = 0; i < a.length; i++)
-            a[i] = buffer.readInt();
-
+        super.a(buffer);
+        e = buffer.readByte();
+        f = buffer.readByte();
     }
     public void write(Buffer buffer)
     {
-        buffer.writeByte(a.length);
-        for(int i = 0; i < a.length; i++)
-            buffer.writeInt(a[i]);
-
+        super.b(buffer);
+        buffer.writeByte(e);
+        buffer.writeByte(f);
     }
 }

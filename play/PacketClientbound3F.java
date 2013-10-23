@@ -1,22 +1,14 @@
 class PacketClientbound3F {
     public void read(Buffer buffer)
     {
-        a = buffer.readString(16);
-        d = buffer.readByte();
-        if(d != 1)
-        {
-            b = buffer.readString(16);
-            c = buffer.readInt();
-        }
+        a = buffer.readString(20);
+        b = new byte[buffer.readUnsignedShort()];
+        buffer.readBytes(b);
     }
     public void write(Buffer buffer)
     {
         buffer.writeString(a);
-        buffer.writeByte(d);
-        if(d != 1)
-        {
-            buffer.writeString(b);
-            buffer.writeInt(c);
-        }
+        buffer.writeShort(b.length);
+        buffer.writeBytes(b);
     }
 }

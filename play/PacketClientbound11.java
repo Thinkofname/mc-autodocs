@@ -1,36 +1,18 @@
 class PacketClientbound11 {
     public void read(Buffer buffer)
     {
-        a = buffer.readInt();
-        j = buffer.readByte();
+        a = buffer.readVarInt();
         b = buffer.readInt();
         c = buffer.readInt();
         d = buffer.readInt();
-        h = buffer.readByte();
-        i = buffer.readByte();
-        k = buffer.readInt();
-        if(k > 0)
-        {
-            e = buffer.readShort();
-            f = buffer.readShort();
-            g = buffer.readShort();
-        }
+        e = buffer.readShort();
     }
     public void write(Buffer buffer)
     {
-        buffer.writeInt(a);
-        buffer.writeByte(j);
+        buffer.writeVarInt(a);
         buffer.writeInt(b);
         buffer.writeInt(c);
         buffer.writeInt(d);
-        buffer.writeByte(h);
-        buffer.writeByte(i);
-        buffer.writeInt(k);
-        if(k > 0)
-        {
-            buffer.writeShort(e);
-            buffer.writeShort(f);
-            buffer.writeShort(g);
-        }
+        buffer.writeShort(e);
     }
 }

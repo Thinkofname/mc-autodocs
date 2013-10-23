@@ -1,14 +1,14 @@
 class PacketClientbound32 {
     public void read(Buffer buffer)
     {
-        a = buffer.readByte();
+        a = buffer.readUnsignedByte();
         b = buffer.readShort();
-        c = buffer.readSlot();
+        c = buffer.readBoolean();
     }
     public void write(Buffer buffer)
     {
         buffer.writeByte(a);
         buffer.writeShort(b);
-        buffer.writeSlot(c);
+        buffer.writeBoolean(c);
     }
 }

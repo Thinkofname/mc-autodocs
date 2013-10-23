@@ -1,10 +1,12 @@
 class PacketClientbound3D {
     public void read(Buffer buffer)
     {
-        a = buffer.readString(32767);
+        a = buffer.readByte();
+        b = buffer.readString(16);
     }
     public void write(Buffer buffer)
     {
-        buffer.writeString(StringUtils.substring(a, 0, 32767));
+        buffer.writeByte(a);
+        buffer.writeString(b);
     }
 }

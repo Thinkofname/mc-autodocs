@@ -2,13 +2,13 @@ class PacketClientbound3B {
     public void read(Buffer buffer)
     {
         a = buffer.readString(16);
-        b = buffer.readByte() != 0;
-        c = buffer.readShort();
+        b = buffer.readString(32);
+        c = buffer.readByte();
     }
     public void write(Buffer buffer)
     {
         buffer.writeString(a);
-        buffer.writeByte(b ? 1 : 0);
-        buffer.writeShort(c);
+        buffer.writeString(b);
+        buffer.writeByte(c);
     }
 }

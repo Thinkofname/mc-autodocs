@@ -1,14 +1,12 @@
 class PacketClientbound1E {
     public void read(Buffer buffer)
     {
-        b = buffer.readInt();
-        c = buffer.readInt();
-        a = buffer.readUnsignedByte();
+        a = buffer.readInt();
+        b = buffer.readUnsignedByte();
     }
     public void write(Buffer buffer)
     {
-        buffer.writeInt(b);
-        buffer.writeInt(c);
-        buffer.writeByte(a);
+        buffer.writeInt(a);
+        buffer.writeByte(b);
     }
 }

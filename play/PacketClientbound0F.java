@@ -1,27 +1,32 @@
 class PacketClientbound0F {
     public void read(Buffer buffer)
     {
-        a = buffer.readInt();
-        b = new GameProfile(buffer.readString(36), buffer.readString(16));
+        a = buffer.readVarInt();
+        b = buffer.readByte() & 0xff;
         c = buffer.readInt();
         d = buffer.readInt();
         e = buffer.readInt();
-        f = buffer.readByte();
-        g = buffer.readByte();
+        i = buffer.readByte();
+        j = buffer.readByte();
+        k = buffer.readByte();
+        f = buffer.readShort();
+        g = buffer.readShort();
         h = buffer.readShort();
-        j = rk.b(buffer);
+        m = rh.b(buffer);
     }
     public void write(Buffer buffer)
     {
-        buffer.writeInt(a);
-        buffer.writeString(b.getId());
-        buffer.writeString(b.getName());
+        buffer.writeVarInt(a);
+        buffer.writeByte(b & 0xff);
         buffer.writeInt(c);
         buffer.writeInt(d);
         buffer.writeInt(e);
-        buffer.writeByte(f);
-        buffer.writeByte(g);
+        buffer.writeByte(i);
+        buffer.writeByte(j);
+        buffer.writeByte(k);
+        buffer.writeShort(f);
+        buffer.writeShort(g);
         buffer.writeShort(h);
-        i.a(buffer);
+        l.a(buffer);
     }
 }

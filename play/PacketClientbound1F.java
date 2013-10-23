@@ -1,12 +1,14 @@
 class PacketClientbound1F {
     public void read(Buffer buffer)
     {
-        a = buffer.readInt();
-        b = rk.b(buffer);
+        a = buffer.readFloat();
+        c = buffer.readShort();
+        b = buffer.readShort();
     }
     public void write(Buffer buffer)
     {
-        buffer.writeInt(a);
-        rk.a(b, buffer);
+        buffer.writeFloat(a);
+        buffer.writeShort(c);
+        buffer.writeShort(b);
     }
 }
