@@ -7,7 +7,6 @@ class PacketClientbound29 {
         d = buffer.readInt();
         e = buffer.readFloat();
         f = buffer.readUnsignedByte();
-        g = afv.a(buffer.readUnsignedByte());
     }
     public void write(Buffer buffer)
     {
@@ -17,6 +16,5 @@ class PacketClientbound29 {
         buffer.writeInt(d);
         buffer.writeFloat(e);
         buffer.writeByte(f);
-        buffer.writeByte(g.b());
     }
 }

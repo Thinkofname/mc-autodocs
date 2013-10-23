@@ -15,7 +15,7 @@ class PacketClientbound27 {
             int j1 = buffer.readByte() + j;
             int k1 = buffer.readByte() + k;
             int l1 = buffer.readByte() + l;
-            e.add(new aew(j1, k1, l1));
+            e.add(new afc(j1, k1, l1));
         }
 
         f = buffer.readFloat();
@@ -35,10 +35,10 @@ class PacketClientbound27 {
         int j1;
         for(Iterator iterator = e.iterator(); iterator.hasNext(); buffer.writeByte(j1))
         {
-            aew aew1 = (aew)iterator.next();
-            int l = aew1.a - i;
-            int i1 = aew1.b - j;
-            j1 = aew1.c - k;
+            afc afc1 = (afc)iterator.next();
+            int l = afc1.a - i;
+            int i1 = afc1.b - j;
+            j1 = afc1.c - k;
             buffer.writeByte(l);
             buffer.writeByte(i1);
         }
