@@ -6,7 +6,7 @@ class PacketClientbound24 {
         c = buffer.readInt();
         d = buffer.readUnsignedByte();
         e = buffer.readUnsignedByte();
-        f = ahs.e(buffer.readVarInt() & 0xfff);
+        f = aht.e(buffer.readVarInt() & 0xfff);
     }
     public void write(Buffer buffer)
     {
@@ -15,6 +15,6 @@ class PacketClientbound24 {
         buffer.writeInt(c);
         buffer.writeByte(d);
         buffer.writeByte(e);
-        buffer.writeVarInt(ahs.b(f) & 0xfff);
+        buffer.writeVarInt(aht.b(f) & 0xfff);
     }
 }

@@ -3,9 +3,9 @@ class PacketServerbound15 {
     {
         a = buffer.readString(7);
         b = buffer.readByte();
-        c = xl.a(buffer.readByte());
+        c = xm.a(buffer.readByte());
         d = buffer.readBoolean();
-        e = po.a(buffer.readByte());
+        e = pp.a(buffer.readByte());
         f = buffer.readBoolean();
     }
     public void write(Buffer buffer)

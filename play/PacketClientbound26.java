@@ -15,7 +15,7 @@ class PacketClientbound26 {
         if(i.length < g)
             i = new byte[g];
         buffer.readBytes(i, 0, g);
-        abyte0 = new byte[go.c() * word0];
+        abyte0 = new byte[gn.c() * word0];
         inflater = new Inflater();
         inflater.setInput(i, 0, g);
         try
