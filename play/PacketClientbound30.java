@@ -3,7 +3,7 @@ class PacketClientbound30 {
     {
         a = buffer.readUnsignedByte();
         short word0 = buffer.readShort();
-        b = new abm[word0];
+        b = new abn[word0];
         for(int i = 0; i < word0; i++)
             b[i] = buffer.readSlot();
 
@@ -12,12 +12,12 @@ class PacketClientbound30 {
     {
         buffer.writeByte(a);
         buffer.writeShort(b.length);
-        abm aabm[] = b;
-        int i = aabm.length;
+        abn aabn[] = b;
+        int i = aabn.length;
         for(int j = 0; j < i; j++)
         {
-            abm abm1 = aabm[j];
-            buffer.writeSlot(abm1);
+            abn abn1 = aabn[j];
+            buffer.writeSlot(abn1);
         }
 
     }
