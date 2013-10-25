@@ -5,7 +5,7 @@ class PacketClientbound35 {
         b = buffer.readShort();
         c = buffer.readInt();
         d = buffer.readUnsignedByte();
-        e = buffer.writeVarInt();
+        e = buffer.readNBT();
     }
     public void write(Buffer buffer)
     {
@@ -13,6 +13,6 @@ class PacketClientbound35 {
         buffer.writeShort(b);
         buffer.writeInt(c);
         buffer.writeByte((byte)d);
-        buffer.writeSlot(e);
+        buffer.writeNBT(e);
     }
 }
