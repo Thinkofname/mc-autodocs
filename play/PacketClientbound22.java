@@ -1,7 +1,7 @@
 class PacketClientbound22 {
     public void read(Buffer buffer)
     {
-        b = new aff(buffer.readVarInt(), buffer.readVarInt());
+        b = new afg(buffer.readInt(), buffer.readInt());
         d = buffer.readShort() & 0xffff;
         int i = buffer.readInt();
         if(i > 0)
@@ -12,8 +12,8 @@ class PacketClientbound22 {
     }
     public void write(Buffer buffer)
     {
-        buffer.writeVarInt(b.a);
-        buffer.writeVarInt(b.b);
+        buffer.writeInt(b.a);
+        buffer.writeInt(b.b);
         buffer.writeShort((short)d);
         if(c != null)
         {

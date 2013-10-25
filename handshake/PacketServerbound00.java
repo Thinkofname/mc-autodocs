@@ -4,7 +4,7 @@ class PacketServerbound00 {
         a = buffer.readVarInt();
         b = buffer.readString(255);
         c = buffer.readUnsignedShort();
-        d = ej.a(buffer.readVarInt());
+        d = ek.a(buffer.readVarInt());
     }
     public void write(Buffer buffer)
     {

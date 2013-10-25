@@ -12,10 +12,10 @@ class PacketClientbound20 {
             for(int k = 0; k < word0; k++)
             {
                 UUID uuid = new UUID(buffer.readLong(), buffer.readLong());
-                arraylist.add(new ru(uuid, "Unknown synced attribute modifier", buffer.readDouble(), buffer.readByte()));
+                arraylist.add(new rv(uuid, "Unknown synced attribute modifier", buffer.readDouble(), buffer.readByte()));
             }
 
-            b.add(new hy(this, s, d, arraylist));
+            b.add(new hz(this, s, d, arraylist));
         }
 
     }
@@ -25,18 +25,18 @@ class PacketClientbound20 {
         buffer.writeInt(b.size());
         for(Iterator iterator = b.iterator(); iterator.hasNext();)
         {
-            hy hy1 = (hy)iterator.next();
-            buffer.writeString(hy1.a());
-            buffer.writeDouble(hy1.b());
-            buffer.writeShort(hy1.c().size());
-            Iterator iterator1 = hy1.c().iterator();
+            hz hz1 = (hz)iterator.next();
+            buffer.writeString(hz1.a());
+            buffer.writeDouble(hz1.b());
+            buffer.writeShort(hz1.c().size());
+            Iterator iterator1 = hz1.c().iterator();
             while(iterator1.hasNext()) 
             {
-                ru ru1 = (ru)iterator1.next();
-                buffer.writeLong(ru1.a().getMostSignificantBits());
-                buffer.writeLong(ru1.a().getLeastSignificantBits());
-                buffer.writeDouble(ru1.d());
-                buffer.writeByte(ru1.c());
+                rv rv1 = (rv)iterator1.next();
+                buffer.writeLong(rv1.a().getMostSignificantBits());
+                buffer.writeLong(rv1.a().getLeastSignificantBits());
+                buffer.writeDouble(rv1.d());
+                buffer.writeByte(rv1.c());
             }
         }
 

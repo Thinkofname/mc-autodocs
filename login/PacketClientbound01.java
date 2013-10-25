@@ -2,7 +2,7 @@ class PacketClientbound01 {
     public void read(Buffer buffer)
     {
         a = buffer.readString(20);
-        b = og.a(a(((io.netty.buffer.ByteBuf) (buffer))));
+        b = oh.a(a(((io.netty.buffer.ByteBuf) (buffer))));
         c = a(((io.netty.buffer.ByteBuf) (buffer)));
     }
     public void write(Buffer buffer)
