@@ -5,13 +5,13 @@ class PacketClientbound01 {
         int i = buffer.readUnsignedByte();
         b = (i & 8) == 8;
         i &= -9;
-        c = afw.a(i);
+        c = afz.a(i);
         d = buffer.readByte();
-        e = pq.a(buffer.readUnsignedByte());
+        e = pt.a(buffer.readUnsignedByte());
         f = buffer.readUnsignedByte();
-        g = afy.a(buffer.readString(16));
+        g = agb.a(buffer.readString(16));
         if(g == null)
-            g = afy.b;
+            g = agb.b;
     }
     public void write(Buffer buffer)
     {

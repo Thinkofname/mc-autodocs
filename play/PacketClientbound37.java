@@ -5,10 +5,10 @@ class PacketClientbound37 {
         a = Maps.newHashMap();
         for(int j = 0; j < i; j++)
         {
-            nv nv1 = od.a(buffer.readString(32767));
+            ny ny1 = og.a(buffer.readString(32767));
             int k = buffer.readVarInt();
-            if(nv1 != null)
-                a.put(nv1, Integer.valueOf(k));
+            if(ny1 != null)
+                a.put(ny1, Integer.valueOf(k));
         }
 
     }
@@ -19,7 +19,7 @@ class PacketClientbound37 {
         for(Iterator iterator = a.entrySet().iterator(); iterator.hasNext(); buffer.writeVarInt(((Integer)entry.getValue()).intValue()))
         {
             entry = (java.util.Map.Entry)iterator.next();
-            buffer.writeString(((nv)entry.getKey()).e);
+            buffer.writeString(((ny)entry.getKey()).e);
         }
 
     }
