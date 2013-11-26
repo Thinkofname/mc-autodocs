@@ -1,7 +1,7 @@
 class PacketClientbound22 {
     public void read(Buffer buffer)
     {
-        b = new afj(buffer.readInt(), buffer.readInt());
+        b = new afk(buffer.readInt(), buffer.readInt());
         d = buffer.readShort() & 0xffff;
         int i = buffer.readInt();
         if(i > 0)

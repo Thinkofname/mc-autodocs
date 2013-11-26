@@ -9,7 +9,7 @@ class PacketClientbound0C {
         f = buffer.readByte();
         g = buffer.readByte();
         h = buffer.readShort();
-        j = rt.b(buffer);
+        j = ru.b(buffer);
     }
     public void write(Buffer buffer)
     {
