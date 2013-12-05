@@ -1,7 +1,7 @@
 class PacketClientbound2F {
     public void read(Buffer buffer)
     {
-        a = buffer.readUnsignedByte();
+        a = buffer.readByte();
         b = buffer.readShort();
         c = buffer.readSlot();
     }
