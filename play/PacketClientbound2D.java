@@ -2,21 +2,19 @@ class PacketClientbound2D {
     public void read(Buffer buffer)
     {
         a = buffer.readUnsignedByte();
-        b = buffer.readUnsignedByte();
-        c = buffer.readString(32);
+        b = buffer.readString(32);
+        c = fp.a(buffer.readString(32767));
         d = buffer.readUnsignedByte();
-        e = buffer.readBoolean();
-        if(b == 11)
-            f = buffer.readInt();
+        if(b.equals("EntityHorse"))
+            e = buffer.readInt();
     }
     public void write(Buffer buffer)
     {
         buffer.writeByte(a);
-        buffer.writeByte(b);
-        buffer.writeString(c);
+        buffer.writeString(b);
+        buffer.writeString(fp.a(c));
         buffer.writeByte(d);
-        buffer.writeBoolean(e);
-        if(b == 11)
-            buffer.writeInt(f);
+        if(b.equals("EntityHorse"))
+            buffer.writeInt(e);
     }
 }

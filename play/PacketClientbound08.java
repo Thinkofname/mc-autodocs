@@ -6,7 +6,7 @@ class PacketClientbound08 {
         c = buffer.readDouble();
         d = buffer.readFloat();
         e = buffer.readFloat();
-        f = buffer.readBoolean();
+        f = ga.a(buffer.readUnsignedByte());
     }
     public void write(Buffer buffer)
     {
@@ -15,6 +15,6 @@ class PacketClientbound08 {
         buffer.writeDouble(c);
         buffer.writeFloat(d);
         buffer.writeFloat(e);
-        buffer.writeBoolean(f);
+        buffer.writeByte(ga.a(f));
     }
 }

@@ -1,10 +1,12 @@
 class PacketClientbound02 {
     public void read(Buffer buffer)
     {
-        a = fb.a(buffer.readString(32767));
+        a = fp.a(buffer.readString(32767));
+        b = buffer.readByte();
     }
     public void write(Buffer buffer)
     {
-        buffer.writeString(fb.a(a));
+        buffer.writeString(fp.a(a));
+        buffer.writeByte(b);
     }
 }

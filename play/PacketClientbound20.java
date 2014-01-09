@@ -7,15 +7,15 @@ class PacketClientbound20 {
         {
             String s = buffer.readString(64);
             double d = buffer.readDouble();
-            ArrayList arraylist = new ArrayList();
+            ArrayList arraylist = Lists.newArrayList();
             short word0 = buffer.readShort();
             for(int k = 0; k < word0; k++)
             {
                 UUID uuid = new UUID(buffer.readLong(), buffer.readLong());
-                arraylist.add(new sa(uuid, "Unknown synced attribute modifier", buffer.readDouble(), buffer.readByte()));
+                arraylist.add(new ss(uuid, "Unknown synced attribute modifier", buffer.readDouble(), buffer.readByte()));
             }
 
-            b.add(new ic(this, s, d, arraylist));
+            b.add(new it(this, s, d, arraylist));
         }
 
     }
@@ -25,18 +25,18 @@ class PacketClientbound20 {
         buffer.writeInt(b.size());
         for(Iterator iterator = b.iterator(); iterator.hasNext();)
         {
-            ic ic1 = (ic)iterator.next();
-            buffer.writeString(ic1.a());
-            buffer.writeDouble(ic1.b());
-            buffer.writeShort(ic1.c().size());
-            Iterator iterator1 = ic1.c().iterator();
+            it it1 = (it)iterator.next();
+            buffer.writeString(it1.a());
+            buffer.writeDouble(it1.b());
+            buffer.writeShort(it1.c().size());
+            Iterator iterator1 = it1.c().iterator();
             while(iterator1.hasNext()) 
             {
-                sa sa1 = (sa)iterator1.next();
-                buffer.writeLong(sa1.a().getMostSignificantBits());
-                buffer.writeLong(sa1.a().getLeastSignificantBits());
-                buffer.writeDouble(sa1.d());
-                buffer.writeByte(sa1.c());
+                ss ss1 = (ss)iterator1.next();
+                buffer.writeLong(ss1.a().getMostSignificantBits());
+                buffer.writeLong(ss1.a().getLeastSignificantBits());
+                buffer.writeDouble(ss1.d());
+                buffer.writeByte(ss1.c());
             }
         }
 

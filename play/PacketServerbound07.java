@@ -1,18 +1,19 @@
 class PacketServerbound07 {
     public void read(Buffer buffer)
     {
-        e = buffer.readUnsignedByte();
-        a = buffer.readInt();
-        b = buffer.readUnsignedByte();
-        c = buffer.readInt();
-        d = buffer.readUnsignedByte();
+        c = buffer.readUnsignedByte();
+        int i = buffer.readInt();
+        short word0 = buffer.readUnsignedByte();
+        int j = buffer.readInt();
+        a = new ct(i, word0, j);
+        b = db.a(buffer.readUnsignedByte());
     }
     public void write(Buffer buffer)
     {
-        buffer.writeByte(e);
-        buffer.writeInt(a);
-        buffer.writeByte(b);
-        buffer.writeInt(c);
-        buffer.writeByte(d);
+        buffer.writeByte(c);
+        buffer.writeInt(a.a());
+        buffer.writeByte(a.b());
+        buffer.writeInt(a.c());
+        buffer.writeByte(b.a());
     }
 }
