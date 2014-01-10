@@ -12,7 +12,7 @@ class PacketClientbound20 {
             for(int k = 0; k < word0; k++)
             {
                 UUID uuid = new UUID(buffer.readLong(), buffer.readLong());
-                arraylist.add(new ss(uuid, "Unknown synced attribute modifier", buffer.readDouble(), buffer.readByte()));
+                arraylist.add(new su(uuid, "Unknown synced attribute modifier", buffer.readDouble(), buffer.readByte()));
             }
 
             b.add(new it(this, s, d, arraylist));
@@ -32,11 +32,11 @@ class PacketClientbound20 {
             Iterator iterator1 = it1.c().iterator();
             while(iterator1.hasNext()) 
             {
-                ss ss1 = (ss)iterator1.next();
-                buffer.writeLong(ss1.a().getMostSignificantBits());
-                buffer.writeLong(ss1.a().getLeastSignificantBits());
-                buffer.writeDouble(ss1.d());
-                buffer.writeByte(ss1.c());
+                su su1 = (su)iterator1.next();
+                buffer.writeLong(su1.a().getMostSignificantBits());
+                buffer.writeLong(su1.a().getLeastSignificantBits());
+                buffer.writeDouble(su1.d());
+                buffer.writeByte(su1.c());
             }
         }
 

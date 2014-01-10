@@ -3,10 +3,10 @@ class PacketClientbound07 {
     {
         a = buffer.readInt();
         b = qh.a(buffer.readUnsignedByte());
-        c = ahd.a(buffer.readUnsignedByte());
-        d = ahf.a(buffer.readString(16));
+        c = ahf.a(buffer.readUnsignedByte());
+        d = ahh.a(buffer.readString(16));
         if(d == null)
-            d = ahf.b;
+            d = ahh.b;
     }
     public void write(Buffer buffer)
     {

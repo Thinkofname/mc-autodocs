@@ -3,7 +3,7 @@ class PacketServerbound15 {
     {
         a = buffer.readString(7);
         b = buffer.readByte();
-        c = yt.a(buffer.readByte());
+        c = yv.a(buffer.readByte());
         d = buffer.readBoolean();
         e = buffer.readBoolean();
     }
