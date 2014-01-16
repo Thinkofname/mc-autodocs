@@ -1,7 +1,7 @@
 class PacketClientbound00 {
     public void read(Buffer buffer)
     {
-        b = (ki)a.fromJson(buffer.readString(32767), ki);
+        b = (kj)a.fromJson(buffer.readString(32767), kj);
     }
     public void write(Buffer buffer)
     {

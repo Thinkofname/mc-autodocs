@@ -2,7 +2,7 @@ class PacketClientbound10 {
     public void read(Buffer buffer)
     {
         a = buffer.readVarInt();
-        f = buffer.readString(sn.A);
+        f = buffer.readString(so.A);
         b = buffer.readInt();
         c = buffer.readInt();
         d = buffer.readInt();

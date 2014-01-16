@@ -1,10 +1,10 @@
 class PacketServerbound00 {
     public void read(Buffer buffer)
     {
-        a = buffer.readVarInt();
+        a = buffer.writeVarInt();
         b = buffer.readString(255);
         c = buffer.readUnsignedShort();
-        d = ey.a(buffer.readVarInt());
+        d = ez.a(buffer.writeVarInt());
     }
     public void write(Buffer buffer)
     {

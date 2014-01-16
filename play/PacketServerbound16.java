@@ -1,10 +1,10 @@
 class PacketServerbound16 {
     public void read(Buffer buffer)
     {
-        a = ja.a()[buffer.readByte() % ja.a().length];
+        a = jb.a()[buffer.readByte() % jb.a().length];
     }
     public void write(Buffer buffer)
     {
-        buffer.writeByte(ja.a(a));
+        buffer.writeByte(jb.a(a));
     }
 }

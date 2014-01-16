@@ -1,10 +1,7 @@
 class PacketServerbound08 {
     public void read(Buffer buffer)
     {
-        int i = buffer.readInt();
-        short word0 = buffer.readUnsignedByte();
-        int j = buffer.readInt();
-        b = new ct(i, word0, j);
+        b = buffer.readPosition();
         c = buffer.readUnsignedByte();
         d = buffer.readSlot();
         e = (float)buffer.readUnsignedByte() / 16F;
@@ -13,9 +10,7 @@ class PacketServerbound08 {
     }
     public void write(Buffer buffer)
     {
-        buffer.writeInt(b.a());
-        buffer.writeByte(b.b());
-        buffer.writeInt(b.c());
+        buffer.writePosition(b);
         buffer.writeByte(c);
         buffer.writeSlot(d);
         buffer.writeByte((int)(e * 16F));

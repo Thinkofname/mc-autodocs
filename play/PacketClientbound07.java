@@ -2,11 +2,11 @@ class PacketClientbound07 {
     public void read(Buffer buffer)
     {
         a = buffer.readInt();
-        b = qh.a(buffer.readUnsignedByte());
-        c = ahf.a(buffer.readUnsignedByte());
-        d = ahh.a(buffer.readString(16));
+        b = qi.a(buffer.readUnsignedByte());
+        c = ahj.a(buffer.readUnsignedByte());
+        d = ahl.a(buffer.readString(16));
         if(d == null)
-            d = ahh.b;
+            d = ahl.b;
     }
     public void write(Buffer buffer)
     {
