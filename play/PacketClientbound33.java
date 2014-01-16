@@ -1,13 +1,13 @@
 
 public class PacketClientbound33 extends ga {
 
-   private cu a;
+   private Position a;
    private String[] b;
 
 
    public PacketClientbound33() {}
 
-   public PacketClientbound33(cu var1, String[] var2) {
+   public PacketClientbound33(Position var1, String[] var2) {
       this.a = var1;
       this.b = new String[]{var2[0], var2[1], var2[2], var2[3]};
    }

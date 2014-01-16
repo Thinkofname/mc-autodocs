@@ -25,7 +25,7 @@ public class PacketClientbound0C extends ga {
       this.e = pp.c(var1.u * 32.0D);
       this.f = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.g = (byte)((int)(var1.z * 256.0F / 360.0F));
-      adc var2 = var1.bm.j();
+      ItemStack var2 = var1.bm.j();
       this.h = var2 == null?0:ada.b(var2.b());
       this.i = var1.z();
    }

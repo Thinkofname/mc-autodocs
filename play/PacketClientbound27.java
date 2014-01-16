@@ -45,7 +45,7 @@ public class PacketClientbound27 extends ga {
          int var7 = var1.readByte() + var3;
          int var8 = var1.readByte() + var4;
          int var9 = var1.readByte() + var5;
-         this.e.add(new cu(var7, var8, var9));
+         this.e.add(new Position(var7, var8, var9));
       }
 
       this.f = var1.readFloat();
@@ -65,7 +65,7 @@ public class PacketClientbound27 extends ga {
       Iterator var5 = this.e.iterator();
 
       while(var5.hasNext()) {
-         cu var6 = (cu)var5.next();
+         Position var6 = (Position)var5.next();
          int var7 = var6.a() - var2;
          int var8 = var6.b() - var3;
          int var9 = var6.c() - var4;

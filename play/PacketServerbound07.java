@@ -1,7 +1,7 @@
 
 public class PacketServerbound07 extends ga {
 
-   private cu a;
+   private Position a;
    private dc b;
    private int c;
 
@@ -22,7 +22,7 @@ public class PacketServerbound07 extends ga {
       var1.a(this);
    }
 
-   public cu c() {
+   public Position c() {
       return this.a;
    }
 

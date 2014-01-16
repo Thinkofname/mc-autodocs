@@ -1,10 +1,10 @@
 
 public class PacketServerbound08 extends ga {
 
-   private static final cu a = new cu(-1, -1, -1);
-   private cu b;
+   private static final Position a = new Position(-1, -1, -1);
+   private Position b;
    private int c;
-   private adc d;
+   private ItemStack d;
    private float e;
    private float f;
    private float g;
@@ -12,11 +12,11 @@ public class PacketServerbound08 extends ga {
 
    public PacketServerbound08() {}
 
-   public PacketServerbound08(adc var1) {
+   public PacketServerbound08(ItemStack var1) {
       this(a, 255, var1, 0.0F, 0.0F, 0.0F);
    }
 
-   public PacketServerbound08(cu var1, int var2, adc var3, float var4, float var5, float var6) {
+   public PacketServerbound08(Position var1, int var2, ItemStack var3, float var4, float var5, float var6) {
       this.b = var1;
       this.c = var2;
       this.d = var3 != null?var3.m():null;
@@ -47,7 +47,7 @@ public class PacketServerbound08 extends ga {
       var1.a(this);
    }
 
-   public cu c() {
+   public Position c() {
       return this.b;
    }
 
@@ -55,7 +55,7 @@ public class PacketServerbound08 extends ga {
       return this.c;
    }
 
-   public adc e() {
+   public ItemStack e() {
       return this.d;
    }
 

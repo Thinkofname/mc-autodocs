@@ -3,12 +3,12 @@ public class PacketClientbound2F extends ga {
 
    private int a;
    private int b;
-   private adc c;
+   private ItemStack c;
 
 
    public PacketClientbound2F() {}
 
-   public PacketClientbound2F(int var1, int var2, adc var3) {
+   public PacketClientbound2F(int var1, int var2, ItemStack var3) {
       this.a = var1;
       this.b = var2;
       this.c = var3 == null?null:var3.m();

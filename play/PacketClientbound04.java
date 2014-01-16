@@ -3,12 +3,12 @@ public class PacketClientbound04 extends ga {
 
    private int a;
    private int b;
-   private adc c;
+   private ItemStack c;
 
 
    public PacketClientbound04() {}
 
-   public PacketClientbound04(int var1, int var2, adc var3) {
+   public PacketClientbound04(int var1, int var2, ItemStack var3) {
       this.a = var1;
       this.b = var2;
       this.c = var3 == null?null:var3.m();

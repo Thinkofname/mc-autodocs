@@ -5,7 +5,7 @@ public class PacketServerbound0E extends ga {
    private int b;
    private int c;
    private short d;
-   private adc e;
+   private ItemStack e;
    private int f;
 
 
@@ -51,7 +51,7 @@ public class PacketServerbound0E extends ga {
       return this.d;
    }
 
-   public adc g() {
+   public ItemStack g() {
       return this.e;
    }
 

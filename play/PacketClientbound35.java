@@ -1,14 +1,14 @@
 
 public class PacketClientbound35 extends ga {
 
-   private cu a;
+   private Position a;
    private int b;
    private dx c;
 
 
    public PacketClientbound35() {}
 
-   public PacketClientbound35(cu var1, int var2, dx var3) {
+   public PacketClientbound35(Position var1, int var2, dx var3) {
       this.a = var1;
       this.b = var2;
       this.c = var3;

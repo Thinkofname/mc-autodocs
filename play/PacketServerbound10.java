@@ -2,7 +2,7 @@
 public class PacketServerbound10 extends ga {
 
    private int a;
-   private adc b;
+   private ItemStack b;
 
 
    public void a(ix var1) {
@@ -23,7 +23,7 @@ public class PacketServerbound10 extends ga {
       return this.a;
    }
 
-   public adc d() {
+   public ItemStack d() {
       return this.b;
    }
 }
