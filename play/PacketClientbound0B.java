@@ -1,12 +1,32 @@
-class PacketClientbound0B {
-    public void read(Buffer buffer)
-    {
-        a = buffer.readVarInt();
-        b = buffer.readUnsignedByte();
-    }
-    public void write(Buffer buffer)
-    {
-        buffer.writeVarInt(a);
-        buffer.writeByte(b);
-    }
+
+public class PacketClientbound0B extends ga {
+
+   private int a;
+   private int b;
+
+
+   public PacketClientbound0B() {}
+
+   public PacketClientbound0B(rl var1, int var2) {
+      this.a = var1.x();
+      this.b = var2;
+   }
+
+   public void read(PacketBuffer var1) {
+      this.a = var1.readVarInt();
+      this.b = var1.readUnsignedByte();
+   }
+
+   public void write(PacketBuffer var1) {
+      var1.writeVarInt(this.a);
+      var1.writeByte(this.b);
+   }
+
+   public void a(gd var1) {
+      var1.a(this);
+   }
+
+   public String b() {
+      return String.format("id=%d, type=%d", new Object[]{Integer.valueOf(this.a), Integer.valueOf(this.b)});
+   }
 }

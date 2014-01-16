@@ -1,12 +1,33 @@
-class PacketServerbound11 {
-    public void read(Buffer buffer)
-    {
-        a = buffer.readByte();
-        b = buffer.readByte();
-    }
-    public void write(Buffer buffer)
-    {
-        buffer.writeByte(a);
-        buffer.writeByte(b);
-    }
+
+public class PacketServerbound11 extends ga {
+
+   private int a;
+   private int b;
+
+
+   public void a(ix var1) {
+      var1.a(this);
+   }
+
+   public void read(PacketBuffer var1) {
+      this.a = var1.readByte();
+      this.b = var1.readByte();
+   }
+
+   public void write(PacketBuffer var1) {
+      var1.writeByte(this.a);
+      var1.writeByte(this.b);
+   }
+
+   public String b() {
+      return String.format("id=%d, button=%d", new Object[]{Integer.valueOf(this.a), Integer.valueOf(this.b)});
+   }
+
+   public int c() {
+      return this.a;
+   }
+
+   public int d() {
+      return this.b;
+   }
 }

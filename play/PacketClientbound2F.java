@@ -1,14 +1,32 @@
-class PacketClientbound2F {
-    public void read(Buffer buffer)
-    {
-        a = buffer.readByte();
-        b = buffer.readShort();
-        c = buffer.readSlot();
-    }
-    public void write(Buffer buffer)
-    {
-        buffer.writeByte(a);
-        buffer.writeShort(b);
-        buffer.writeSlot(c);
-    }
+
+public class PacketClientbound2F extends ga {
+
+   private int a;
+   private int b;
+   private adc c;
+
+
+   public PacketClientbound2F() {}
+
+   public PacketClientbound2F(int var1, int var2, adc var3) {
+      this.a = var1;
+      this.b = var2;
+      this.c = var3 == null?null:var3.m();
+   }
+
+   public void a(gd var1) {
+      var1.a(this);
+   }
+
+   public void read(PacketBuffer var1) {
+      this.a = var1.readByte();
+      this.b = var1.readShort();
+      this.c = var1.readSlot();
+   }
+
+   public void write(PacketBuffer var1) {
+      var1.writeByte(this.a);
+      var1.writeShort(this.b);
+      var1.writeSlot(this.c);
+   }
 }

@@ -1,10 +1,33 @@
-class PacketServerbound14 {
-    public void read(Buffer buffer)
-    {
-        a = buffer.readString(32767);
-    }
-    public void write(Buffer buffer)
-    {
-        buffer.writeString(StringUtils.substring(a, 0, 32767));
-    }
+import org.apache.commons.lang3.StringUtils;
+
+public class PacketServerbound14 extends ga {
+
+   private String a;
+
+
+   public PacketServerbound14() {}
+
+   public PacketServerbound14(String var1) {
+      this.a = var1;
+   }
+
+   public void read(PacketBuffer var1) {
+      this.a = var1.readString(32767);
+   }
+
+   public void write(PacketBuffer var1) {
+      var1.writeString(StringUtils.substring(this.a, 0, 32767));
+   }
+
+   public void a(ix var1) {
+      var1.a(this);
+   }
+
+   public String c() {
+      return this.a;
+   }
+
+   public String b() {
+      return String.format("message=\'%s\'", new Object[]{this.a});
+   }
 }

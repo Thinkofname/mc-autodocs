@@ -1,14 +1,19 @@
-class PacketServerbound05 {
-    public void read(Buffer buffer)
-    {
-        e = buffer.readFloat();
-        f = buffer.readFloat();
-        super.a(buffer);
-    }
-    public void write(Buffer buffer)
-    {
-        buffer.writeFloat(e);
-        buffer.writeFloat(f);
-        super.b(buffer);
-    }
+
+public class PacketServerbound05 extends jm {
+
+   public PacketServerbound05() {
+      this.i = true;
+   }
+
+   public void read(PacketBuffer var1) {
+      this.e = var1.readFloat();
+      this.f = var1.readFloat();
+      super.a(var1);
+   }
+
+   public void write(PacketBuffer var1) {
+      var1.writeFloat(this.e);
+      var1.writeFloat(this.f);
+      super.b(var1);
+   }
 }

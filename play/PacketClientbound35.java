@@ -1,14 +1,32 @@
-class PacketClientbound35 {
-    public void read(Buffer buffer)
-    {
-        a = buffer.readPosition();
-        b = buffer.readUnsignedByte();
-        c = buffer.readNBT();
-    }
-    public void write(Buffer buffer)
-    {
-        buffer.writePosition(a);
-        buffer.writeByte((byte)b);
-        buffer.writeNBT(c);
-    }
+
+public class PacketClientbound35 extends ga {
+
+   private cu a;
+   private int b;
+   private dx c;
+
+
+   public PacketClientbound35() {}
+
+   public PacketClientbound35(cu var1, int var2, dx var3) {
+      this.a = var1;
+      this.b = var2;
+      this.c = var3;
+   }
+
+   public void read(PacketBuffer var1) {
+      this.a = var1.readPosition();
+      this.b = var1.readUnsignedByte();
+      this.c = var1.c();
+   }
+
+   public void write(PacketBuffer var1) {
+      var1.writePosition(this.a);
+      var1.writeByte((byte)this.b);
+      var1.a(this.c);
+   }
+
+   public void a(gd var1) {
+      var1.a(this);
+   }
 }

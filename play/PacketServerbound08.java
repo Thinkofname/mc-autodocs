@@ -1,20 +1,74 @@
-class PacketServerbound08 {
-    public void read(Buffer buffer)
-    {
-        b = buffer.readPosition();
-        c = buffer.readUnsignedByte();
-        d = buffer.readSlot();
-        e = (float)buffer.readUnsignedByte() / 16F;
-        f = (float)buffer.readUnsignedByte() / 16F;
-        g = (float)buffer.readUnsignedByte() / 16F;
-    }
-    public void write(Buffer buffer)
-    {
-        buffer.writePosition(b);
-        buffer.writeByte(c);
-        buffer.writeSlot(d);
-        buffer.writeByte((int)(e * 16F));
-        buffer.writeByte((int)(f * 16F));
-        buffer.writeByte((int)(g * 16F));
-    }
+
+public class PacketServerbound08 extends ga {
+
+   private static final cu a = new cu(-1, -1, -1);
+   private cu b;
+   private int c;
+   private adc d;
+   private float e;
+   private float f;
+   private float g;
+
+
+   public PacketServerbound08() {}
+
+   public PacketServerbound08(adc var1) {
+      this(a, 255, var1, 0.0F, 0.0F, 0.0F);
+   }
+
+   public PacketServerbound08(cu var1, int var2, adc var3, float var4, float var5, float var6) {
+      this.b = var1;
+      this.c = var2;
+      this.d = var3 != null?var3.m():null;
+      this.e = var4;
+      this.f = var5;
+      this.g = var6;
+   }
+
+   public void read(PacketBuffer var1) {
+      this.b = var1.readPosition();
+      this.c = var1.readUnsignedByte();
+      this.d = var1.readSlot();
+      this.e = (float)var1.readUnsignedByte() / 16.0F;
+      this.f = (float)var1.readUnsignedByte() / 16.0F;
+      this.g = (float)var1.readUnsignedByte() / 16.0F;
+   }
+
+   public void write(PacketBuffer var1) {
+      var1.writePosition(this.b);
+      var1.writeByte(this.c);
+      var1.writeSlot(this.d);
+      var1.writeByte((int)(this.e * 16.0F));
+      var1.writeByte((int)(this.f * 16.0F));
+      var1.writeByte((int)(this.g * 16.0F));
+   }
+
+   public void a(ix var1) {
+      var1.a(this);
+   }
+
+   public cu c() {
+      return this.b;
+   }
+
+   public int d() {
+      return this.c;
+   }
+
+   public adc e() {
+      return this.d;
+   }
+
+   public float f() {
+      return this.e;
+   }
+
+   public float g() {
+      return this.f;
+   }
+
+   public float h() {
+      return this.g;
+   }
+
 }

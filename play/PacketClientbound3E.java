@@ -1,39 +1,91 @@
-class PacketClientbound3E {
-    public void read(Buffer buffer)
-    {
-        a = buffer.readString(16);
-        f = buffer.readByte();
-        if(f == 0 || f == 2)
-        {
-            b = buffer.readString(32);
-            c = buffer.readString(16);
-            d = buffer.readString(16);
-            g = buffer.readByte();
-        }
-        if(f == 0 || f == 3 || f == 4)
-        {
-            short word0 = buffer.readShort();
-            for(int i = 0; i < word0; i++)
-                e.add(buffer.readString(16));
+import com.google.common.collect.Lists;
+import java.util.Collection;
+import java.util.Iterator;
 
-        }
-    }
-    public void write(Buffer buffer)
-    {
-        buffer.writeString(a);
-        buffer.writeByte(f);
-        if(f == 0 || f == 2)
-        {
-            buffer.writeString(b);
-            buffer.writeString(c);
-            buffer.writeString(d);
-            buffer.writeByte(g);
-        }
-        if(f == 0 || f == 3 || f == 4)
-        {
-            buffer.writeShort(e.size());
-            String s;
-            for(Iterator iterator = e.iterator(); iterator.hasNext(); buffer.writeString(s))
-        }
-    }
+public class PacketClientbound3E extends ga {
+
+   private String a = "";
+   private String b = "";
+   private String c = "";
+   private String d = "";
+   private Collection e = Lists.newArrayList();
+   private int f;
+   private int g;
+
+
+   public PacketClientbound3E() {}
+
+   public PacketClientbound3E(baw var1, int var2) {
+      this.a = var1.b();
+      this.f = var2;
+      if(var2 == 0 || var2 == 2) {
+         this.b = var1.c();
+         this.c = var1.e();
+         this.d = var1.f();
+         this.g = var1.i();
+      }
+
+      if(var2 == 0) {
+         this.e.addAll(var1.d());
+      }
+
+   }
+
+   public PacketClientbound3E(baw var1, Collection var2, int var3) {
+      if(var3 != 3 && var3 != 4) {
+         throw new IllegalArgumentException("Method must be join or leave for player constructor");
+      } else if(var2 != null && !var2.isEmpty()) {
+         this.f = var3;
+         this.a = var1.b();
+         this.e.addAll(var2);
+      } else {
+         throw new IllegalArgumentException("Players cannot be null/empty");
+      }
+   }
+
+   public void read(PacketBuffer var1) {
+      this.a = var1.readString(16);
+      this.f = var1.readByte();
+      if(this.f == 0 || this.f == 2) {
+         this.b = var1.readString(32);
+         this.c = var1.readString(16);
+         this.d = var1.readString(16);
+         this.g = var1.readByte();
+      }
+
+      if(this.f == 0 || this.f == 3 || this.f == 4) {
+         short var2 = var1.readShort();
+
+         for(int var3 = 0; var3 < var2; ++var3) {
+            this.e.add(var1.readString(16));
+         }
+      }
+
+   }
+
+   public void write(PacketBuffer var1) {
+      var1.writeString(this.a);
+      var1.writeByte(this.f);
+      if(this.f == 0 || this.f == 2) {
+         var1.writeString(this.b);
+         var1.writeString(this.c);
+         var1.writeString(this.d);
+         var1.writeByte(this.g);
+      }
+
+      if(this.f == 0 || this.f == 3 || this.f == 4) {
+         var1.writeShort(this.e.size());
+         Iterator var2 = this.e.iterator();
+
+         while(var2.hasNext()) {
+            String var3 = (String)var2.next();
+            var1.writeString(var3);
+         }
+      }
+
+   }
+
+   public void a(gd var1) {
+      var1.a(this);
+   }
 }
