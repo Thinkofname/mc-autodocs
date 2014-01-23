@@ -40,7 +40,7 @@ public class PacketClientbound42 extends gf {
    }
 
    public void write(PacketBuffer var1) {
-      var1.writeInt(this.a.e);
+      var1.writeByte(this.a.e);
       if(this.a == ib.b) {
          var1.writeVarInt(this.d);
          var1.writeInt(this.c);
