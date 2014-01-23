@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class PacketClientbound0F extends ga {
+public class PacketClientbound0F extends gf {
 
    private int a;
    private int b;
@@ -13,17 +13,17 @@ public class PacketClientbound0F extends ga {
    private byte i;
    private byte j;
    private byte k;
-   private sr l;
+   private ta l;
    private List m;
 
 
    public PacketClientbound0F() {}
 
-   public PacketClientbound0F(si var1) {
-      this.a = var1.x();
-      this.b = (byte)rt.a(var1);
+   public PacketClientbound0F(sr var1) {
+      this.a = var1.A();
+      this.b = (byte)sc.a(var1);
       this.c = var1.as.a(var1.s);
-      this.d = pp.c(var1.t * 32.0D);
+      this.d = py.c(var1.t * 32.0D);
       this.e = var1.as.a(var1.u);
       this.i = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.j = (byte)((int)(var1.z * 256.0F / 360.0F));
@@ -59,7 +59,7 @@ public class PacketClientbound0F extends ga {
       this.f = (int)(var4 * 8000.0D);
       this.g = (int)(var6 * 8000.0D);
       this.h = (int)(var8 * 8000.0D);
-      this.l = var1.z();
+      this.l = var1.C();
    }
 
    public void read(PacketBuffer var1) {
@@ -74,7 +74,7 @@ public class PacketClientbound0F extends ga {
       this.f = var1.readShort();
       this.g = var1.readShort();
       this.h = var1.readShort();
-      this.m = sr.b(var1);
+      this.m = ta.b(var1);
    }
 
    public void write(PacketBuffer var1) {
@@ -92,7 +92,7 @@ public class PacketClientbound0F extends ga {
       this.l.a(var1);
    }
 
-   public void a(gd var1) {
+   public void a(gi var1) {
       var1.a(this);
    }
 

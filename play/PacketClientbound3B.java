@@ -1,5 +1,5 @@
 
-public class PacketClientbound3B extends ga {
+public class PacketClientbound3B extends gf {
 
    private String a;
    private String b;
@@ -8,7 +8,7 @@ public class PacketClientbound3B extends ga {
 
    public PacketClientbound3B() {}
 
-   public PacketClientbound3B(bav var1, int var2) {
+   public PacketClientbound3B(bbh var1, int var2) {
       this.a = var1.b();
       this.b = var1.d();
       this.c = var2;
@@ -26,7 +26,7 @@ public class PacketClientbound3B extends ga {
       var1.writeByte(this.c);
    }
 
-   public void a(gd var1) {
+   public void a(gi var1) {
       var1.a(this);
    }
 }

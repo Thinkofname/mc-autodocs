@@ -1,5 +1,5 @@
 
-public class PacketClientbound11 extends ga {
+public class PacketClientbound11 extends gf {
 
    private int a;
    private int b;
@@ -10,11 +10,11 @@ public class PacketClientbound11 extends ga {
 
    public PacketClientbound11() {}
 
-   public PacketClientbound11(sd var1) {
-      this.a = var1.x();
-      this.b = pp.c(var1.s * 32.0D);
-      this.c = pp.c(var1.t * 32.0D);
-      this.d = pp.c(var1.u * 32.0D);
+   public PacketClientbound11(sm var1) {
+      this.a = var1.A();
+      this.b = py.c(var1.s * 32.0D);
+      this.c = py.c(var1.t * 32.0D);
+      this.d = py.c(var1.u * 32.0D);
       this.e = var1.e();
    }
 
@@ -34,7 +34,7 @@ public class PacketClientbound11 extends ga {
       var1.writeShort(this.e);
    }
 
-   public void a(gd var1) {
+   public void a(gi var1) {
       var1.a(this);
    }
 

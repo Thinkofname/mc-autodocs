@@ -1,5 +1,5 @@
 
-public class PacketServerbound09 extends ga {
+public class PacketServerbound09 extends gf {
 
    private int a;
 
@@ -12,7 +12,7 @@ public class PacketServerbound09 extends ga {
       var1.writeShort(this.a);
    }
 
-   public void a(ix var1) {
+   public void a(jc var1) {
       var1.a(this);
    }
 

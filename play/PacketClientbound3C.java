@@ -1,5 +1,5 @@
 
-public class PacketClientbound3C extends ga {
+public class PacketClientbound3C extends gf {
 
    private String a = "";
    private String b = "";
@@ -9,7 +9,7 @@ public class PacketClientbound3C extends ga {
 
    public PacketClientbound3C() {}
 
-   public PacketClientbound3C(bax var1, int var2) {
+   public PacketClientbound3C(bbj var1, int var2) {
       this.a = var1.e();
       this.b = var1.d().b();
       this.c = var1.c();
@@ -28,7 +28,7 @@ public class PacketClientbound3C extends ga {
       this.d = var1.readByte();
       if(this.d != 1) {
          this.b = var1.readString(16);
-         this.c = var1.readInt();
+         this.c = var1.readVarInt();
       }
 
    }
@@ -38,12 +38,12 @@ public class PacketClientbound3C extends ga {
       var1.writeByte(this.d);
       if(this.d != 1) {
          var1.writeString(this.b);
-         var1.writeInt(this.c);
+         var1.writeVarInt(this.c);
       }
 
    }
 
-   public void a(gd var1) {
+   public void a(gi var1) {
       var1.a(this);
    }
 }

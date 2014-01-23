@@ -1,5 +1,5 @@
 
-public class PacketClientbound0E extends ga {
+public class PacketClientbound0E extends gf {
 
    private int a;
    private int b;
@@ -16,17 +16,17 @@ public class PacketClientbound0E extends ga {
 
    public PacketClientbound0E() {}
 
-   public PacketClientbound0E(rl var1, int var2) {
+   public PacketClientbound0E(ru var1, int var2) {
       this(var1, var2, 0);
    }
 
-   public PacketClientbound0E(rl var1, int var2, int var3) {
-      this.a = var1.x();
-      this.b = pp.c(var1.s * 32.0D);
-      this.c = pp.c(var1.t * 32.0D);
-      this.d = pp.c(var1.u * 32.0D);
-      this.h = pp.d(var1.z * 256.0F / 360.0F);
-      this.i = pp.d(var1.y * 256.0F / 360.0F);
+   public PacketClientbound0E(ru var1, int var2, int var3) {
+      this.a = var1.A();
+      this.b = py.c(var1.s * 32.0D);
+      this.c = py.c(var1.t * 32.0D);
+      this.d = py.c(var1.u * 32.0D);
+      this.h = py.d(var1.z * 256.0F / 360.0F);
+      this.i = py.d(var1.y * 256.0F / 360.0F);
       this.j = var2;
       this.k = var3;
       if(var3 > 0) {
@@ -99,7 +99,7 @@ public class PacketClientbound0E extends ga {
 
    }
 
-   public void a(gd var1) {
+   public void a(gi var1) {
       var1.a(this);
    }
 

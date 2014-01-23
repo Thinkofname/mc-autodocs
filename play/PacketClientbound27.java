@@ -2,7 +2,7 @@ import com.google.common.collect.Lists;
 import java.util.Iterator;
 import java.util.List;
 
-public class PacketClientbound27 extends ga {
+public class PacketClientbound27 extends gf {
 
    private double a;
    private double b;
@@ -16,7 +16,7 @@ public class PacketClientbound27 extends ga {
 
    public PacketClientbound27() {}
 
-   public PacketClientbound27(double var1, double var3, double var5, float var7, List var8, bau var9) {
+   public PacketClientbound27(double var1, double var3, double var5, float var7, List var8, bbg var9) {
       this.a = var1;
       this.b = var3;
       this.c = var5;
@@ -66,9 +66,9 @@ public class PacketClientbound27 extends ga {
 
       while(var5.hasNext()) {
          Position var6 = (Position)var5.next();
-         int var7 = var6.a() - var2;
-         int var8 = var6.b() - var3;
-         int var9 = var6.c() - var4;
+         int var7 = var6.n() - var2;
+         int var8 = var6.o() - var3;
+         int var9 = var6.p() - var4;
          var1.writeByte(var7);
          var1.writeByte(var8);
          var1.writeByte(var9);
@@ -79,7 +79,7 @@ public class PacketClientbound27 extends ga {
       var1.writeFloat(this.h);
    }
 
-   public void a(gd var1) {
+   public void a(gi var1) {
       var1.a(this);
    }
 }

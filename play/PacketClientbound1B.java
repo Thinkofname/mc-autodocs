@@ -1,5 +1,5 @@
 
-public class PacketClientbound1B extends ga {
+public class PacketClientbound1B extends gf {
 
    private int a;
    private int b;
@@ -8,10 +8,10 @@ public class PacketClientbound1B extends ga {
 
    public PacketClientbound1B() {}
 
-   public PacketClientbound1B(int var1, rl var2, rl var3) {
+   public PacketClientbound1B(int var1, ru var2, ru var3) {
       this.a = var1;
-      this.b = var2.x();
-      this.c = var3 != null?var3.x():-1;
+      this.b = var2.A();
+      this.c = var3 != null?var3.A():-1;
    }
 
    public void read(PacketBuffer var1) {
@@ -26,7 +26,7 @@ public class PacketClientbound1B extends ga {
       var1.writeByte(this.a);
    }
 
-   public void a(gd var1) {
+   public void a(gi var1) {
       var1.a(this);
    }
 }

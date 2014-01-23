@@ -1,5 +1,5 @@
 
-public class PacketClientbound13 extends ga {
+public class PacketClientbound13 extends gf {
 
    private int[] a;
 
@@ -11,24 +11,24 @@ public class PacketClientbound13 extends ga {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = new int[var1.readByte()];
+      this.a = new int[var1.readVarInt()];
 
       for(int var2 = 0; var2 < this.a.length; ++var2) {
-         this.a[var2] = var1.readInt();
+         this.a[var2] = var1.readVarInt();
       }
 
    }
 
    public void write(PacketBuffer var1) {
-      var1.writeByte(this.a.length);
+      var1.writeVarInt(this.a.length);
 
       for(int var2 = 0; var2 < this.a.length; ++var2) {
-         var1.writeInt(this.a[var2]);
+         var1.writeVarInt(this.a[var2]);
       }
 
    }
 
-   public void a(gd var1) {
+   public void a(gi var1) {
       var1.a(this);
    }
 

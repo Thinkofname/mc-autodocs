@@ -2,7 +2,7 @@ import com.google.common.collect.Lists;
 import java.util.Collection;
 import java.util.Iterator;
 
-public class PacketClientbound3E extends ga {
+public class PacketClientbound3E extends gf {
 
    private String a = "";
    private String b = "";
@@ -15,7 +15,7 @@ public class PacketClientbound3E extends ga {
 
    public PacketClientbound3E() {}
 
-   public PacketClientbound3E(baw var1, int var2) {
+   public PacketClientbound3E(bbi var1, int var2) {
       this.a = var1.b();
       this.f = var2;
       if(var2 == 0 || var2 == 2) {
@@ -31,7 +31,7 @@ public class PacketClientbound3E extends ga {
 
    }
 
-   public PacketClientbound3E(baw var1, Collection var2, int var3) {
+   public PacketClientbound3E(bbi var1, Collection var2, int var3) {
       if(var3 != 3 && var3 != 4) {
          throw new IllegalArgumentException("Method must be join or leave for player constructor");
       } else if(var2 != null && !var2.isEmpty()) {
@@ -54,7 +54,7 @@ public class PacketClientbound3E extends ga {
       }
 
       if(this.f == 0 || this.f == 3 || this.f == 4) {
-         short var2 = var1.readShort();
+         int var2 = var1.readVarInt();
 
          for(int var3 = 0; var3 < var2; ++var3) {
             this.e.add(var1.readString(16));
@@ -74,7 +74,7 @@ public class PacketClientbound3E extends ga {
       }
 
       if(this.f == 0 || this.f == 3 || this.f == 4) {
-         var1.writeShort(this.e.size());
+         var1.writeVarInt(this.e.size());
          Iterator var2 = this.e.iterator();
 
          while(var2.hasNext()) {
@@ -85,7 +85,7 @@ public class PacketClientbound3E extends ga {
 
    }
 
-   public void a(gd var1) {
+   public void a(gi var1) {
       var1.a(this);
    }
 }

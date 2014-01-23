@@ -1,5 +1,5 @@
 
-public class PacketClientbound2C extends ga {
+public class PacketClientbound2C extends gf {
 
    private int a;
    private int b;
@@ -10,12 +10,12 @@ public class PacketClientbound2C extends ga {
 
    public PacketClientbound2C() {}
 
-   public PacketClientbound2C(rl var1) {
-      this.a = var1.x();
-      this.b = pp.c(var1.s * 32.0D);
-      this.c = pp.c(var1.t * 32.0D);
-      this.d = pp.c(var1.u * 32.0D);
-      if(var1 instanceof wu) {
+   public PacketClientbound2C(ru var1) {
+      this.a = var1.A();
+      this.b = py.c(var1.s * 32.0D);
+      this.c = py.c(var1.t * 32.0D);
+      this.d = py.c(var1.u * 32.0D);
+      if(var1 instanceof xg) {
          this.e = 1;
       }
 
@@ -37,7 +37,7 @@ public class PacketClientbound2C extends ga {
       var1.writeInt(this.d);
    }
 
-   public void a(gd var1) {
+   public void a(gi var1) {
       var1.a(this);
    }
 

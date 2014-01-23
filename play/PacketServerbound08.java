@@ -1,5 +1,5 @@
 
-public class PacketServerbound08 extends ga {
+public class PacketServerbound08 extends gf {
 
    private static final Position a = new Position(-1, -1, -1);
    private Position b;
@@ -43,7 +43,7 @@ public class PacketServerbound08 extends ga {
       var1.writeByte((int)(this.g * 16.0F));
    }
 
-   public void a(ix var1) {
+   public void a(jc var1) {
       var1.a(this);
    }
 
