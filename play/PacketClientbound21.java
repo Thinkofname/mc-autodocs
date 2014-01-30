@@ -3,7 +3,7 @@ import java.util.zip.DataFormatException;
 import java.util.zip.Deflater;
 import java.util.zip.Inflater;
 
-public class PacketClientbound21 extends gf {
+public class PacketClientbound21 extends gj {
 
    private int a;
    private int b;
@@ -18,11 +18,11 @@ public class PacketClientbound21 extends gf {
 
    public PacketClientbound21() {}
 
-   public PacketClientbound21(aqz var1, boolean var2, int var3) {
+   public PacketClientbound21(arg var1, boolean var2, int var3) {
       this.a = var1.a;
       this.b = var1.b;
       this.g = var2;
-      hm var4 = a(var1, var2, var3);
+      hq var4 = a(var1, var2, var3);
       Deflater var5 = new Deflater(-1);
       this.d = var4.c;
       this.c = var4.b;
@@ -91,7 +91,7 @@ public class PacketClientbound21 extends gf {
       var1.writeBytes(this.e, 0, this.h);
    }
 
-   public void a(gi var1) {
+   public void a(gm var1) {
       var1.a(this);
    }
 
@@ -99,11 +99,11 @@ public class PacketClientbound21 extends gf {
       return String.format("x=%d, z=%d, full=%b, sects=%d, add=%d, size=%d", new Object[]{Integer.valueOf(this.a), Integer.valueOf(this.b), Boolean.valueOf(this.g), Integer.valueOf(this.c), Integer.valueOf(this.d), Integer.valueOf(this.h)});
    }
 
-   public static hm a(aqz var0, boolean var1, int var2) {
+   public static hq a(arg var0, boolean var1, int var2) {
       int var3 = 0;
-      arc[] var4 = var0.h();
+      arj[] var4 = var0.h();
       int var5 = 0;
-      hm var6 = new hm();
+      hq var6 = new hq();
       byte[] var7 = i;
 
       int var8;
@@ -125,7 +125,7 @@ public class PacketClientbound21 extends gf {
          }
       }
 
-      aqx var10;
+      are var10;
       for(var8 = 0; var8 < var4.length; ++var8) {
          if(var4[var8] != null && (!var1 || !var4[var8].a()) && (var2 & 1 << var8) != 0) {
             var10 = var4[var8].j();

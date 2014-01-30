@@ -1,5 +1,5 @@
 
-public class PacketClientbound1D extends gf {
+public class PacketClientbound1D extends gj {
 
    private int a;
    private byte b;
@@ -9,7 +9,7 @@ public class PacketClientbound1D extends gf {
 
    public PacketClientbound1D() {}
 
-   public PacketClientbound1D(int var1, rq var2) {
+   public PacketClientbound1D(int var1, rv var2) {
       this.a = var1;
       this.b = (byte)(var2.a() & 255);
       this.c = (byte)(var2.c() & 255);
@@ -35,7 +35,7 @@ public class PacketClientbound1D extends gf {
       var1.writeVarInt(this.d);
    }
 
-   public void a(gi var1) {
+   public void a(gm var1) {
       var1.a(this);
    }
 }

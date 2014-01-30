@@ -1,24 +1,24 @@
 
-public class PacketServerbound07 extends gf {
+public class PacketServerbound07 extends gj {
 
    private Position a;
-   private de b;
-   private jw c;
+   private dg b;
+   private kb c;
 
 
    public void read(PacketBuffer var1) {
-      this.c = jw.a(var1.readUnsignedByte());
+      this.c = kb.a(var1.readUnsignedByte());
       this.a = var1.readPosition();
-      this.b = de.a(var1.readUnsignedByte());
+      this.b = dg.a(var1.readUnsignedByte());
    }
 
    public void write(PacketBuffer var1) {
-      var1.writeByte(jw.a(this.c));
+      var1.writeByte(kb.a(this.c));
       var1.writePosition(this.a);
       var1.writeByte(this.b.a());
    }
 
-   public void a(jc var1) {
+   public void a(jh var1) {
       var1.a(this);
    }
 
@@ -26,11 +26,11 @@ public class PacketServerbound07 extends gf {
       return this.a;
    }
 
-   public de d() {
+   public dg d() {
       return this.b;
    }
 
-   public jw e() {
+   public kb e() {
       return this.c;
    }
 }

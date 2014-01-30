@@ -1,15 +1,15 @@
 
-public class PacketClientbound24 extends gf {
+public class PacketClientbound24 extends gj {
 
    private Position a;
    private int b;
    private int c;
-   private aju d;
+   private akb d;
 
 
    public PacketClientbound24() {}
 
-   public PacketClientbound24(Position var1, aju var2, int var3, int var4) {
+   public PacketClientbound24(Position var1, akb var2, int var3, int var4) {
       this.a = var1;
       this.b = var3;
       this.c = var4;
@@ -20,17 +20,17 @@ public class PacketClientbound24 extends gf {
       this.a = var1.readPosition();
       this.b = var1.readUnsignedByte();
       this.c = var1.readUnsignedByte();
-      this.d = aju.e(var1.readVarInt() & 4095);
+      this.d = akb.e(var1.readVarInt() & 4095);
    }
 
    public void write(PacketBuffer var1) {
       var1.writePosition(this.a);
       var1.writeByte(this.b);
       var1.writeByte(this.c);
-      var1.writeVarInt(aju.b(this.d) & 4095);
+      var1.writeVarInt(akb.b(this.d) & 4095);
    }
 
-   public void a(gi var1) {
+   public void a(gm var1) {
       var1.a(this);
    }
 }
