@@ -1,5 +1,5 @@
 
-public class PacketServerbound01 extends gk {
+public class PacketServerbound01 extends gm {
 
    private long a;
 
@@ -12,7 +12,7 @@ public class PacketServerbound01 extends gk {
       var1.writeLong(this.a);
    }
 
-   public void a(ld var1) {
+   public void a(lf var1) {
       var1.a(this);
    }
 

@@ -1,15 +1,15 @@
 
-public class PacketClientbound10 extends gk {
+public class PacketClientbound10 extends gm {
 
    private int a;
    private Position b;
-   private dh c;
+   private dj c;
    private String d;
 
 
    public PacketClientbound10() {}
 
-   public PacketClientbound10(te var1) {
+   public PacketClientbound10(tg var1) {
       this.a = var1.A();
       this.b = var1.h();
       this.c = var1.b;
@@ -18,9 +18,9 @@ public class PacketClientbound10 extends gk {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.d = var1.readString(tf.A);
+      this.d = var1.readString(th.A);
       this.b = var1.readPosition();
-      this.c = dh.b(var1.readUnsignedByte());
+      this.c = dj.b(var1.readUnsignedByte());
    }
 
    public void write(PacketBuffer var1) {
@@ -30,7 +30,7 @@ public class PacketClientbound10 extends gk {
       var1.writeByte(this.c.b());
    }
 
-   public void a(gn var1) {
+   public void a(gp var1) {
       var1.a(this);
    }
 

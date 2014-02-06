@@ -3,7 +3,7 @@ import com.mojang.authlib.ProfileProperty;
 import java.util.Iterator;
 import java.util.List;
 
-public class PacketClientbound0C extends gk {
+public class PacketClientbound0C extends gm {
 
    private int a;
    private GameProfile b;
@@ -13,22 +13,22 @@ public class PacketClientbound0C extends gk {
    private byte f;
    private byte g;
    private int h;
-   private th i;
+   private tj i;
    private List j;
 
 
    public PacketClientbound0C() {}
 
-   public PacketClientbound0C(aak var1) {
+   public PacketClientbound0C(aam var1) {
       this.a = var1.A();
       this.b = var1.bM();
-      this.c = qe.c(var1.s * 32.0D);
-      this.d = qe.c(var1.t * 32.0D);
-      this.e = qe.c(var1.u * 32.0D);
+      this.c = qg.c(var1.s * 32.0D);
+      this.d = qg.c(var1.t * 32.0D);
+      this.e = qg.c(var1.u * 32.0D);
       this.f = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.g = (byte)((int)(var1.z * 256.0F / 360.0F));
       ItemStack var2 = var1.bh.h();
-      this.h = var2 == null?0:aep.b(var2.b());
+      this.h = var2 == null?0:aer.b(var2.b());
       this.i = var1.C();
    }
 
@@ -50,7 +50,7 @@ public class PacketClientbound0C extends gk {
       this.f = var1.readByte();
       this.g = var1.readByte();
       this.h = var1.readShort();
-      this.j = th.b(var1);
+      this.j = tj.b(var1);
    }
 
    public void write(PacketBuffer var1) {
@@ -76,7 +76,7 @@ public class PacketClientbound0C extends gk {
       this.i.a(var1);
    }
 
-   public void a(gn var1) {
+   public void a(gp var1) {
       var1.a(this);
    }
 

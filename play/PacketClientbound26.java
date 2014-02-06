@@ -4,7 +4,7 @@ import java.util.zip.DataFormatException;
 import java.util.zip.Deflater;
 import java.util.zip.Inflater;
 
-public class PacketClientbound26 extends gk {
+public class PacketClientbound26 extends gm {
 
    private int[] a;
    private int[] b;
@@ -26,12 +26,12 @@ public class PacketClientbound26 extends gk {
       this.c = new int[var2];
       this.d = new int[var2];
       this.f = new byte[var2][];
-      this.h = !var1.isEmpty() && !((asf)var1.get(0)).p().s.p();
+      this.h = !var1.isEmpty() && !((ash)var1.get(0)).p().s.p();
       int var3 = 0;
 
       for(int var4 = 0; var4 < var2; ++var4) {
-         asf var5 = (asf)var1.get(var4);
-         hr var6 = hq.a(var5, true, '\uffff');
+         ash var5 = (ash)var1.get(var4);
+         ht var6 = hs.a(var5, true, '\uffff');
          if(i.length < var3 + var6.a.length) {
             byte[] var7 = new byte[var3 + var6.a.length];
             System.arraycopy(i, 0, var7, 0, i.length);
@@ -78,7 +78,7 @@ public class PacketClientbound26 extends gk {
       }
 
       var1.readBytes(i, 0, this.g);
-      byte[] var3 = new byte[hq.c() * var2];
+      byte[] var3 = new byte[hs.c() * var2];
       Inflater var4 = new Inflater();
       var4.setInput(i, 0, this.g);
 
@@ -134,7 +134,7 @@ public class PacketClientbound26 extends gk {
 
    }
 
-   public void a(gn var1) {
+   public void a(gp var1) {
       var1.a(this);
    }
 

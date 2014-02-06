@@ -1,12 +1,12 @@
 
-public class PacketClientbound43 extends gk {
+public class PacketClientbound43 extends gm {
 
    public int a;
 
 
    public PacketClientbound43() {}
 
-   public PacketClientbound43(sb var1) {
+   public PacketClientbound43(sd var1) {
       this.a = var1.A();
    }
 
@@ -18,7 +18,7 @@ public class PacketClientbound43 extends gk {
       var1.writeVarInt(this.a);
    }
 
-   public void a(gn var1) {
+   public void a(gp var1) {
       var1.a(this);
    }
 

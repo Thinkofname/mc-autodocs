@@ -1,5 +1,5 @@
 
-public class PacketClientbound3D extends gk {
+public class PacketClientbound3D extends gm {
 
    private int a;
    private String b;
@@ -7,7 +7,7 @@ public class PacketClientbound3D extends gk {
 
    public PacketClientbound3D() {}
 
-   public PacketClientbound3D(int var1, bcn var2) {
+   public PacketClientbound3D(int var1, bcp var2) {
       this.a = var1;
       if(var2 == null) {
          this.b = "";
@@ -27,7 +27,7 @@ public class PacketClientbound3D extends gk {
       var1.writeString(this.b);
    }
 
-   public void a(gn var1) {
+   public void a(gp var1) {
       var1.a(this);
    }
 }

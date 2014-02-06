@@ -1,5 +1,5 @@
 
-public class PacketClientbound3C extends gk {
+public class PacketClientbound3C extends gm {
 
    private String a = "";
    private String b = "";
@@ -9,7 +9,7 @@ public class PacketClientbound3C extends gk {
 
    public PacketClientbound3C() {}
 
-   public PacketClientbound3C(bcp var1, int var2) {
+   public PacketClientbound3C(bcr var1, int var2) {
       this.a = var1.e();
       this.b = var1.d().b();
       this.c = var1.c();
@@ -23,7 +23,7 @@ public class PacketClientbound3C extends gk {
       this.d = 1;
    }
 
-   public PacketClientbound3C(String var1, bcn var2) {
+   public PacketClientbound3C(String var1, bcp var2) {
       this.a = var1;
       this.b = var2.b();
       this.c = 0;
@@ -50,7 +50,7 @@ public class PacketClientbound3C extends gk {
 
    }
 
-   public void a(gn var1) {
+   public void a(gp var1) {
       var1.a(this);
    }
 }

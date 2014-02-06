@@ -1,6 +1,6 @@
 import org.apache.commons.lang3.ArrayUtils;
 
-public class PacketClientbound3A extends gk {
+public class PacketClientbound3A extends gm {
 
    private String[] a;
 
@@ -32,7 +32,7 @@ public class PacketClientbound3A extends gk {
 
    }
 
-   public void a(gn var1) {
+   public void a(gp var1) {
       var1.a(this);
    }
 
