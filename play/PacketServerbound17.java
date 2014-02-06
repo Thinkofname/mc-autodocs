@@ -1,5 +1,5 @@
 
-public class PacketServerbound17 extends gj {
+public class PacketServerbound17 extends gk {
 
    private String a;
    private int b;
@@ -25,7 +25,7 @@ public class PacketServerbound17 extends gj {
 
    }
 
-   public void a(jh var1) {
+   public void a(ji var1) {
       var1.a(this);
    }
 

@@ -1,27 +1,26 @@
 
-public class PacketServerbound03 extends gj {
+public class PacketServerbound03 extends gk {
 
    protected double a;
    protected double b;
    protected double c;
-   protected double d;
+   protected float d;
    protected float e;
-   protected float f;
+   protected boolean f;
    protected boolean g;
    protected boolean h;
-   protected boolean i;
 
 
-   public void a(jh var1) {
+   public void a(ji var1) {
       var1.a(this);
    }
 
    public void read(PacketBuffer var1) {
-      this.g = var1.readUnsignedByte() != 0;
+      this.f = var1.readUnsignedByte() != 0;
    }
 
    public void write(PacketBuffer var1) {
-      var1.writeByte(this.g?1:0);
+      var1.writeByte(this.f?1:0);
    }
 
    public double c() {
@@ -36,7 +35,7 @@ public class PacketServerbound03 extends gj {
       return this.c;
    }
 
-   public double f() {
+   public float f() {
       return this.d;
    }
 
@@ -44,7 +43,7 @@ public class PacketServerbound03 extends gj {
       return this.e;
    }
 
-   public float h() {
+   public boolean h() {
       return this.f;
    }
 
@@ -56,11 +55,7 @@ public class PacketServerbound03 extends gj {
       return this.h;
    }
 
-   public boolean k() {
-      return this.i;
-   }
-
    public void a(boolean var1) {
-      this.h = var1;
+      this.g = var1;
    }
 }

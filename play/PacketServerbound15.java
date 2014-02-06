@@ -1,9 +1,9 @@
 
-public class PacketServerbound15 extends gj {
+public class PacketServerbound15 extends gk {
 
    private String a;
    private int b;
-   private zq c;
+   private aan c;
    private boolean d;
    private int e;
 
@@ -11,7 +11,7 @@ public class PacketServerbound15 extends gj {
    public void read(PacketBuffer var1) {
       this.a = var1.readString(7);
       this.b = var1.readByte();
-      this.c = zq.a(var1.readByte());
+      this.c = aan.a(var1.readByte());
       this.d = var1.readBoolean();
       this.e = var1.readUnsignedByte();
    }
@@ -24,7 +24,7 @@ public class PacketServerbound15 extends gj {
       var1.writeByte(this.e);
    }
 
-   public void a(jh var1) {
+   public void a(ji var1) {
       var1.a(this);
    }
 
@@ -32,7 +32,7 @@ public class PacketServerbound15 extends gj {
       return this.a;
    }
 
-   public zq e() {
+   public aan e() {
       return this.c;
    }
 
