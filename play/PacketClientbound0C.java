@@ -1,9 +1,9 @@
 import com.mojang.authlib.GameProfile;
-import com.mojang.authlib.ProfileProperty;
+import com.mojang.authlib.properties.Property;
 import java.util.Iterator;
 import java.util.List;
 
-public class PacketClientbound0C extends gm {
+public class PacketClientbound0C extends gs {
 
    private int a;
    private GameProfile b;
@@ -13,22 +13,22 @@ public class PacketClientbound0C extends gm {
    private byte f;
    private byte g;
    private int h;
-   private tj i;
+   private tq i;
    private List j;
 
 
    public PacketClientbound0C() {}
 
-   public PacketClientbound0C(aam var1) {
+   public PacketClientbound0C(aat var1) {
       this.a = var1.A();
       this.b = var1.bM();
-      this.c = qg.c(var1.s * 32.0D);
-      this.d = qg.c(var1.t * 32.0D);
-      this.e = qg.c(var1.u * 32.0D);
+      this.c = qn.c(var1.s * 32.0D);
+      this.d = qn.c(var1.t * 32.0D);
+      this.e = qn.c(var1.u * 32.0D);
       this.f = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.g = (byte)((int)(var1.z * 256.0F / 360.0F));
       ItemStack var2 = var1.bh.h();
-      this.h = var2 == null?0:aer.b(var2.b());
+      this.h = var2 == null?0:aey.b(var2.b());
       this.i = var1.C();
    }
 
@@ -41,7 +41,7 @@ public class PacketClientbound0C extends gm {
          String var4 = var1.readString(32767);
          String var5 = var1.readString(32767);
          String var6 = var1.readString(32767);
-         this.b.getProperties().put(var4, new ProfileProperty(var4, var5, var6));
+         this.b.getProperties().put(var4, new Property(var4, var5, var6));
       }
 
       this.c = var1.readInt();
@@ -50,7 +50,7 @@ public class PacketClientbound0C extends gm {
       this.f = var1.readByte();
       this.g = var1.readByte();
       this.h = var1.readShort();
-      this.j = tj.b(var1);
+      this.j = tq.b(var1);
    }
 
    public void write(PacketBuffer var1) {
@@ -61,7 +61,7 @@ public class PacketClientbound0C extends gm {
       Iterator var2 = this.b.getProperties().values().iterator();
 
       while(var2.hasNext()) {
-         ProfileProperty var3 = (ProfileProperty)var2.next();
+         Property var3 = (Property)var2.next();
          var1.writeString(var3.getName());
          var1.writeString(var3.getValue());
          var1.writeString(var3.getSignature());
@@ -76,7 +76,7 @@ public class PacketClientbound0C extends gm {
       this.i.a(var1);
    }
 
-   public void a(gp var1) {
+   public void a(gv var1) {
       var1.a(this);
    }
 

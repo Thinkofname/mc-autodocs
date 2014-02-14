@@ -1,5 +1,5 @@
 
-public class PacketClientbound19 extends gm {
+public class PacketClientbound19 extends gs {
 
    private int a;
    private byte b;
@@ -7,7 +7,7 @@ public class PacketClientbound19 extends gm {
 
    public PacketClientbound19() {}
 
-   public PacketClientbound19(sd var1, byte var2) {
+   public PacketClientbound19(sk var1, byte var2) {
       this.a = var1.A();
       this.b = var2;
    }
@@ -22,7 +22,7 @@ public class PacketClientbound19 extends gm {
       var1.writeByte(this.b);
    }
 
-   public void a(gp var1) {
+   public void a(gv var1) {
       var1.a(this);
    }
 

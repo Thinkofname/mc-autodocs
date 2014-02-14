@@ -1,29 +1,29 @@
 
-public class PacketServerbound02 extends gm {
+public class PacketServerbound02 extends gs {
 
    private int a;
-   private jw b;
+   private kc b;
 
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.b = jw.a()[var1.readUnsignedByte() % jw.a().length];
+      this.b = kc.a()[var1.readUnsignedByte() % kc.a().length];
    }
 
    public void write(PacketBuffer var1) {
       var1.writeVarInt(this.a);
-      var1.writeByte(jw.a(this.b));
+      var1.writeByte(kc.a(this.b));
    }
 
-   public void a(jk var1) {
+   public void a(jq var1) {
       var1.a(this);
    }
 
-   public sd a(ait var1) {
+   public sk a(aja var1) {
       return var1.a(this.a);
    }
 
-   public jw c() {
+   public kc c() {
       return this.b;
    }
 }

@@ -1,11 +1,11 @@
 
-public class PacketServerbound00 extends gm {
+public class PacketServerbound00 extends gs {
 
    public void read(PacketBuffer var1) {}
 
    public void write(PacketBuffer var1) {}
 
-   public void a(lf var1) {
+   public void a(ll var1) {
       var1.a(this);
    }
 

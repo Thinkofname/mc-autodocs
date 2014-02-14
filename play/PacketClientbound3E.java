@@ -2,42 +2,56 @@ import com.google.common.collect.Lists;
 import java.util.Collection;
 import java.util.Iterator;
 
-public class PacketClientbound3E extends gm {
+public class PacketClientbound3E extends gs {
 
    private String a = "";
    private String b = "";
    private String c = "";
    private String d = "";
-   private Collection e = Lists.newArrayList();
+   private String e;
    private int f;
-   private int g;
+   private Collection g;
+   private int h;
+   private int i;
 
 
-   public PacketClientbound3E() {}
+   public PacketClientbound3E() {
+      this.e = bde.a.e;
+      this.f = -1;
+      this.g = Lists.newArrayList();
+   }
 
-   public PacketClientbound3E(bcq var1, int var2) {
+   public PacketClientbound3E(bcx var1, int var2) {
+      this.e = bde.a.e;
+      this.f = -1;
+      this.g = Lists.newArrayList();
       this.a = var1.b();
-      this.f = var2;
+      this.h = var2;
       if(var2 == 0 || var2 == 2) {
          this.b = var1.c();
          this.c = var1.e();
          this.d = var1.f();
-         this.g = var1.i();
+         this.i = var1.j();
+         this.e = var1.i().e;
+         this.f = var1.k().b();
       }
 
       if(var2 == 0) {
-         this.e.addAll(var1.d());
+         this.g.addAll(var1.d());
       }
 
    }
 
-   public PacketClientbound3E(bcq var1, Collection var2, int var3) {
+   public PacketClientbound3E(bcx var1, Collection var2, int var3) {
+      this.e = bde.a.e;
+      this.f = -1;
+      this.g = Lists.newArrayList();
       if(var3 != 3 && var3 != 4) {
          throw new IllegalArgumentException("Method must be join or leave for player constructor");
       } else if(var2 != null && !var2.isEmpty()) {
-         this.f = var3;
+         this.h = var3;
          this.a = var1.b();
-         this.e.addAll(var2);
+         this.g.addAll(var2);
       } else {
          throw new IllegalArgumentException("Players cannot be null/empty");
       }
@@ -45,19 +59,21 @@ public class PacketClientbound3E extends gm {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readString(16);
-      this.f = var1.readByte();
-      if(this.f == 0 || this.f == 2) {
+      this.h = var1.readByte();
+      if(this.h == 0 || this.h == 2) {
          this.b = var1.readString(32);
          this.c = var1.readString(16);
          this.d = var1.readString(16);
-         this.g = var1.readByte();
+         this.i = var1.readByte();
+         this.e = var1.readString(32);
+         this.f = var1.readByte();
       }
 
-      if(this.f == 0 || this.f == 3 || this.f == 4) {
+      if(this.h == 0 || this.h == 3 || this.h == 4) {
          int var2 = var1.readVarInt();
 
          for(int var3 = 0; var3 < var2; ++var3) {
-            this.e.add(var1.readString(16));
+            this.g.add(var1.readString(16));
          }
       }
 
@@ -65,17 +81,19 @@ public class PacketClientbound3E extends gm {
 
    public void write(PacketBuffer var1) {
       var1.writeString(this.a);
-      var1.writeByte(this.f);
-      if(this.f == 0 || this.f == 2) {
+      var1.writeByte(this.h);
+      if(this.h == 0 || this.h == 2) {
          var1.writeString(this.b);
          var1.writeString(this.c);
          var1.writeString(this.d);
-         var1.writeByte(this.g);
+         var1.writeByte(this.i);
+         var1.writeString(this.e);
+         var1.writeByte(this.f);
       }
 
-      if(this.f == 0 || this.f == 3 || this.f == 4) {
-         var1.writeVarInt(this.e.size());
-         Iterator var2 = this.e.iterator();
+      if(this.h == 0 || this.h == 3 || this.h == 4) {
+         var1.writeVarInt(this.g.size());
+         Iterator var2 = this.g.iterator();
 
          while(var2.hasNext()) {
             String var3 = (String)var2.next();
@@ -85,7 +103,7 @@ public class PacketClientbound3E extends gm {
 
    }
 
-   public void a(gp var1) {
+   public void a(gv var1) {
       var1.a(this);
    }
 }

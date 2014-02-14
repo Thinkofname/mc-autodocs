@@ -1,32 +1,32 @@
 
-public class PacketClientbound02 extends gm {
+public class PacketClientbound02 extends gs {
 
-   private gc a;
+   private gh a;
    private byte b;
 
 
    public PacketClientbound02() {}
 
-   public PacketClientbound02(gc var1) {
+   public PacketClientbound02(gh var1) {
       this(var1, (byte)1);
    }
 
-   public PacketClientbound02(gc var1, byte var2) {
+   public PacketClientbound02(gh var1, byte var2) {
       this.a = var1;
       this.b = var2;
    }
 
    public void read(PacketBuffer var1) {
-      this.a = gd.a(var1.readString(32767));
+      this.a = gi.a(var1.readString(32767));
       this.b = var1.readByte();
    }
 
    public void write(PacketBuffer var1) {
-      var1.writeString(gd.a(this.a));
+      var1.writeString(gi.a(this.a));
       var1.writeByte(this.b);
    }
 
-   public void a(gp var1) {
+   public void a(gv var1) {
       var1.a(this);
    }
 

@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class PacketClientbound30 extends gm {
+public class PacketClientbound30 extends gs {
 
    private int a;
    private ItemStack[] b;
@@ -43,7 +43,7 @@ public class PacketClientbound30 extends gm {
 
    }
 
-   public void a(gp var1) {
+   public void a(gv var1) {
       var1.a(this);
    }
 }
