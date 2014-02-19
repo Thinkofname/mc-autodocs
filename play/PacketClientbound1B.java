@@ -10,8 +10,8 @@ public class PacketClientbound1B extends gs {
 
    public PacketClientbound1B(int var1, sk var2, sk var3) {
       this.a = var1;
-      this.b = var2.A();
-      this.c = var3 != null?var3.A():-1;
+      this.b = var2.B();
+      this.c = var3 != null?var3.B():-1;
    }
 
    public void read(PacketBuffer var1) {

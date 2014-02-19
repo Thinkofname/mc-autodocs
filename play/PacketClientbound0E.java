@@ -21,7 +21,7 @@ public class PacketClientbound0E extends gs {
    }
 
    public PacketClientbound0E(sk var1, int var2, int var3) {
-      this.a = var1.A();
+      this.a = var1.B();
       this.b = qn.c(var1.s * 32.0D);
       this.c = qn.c(var1.t * 32.0D);
       this.d = qn.c(var1.u * 32.0D);

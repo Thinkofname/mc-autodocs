@@ -10,7 +10,7 @@ public class PacketClientbound12 extends gs {
    public PacketClientbound12() {}
 
    public PacketClientbound12(sk var1) {
-      this(var1.A(), var1.v, var1.w, var1.x);
+      this(var1.B(), var1.v, var1.w, var1.x);
    }
 
    public PacketClientbound12(int var1, double var2, double var4, double var6) {

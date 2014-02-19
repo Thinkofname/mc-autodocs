@@ -16,11 +16,11 @@ public class PacketClientbound42 extends gs {
       switch(io.a[var2.ordinal()]) {
       case 1:
          this.d = var1.f();
-         this.c = var3 == null?-1:var3.A();
+         this.c = var3 == null?-1:var3.B();
          break;
       case 2:
-         this.b = var1.h().A();
-         this.c = var3 == null?-1:var3.A();
+         this.b = var1.h().B();
+         this.c = var3 == null?-1:var3.B();
          this.e = var1.b().c();
       }
 

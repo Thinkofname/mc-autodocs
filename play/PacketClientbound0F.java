@@ -20,7 +20,7 @@ public class PacketClientbound0F extends gs {
    public PacketClientbound0F() {}
 
    public PacketClientbound0F(th var1) {
-      this.a = var1.A();
+      this.a = var1.B();
       this.b = (byte)sq.a(var1);
       this.c = qn.c(var1.s * 32.0D);
       this.d = qn.c(var1.t * 32.0D);
@@ -59,7 +59,7 @@ public class PacketClientbound0F extends gs {
       this.f = (int)(var4 * 8000.0D);
       this.g = (int)(var6 * 8000.0D);
       this.h = (int)(var8 * 8000.0D);
-      this.l = var1.C();
+      this.l = var1.D();
    }
 
    public void read(PacketBuffer var1) {

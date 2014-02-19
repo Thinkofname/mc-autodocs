@@ -7,7 +7,7 @@ public class PacketClientbound43 extends gs {
    public PacketClientbound43() {}
 
    public PacketClientbound43(sk var1) {
-      this.a = var1.A();
+      this.a = var1.B();
    }
 
    public void read(PacketBuffer var1) {

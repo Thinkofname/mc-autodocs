@@ -8,7 +8,7 @@ public class PacketClientbound1A extends gs {
    public PacketClientbound1A() {}
 
    public PacketClientbound1A(sk var1, byte var2) {
-      this.a = var1.A();
+      this.a = var1.B();
       this.b = var2;
    }
 

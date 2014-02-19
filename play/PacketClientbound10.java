@@ -10,7 +10,7 @@ public class PacketClientbound10 extends gs {
    public PacketClientbound10() {}
 
    public PacketClientbound10(tn var1) {
-      this.a = var1.A();
+      this.a = var1.B();
       this.b = var1.h();
       this.c = var1.b;
       this.d = var1.c.B;
