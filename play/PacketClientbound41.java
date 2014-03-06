@@ -1,13 +1,13 @@
 
 public class PacketClientbound41 extends gs {
 
-   private rh a;
+   private se a;
    private boolean b;
 
 
    public PacketClientbound41() {}
 
-   public PacketClientbound41(rh var1, boolean var2) {
+   public PacketClientbound41(se var1, boolean var2) {
       this.a = var1;
       this.b = var2;
    }
@@ -17,7 +17,7 @@ public class PacketClientbound41 extends gs {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = rh.a(var1.readUnsignedByte());
+      this.a = se.a(var1.readUnsignedByte());
    }
 
    public void write(PacketBuffer var1) {

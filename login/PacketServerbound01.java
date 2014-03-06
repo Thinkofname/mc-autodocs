@@ -23,10 +23,10 @@ public class PacketServerbound01 extends gs {
    }
 
    public SecretKey a(PrivateKey var1) {
-      return pz.a(var1, this.a);
+      return qw.a(var1, this.a);
    }
 
    public byte[] b(PrivateKey var1) {
-      return var1 == null?this.b:pz.b(var1, this.b);
+      return var1 == null?this.b:qw.b(var1, this.b);
    }
 }

@@ -9,7 +9,7 @@ public class PacketClientbound3C extends gs {
 
    public PacketClientbound3C() {}
 
-   public PacketClientbound3C(bcy var1, int var2) {
+   public PacketClientbound3C(bdv var1, int var2) {
       this.a = var1.e();
       this.b = var1.d().b();
       this.c = var1.c();
@@ -23,7 +23,7 @@ public class PacketClientbound3C extends gs {
       this.d = 1;
    }
 
-   public PacketClientbound3C(String var1, bcw var2) {
+   public PacketClientbound3C(String var1, bdt var2) {
       this.a = var1;
       this.b = var2.b();
       this.c = 0;
@@ -31,7 +31,7 @@ public class PacketClientbound3C extends gs {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = var1.readString(16);
+      this.a = var1.readString(36);
       this.d = var1.readByte();
       if(this.d != 1) {
          this.b = var1.readString(16);

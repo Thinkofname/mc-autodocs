@@ -10,7 +10,7 @@ public class PacketClientbound1D extends gs {
 
    public PacketClientbound1D() {}
 
-   public PacketClientbound1D(int var1, sg var2) {
+   public PacketClientbound1D(int var1, td var2) {
       this.a = var1;
       this.b = (byte)(var2.a() & 255);
       this.c = (byte)(var2.c() & 255);

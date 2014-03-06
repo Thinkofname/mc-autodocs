@@ -18,7 +18,7 @@ public class PacketClientbound01 extends gs {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readString(20);
-      this.b = pz.a(a((ByteBuf)var1));
+      this.b = qw.a(a((ByteBuf)var1));
       this.c = a((ByteBuf)var1);
    }
 

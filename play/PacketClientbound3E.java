@@ -16,13 +16,13 @@ public class PacketClientbound3E extends gs {
 
 
    public PacketClientbound3E() {
-      this.e = bde.a.e;
+      this.e = beb.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
    }
 
-   public PacketClientbound3E(bcx var1, int var2) {
-      this.e = bde.a.e;
+   public PacketClientbound3E(bdu var1, int var2) {
+      this.e = beb.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
       this.a = var1.b();
@@ -31,9 +31,9 @@ public class PacketClientbound3E extends gs {
          this.b = var1.c();
          this.c = var1.e();
          this.d = var1.f();
-         this.i = var1.j();
+         this.i = var1.k();
          this.e = var1.i().e;
-         this.f = var1.k().b();
+         this.f = var1.l().b();
       }
 
       if(var2 == 0) {
@@ -42,8 +42,8 @@ public class PacketClientbound3E extends gs {
 
    }
 
-   public PacketClientbound3E(bcx var1, Collection var2, int var3) {
-      this.e = bde.a.e;
+   public PacketClientbound3E(bdu var1, Collection var2, int var3) {
+      this.e = beb.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
       if(var3 != 3 && var3 != 4) {

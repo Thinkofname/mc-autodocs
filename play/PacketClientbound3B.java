@@ -3,13 +3,13 @@ public class PacketClientbound3B extends gs {
 
    private String a;
    private String b;
-   private bdj c;
+   private beg c;
    private int d;
 
 
    public PacketClientbound3B() {}
 
-   public PacketClientbound3B(bcw var1, int var2) {
+   public PacketClientbound3B(bdt var1, int var2) {
       this.a = var1.b();
       this.b = var1.d();
       this.c = var1.c().c();
@@ -21,7 +21,7 @@ public class PacketClientbound3B extends gs {
       this.d = var1.readByte();
       if(this.d == 0 || this.d == 2) {
          this.b = var1.readString(32);
-         this.c = bdj.a(var1.readString(16));
+         this.c = beg.a(var1.readString(16));
       }
 
    }

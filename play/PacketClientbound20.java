@@ -18,7 +18,7 @@ public class PacketClientbound20 extends gs {
       Iterator var3 = var2.iterator();
 
       while(var3.hasNext()) {
-         tu var4 = (tu)var3.next();
+         ur var4 = (ur)var3.next();
          this.b.add(new jo(this, var4.a().a(), var4.b(), var4.c()));
       }
 
@@ -35,8 +35,8 @@ public class PacketClientbound20 extends gs {
          int var8 = var1.readVarInt();
 
          for(int var9 = 0; var9 < var8; ++var9) {
-            UUID var10 = var1.c();
-            var7.add(new tv(var10, "Unknown synced attribute modifier", var1.readDouble(), var1.readByte()));
+            UUID var10 = var1.d();
+            var7.add(new us(var10, "Unknown synced attribute modifier", var1.readDouble(), var1.readByte()));
          }
 
          this.b.add(new jo(this, var4, var5, var7));
@@ -57,7 +57,7 @@ public class PacketClientbound20 extends gs {
          Iterator var4 = var3.c().iterator();
 
          while(var4.hasNext()) {
-            tv var5 = (tv)var4.next();
+            us var5 = (us)var4.next();
             var1.a(var5.a());
             var1.writeDouble(var5.d());
             var1.writeByte(var5.c());

@@ -33,7 +33,7 @@ public class PacketClientbound2D extends gs {
    public void read(PacketBuffer var1) {
       this.a = var1.readUnsignedByte();
       this.b = var1.readString(32);
-      this.c = gi.a(var1.readString(32767));
+      this.c = var1.b();
       this.d = var1.readUnsignedByte();
       if(this.b.equals("EntityHorse")) {
          this.e = var1.readInt();
@@ -44,7 +44,7 @@ public class PacketClientbound2D extends gs {
    public void write(PacketBuffer var1) {
       var1.writeByte(this.a);
       var1.writeString(this.b);
-      var1.writeString(gi.a(this.c));
+      var1.a(this.c);
       var1.writeByte(this.d);
       if(this.b.equals("EntityHorse")) {
          var1.writeInt(this.e);

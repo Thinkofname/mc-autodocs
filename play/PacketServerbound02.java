@@ -19,7 +19,7 @@ public class PacketServerbound02 extends gs {
       var1.a(this);
    }
 
-   public sk a(aja var1) {
+   public th a(ajx var1) {
       return var1.a(this.a);
    }
 

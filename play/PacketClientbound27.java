@@ -16,7 +16,7 @@ public class PacketClientbound27 extends gs {
 
    public PacketClientbound27() {}
 
-   public PacketClientbound27(double var1, double var3, double var5, float var7, List var8, bcv var9) {
+   public PacketClientbound27(double var1, double var3, double var5, float var7, List var8, bds var9) {
       this.a = var1;
       this.b = var3;
       this.c = var5;

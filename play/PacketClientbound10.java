@@ -9,7 +9,7 @@ public class PacketClientbound10 extends gs {
 
    public PacketClientbound10() {}
 
-   public PacketClientbound10(tn var1) {
+   public PacketClientbound10(uk var1) {
       this.a = var1.B();
       this.b = var1.h();
       this.c = var1.b;
@@ -18,7 +18,7 @@ public class PacketClientbound10 extends gs {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.d = var1.readString(to.A);
+      this.d = var1.readString(ul.A);
       this.b = var1.readPosition();
       this.c = dp.b(var1.readUnsignedByte());
    }

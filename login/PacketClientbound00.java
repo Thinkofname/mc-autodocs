@@ -11,11 +11,11 @@ public class PacketClientbound00 extends gs {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = gi.a(var1.readString(32767));
+      this.a = var1.b();
    }
 
    public void write(PacketBuffer var1) {
-      var1.writeString(gi.a(this.a));
+      var1.a(this.a);
    }
 
    public void a(kv var1) {

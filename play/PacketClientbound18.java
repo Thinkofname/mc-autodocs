@@ -11,11 +11,11 @@ public class PacketClientbound18 extends gs {
 
    public PacketClientbound18() {}
 
-   public PacketClientbound18(sk var1) {
+   public PacketClientbound18(th var1) {
       this.a = var1.B();
-      this.b = qn.c(var1.s * 32.0D);
-      this.c = qn.c(var1.t * 32.0D);
-      this.d = qn.c(var1.u * 32.0D);
+      this.b = rk.c(var1.s * 32.0D);
+      this.c = rk.c(var1.t * 32.0D);
+      this.d = rk.c(var1.u * 32.0D);
       this.e = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.f = (byte)((int)(var1.z * 256.0F / 360.0F));
    }

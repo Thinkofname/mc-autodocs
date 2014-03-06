@@ -7,7 +7,7 @@ public class PacketClientbound0B extends gs {
 
    public PacketClientbound0B() {}
 
-   public PacketClientbound0B(sk var1, int var2) {
+   public PacketClientbound0B(th var1, int var2) {
       this.a = var1.B();
       this.b = var2;
    }

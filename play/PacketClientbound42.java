@@ -10,9 +10,9 @@ public class PacketClientbound42 extends gs {
 
    public PacketClientbound42() {}
 
-   public PacketClientbound42(rx var1, ip var2) {
+   public PacketClientbound42(su var1, ip var2) {
       this.a = var2;
-      th var3 = var1.c();
+      ue var3 = var1.c();
       switch(io.a[var2.ordinal()]) {
       case 1:
          this.d = var1.f();

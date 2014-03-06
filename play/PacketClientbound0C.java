@@ -13,22 +13,22 @@ public class PacketClientbound0C extends gs {
    private byte f;
    private byte g;
    private int h;
-   private tq i;
+   private un i;
    private List j;
 
 
    public PacketClientbound0C() {}
 
-   public PacketClientbound0C(aat var1) {
+   public PacketClientbound0C(abq var1) {
       this.a = var1.B();
       this.b = var1.bN();
-      this.c = qn.c(var1.s * 32.0D);
-      this.d = qn.c(var1.t * 32.0D);
-      this.e = qn.c(var1.u * 32.0D);
+      this.c = rk.c(var1.s * 32.0D);
+      this.d = rk.c(var1.t * 32.0D);
+      this.e = rk.c(var1.u * 32.0D);
       this.f = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.g = (byte)((int)(var1.z * 256.0F / 360.0F));
       ItemStack var2 = var1.bh.h();
-      this.h = var2 == null?0:aey.b(var2.b());
+      this.h = var2 == null?0:afv.b(var2.b());
       this.i = var1.D();
    }
 
@@ -50,7 +50,7 @@ public class PacketClientbound0C extends gs {
       this.f = var1.readByte();
       this.g = var1.readByte();
       this.h = var1.readShort();
-      this.j = tq.b(var1);
+      this.j = un.b(var1);
    }
 
    public void write(PacketBuffer var1) {

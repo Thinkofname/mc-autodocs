@@ -3,7 +3,7 @@ public class PacketServerbound15 extends gs {
 
    private String a;
    private int b;
-   private aaw c;
+   private abt c;
    private boolean d;
    private int e;
 
@@ -11,7 +11,7 @@ public class PacketServerbound15 extends gs {
    public void read(PacketBuffer var1) {
       this.a = var1.readString(7);
       this.b = var1.readByte();
-      this.c = aaw.a(var1.readByte());
+      this.c = abt.a(var1.readByte());
       this.d = var1.readBoolean();
       this.e = var1.readUnsignedByte();
    }
@@ -32,7 +32,7 @@ public class PacketServerbound15 extends gs {
       return this.a;
    }
 
-   public aaw e() {
+   public abt e() {
       return this.c;
    }
 

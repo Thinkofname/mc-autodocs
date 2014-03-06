@@ -26,11 +26,11 @@ public class PacketClientbound26 extends gs {
       this.c = new int[var2];
       this.d = new int[var2];
       this.f = new byte[var2][];
-      this.h = !var1.isEmpty() && !((aso)var1.get(0)).p().s.p();
+      this.h = !var1.isEmpty() && !((atl)var1.get(0)).p().s.p();
       int var3 = 0;
 
       for(int var4 = 0; var4 < var2; ++var4) {
-         aso var5 = (aso)var1.get(var4);
+         atl var5 = (atl)var1.get(var4);
          hz var6 = hy.a(var5, true, '\uffff');
          if(i.length < var3 + var6.a.length) {
             byte[] var7 = new byte[var3 + var6.a.length];

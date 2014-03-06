@@ -17,7 +17,7 @@ public class PacketClientbound35 extends gs {
    public void read(PacketBuffer var1) {
       this.a = var1.readPosition();
       this.b = var1.readUnsignedByte();
-      this.c = var1.d();
+      this.c = var1.e();
    }
 
    public void write(PacketBuffer var1) {

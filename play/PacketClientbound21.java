@@ -18,7 +18,7 @@ public class PacketClientbound21 extends gs {
 
    public PacketClientbound21() {}
 
-   public PacketClientbound21(aso var1, boolean var2, int var3) {
+   public PacketClientbound21(atl var1, boolean var2, int var3) {
       this.a = var1.a;
       this.b = var1.b;
       this.g = var2;
@@ -99,9 +99,9 @@ public class PacketClientbound21 extends gs {
       return String.format("x=%d, z=%d, full=%b, sects=%d, add=%d, size=%d", new Object[]{Integer.valueOf(this.a), Integer.valueOf(this.b), Boolean.valueOf(this.g), Integer.valueOf(this.c), Integer.valueOf(this.d), Integer.valueOf(this.h)});
    }
 
-   public static hz a(aso var0, boolean var1, int var2) {
+   public static hz a(atl var0, boolean var1, int var2) {
       int var3 = 0;
-      asr[] var4 = var0.h();
+      ato[] var4 = var0.h();
       int var5 = 0;
       hz var6 = new hz();
       byte[] var7 = i;
@@ -125,7 +125,7 @@ public class PacketClientbound21 extends gs {
          }
       }
 
-      asm var10;
+      atj var10;
       for(var8 = 0; var8 < var4.length; ++var8) {
          if(var4[var8] != null && (!var1 || !var4[var8].a()) && (var2 & 1 << var8) != 0) {
             var10 = var4[var8].j();

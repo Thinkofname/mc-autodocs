@@ -3,7 +3,7 @@ import com.google.gson.GsonBuilder;
 
 public class PacketClientbound00 extends gs {
 
-   private static final Gson a = (new GsonBuilder()).registerTypeAdapter(lj.class, new lk()).registerTypeAdapter(lg.class, new lh()).registerTypeAdapter(lf.class, new li()).registerTypeHierarchyAdapter(gh.class, new gi()).registerTypeHierarchyAdapter(gm.class, new go()).registerTypeAdapterFactory(new ql()).create();
+   private static final Gson a = (new GsonBuilder()).registerTypeAdapter(lj.class, new lk()).registerTypeAdapter(lg.class, new lh()).registerTypeAdapter(lf.class, new li()).registerTypeHierarchyAdapter(gh.class, new gi()).registerTypeHierarchyAdapter(gm.class, new go()).registerTypeAdapterFactory(new ri()).create();
    private lf b;
 
 

@@ -13,18 +13,18 @@ public class PacketClientbound0F extends gs {
    private byte i;
    private byte j;
    private byte k;
-   private tq l;
+   private un l;
    private List m;
 
 
    public PacketClientbound0F() {}
 
-   public PacketClientbound0F(th var1) {
+   public PacketClientbound0F(ue var1) {
       this.a = var1.B();
-      this.b = (byte)sq.a(var1);
-      this.c = qn.c(var1.s * 32.0D);
-      this.d = qn.c(var1.t * 32.0D);
-      this.e = qn.c(var1.u * 32.0D);
+      this.b = (byte)tn.a(var1);
+      this.c = rk.c(var1.s * 32.0D);
+      this.d = rk.c(var1.t * 32.0D);
+      this.e = rk.c(var1.u * 32.0D);
       this.i = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.j = (byte)((int)(var1.z * 256.0F / 360.0F));
       this.k = (byte)((int)(var1.aJ * 256.0F / 360.0F));
@@ -74,7 +74,7 @@ public class PacketClientbound0F extends gs {
       this.f = var1.readShort();
       this.g = var1.readShort();
       this.h = var1.readShort();
-      this.m = tq.b(var1);
+      this.m = un.b(var1);
    }
 
    public void write(PacketBuffer var1) {
