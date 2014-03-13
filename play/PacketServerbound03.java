@@ -1,5 +1,5 @@
 
-public class PacketServerbound03 extends gs {
+public class PacketServerbound03 extends gt {
 
    protected double a;
    protected double b;
@@ -11,7 +11,7 @@ public class PacketServerbound03 extends gs {
    protected boolean h;
 
 
-   public void a(jq var1) {
+   public void a(jr var1) {
       var1.a(this);
    }
 

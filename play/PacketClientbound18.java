@@ -1,5 +1,5 @@
 
-public class PacketClientbound18 extends gs {
+public class PacketClientbound18 extends gt {
 
    private int a;
    private int b;
@@ -11,11 +11,11 @@ public class PacketClientbound18 extends gs {
 
    public PacketClientbound18() {}
 
-   public PacketClientbound18(th var1) {
+   public PacketClientbound18(tj var1) {
       this.a = var1.B();
-      this.b = rk.c(var1.s * 32.0D);
-      this.c = rk.c(var1.t * 32.0D);
-      this.d = rk.c(var1.u * 32.0D);
+      this.b = rm.c(var1.s * 32.0D);
+      this.c = rm.c(var1.t * 32.0D);
+      this.d = rm.c(var1.u * 32.0D);
       this.e = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.f = (byte)((int)(var1.z * 256.0F / 360.0F));
    }
@@ -47,7 +47,7 @@ public class PacketClientbound18 extends gs {
       var1.writeByte(this.f);
    }
 
-   public void a(gv var1) {
+   public void a(gw var1) {
       var1.a(this);
    }
 }

@@ -1,6 +1,6 @@
 import org.apache.commons.lang3.Validate;
 
-public class PacketClientbound29 extends gs {
+public class PacketClientbound29 extends gt {
 
    private String a;
    private int b;
@@ -20,14 +20,7 @@ public class PacketClientbound29 extends gs {
       this.d = (int)(var6 * 8.0D);
       this.e = var8;
       this.f = (int)(var9 * 63.0F);
-      if(this.f < 0) {
-         this.f = 0;
-      }
-
-      if(this.f > 255) {
-         this.f = 255;
-      }
-
+      var9 = rm.a(var9, 0.0F, 255.0F);
    }
 
    public void read(PacketBuffer var1) {
@@ -48,7 +41,7 @@ public class PacketClientbound29 extends gs {
       var1.writeByte(this.f);
    }
 
-   public void a(gv var1) {
+   public void a(gw var1) {
       var1.a(this);
    }
 }

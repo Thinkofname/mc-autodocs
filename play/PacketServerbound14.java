@@ -1,6 +1,6 @@
 import org.apache.commons.lang3.StringUtils;
 
-public class PacketServerbound14 extends gs {
+public class PacketServerbound14 extends gt {
 
    private String a;
 
@@ -19,7 +19,7 @@ public class PacketServerbound14 extends gs {
       var1.writeString(StringUtils.substring(this.a, 0, 32767));
    }
 
-   public void a(jq var1) {
+   public void a(jr var1) {
       var1.a(this);
    }
 

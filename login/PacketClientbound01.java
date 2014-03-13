@@ -1,7 +1,7 @@
 import io.netty.buffer.ByteBuf;
 import java.security.PublicKey;
 
-public class PacketClientbound01 extends gs {
+public class PacketClientbound01 extends gt {
 
    private String a;
    private PublicKey b;
@@ -18,7 +18,7 @@ public class PacketClientbound01 extends gs {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readString(20);
-      this.b = qw.a(a((ByteBuf)var1));
+      this.b = qy.a(a((ByteBuf)var1));
       this.c = a((ByteBuf)var1);
    }
 
@@ -28,7 +28,7 @@ public class PacketClientbound01 extends gs {
       a(var1, this.c);
    }
 
-   public void a(kv var1) {
+   public void a(kw var1) {
       var1.a(this);
    }
 }

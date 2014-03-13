@@ -2,8 +2,9 @@ import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
 import java.util.Iterator;
 import java.util.List;
+import java.util.UUID;
 
-public class PacketClientbound0C extends gs {
+public class PacketClientbound0C extends gt {
 
    private int a;
    private GameProfile b;
@@ -13,35 +14,36 @@ public class PacketClientbound0C extends gs {
    private byte f;
    private byte g;
    private int h;
-   private un i;
+   private um i;
    private List j;
 
 
    public PacketClientbound0C() {}
 
-   public PacketClientbound0C(abq var1) {
+   public PacketClientbound0C(abv var1) {
       this.a = var1.B();
       this.b = var1.bN();
-      this.c = rk.c(var1.s * 32.0D);
-      this.d = rk.c(var1.t * 32.0D);
-      this.e = rk.c(var1.u * 32.0D);
+      this.c = rm.c(var1.s * 32.0D);
+      this.d = rm.c(var1.t * 32.0D);
+      this.e = rm.c(var1.u * 32.0D);
       this.f = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.g = (byte)((int)(var1.z * 256.0F / 360.0F));
       ItemStack var2 = var1.bh.h();
-      this.h = var2 == null?0:afv.b(var2.b());
+      this.h = var2 == null?0:aga.b(var2.b());
       this.i = var1.D();
    }
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.b = new GameProfile(var1.readString(36), var1.readString(16));
-      int var2 = var1.readVarInt();
+      UUID var2 = UUID.fromString(var1.readString(36));
+      this.b = new GameProfile(var2, var1.readString(16));
+      int var3 = var1.readVarInt();
 
-      for(int var3 = 0; var3 < var2; ++var3) {
-         String var4 = var1.readString(32767);
+      for(int var4 = 0; var4 < var3; ++var4) {
          String var5 = var1.readString(32767);
          String var6 = var1.readString(32767);
-         this.b.getProperties().put(var4, new Property(var4, var5, var6));
+         String var7 = var1.readString(32767);
+         this.b.getProperties().put(var5, new Property(var5, var6, var7));
       }
 
       this.c = var1.readInt();
@@ -50,21 +52,22 @@ public class PacketClientbound0C extends gs {
       this.f = var1.readByte();
       this.g = var1.readByte();
       this.h = var1.readShort();
-      this.j = un.b(var1);
+      this.j = um.b(var1);
    }
 
    public void write(PacketBuffer var1) {
       var1.writeVarInt(this.a);
-      var1.writeString(this.b.getId());
+      UUID var2 = this.b.getId();
+      var1.writeString(var2 == null?"":var2.toString());
       var1.writeString(this.b.getName());
       var1.writeVarInt(this.b.getProperties().size());
-      Iterator var2 = this.b.getProperties().values().iterator();
+      Iterator var3 = this.b.getProperties().values().iterator();
 
-      while(var2.hasNext()) {
-         Property var3 = (Property)var2.next();
-         var1.writeString(var3.getName());
-         var1.writeString(var3.getValue());
-         var1.writeString(var3.getSignature());
+      while(var3.hasNext()) {
+         Property var4 = (Property)var3.next();
+         var1.writeString(var4.getName());
+         var1.writeString(var4.getValue());
+         var1.writeString(var4.getSignature());
       }
 
       var1.writeInt(this.c);
@@ -76,7 +79,7 @@ public class PacketClientbound0C extends gs {
       this.i.a(var1);
    }
 
-   public void a(gv var1) {
+   public void a(gw var1) {
       var1.a(this);
    }
 

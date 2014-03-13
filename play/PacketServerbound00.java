@@ -1,10 +1,10 @@
 
-public class PacketServerbound00 extends gs {
+public class PacketServerbound00 extends gt {
 
    private int a;
 
 
-   public void a(jq var1) {
+   public void a(jr var1) {
       var1.a(this);
    }
 

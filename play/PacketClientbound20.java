@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
-public class PacketClientbound20 extends gs {
+public class PacketClientbound20 extends gt {
 
    private int a;
    private final List b = Lists.newArrayList();
@@ -18,8 +18,8 @@ public class PacketClientbound20 extends gs {
       Iterator var3 = var2.iterator();
 
       while(var3.hasNext()) {
-         ur var4 = (ur)var3.next();
-         this.b.add(new jo(this, var4.a().a(), var4.b(), var4.c()));
+         uq var4 = (uq)var3.next();
+         this.b.add(new jp(this, var4.a().a(), var4.b(), var4.c()));
       }
 
    }
@@ -36,10 +36,10 @@ public class PacketClientbound20 extends gs {
 
          for(int var9 = 0; var9 < var8; ++var9) {
             UUID var10 = var1.d();
-            var7.add(new us(var10, "Unknown synced attribute modifier", var1.readDouble(), var1.readByte()));
+            var7.add(new ur(var10, "Unknown synced attribute modifier", var1.readDouble(), var1.readByte()));
          }
 
-         this.b.add(new jo(this, var4, var5, var7));
+         this.b.add(new jp(this, var4, var5, var7));
       }
 
    }
@@ -50,14 +50,14 @@ public class PacketClientbound20 extends gs {
       Iterator var2 = this.b.iterator();
 
       while(var2.hasNext()) {
-         jo var3 = (jo)var2.next();
+         jp var3 = (jp)var2.next();
          var1.writeString(var3.a());
          var1.writeDouble(var3.b());
          var1.writeVarInt(var3.c().size());
          Iterator var4 = var3.c().iterator();
 
          while(var4.hasNext()) {
-            us var5 = (us)var4.next();
+            ur var5 = (ur)var4.next();
             var1.a(var5.a());
             var1.writeDouble(var5.d());
             var1.writeByte(var5.c());
@@ -66,7 +66,7 @@ public class PacketClientbound20 extends gs {
 
    }
 
-   public void a(gv var1) {
+   public void a(gw var1) {
       var1.a(this);
    }
 }

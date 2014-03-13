@@ -1,17 +1,17 @@
 
-public class PacketClientbound02 extends gs {
+public class PacketClientbound02 extends gt {
 
-   private gh a;
+   private gi a;
    private byte b;
 
 
    public PacketClientbound02() {}
 
-   public PacketClientbound02(gh var1) {
+   public PacketClientbound02(gi var1) {
       this(var1, (byte)1);
    }
 
-   public PacketClientbound02(gh var1, byte var2) {
+   public PacketClientbound02(gi var1, byte var2) {
       this.a = var1;
       this.b = var2;
    }
@@ -26,7 +26,7 @@ public class PacketClientbound02 extends gs {
       var1.writeByte(this.b);
    }
 
-   public void a(gv var1) {
+   public void a(gw var1) {
       var1.a(this);
    }
 

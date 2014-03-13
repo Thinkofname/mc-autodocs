@@ -1,28 +1,28 @@
 
-public class PacketServerbound16 extends gs {
+public class PacketServerbound16 extends gt {
 
-   private ju a;
+   private jv a;
 
 
    public PacketServerbound16() {}
 
-   public PacketServerbound16(ju var1) {
+   public PacketServerbound16(jv var1) {
       this.a = var1;
    }
 
    public void read(PacketBuffer var1) {
-      this.a = ju.a()[var1.readUnsignedByte() % ju.a().length];
+      this.a = jv.a()[var1.readUnsignedByte() % jv.a().length];
    }
 
    public void write(PacketBuffer var1) {
-      var1.writeByte(ju.a(this.a));
+      var1.writeByte(jv.a(this.a));
    }
 
-   public void a(jq var1) {
+   public void a(jr var1) {
       var1.a(this);
    }
 
-   public ju c() {
+   public jv c() {
       return this.a;
    }
 }

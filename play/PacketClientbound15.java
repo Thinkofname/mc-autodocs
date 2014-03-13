@@ -1,5 +1,5 @@
 
-public class PacketClientbound15 extends ih {
+public class PacketClientbound15 extends ii {
 
    public PacketClientbound15() {}
 
