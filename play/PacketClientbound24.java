@@ -1,17 +1,17 @@
 
-public class PacketClientbound24 extends fq {
+public class PacketClientbound24 extends fr {
 
    private int a;
    private int b;
    private int c;
    private int d;
    private int e;
-   private aif f;
+   private aje f;
 
 
    public PacketClientbound24() {}
 
-   public PacketClientbound24(int var1, int var2, int var3, aif var4, int var5, int var6) {
+   public PacketClientbound24(int var1, int var2, int var3, aje var4, int var5, int var6) {
       this.a = var1;
       this.b = var2;
       this.c = var3;
@@ -26,7 +26,7 @@ public class PacketClientbound24 extends fq {
       this.c = var1.readInt();
       this.d = var1.readUnsignedByte();
       this.e = var1.readUnsignedByte();
-      this.f = aif.e(var1.readVarInt() & 4095);
+      this.f = aje.e(var1.readVarInt() & 4095);
    }
 
    public void write(PacketBuffer var1) {
@@ -35,10 +35,10 @@ public class PacketClientbound24 extends fq {
       var1.writeInt(this.c);
       var1.writeByte(this.d);
       var1.writeByte(this.e);
-      var1.writeVarInt(aif.b(this.f) & 4095);
+      var1.writeVarInt(aje.b(this.f) & 4095);
    }
 
-   public void a(fs var1) {
+   public void a(ft var1) {
       var1.a(this);
    }
 }

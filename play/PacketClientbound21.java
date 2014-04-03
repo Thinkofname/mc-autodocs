@@ -3,7 +3,7 @@ import java.util.zip.DataFormatException;
 import java.util.zip.Deflater;
 import java.util.zip.Inflater;
 
-public class PacketClientbound21 extends fq {
+public class PacketClientbound21 extends fr {
 
    private int a;
    private int b;
@@ -18,11 +18,11 @@ public class PacketClientbound21 extends fq {
 
    public PacketClientbound21() {}
 
-   public PacketClientbound21(aou var1, boolean var2, int var3) {
+   public PacketClientbound21(apt var1, boolean var2, int var3) {
       this.a = var1.g;
       this.b = var1.h;
       this.g = var2;
-      gv var4 = a(var1, var2, var3);
+      gw var4 = a(var1, var2, var3);
       Deflater var5 = new Deflater(-1);
       this.d = var4.c;
       this.c = var4.b;
@@ -91,7 +91,7 @@ public class PacketClientbound21 extends fq {
       var1.writeBytes(this.e, 0, this.h);
    }
 
-   public void a(fs var1) {
+   public void a(ft var1) {
       var1.a(this);
    }
 
@@ -99,11 +99,11 @@ public class PacketClientbound21 extends fq {
       return String.format("x=%d, z=%d, full=%b, sects=%d, add=%d, size=%d", new Object[]{Integer.valueOf(this.a), Integer.valueOf(this.b), Boolean.valueOf(this.g), Integer.valueOf(this.c), Integer.valueOf(this.d), Integer.valueOf(this.h)});
    }
 
-   public static gv a(aou var0, boolean var1, int var2) {
+   public static gw a(apt var0, boolean var1, int var2) {
       int var3 = 0;
-      aow[] var4 = var0.i();
+      apv[] var4 = var0.i();
       int var5 = 0;
-      gv var6 = new gv();
+      gw var6 = new gw();
       byte[] var7 = i;
       if(var1) {
          var0.q = true;
@@ -128,7 +128,7 @@ public class PacketClientbound21 extends fq {
          }
       }
 
-      aos var10;
+      apr var10;
       for(var8 = 0; var8 < var4.length; ++var8) {
          if(var4[var8] != null && (!var1 || !var4[var8].a()) && (var2 & 1 << var8) != 0) {
             var10 = var4[var8].j();

@@ -1,5 +1,5 @@
 
-public class PacketClientbound2B extends fq {
+public class PacketClientbound2B extends fr {
 
    public static final String[] a = new String[]{"tile.bed.notValid", null, null, "gameMode.changed"};
    private int b;
@@ -23,7 +23,7 @@ public class PacketClientbound2B extends fq {
       var1.writeFloat(this.c);
    }
 
-   public void a(fs var1) {
+   public void a(ft var1) {
       var1.a(this);
    }
 

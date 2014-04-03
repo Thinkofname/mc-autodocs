@@ -1,6 +1,6 @@
 import io.netty.buffer.ByteBuf;
 
-public class PacketClientbound3F extends fq {
+public class PacketClientbound3F extends fr {
 
    private String a;
    private byte[] b;
@@ -32,7 +32,7 @@ public class PacketClientbound3F extends fq {
       var1.writeBytes(this.b);
    }
 
-   public void a(fs var1) {
+   public void a(ft var1) {
       var1.a(this);
    }
 }

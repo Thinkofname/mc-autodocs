@@ -1,5 +1,5 @@
 
-public class PacketClientbound10 extends fq {
+public class PacketClientbound10 extends fr {
 
    private int a;
    private int b;
@@ -11,7 +11,7 @@ public class PacketClientbound10 extends fq {
 
    public PacketClientbound10() {}
 
-   public PacketClientbound10(ry var1) {
+   public PacketClientbound10(sx var1) {
       this.a = var1.x();
       this.b = var1.b;
       this.c = var1.c;
@@ -22,7 +22,7 @@ public class PacketClientbound10 extends fq {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.f = var1.readString(rz.A);
+      this.f = var1.readString(sy.A);
       this.b = var1.readInt();
       this.c = var1.readInt();
       this.d = var1.readInt();
@@ -38,7 +38,7 @@ public class PacketClientbound10 extends fq {
       var1.writeInt(this.e);
    }
 
-   public void a(fs var1) {
+   public void a(ft var1) {
       var1.a(this);
    }
 

@@ -1,18 +1,18 @@
 
-public class PacketClientbound01 extends fq {
+public class PacketClientbound01 extends fr {
 
    private int a;
    private boolean b;
-   private agh c;
+   private ahg c;
    private int d;
-   private qa e;
+   private qz e;
    private int f;
-   private agj g;
+   private ahi g;
 
 
    public PacketClientbound01() {}
 
-   public PacketClientbound01(int var1, agh var2, boolean var3, int var4, qa var5, int var6, agj var7) {
+   public PacketClientbound01(int var1, ahg var2, boolean var3, int var4, qz var5, int var6, ahi var7) {
       this.a = var1;
       this.d = var4;
       this.e = var5;
@@ -27,13 +27,13 @@ public class PacketClientbound01 extends fq {
       short var2 = var1.readUnsignedByte();
       this.b = (var2 & 8) == 8;
       int var3 = var2 & -9;
-      this.c = agh.a(var3);
+      this.c = ahg.a(var3);
       this.d = var1.readByte();
-      this.e = qa.a(var1.readUnsignedByte());
+      this.e = qz.a(var1.readUnsignedByte());
       this.f = var1.readUnsignedByte();
-      this.g = agj.a(var1.readString(16));
+      this.g = ahi.a(var1.readString(16));
       if(this.g == null) {
-         this.g = agj.b;
+         this.g = ahi.b;
       }
 
    }
@@ -52,7 +52,7 @@ public class PacketClientbound01 extends fq {
       var1.writeString(this.g.a());
    }
 
-   public void a(fs var1) {
+   public void a(ft var1) {
       var1.a(this);
    }
 

@@ -1,5 +1,5 @@
 
-public class PacketServerbound07 extends fq {
+public class PacketServerbound07 extends fr {
 
    private int a;
    private int b;
@@ -24,7 +24,7 @@ public class PacketServerbound07 extends fq {
       var1.writeByte(this.d);
    }
 
-   public void a(il var1) {
+   public void a(im var1) {
       var1.a(this);
    }
 

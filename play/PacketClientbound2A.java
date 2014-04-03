@@ -1,5 +1,5 @@
 
-public class PacketClientbound2A extends fq {
+public class PacketClientbound2A extends fr {
 
    private String a;
    private float b;
@@ -50,7 +50,7 @@ public class PacketClientbound2A extends fq {
       var1.writeInt(this.i);
    }
 
-   public void a(fs var1) {
+   public void a(ft var1) {
       var1.a(this);
    }
 }

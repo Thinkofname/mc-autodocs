@@ -1,5 +1,5 @@
 
-public class PacketClientbound33 extends fq {
+public class PacketClientbound33 extends fr {
 
    private int a;
    private int b;
@@ -39,7 +39,7 @@ public class PacketClientbound33 extends fq {
 
    }
 
-   public void a(fs var1) {
+   public void a(ft var1) {
       var1.a(this);
    }
 }

@@ -1,5 +1,5 @@
 
-public class PacketClientbound0E extends fq {
+public class PacketClientbound0E extends fr {
 
    private int a;
    private int b;
@@ -16,17 +16,17 @@ public class PacketClientbound0E extends fq {
 
    public PacketClientbound0E() {}
 
-   public PacketClientbound0E(qx var1, int var2) {
+   public PacketClientbound0E(rw var1, int var2) {
       this(var1, var2, 0);
    }
 
-   public PacketClientbound0E(qx var1, int var2, int var3) {
+   public PacketClientbound0E(rw var1, int var2, int var3) {
       this.a = var1.x();
-      this.b = pe.c(var1.s * 32.0D);
-      this.c = pe.c(var1.t * 32.0D);
-      this.d = pe.c(var1.u * 32.0D);
-      this.h = pe.d(var1.z * 256.0F / 360.0F);
-      this.i = pe.d(var1.y * 256.0F / 360.0F);
+      this.b = qd.c(var1.s * 32.0D);
+      this.c = qd.c(var1.t * 32.0D);
+      this.d = qd.c(var1.u * 32.0D);
+      this.h = qd.d(var1.z * 256.0F / 360.0F);
+      this.i = qd.d(var1.y * 256.0F / 360.0F);
       this.j = var2;
       this.k = var3;
       if(var3 > 0) {
@@ -99,7 +99,7 @@ public class PacketClientbound0E extends fq {
 
    }
 
-   public void a(fs var1) {
+   public void a(ft var1) {
       var1.a(this);
    }
 

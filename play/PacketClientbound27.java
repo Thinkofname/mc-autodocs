@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class PacketClientbound27 extends fq {
+public class PacketClientbound27 extends fr {
 
    private double a;
    private double b;
@@ -16,7 +16,7 @@ public class PacketClientbound27 extends fq {
 
    public PacketClientbound27() {}
 
-   public PacketClientbound27(double var1, double var3, double var5, float var7, List var8, ayt var9) {
+   public PacketClientbound27(double var1, double var3, double var5, float var7, List var8, azs var9) {
       this.a = var1;
       this.b = var3;
       this.c = var5;
@@ -45,7 +45,7 @@ public class PacketClientbound27 extends fq {
          int var7 = var1.readByte() + var3;
          int var8 = var1.readByte() + var4;
          int var9 = var1.readByte() + var5;
-         this.e.add(new afq(var7, var8, var9));
+         this.e.add(new agp(var7, var8, var9));
       }
 
       this.f = var1.readFloat();
@@ -65,7 +65,7 @@ public class PacketClientbound27 extends fq {
       Iterator var5 = this.e.iterator();
 
       while(var5.hasNext()) {
-         afq var6 = (afq)var5.next();
+         agp var6 = (agp)var5.next();
          int var7 = var6.a - var2;
          int var8 = var6.b - var3;
          int var9 = var6.c - var4;
@@ -79,7 +79,7 @@ public class PacketClientbound27 extends fq {
       var1.writeFloat(this.h);
    }
 
-   public void a(fs var1) {
+   public void a(ft var1) {
       var1.a(this);
    }
 }

@@ -1,5 +1,5 @@
 
-public class PacketClientbound39 extends fq {
+public class PacketClientbound39 extends fr {
 
    private boolean a;
    private boolean b;
@@ -11,7 +11,7 @@ public class PacketClientbound39 extends fq {
 
    public PacketClientbound39() {}
 
-   public PacketClientbound39(xt var1) {
+   public PacketClientbound39(ys var1) {
       this.a(var1.a);
       this.b(var1.b);
       this.c(var1.c);
@@ -53,7 +53,7 @@ public class PacketClientbound39 extends fq {
       var1.writeFloat(this.f);
    }
 
-   public void a(fs var1) {
+   public void a(ft var1) {
       var1.a(this);
    }
 

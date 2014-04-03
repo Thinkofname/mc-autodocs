@@ -1,17 +1,17 @@
 
-public class PacketServerbound00 extends fq {
+public class PacketServerbound00 extends fr {
 
    private int a;
    private String b;
    private int c;
-   private el d;
+   private em d;
 
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
       this.b = var1.readString(255);
       this.c = var1.readUnsignedShort();
-      this.d = el.a(var1.readVarInt());
+      this.d = em.a(var1.readVarInt());
    }
 
    public void write(PacketBuffer var1) {
@@ -21,7 +21,7 @@ public class PacketServerbound00 extends fq {
       var1.writeVarInt(this.d.c());
    }
 
-   public void a(jn var1) {
+   public void a(jo var1) {
       var1.a(this);
    }
 
@@ -29,7 +29,7 @@ public class PacketServerbound00 extends fq {
       return true;
    }
 
-   public el c() {
+   public em c() {
       return this.d;
    }
 

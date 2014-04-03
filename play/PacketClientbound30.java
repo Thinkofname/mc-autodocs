@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class PacketClientbound30 extends fq {
+public class PacketClientbound30 extends fr {
 
    private int a;
    private ItemStack[] b;
@@ -43,7 +43,7 @@ public class PacketClientbound30 extends fq {
 
    }
 
-   public void a(fs var1) {
+   public void a(ft var1) {
       var1.a(this);
    }
 }

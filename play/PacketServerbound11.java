@@ -1,11 +1,11 @@
 
-public class PacketServerbound11 extends fq {
+public class PacketServerbound11 extends fr {
 
    private int a;
    private int b;
 
 
-   public void a(il var1) {
+   public void a(im var1) {
       var1.a(this);
    }
 

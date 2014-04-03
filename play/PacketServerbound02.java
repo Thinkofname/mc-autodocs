@@ -1,29 +1,29 @@
 
-public class PacketServerbound02 extends fq {
+public class PacketServerbound02 extends fr {
 
    private int a;
-   private iy b;
+   private iz b;
 
 
    public void read(PacketBuffer var1) {
       this.a = var1.readInt();
-      this.b = iy.a()[var1.readByte() % iy.a().length];
+      this.b = iz.a()[var1.readByte() % iz.a().length];
    }
 
    public void write(PacketBuffer var1) {
       var1.writeInt(this.a);
-      var1.writeByte(iy.a(this.b));
+      var1.writeByte(iz.a(this.b));
    }
 
-   public void a(il var1) {
+   public void a(im var1) {
       var1.a(this);
    }
 
-   public qx a(afy var1) {
+   public rw a(agx var1) {
       return var1.a(this.a);
    }
 
-   public iy c() {
+   public iz c() {
       return this.b;
    }
 }

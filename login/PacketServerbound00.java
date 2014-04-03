@@ -1,6 +1,7 @@
 import com.mojang.authlib.GameProfile;
+import java.util.UUID;
 
-public class PacketServerbound00 extends fq {
+public class PacketServerbound00 extends fr {
 
    private GameProfile a;
 
@@ -12,14 +13,14 @@ public class PacketServerbound00 extends fq {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = new GameProfile((String)null, var1.readString(16));
+      this.a = new GameProfile((UUID)null, var1.readString(16));
    }
 
    public void write(PacketBuffer var1) {
       var1.writeString(this.a.getName());
    }
 
-   public void a(js var1) {
+   public void a(jt var1) {
       var1.a(this);
    }
 

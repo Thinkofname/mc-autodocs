@@ -1,5 +1,5 @@
 
-public class PacketServerbound03 extends fq {
+public class PacketServerbound03 extends fr {
 
    protected double a;
    protected double b;
@@ -12,7 +12,7 @@ public class PacketServerbound03 extends fq {
    protected boolean i;
 
 
-   public void a(il var1) {
+   public void a(im var1) {
       var1.a(this);
    }
 

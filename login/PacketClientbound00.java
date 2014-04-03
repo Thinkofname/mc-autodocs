@@ -1,24 +1,24 @@
 
-public class PacketClientbound00 extends fq {
+public class PacketClientbound00 extends fr {
 
-   private fg a;
+   private fh a;
 
 
    public PacketClientbound00() {}
 
-   public PacketClientbound00(fg var1) {
+   public PacketClientbound00(fh var1) {
       this.a = var1;
    }
 
    public void read(PacketBuffer var1) {
-      this.a = fh.a(var1.readString(32767));
+      this.a = fi.a(var1.readString(32767));
    }
 
    public void write(PacketBuffer var1) {
-      var1.writeString(fh.a(this.a));
+      var1.writeString(fi.a(this.a));
    }
 
-   public void a(jo var1) {
+   public void a(jp var1) {
       var1.a(this);
    }
 
