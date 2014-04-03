@@ -1,18 +1,50 @@
-class PacketServerbound07 {
-    public void read(Buffer buffer)
-    {
-        e = buffer.readUnsignedByte();
-        a = buffer.readInt();
-        b = buffer.readUnsignedByte();
-        c = buffer.readInt();
-        d = buffer.readUnsignedByte();
-    }
-    public void write(Buffer buffer)
-    {
-        buffer.writeByte(e);
-        buffer.writeInt(a);
-        buffer.writeByte(b);
-        buffer.writeInt(c);
-        buffer.writeByte(d);
-    }
+
+public class PacketServerbound07 extends fq {
+
+   private int a;
+   private int b;
+   private int c;
+   private int d;
+   private int e;
+
+
+   public void read(PacketBuffer var1) {
+      this.e = var1.readUnsignedByte();
+      this.a = var1.readInt();
+      this.b = var1.readUnsignedByte();
+      this.c = var1.readInt();
+      this.d = var1.readUnsignedByte();
+   }
+
+   public void write(PacketBuffer var1) {
+      var1.writeByte(this.e);
+      var1.writeInt(this.a);
+      var1.writeByte(this.b);
+      var1.writeInt(this.c);
+      var1.writeByte(this.d);
+   }
+
+   public void a(il var1) {
+      var1.a(this);
+   }
+
+   public int c() {
+      return this.a;
+   }
+
+   public int d() {
+      return this.b;
+   }
+
+   public int e() {
+      return this.c;
+   }
+
+   public int f() {
+      return this.d;
+   }
+
+   public int g() {
+      return this.e;
+   }
 }

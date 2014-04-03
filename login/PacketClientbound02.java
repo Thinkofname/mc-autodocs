@@ -1,13 +1,32 @@
-class PacketClientbound02 {
-    public void read(Buffer buffer)
-    {
-        String s = buffer.readString(36);
-        String s1 = buffer.readString(16);
-        a = new GameProfile(s, s1);
-    }
-    public void write(Buffer buffer)
-    {
-        buffer.writeString(a.getId());
-        buffer.writeString(a.getName());
-    }
+import com.mojang.authlib.GameProfile;
+
+public class PacketClientbound02 extends fq {
+
+   private GameProfile a;
+
+
+   public PacketClientbound02() {}
+
+   public PacketClientbound02(GameProfile var1) {
+      this.a = var1;
+   }
+
+   public void read(PacketBuffer var1) {
+      String var2 = var1.readString(36);
+      String var3 = var1.readString(16);
+      this.a = new GameProfile(var2, var3);
+   }
+
+   public void write(PacketBuffer var1) {
+      var1.writeString(this.a.getId());
+      var1.writeString(this.a.getName());
+   }
+
+   public void a(jo var1) {
+      var1.a(this);
+   }
+
+   public boolean a() {
+      return true;
+   }
 }

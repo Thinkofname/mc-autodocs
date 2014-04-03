@@ -1,18 +1,40 @@
-class PacketClientbound07 {
-    public void read(Buffer buffer)
-    {
-        a = buffer.readInt();
-        b = pu.a(buffer.readUnsignedByte());
-        c = agb.a(buffer.readUnsignedByte());
-        d = agd.a(buffer.readString(16));
-        if(d == null)
-            d = agd.b;
-    }
-    public void write(Buffer buffer)
-    {
-        buffer.writeInt(a);
-        buffer.writeByte(b.a());
-        buffer.writeByte(c.a());
-        buffer.writeString(d.a());
-    }
+
+public class PacketClientbound07 extends fq {
+
+   private int a;
+   private qa b;
+   private agh c;
+   private agj d;
+
+
+   public PacketClientbound07() {}
+
+   public PacketClientbound07(int var1, qa var2, agj var3, agh var4) {
+      this.a = var1;
+      this.b = var2;
+      this.c = var4;
+      this.d = var3;
+   }
+
+   public void a(fs var1) {
+      var1.a(this);
+   }
+
+   public void read(PacketBuffer var1) {
+      this.a = var1.readInt();
+      this.b = qa.a(var1.readUnsignedByte());
+      this.c = agh.a(var1.readUnsignedByte());
+      this.d = agj.a(var1.readString(16));
+      if(this.d == null) {
+         this.d = agj.b;
+      }
+
+   }
+
+   public void write(PacketBuffer var1) {
+      var1.writeInt(this.a);
+      var1.writeByte(this.b.a());
+      var1.writeByte(this.c.a());
+      var1.writeString(this.d.a());
+   }
 }

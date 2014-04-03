@@ -1,76 +1,155 @@
-class PacketClientbound26 {
-    public void read(Buffer buffer)
-    {
-        short word0;
-        byte abyte0[];
-        Inflater inflater;
-        word0 = buffer.readShort();
-        g = buffer.readInt();
-        h = buffer.readBoolean();
-        a = new int[word0];
-        b = new int[word0];
-        c = new int[word0];
-        d = new int[word0];
-        f = new byte[word0][];
-        if(i.length < g)
-            i = new byte[g];
-        buffer.readBytes(i, 0, g);
-        abyte0 = new byte[go.c() * word0];
-        inflater = new Inflater();
-        inflater.setInput(i, 0, g);
-        try
-        {
-            inflater.inflate(abyte0);
-        }
-        catch(DataFormatException dataformatexception)
-        {
-            throw new IOException("Bad compressed data format");
-        }
-        inflater.end();
-        break MISSING_BLOCK_LABEL_157;
-        Exception exception;
-        exception;
-        inflater.end();
-        throw exception;
-        int j = 0;
-        for(int k = 0; k < word0; k++)
-        {
-            a[k] = buffer.readInt();
-            b[k] = buffer.readInt();
-            c[k] = buffer.readShort();
-            d[k] = buffer.readShort();
-            int l = 0;
-            int i1 = 0;
-            for(int j1 = 0; j1 < 16; j1++)
-            {
-                l += c[k] >> j1 & 1;
-                i1 += d[k] >> j1 & 1;
-            }
+import java.io.IOException;
+import java.util.List;
+import java.util.zip.DataFormatException;
+import java.util.zip.Deflater;
+import java.util.zip.Inflater;
 
-            int k1 = 2048 * (4 * l) + 256;
-            k1 += 2048 * i1;
-            if(h)
-                k1 += 2048 * l;
-            f[k] = new byte[k1];
-            System.arraycopy(abyte0, j, f[k], 0, k1);
-            j += k1;
-        }
+public class PacketClientbound26 extends fq {
 
-        return;
-    }
-    public void write(Buffer buffer)
-    {
-        buffer.writeShort(a.length);
-        buffer.writeInt(g);
-        buffer.writeBoolean(h);
-        buffer.writeBytes(e, 0, g);
-        for(int j = 0; j < a.length; j++)
-        {
-            buffer.writeInt(a[j]);
-            buffer.writeInt(b[j]);
-            buffer.writeShort((short)(c[j] & 0xffff));
-            buffer.writeShort((short)(d[j] & 0xffff));
-        }
+   private int[] a;
+   private int[] b;
+   private int[] c;
+   private int[] d;
+   private byte[] e;
+   private byte[][] f;
+   private int g;
+   private boolean h;
+   private static byte[] i = new byte[0];
 
-    }
+
+   public PacketClientbound26() {}
+
+   public PacketClientbound26(List var1) {
+      int var2 = var1.size();
+      this.a = new int[var2];
+      this.b = new int[var2];
+      this.c = new int[var2];
+      this.d = new int[var2];
+      this.f = new byte[var2][];
+      this.h = !var1.isEmpty() && !((aou)var1.get(0)).e.t.g;
+      int var3 = 0;
+
+      for(int var4 = 0; var4 < var2; ++var4) {
+         aou var5 = (aou)var1.get(var4);
+         gv var6 = gu.a(var5, true, '\uffff');
+         if(i.length < var3 + var6.a.length) {
+            byte[] var7 = new byte[var3 + var6.a.length];
+            System.arraycopy(i, 0, var7, 0, i.length);
+            i = var7;
+         }
+
+         System.arraycopy(var6.a, 0, i, var3, var6.a.length);
+         var3 += var6.a.length;
+         this.a[var4] = var5.g;
+         this.b[var4] = var5.h;
+         this.c[var4] = var6.b;
+         this.d[var4] = var6.c;
+         this.f[var4] = var6.a;
+      }
+
+      Deflater var11 = new Deflater(-1);
+
+      try {
+         var11.setInput(i, 0, var3);
+         var11.finish();
+         this.e = new byte[var3];
+         this.g = var11.deflate(this.e);
+      } finally {
+         var11.end();
+      }
+
+   }
+
+   public static int c() {
+      return 5;
+   }
+
+   public void read(PacketBuffer var1) {
+      short var2 = var1.readShort();
+      this.g = var1.readInt();
+      this.h = var1.readBoolean();
+      this.a = new int[var2];
+      this.b = new int[var2];
+      this.c = new int[var2];
+      this.d = new int[var2];
+      this.f = new byte[var2][];
+      if(i.length < this.g) {
+         i = new byte[this.g];
+      }
+
+      var1.readBytes(i, 0, this.g);
+      byte[] var3 = new byte[gu.c() * var2];
+      Inflater var4 = new Inflater();
+      var4.setInput(i, 0, this.g);
+
+      try {
+         var4.inflate(var3);
+      } catch (DataFormatException var12) {
+         throw new IOException("Bad compressed data format");
+      } finally {
+         var4.end();
+      }
+
+      int var5 = 0;
+
+      for(int var6 = 0; var6 < var2; ++var6) {
+         this.a[var6] = var1.readInt();
+         this.b[var6] = var1.readInt();
+         this.c[var6] = var1.readShort();
+         this.d[var6] = var1.readShort();
+         int var7 = 0;
+         int var8 = 0;
+
+         int var9;
+         for(var9 = 0; var9 < 16; ++var9) {
+            var7 += this.c[var6] >> var9 & 1;
+            var8 += this.d[var6] >> var9 & 1;
+         }
+
+         var9 = 2048 * 4 * var7 + 256;
+         var9 += 2048 * var8;
+         if(this.h) {
+            var9 += 2048 * var7;
+         }
+
+         this.f[var6] = new byte[var9];
+         System.arraycopy(var3, var5, this.f[var6], 0, var9);
+         var5 += var9;
+      }
+
+   }
+
+   public void write(PacketBuffer var1) {
+      var1.writeShort(this.a.length);
+      var1.writeInt(this.g);
+      var1.writeBoolean(this.h);
+      var1.writeBytes(this.e, 0, this.g);
+
+      for(int var2 = 0; var2 < this.a.length; ++var2) {
+         var1.writeInt(this.a[var2]);
+         var1.writeInt(this.b[var2]);
+         var1.writeShort((short)(this.c[var2] & '\uffff'));
+         var1.writeShort((short)(this.d[var2] & '\uffff'));
+      }
+
+   }
+
+   public void a(fs var1) {
+      var1.a(this);
+   }
+
+   public String b() {
+      StringBuilder var1 = new StringBuilder();
+
+      for(int var2 = 0; var2 < this.a.length; ++var2) {
+         if(var2 > 0) {
+            var1.append(", ");
+         }
+
+         var1.append(String.format("{x=%d, z=%d, sections=%d, adds=%d, data=%d}", new Object[]{Integer.valueOf(this.a[var2]), Integer.valueOf(this.b[var2]), Integer.valueOf(this.c[var2]), Integer.valueOf(this.d[var2]), Integer.valueOf(this.f[var2].length)}));
+      }
+
+      return String.format("size=%d, chunks=%d[%s]", new Object[]{Integer.valueOf(this.g), Integer.valueOf(this.a.length), var1});
+   }
+
 }

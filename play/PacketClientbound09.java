@@ -1,10 +1,24 @@
-class PacketClientbound09 {
-    public void read(Buffer buffer)
-    {
-        a = buffer.readByte();
-    }
-    public void write(Buffer buffer)
-    {
-        buffer.writeByte(a);
-    }
+
+public class PacketClientbound09 extends fq {
+
+   private int a;
+
+
+   public PacketClientbound09() {}
+
+   public PacketClientbound09(int var1) {
+      this.a = var1;
+   }
+
+   public void read(PacketBuffer var1) {
+      this.a = var1.readByte();
+   }
+
+   public void write(PacketBuffer var1) {
+      var1.writeByte(this.a);
+   }
+
+   public void a(fs var1) {
+      var1.a(this);
+   }
 }

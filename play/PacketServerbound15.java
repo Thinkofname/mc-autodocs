@@ -1,20 +1,61 @@
-class PacketServerbound15 {
-    public void read(Buffer buffer)
-    {
-        a = buffer.readString(7);
-        b = buffer.readByte();
-        c = xs.a(buffer.readByte());
-        d = buffer.readBoolean();
-        e = pu.a(buffer.readByte());
-        f = buffer.readBoolean();
-    }
-    public void write(Buffer buffer)
-    {
-        buffer.writeString(a);
-        buffer.writeByte(b);
-        buffer.writeByte(c.a());
-        buffer.writeBoolean(d);
-        buffer.writeByte(e.a());
-        buffer.writeBoolean(f);
-    }
+
+public class PacketServerbound15 extends fq {
+
+   private String a;
+   private int b;
+   private xy c;
+   private boolean d;
+   private qa e;
+   private boolean f;
+
+
+   public void read(PacketBuffer var1) {
+      this.a = var1.readString(7);
+      this.b = var1.readByte();
+      this.c = xy.a(var1.readByte());
+      this.d = var1.readBoolean();
+      this.e = qa.a(var1.readByte());
+      this.f = var1.readBoolean();
+   }
+
+   public void write(PacketBuffer var1) {
+      var1.writeString(this.a);
+      var1.writeByte(this.b);
+      var1.writeByte(this.c.a());
+      var1.writeBoolean(this.d);
+      var1.writeByte(this.e.a());
+      var1.writeBoolean(this.f);
+   }
+
+   public void a(il var1) {
+      var1.a(this);
+   }
+
+   public String c() {
+      return this.a;
+   }
+
+   public int d() {
+      return this.b;
+   }
+
+   public xy e() {
+      return this.c;
+   }
+
+   public boolean f() {
+      return this.d;
+   }
+
+   public qa g() {
+      return this.e;
+   }
+
+   public boolean h() {
+      return this.f;
+   }
+
+   public String b() {
+      return String.format("lang=\'%s\', view=%d, chat=%s, col=%b, difficulty=%s, cape=%b", new Object[]{this.a, Integer.valueOf(this.b), this.c, Boolean.valueOf(this.d), this.e, Boolean.valueOf(this.f)});
+   }
 }

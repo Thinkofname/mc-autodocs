@@ -1,20 +1,44 @@
-class PacketClientbound28 {
-    public void read(Buffer buffer)
-    {
-        a = buffer.readInt();
-        c = buffer.readInt();
-        d = buffer.readByte() & 0xff;
-        e = buffer.readInt();
-        b = buffer.readInt();
-        f = buffer.readBoolean();
-    }
-    public void write(Buffer buffer)
-    {
-        buffer.writeInt(a);
-        buffer.writeInt(c);
-        buffer.writeByte(d & 0xff);
-        buffer.writeInt(e);
-        buffer.writeInt(b);
-        buffer.writeBoolean(f);
-    }
+
+public class PacketClientbound28 extends fq {
+
+   private int a;
+   private int b;
+   private int c;
+   private int d;
+   private int e;
+   private boolean f;
+
+
+   public PacketClientbound28() {}
+
+   public PacketClientbound28(int var1, int var2, int var3, int var4, int var5, boolean var6) {
+      this.a = var1;
+      this.c = var2;
+      this.d = var3;
+      this.e = var4;
+      this.b = var5;
+      this.f = var6;
+   }
+
+   public void read(PacketBuffer var1) {
+      this.a = var1.readInt();
+      this.c = var1.readInt();
+      this.d = var1.readByte() & 255;
+      this.e = var1.readInt();
+      this.b = var1.readInt();
+      this.f = var1.readBoolean();
+   }
+
+   public void write(PacketBuffer var1) {
+      var1.writeInt(this.a);
+      var1.writeInt(this.c);
+      var1.writeByte(this.d & 255);
+      var1.writeInt(this.e);
+      var1.writeInt(this.b);
+      var1.writeBoolean(this.f);
+   }
+
+   public void a(fs var1) {
+      var1.a(this);
+   }
 }
