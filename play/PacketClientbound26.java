@@ -26,11 +26,11 @@ public class PacketClientbound26 extends fr {
       this.c = new int[var2];
       this.d = new int[var2];
       this.f = new byte[var2][];
-      this.h = !var1.isEmpty() && !((apt)var1.get(0)).e.t.g;
+      this.h = !var1.isEmpty() && !((apu)var1.get(0)).e.t.g;
       int var3 = 0;
 
       for(int var4 = 0; var4 < var2; ++var4) {
-         apt var5 = (apt)var1.get(var4);
+         apu var5 = (apu)var1.get(var4);
          gw var6 = gv.a(var5, true, '\uffff');
          if(i.length < var3 + var6.a.length) {
             byte[] var7 = new byte[var3 + var6.a.length];

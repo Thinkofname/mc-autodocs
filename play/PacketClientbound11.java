@@ -10,11 +10,11 @@ public class PacketClientbound11 extends fr {
 
    public PacketClientbound11() {}
 
-   public PacketClientbound11(sm var1) {
+   public PacketClientbound11(sn var1) {
       this.a = var1.x();
-      this.b = qd.c(var1.s * 32.0D);
-      this.c = qd.c(var1.t * 32.0D);
-      this.d = qd.c(var1.u * 32.0D);
+      this.b = qe.c(var1.s * 32.0D);
+      this.c = qe.c(var1.t * 32.0D);
+      this.d = qe.c(var1.u * 32.0D);
       this.e = var1.e();
    }
 

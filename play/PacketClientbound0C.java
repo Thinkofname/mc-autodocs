@@ -14,22 +14,22 @@ public class PacketClientbound0C extends fr {
    private byte f;
    private byte g;
    private int h;
-   private ta i;
+   private tb i;
    private List j;
 
 
    public PacketClientbound0C() {}
 
-   public PacketClientbound0C(yv var1) {
+   public PacketClientbound0C(yw var1) {
       this.a = var1.x();
       this.b = var1.bI();
-      this.c = qd.c(var1.s * 32.0D);
-      this.d = qd.c(var1.t * 32.0D);
-      this.e = qd.c(var1.u * 32.0D);
+      this.c = qe.c(var1.s * 32.0D);
+      this.d = qe.c(var1.t * 32.0D);
+      this.e = qe.c(var1.u * 32.0D);
       this.f = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.g = (byte)((int)(var1.z * 256.0F / 360.0F));
       ItemStack var2 = var1.bm.h();
-      this.h = var2 == null?0:acx.b(var2.b());
+      this.h = var2 == null?0:acy.b(var2.b());
       this.i = var1.y();
    }
 
@@ -52,7 +52,7 @@ public class PacketClientbound0C extends fr {
       this.f = var1.readByte();
       this.g = var1.readByte();
       this.h = var1.readShort();
-      this.j = ta.b(var1);
+      this.j = tb.b(var1);
    }
 
    public void write(PacketBuffer var1) {

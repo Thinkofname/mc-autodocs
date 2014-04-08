@@ -17,7 +17,7 @@ public class PacketClientbound20 extends fr {
       Iterator var3 = var2.iterator();
 
       while(var3.hasNext()) {
-         te var4 = (te)var3.next();
+         tf var4 = (tf)var3.next();
          this.b.add(new ik(this, var4.a().a(), var4.b(), var4.c()));
       }
 
@@ -35,7 +35,7 @@ public class PacketClientbound20 extends fr {
 
          for(int var9 = 0; var9 < var8; ++var9) {
             UUID var10 = new UUID(var1.readLong(), var1.readLong());
-            var7.add(new tf(var10, "Unknown synced attribute modifier", var1.readDouble(), var1.readByte()));
+            var7.add(new tg(var10, "Unknown synced attribute modifier", var1.readDouble(), var1.readByte()));
          }
 
          this.b.add(new ik(this, var4, var5, var7));
@@ -56,7 +56,7 @@ public class PacketClientbound20 extends fr {
          Iterator var4 = var3.c().iterator();
 
          while(var4.hasNext()) {
-            tf var5 = (tf)var4.next();
+            tg var5 = (tg)var4.next();
             var1.writeLong(var5.a().getMostSignificantBits());
             var1.writeLong(var5.a().getLeastSignificantBits());
             var1.writeDouble(var5.d());

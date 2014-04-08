@@ -9,7 +9,7 @@ public class PacketClientbound12 extends fr {
 
    public PacketClientbound12() {}
 
-   public PacketClientbound12(rw var1) {
+   public PacketClientbound12(rx var1) {
       this(var1.x(), var1.v, var1.w, var1.x);
    }
 

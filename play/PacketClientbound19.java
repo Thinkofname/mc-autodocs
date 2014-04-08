@@ -7,7 +7,7 @@ public class PacketClientbound19 extends fr {
 
    public PacketClientbound19() {}
 
-   public PacketClientbound19(rw var1, byte var2) {
+   public PacketClientbound19(rx var1, byte var2) {
       this.a = var1.x();
       this.b = var2;
    }

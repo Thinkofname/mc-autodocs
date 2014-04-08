@@ -11,7 +11,7 @@ public class PacketServerbound13 extends fr {
 
    public PacketServerbound13() {}
 
-   public PacketServerbound13(ys var1) {
+   public PacketServerbound13(yt var1) {
       this.a(var1.a);
       this.b(var1.b);
       this.c(var1.c);

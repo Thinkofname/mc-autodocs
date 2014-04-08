@@ -8,7 +8,7 @@ public class PacketClientbound1C extends fr {
 
    public PacketClientbound1C() {}
 
-   public PacketClientbound1C(int var1, ta var2, boolean var3) {
+   public PacketClientbound1C(int var1, tb var2, boolean var3) {
       this.a = var1;
       if(var3) {
          this.b = var2.c();
@@ -20,12 +20,12 @@ public class PacketClientbound1C extends fr {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readInt();
-      this.b = ta.b(var1);
+      this.b = tb.b(var1);
    }
 
    public void write(PacketBuffer var1) {
       var1.writeInt(this.a);
-      ta.a(this.b, var1);
+      tb.a(this.b, var1);
    }
 
    public void a(ft var1) {

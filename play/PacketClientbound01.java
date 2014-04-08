@@ -3,16 +3,16 @@ public class PacketClientbound01 extends fr {
 
    private int a;
    private boolean b;
-   private ahg c;
+   private ahh c;
    private int d;
-   private qz e;
+   private ra e;
    private int f;
-   private ahi g;
+   private ahj g;
 
 
    public PacketClientbound01() {}
 
-   public PacketClientbound01(int var1, ahg var2, boolean var3, int var4, qz var5, int var6, ahi var7) {
+   public PacketClientbound01(int var1, ahh var2, boolean var3, int var4, ra var5, int var6, ahj var7) {
       this.a = var1;
       this.d = var4;
       this.e = var5;
@@ -27,13 +27,13 @@ public class PacketClientbound01 extends fr {
       short var2 = var1.readUnsignedByte();
       this.b = (var2 & 8) == 8;
       int var3 = var2 & -9;
-      this.c = ahg.a(var3);
+      this.c = ahh.a(var3);
       this.d = var1.readByte();
-      this.e = qz.a(var1.readUnsignedByte());
+      this.e = ra.a(var1.readUnsignedByte());
       this.f = var1.readUnsignedByte();
-      this.g = ahi.a(var1.readString(16));
+      this.g = ahj.a(var1.readString(16));
       if(this.g == null) {
-         this.g = ahi.b;
+         this.g = ahj.b;
       }
 
    }

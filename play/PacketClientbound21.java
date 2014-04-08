@@ -18,7 +18,7 @@ public class PacketClientbound21 extends fr {
 
    public PacketClientbound21() {}
 
-   public PacketClientbound21(apt var1, boolean var2, int var3) {
+   public PacketClientbound21(apu var1, boolean var2, int var3) {
       this.a = var1.g;
       this.b = var1.h;
       this.g = var2;
@@ -99,9 +99,9 @@ public class PacketClientbound21 extends fr {
       return String.format("x=%d, z=%d, full=%b, sects=%d, add=%d, size=%d", new Object[]{Integer.valueOf(this.a), Integer.valueOf(this.b), Boolean.valueOf(this.g), Integer.valueOf(this.c), Integer.valueOf(this.d), Integer.valueOf(this.h)});
    }
 
-   public static gw a(apt var0, boolean var1, int var2) {
+   public static gw a(apu var0, boolean var1, int var2) {
       int var3 = 0;
-      apv[] var4 = var0.i();
+      apw[] var4 = var0.i();
       int var5 = 0;
       gw var6 = new gw();
       byte[] var7 = i;
@@ -128,7 +128,7 @@ public class PacketClientbound21 extends fr {
          }
       }
 
-      apr var10;
+      aps var10;
       for(var8 = 0; var8 < var4.length; ++var8) {
          if(var4[var8] != null && (!var1 || !var4[var8].a()) && (var2 & 1 << var8) != 0) {
             var10 = var4[var8].j();

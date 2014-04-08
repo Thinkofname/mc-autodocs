@@ -9,7 +9,7 @@ public class PacketClientbound3C extends fr {
 
    public PacketClientbound3C() {}
 
-   public PacketClientbound3C(azv var1, int var2) {
+   public PacketClientbound3C(azw var1, int var2) {
       this.a = var1.e();
       this.b = var1.d().b();
       this.c = var1.c();

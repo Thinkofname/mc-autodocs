@@ -3,18 +3,18 @@ public class PacketServerbound15 extends fr {
 
    private String a;
    private int b;
-   private yx c;
+   private yy c;
    private boolean d;
-   private qz e;
+   private ra e;
    private boolean f;
 
 
    public void read(PacketBuffer var1) {
       this.a = var1.readString(7);
       this.b = var1.readByte();
-      this.c = yx.a(var1.readByte());
+      this.c = yy.a(var1.readByte());
       this.d = var1.readBoolean();
-      this.e = qz.a(var1.readByte());
+      this.e = ra.a(var1.readByte());
       this.f = var1.readBoolean();
    }
 
@@ -39,7 +39,7 @@ public class PacketServerbound15 extends fr {
       return this.b;
    }
 
-   public yx e() {
+   public yy e() {
       return this.c;
    }
 
@@ -47,7 +47,7 @@ public class PacketServerbound15 extends fr {
       return this.d;
    }
 
-   public qz g() {
+   public ra g() {
       return this.e;
    }
 

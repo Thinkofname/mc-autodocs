@@ -10,12 +10,12 @@ public class PacketClientbound2C extends fr {
 
    public PacketClientbound2C() {}
 
-   public PacketClientbound2C(rw var1) {
+   public PacketClientbound2C(rx var1) {
       this.a = var1.x();
-      this.b = qd.c(var1.s * 32.0D);
-      this.c = qd.c(var1.t * 32.0D);
-      this.d = qd.c(var1.u * 32.0D);
-      if(var1 instanceof xd) {
+      this.b = qe.c(var1.s * 32.0D);
+      this.c = qe.c(var1.t * 32.0D);
+      this.d = qe.c(var1.u * 32.0D);
+      if(var1 instanceof xe) {
          this.e = 1;
       }
 

@@ -7,7 +7,7 @@ public class PacketClientbound1E extends fr {
 
    public PacketClientbound1E() {}
 
-   public PacketClientbound1E(int var1, rs var2) {
+   public PacketClientbound1E(int var1, rt var2) {
       this.a = var1;
       this.b = var2.a();
    }

@@ -7,15 +7,15 @@ import org.apache.logging.log4j.Logger;
 public class PacketClientbound22 extends fr {
 
    private static final Logger a = LogManager.getLogger();
-   private agq b;
+   private agr b;
    private byte[] c;
    private int d;
 
 
    public PacketClientbound22() {}
 
-   public PacketClientbound22(int var1, short[] var2, apt var3) {
-      this.b = new agq(var3.g, var3.h);
+   public PacketClientbound22(int var1, short[] var2, apu var3) {
+      this.b = new agr(var3.g, var3.h);
       this.d = var1;
       int var4 = 4 * var1;
 
@@ -28,7 +28,7 @@ public class PacketClientbound22 extends fr {
             int var9 = var2[var7] >> 8 & 15;
             int var10 = var2[var7] & 255;
             var6.writeShort(var2[var7]);
-            var6.writeShort((short)((aje.b(var3.a(var8, var10, var9)) & 4095) << 4 | var3.c(var8, var10, var9) & 15));
+            var6.writeShort((short)((ajf.b(var3.a(var8, var10, var9)) & 4095) << 4 | var3.c(var8, var10, var9) & 15));
          }
 
          this.c = var5.toByteArray();
@@ -43,7 +43,7 @@ public class PacketClientbound22 extends fr {
    }
 
    public void read(PacketBuffer var1) {
-      this.b = new agq(var1.readInt(), var1.readInt());
+      this.b = new agr(var1.readInt(), var1.readInt());
       this.d = var1.readShort() & '\uffff';
       int var2 = var1.readInt();
       if(var2 > 0) {

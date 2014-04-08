@@ -7,7 +7,7 @@ public class PacketClientbound3D extends fr {
 
    public PacketClientbound3D() {}
 
-   public PacketClientbound3D(int var1, azt var2) {
+   public PacketClientbound3D(int var1, azu var2) {
       this.a = var1;
       if(var2 == null) {
          this.b = "";

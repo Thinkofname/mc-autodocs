@@ -23,7 +23,7 @@ public class PacketClientbound37 extends fr {
       this.a = Maps.newHashMap();
 
       for(int var3 = 0; var3 < var2; ++var3) {
-         pd var4 = pl.a(var1.readString(32767));
+         pe var4 = pm.a(var1.readString(32767));
          int var5 = var1.readVarInt();
          if(var4 != null) {
             this.a.put(var4, Integer.valueOf(var5));
@@ -38,7 +38,7 @@ public class PacketClientbound37 extends fr {
 
       while(var2.hasNext()) {
          Entry var3 = (Entry)var2.next();
-         var1.writeString(((pd)var3.getKey()).e);
+         var1.writeString(((pe)var3.getKey()).e);
          var1.writeVarInt(((Integer)var3.getValue()).intValue());
       }
 

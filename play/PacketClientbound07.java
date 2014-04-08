@@ -2,14 +2,14 @@
 public class PacketClientbound07 extends fr {
 
    private int a;
-   private qz b;
-   private ahg c;
-   private ahi d;
+   private ra b;
+   private ahh c;
+   private ahj d;
 
 
    public PacketClientbound07() {}
 
-   public PacketClientbound07(int var1, qz var2, ahi var3, ahg var4) {
+   public PacketClientbound07(int var1, ra var2, ahj var3, ahh var4) {
       this.a = var1;
       this.b = var2;
       this.c = var4;
@@ -22,11 +22,11 @@ public class PacketClientbound07 extends fr {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readInt();
-      this.b = qz.a(var1.readUnsignedByte());
-      this.c = ahg.a(var1.readUnsignedByte());
-      this.d = ahi.a(var1.readString(16));
+      this.b = ra.a(var1.readUnsignedByte());
+      this.c = ahh.a(var1.readUnsignedByte());
+      this.d = ahj.a(var1.readString(16));
       if(this.d == null) {
-         this.d = ahi.b;
+         this.d = ahj.b;
       }
 
    }

@@ -8,7 +8,7 @@ public class PacketClientbound1B extends fr {
 
    public PacketClientbound1B() {}
 
-   public PacketClientbound1B(int var1, rw var2, rw var3) {
+   public PacketClientbound1B(int var1, rx var2, rx var3) {
       this.a = var1;
       this.b = var2.x();
       this.c = var3 != null?var3.x():-1;

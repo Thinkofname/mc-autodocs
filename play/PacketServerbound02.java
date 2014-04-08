@@ -19,7 +19,7 @@ public class PacketServerbound02 extends fr {
       var1.a(this);
    }
 
-   public rw a(agx var1) {
+   public rx a(agy var1) {
       return var1.a(this.a);
    }
 
