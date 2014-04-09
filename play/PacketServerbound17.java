@@ -1,5 +1,5 @@
 
-public class PacketServerbound17 extends fr {
+public class PacketServerbound17 extends ft {
 
    private String a;
    private int b;
@@ -25,7 +25,7 @@ public class PacketServerbound17 extends fr {
 
    }
 
-   public void a(im var1) {
+   public void a(io var1) {
       var1.a(this);
    }
 

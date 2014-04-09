@@ -1,5 +1,5 @@
 
-public class PacketClientbound3D extends fr {
+public class PacketClientbound3D extends ft {
 
    private int a;
    private String b;
@@ -7,7 +7,7 @@ public class PacketClientbound3D extends fr {
 
    public PacketClientbound3D() {}
 
-   public PacketClientbound3D(int var1, azu var2) {
+   public PacketClientbound3D(int var1, azw var2) {
       this.a = var1;
       if(var2 == null) {
          this.b = "";
@@ -27,7 +27,7 @@ public class PacketClientbound3D extends fr {
       var1.writeString(this.b);
    }
 
-   public void a(ft var1) {
+   public void a(fv var1) {
       var1.a(this);
    }
 }

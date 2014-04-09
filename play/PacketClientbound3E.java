@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
-public class PacketClientbound3E extends fr {
+public class PacketClientbound3E extends ft {
 
    private String a = "";
    private String b = "";
@@ -15,7 +15,7 @@ public class PacketClientbound3E extends fr {
 
    public PacketClientbound3E() {}
 
-   public PacketClientbound3E(azv var1, int var2) {
+   public PacketClientbound3E(azx var1, int var2) {
       this.a = var1.b();
       this.f = var2;
       if(var2 == 0 || var2 == 2) {
@@ -31,7 +31,7 @@ public class PacketClientbound3E extends fr {
 
    }
 
-   public PacketClientbound3E(azv var1, Collection var2, int var3) {
+   public PacketClientbound3E(azx var1, Collection var2, int var3) {
       if(var3 != 3 && var3 != 4) {
          throw new IllegalArgumentException("Method must be join or leave for player constructor");
       } else if(var2 != null && !var2.isEmpty()) {
@@ -85,7 +85,7 @@ public class PacketClientbound3E extends fr {
 
    }
 
-   public void a(ft var1) {
+   public void a(fv var1) {
       var1.a(this);
    }
 }

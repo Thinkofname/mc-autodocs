@@ -1,27 +1,27 @@
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-public class PacketClientbound00 extends fr {
+public class PacketClientbound00 extends ft {
 
-   private static final Gson a = (new GsonBuilder()).registerTypeAdapter(kd.class, new ke()).registerTypeAdapter(ka.class, new kb()).registerTypeAdapter(jz.class, new kc()).registerTypeHierarchyAdapter(fh.class, new fi()).registerTypeHierarchyAdapter(fl.class, new fn()).registerTypeAdapterFactory(new qc()).create();
-   private jz b;
+   private static final Gson a = (new GsonBuilder()).registerTypeAdapter(kf.class, new kg()).registerTypeAdapter(kc.class, new kd()).registerTypeAdapter(kb.class, new ke()).registerTypeHierarchyAdapter(fj.class, new fk()).registerTypeHierarchyAdapter(fn.class, new fp()).registerTypeAdapterFactory(new qe()).create();
+   private kb b;
 
 
    public PacketClientbound00() {}
 
-   public PacketClientbound00(jz var1) {
+   public PacketClientbound00(kb var1) {
       this.b = var1;
    }
 
    public void read(PacketBuffer var1) {
-      this.b = (jz)a.fromJson(var1.readString(32767), jz.class);
+      this.b = (kb)a.fromJson(var1.readString(32767), kb.class);
    }
 
    public void write(PacketBuffer var1) {
       var1.writeString(a.toJson(this.b));
    }
 
-   public void a(jw var1) {
+   public void a(jy var1) {
       var1.a(this);
    }
 

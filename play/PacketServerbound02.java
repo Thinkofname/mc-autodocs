@@ -1,29 +1,29 @@
 
-public class PacketServerbound02 extends fr {
+public class PacketServerbound02 extends ft {
 
    private int a;
-   private iz b;
+   private jb b;
 
 
    public void read(PacketBuffer var1) {
       this.a = var1.readInt();
-      this.b = iz.a()[var1.readByte() % iz.a().length];
+      this.b = jb.a()[var1.readByte() % jb.a().length];
    }
 
    public void write(PacketBuffer var1) {
       var1.writeInt(this.a);
-      var1.writeByte(iz.a(this.b));
+      var1.writeByte(jb.a(this.b));
    }
 
-   public void a(im var1) {
+   public void a(io var1) {
       var1.a(this);
    }
 
-   public rx a(agy var1) {
+   public rz a(aha var1) {
       return var1.a(this.a);
    }
 
-   public iz c() {
+   public jb c() {
       return this.b;
    }
 }

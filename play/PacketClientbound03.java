@@ -1,5 +1,5 @@
 
-public class PacketClientbound03 extends fr {
+public class PacketClientbound03 extends ft {
 
    private long a;
    private long b;
@@ -29,7 +29,7 @@ public class PacketClientbound03 extends fr {
       var1.writeLong(this.b);
    }
 
-   public void a(ft var1) {
+   public void a(fv var1) {
       var1.a(this);
    }
 

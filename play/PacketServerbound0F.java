@@ -1,12 +1,12 @@
 
-public class PacketServerbound0F extends fr {
+public class PacketServerbound0F extends ft {
 
    private int a;
    private short b;
    private boolean c;
 
 
-   public void a(im var1) {
+   public void a(io var1) {
       var1.a(this);
    }
 

@@ -1,5 +1,5 @@
 
-public class PacketClientbound18 extends fr {
+public class PacketClientbound18 extends ft {
 
    private int a;
    private int b;
@@ -11,11 +11,11 @@ public class PacketClientbound18 extends fr {
 
    public PacketClientbound18() {}
 
-   public PacketClientbound18(rx var1) {
+   public PacketClientbound18(rz var1) {
       this.a = var1.x();
-      this.b = qe.c(var1.s * 32.0D);
-      this.c = qe.c(var1.t * 32.0D);
-      this.d = qe.c(var1.u * 32.0D);
+      this.b = qg.c(var1.s * 32.0D);
+      this.c = qg.c(var1.t * 32.0D);
+      this.d = qg.c(var1.u * 32.0D);
       this.e = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.f = (byte)((int)(var1.z * 256.0F / 360.0F));
    }
@@ -47,7 +47,7 @@ public class PacketClientbound18 extends fr {
       var1.writeByte(this.f);
    }
 
-   public void a(ft var1) {
+   public void a(fv var1) {
       var1.a(this);
    }
 }

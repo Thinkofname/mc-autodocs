@@ -1,6 +1,6 @@
 import org.apache.commons.lang3.Validate;
 
-public class PacketClientbound29 extends fr {
+public class PacketClientbound29 extends ft {
 
    private String a;
    private int b;
@@ -48,7 +48,7 @@ public class PacketClientbound29 extends fr {
       var1.writeByte(this.f);
    }
 
-   public void a(ft var1) {
+   public void a(fv var1) {
       var1.a(this);
    }
 }

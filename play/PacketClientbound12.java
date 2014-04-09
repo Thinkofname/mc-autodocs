@@ -1,5 +1,5 @@
 
-public class PacketClientbound12 extends fr {
+public class PacketClientbound12 extends ft {
 
    private int a;
    private int b;
@@ -9,7 +9,7 @@ public class PacketClientbound12 extends fr {
 
    public PacketClientbound12() {}
 
-   public PacketClientbound12(rx var1) {
+   public PacketClientbound12(rz var1) {
       this(var1.x(), var1.v, var1.w, var1.x);
    }
 
@@ -59,7 +59,7 @@ public class PacketClientbound12 extends fr {
       var1.writeShort(this.d);
    }
 
-   public void a(ft var1) {
+   public void a(fv var1) {
       var1.a(this);
    }
 

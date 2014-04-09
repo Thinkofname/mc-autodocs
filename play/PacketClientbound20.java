@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
-public class PacketClientbound20 extends fr {
+public class PacketClientbound20 extends ft {
 
    private int a;
    private final List b = new ArrayList();
@@ -17,8 +17,8 @@ public class PacketClientbound20 extends fr {
       Iterator var3 = var2.iterator();
 
       while(var3.hasNext()) {
-         tf var4 = (tf)var3.next();
-         this.b.add(new ik(this, var4.a().a(), var4.b(), var4.c()));
+         th var4 = (th)var3.next();
+         this.b.add(new im(this, var4.a().a(), var4.b(), var4.c()));
       }
 
    }
@@ -35,10 +35,10 @@ public class PacketClientbound20 extends fr {
 
          for(int var9 = 0; var9 < var8; ++var9) {
             UUID var10 = new UUID(var1.readLong(), var1.readLong());
-            var7.add(new tg(var10, "Unknown synced attribute modifier", var1.readDouble(), var1.readByte()));
+            var7.add(new ti(var10, "Unknown synced attribute modifier", var1.readDouble(), var1.readByte()));
          }
 
-         this.b.add(new ik(this, var4, var5, var7));
+         this.b.add(new im(this, var4, var5, var7));
       }
 
    }
@@ -49,14 +49,14 @@ public class PacketClientbound20 extends fr {
       Iterator var2 = this.b.iterator();
 
       while(var2.hasNext()) {
-         ik var3 = (ik)var2.next();
+         im var3 = (im)var2.next();
          var1.writeString(var3.a());
          var1.writeDouble(var3.b());
          var1.writeShort(var3.c().size());
          Iterator var4 = var3.c().iterator();
 
          while(var4.hasNext()) {
-            tg var5 = (tg)var4.next();
+            ti var5 = (ti)var4.next();
             var1.writeLong(var5.a().getMostSignificantBits());
             var1.writeLong(var5.a().getLeastSignificantBits());
             var1.writeDouble(var5.d());
@@ -66,7 +66,7 @@ public class PacketClientbound20 extends fr {
 
    }
 
-   public void a(ft var1) {
+   public void a(fv var1) {
       var1.a(this);
    }
 }

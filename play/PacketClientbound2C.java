@@ -1,5 +1,5 @@
 
-public class PacketClientbound2C extends fr {
+public class PacketClientbound2C extends ft {
 
    private int a;
    private int b;
@@ -10,12 +10,12 @@ public class PacketClientbound2C extends fr {
 
    public PacketClientbound2C() {}
 
-   public PacketClientbound2C(rx var1) {
+   public PacketClientbound2C(rz var1) {
       this.a = var1.x();
-      this.b = qe.c(var1.s * 32.0D);
-      this.c = qe.c(var1.t * 32.0D);
-      this.d = qe.c(var1.u * 32.0D);
-      if(var1 instanceof xe) {
+      this.b = qg.c(var1.s * 32.0D);
+      this.c = qg.c(var1.t * 32.0D);
+      this.d = qg.c(var1.u * 32.0D);
+      if(var1 instanceof xg) {
          this.e = 1;
       }
 
@@ -37,7 +37,7 @@ public class PacketClientbound2C extends fr {
       var1.writeInt(this.d);
    }
 
-   public void a(ft var1) {
+   public void a(fv var1) {
       var1.a(this);
    }
 

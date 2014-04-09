@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class PacketClientbound0F extends fr {
+public class PacketClientbound0F extends ft {
 
    private int a;
    private int b;
@@ -13,17 +13,17 @@ public class PacketClientbound0F extends fr {
    private byte i;
    private byte j;
    private byte k;
-   private tb l;
+   private td l;
    private List m;
 
 
    public PacketClientbound0F() {}
 
-   public PacketClientbound0F(ss var1) {
+   public PacketClientbound0F(su var1) {
       this.a = var1.x();
-      this.b = (byte)sd.a(var1);
+      this.b = (byte)sf.a(var1);
       this.c = var1.as.a(var1.s);
-      this.d = qe.c(var1.t * 32.0D);
+      this.d = qg.c(var1.t * 32.0D);
       this.e = var1.as.a(var1.u);
       this.i = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.j = (byte)((int)(var1.z * 256.0F / 360.0F));
@@ -74,7 +74,7 @@ public class PacketClientbound0F extends fr {
       this.f = var1.readShort();
       this.g = var1.readShort();
       this.h = var1.readShort();
-      this.m = tb.b(var1);
+      this.m = td.b(var1);
    }
 
    public void write(PacketBuffer var1) {
@@ -92,7 +92,7 @@ public class PacketClientbound0F extends fr {
       this.l.a(var1);
    }
 
-   public void a(ft var1) {
+   public void a(fv var1) {
       var1.a(this);
    }
 

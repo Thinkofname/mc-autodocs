@@ -1,5 +1,5 @@
 
-public class PacketClientbound11 extends fr {
+public class PacketClientbound11 extends ft {
 
    private int a;
    private int b;
@@ -10,11 +10,11 @@ public class PacketClientbound11 extends fr {
 
    public PacketClientbound11() {}
 
-   public PacketClientbound11(sn var1) {
+   public PacketClientbound11(sp var1) {
       this.a = var1.x();
-      this.b = qe.c(var1.s * 32.0D);
-      this.c = qe.c(var1.t * 32.0D);
-      this.d = qe.c(var1.u * 32.0D);
+      this.b = qg.c(var1.s * 32.0D);
+      this.c = qg.c(var1.t * 32.0D);
+      this.d = qg.c(var1.u * 32.0D);
       this.e = var1.e();
    }
 
@@ -34,7 +34,7 @@ public class PacketClientbound11 extends fr {
       var1.writeShort(this.e);
    }
 
-   public void a(ft var1) {
+   public void a(fv var1) {
       var1.a(this);
    }
 

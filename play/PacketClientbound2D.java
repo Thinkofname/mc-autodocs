@@ -1,5 +1,5 @@
 
-public class PacketClientbound2D extends fr {
+public class PacketClientbound2D extends ft {
 
    private int a;
    private int b;
@@ -24,7 +24,7 @@ public class PacketClientbound2D extends fr {
       this.f = var6;
    }
 
-   public void a(ft var1) {
+   public void a(fv var1) {
       var1.a(this);
    }
 

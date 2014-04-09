@@ -1,5 +1,5 @@
 
-public class PacketServerbound06 extends jb {
+public class PacketServerbound06 extends jd {
 
    public PacketServerbound06() {
       this.h = true;

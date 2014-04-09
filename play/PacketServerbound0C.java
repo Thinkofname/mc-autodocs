@@ -1,5 +1,5 @@
 
-public class PacketServerbound0C extends fr {
+public class PacketServerbound0C extends ft {
 
    private float a;
    private float b;
@@ -21,7 +21,7 @@ public class PacketServerbound0C extends fr {
       var1.writeBoolean(this.d);
    }
 
-   public void a(im var1) {
+   public void a(io var1) {
       var1.a(this);
    }
 
