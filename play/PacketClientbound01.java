@@ -1,18 +1,18 @@
 
-public class PacketClientbound01 extends gt {
+public class PacketClientbound01 extends gu {
 
    private int a;
    private boolean b;
-   private akp c;
+   private alg c;
    private int d;
-   private sg e;
+   private sm e;
    private int f;
-   private akr g;
+   private ali g;
 
 
    public PacketClientbound01() {}
 
-   public PacketClientbound01(int var1, akp var2, boolean var3, int var4, sg var5, int var6, akr var7) {
+   public PacketClientbound01(int var1, alg var2, boolean var3, int var4, sm var5, int var6, ali var7) {
       this.a = var1;
       this.d = var4;
       this.e = var5;
@@ -27,13 +27,13 @@ public class PacketClientbound01 extends gt {
       short var2 = var1.readUnsignedByte();
       this.b = (var2 & 8) == 8;
       int var3 = var2 & -9;
-      this.c = akp.a(var3);
+      this.c = alg.a(var3);
       this.d = var1.readByte();
-      this.e = sg.a(var1.readUnsignedByte());
+      this.e = sm.a(var1.readUnsignedByte());
       this.f = var1.readUnsignedByte();
-      this.g = akr.a(var1.readString(16));
+      this.g = ali.a(var1.readString(16));
       if(this.g == null) {
-         this.g = akr.b;
+         this.g = ali.b;
       }
 
    }
@@ -52,7 +52,7 @@ public class PacketClientbound01 extends gt {
       var1.writeString(this.g.a());
    }
 
-   public void a(gw var1) {
+   public void a(gx var1) {
       var1.a(this);
    }
 

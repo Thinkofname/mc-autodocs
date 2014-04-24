@@ -1,5 +1,5 @@
 
-public class PacketServerbound13 extends gt {
+public class PacketServerbound13 extends gu {
 
    private boolean a;
    private boolean b;
@@ -11,7 +11,7 @@ public class PacketServerbound13 extends gt {
 
    public PacketServerbound13() {}
 
-   public PacketServerbound13(abs var1) {
+   public PacketServerbound13(abz var1) {
       this.a(var1.a);
       this.b(var1.b);
       this.c(var1.c);
@@ -53,7 +53,7 @@ public class PacketServerbound13 extends gt {
       var1.writeFloat(this.f);
    }
 
-   public void a(jr var1) {
+   public void a(jv var1) {
       var1.a(this);
    }
 

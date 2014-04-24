@@ -1,5 +1,5 @@
 
-public class PacketClientbound1B extends gt {
+public class PacketClientbound1B extends gu {
 
    private int a;
    private int b;
@@ -8,10 +8,10 @@ public class PacketClientbound1B extends gt {
 
    public PacketClientbound1B() {}
 
-   public PacketClientbound1B(int var1, tj var2, tj var3) {
+   public PacketClientbound1B(int var1, tp var2, tp var3) {
       this.a = var1;
-      this.b = var2.B();
-      this.c = var3 != null?var3.B():-1;
+      this.b = var2.C();
+      this.c = var3 != null?var3.C():-1;
    }
 
    public void read(PacketBuffer var1) {
@@ -26,7 +26,7 @@ public class PacketClientbound1B extends gt {
       var1.writeByte(this.a);
    }
 
-   public void a(gw var1) {
+   public void a(gx var1) {
       var1.a(this);
    }
 }

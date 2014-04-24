@@ -1,6 +1,6 @@
 import io.netty.buffer.ByteBuf;
 
-public class PacketClientbound3F extends gt {
+public class PacketClientbound3F extends gu {
 
    private String a;
    private byte[] b;
@@ -15,8 +15,8 @@ public class PacketClientbound3F extends gt {
    public PacketClientbound3F(String var1, byte[] var2) {
       this.a = var1;
       this.b = var2;
-      if(var2.length >= 32767) {
-         throw new IllegalArgumentException("Payload may not be larger than 32767 bytes");
+      if(var2.length >= 1048576) {
+         throw new IllegalArgumentException("Payload may not be larger than 1048576 bytes");
       }
    }
 
@@ -32,7 +32,7 @@ public class PacketClientbound3F extends gt {
       var1.writeBytes(this.b);
    }
 
-   public void a(gw var1) {
+   public void a(gx var1) {
       var1.a(this);
    }
 }

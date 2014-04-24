@@ -1,5 +1,5 @@
 
-public class PacketClientbound38 extends gt {
+public class PacketClientbound38 extends gu {
 
    private String a;
    private boolean b;
@@ -26,7 +26,7 @@ public class PacketClientbound38 extends gt {
       var1.writeVarInt(this.c);
    }
 
-   public void a(gw var1) {
+   public void a(gx var1) {
       var1.a(this);
    }
 }

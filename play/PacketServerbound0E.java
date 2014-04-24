@@ -1,5 +1,5 @@
 
-public class PacketServerbound0E extends gt {
+public class PacketServerbound0E extends gu {
 
    private int a;
    private int b;
@@ -9,7 +9,7 @@ public class PacketServerbound0E extends gt {
    private int f;
 
 
-   public void a(jr var1) {
+   public void a(jv var1) {
       var1.a(this);
    }
 
@@ -32,7 +32,7 @@ public class PacketServerbound0E extends gt {
    }
 
    public String b() {
-      return this.e != null?String.format("id=%d, slot=%d, button=%d, type=%d, itemid=%d, itemcount=%d, itemaux=%d", new Object[]{Integer.valueOf(this.a), Integer.valueOf(this.b), Integer.valueOf(this.c), Integer.valueOf(this.f), Integer.valueOf(aga.b(this.e.b())), Integer.valueOf(this.e.b), Integer.valueOf(this.e.k())}):String.format("id=%d, slot=%d, button=%d, type=%d, itemid=-1", new Object[]{Integer.valueOf(this.a), Integer.valueOf(this.b), Integer.valueOf(this.c), Integer.valueOf(this.f)});
+      return this.e != null?String.format("id=%d, slot=%d, button=%d, type=%d, itemid=%d, itemcount=%d, itemaux=%d", new Object[]{Integer.valueOf(this.a), Integer.valueOf(this.b), Integer.valueOf(this.c), Integer.valueOf(this.f), Integer.valueOf(agi.b(this.e.b())), Integer.valueOf(this.e.b), Integer.valueOf(this.e.k())}):String.format("id=%d, slot=%d, button=%d, type=%d, itemid=-1", new Object[]{Integer.valueOf(this.a), Integer.valueOf(this.b), Integer.valueOf(this.c), Integer.valueOf(this.f)});
    }
 
    public int c() {

@@ -1,5 +1,5 @@
 
-public class PacketClientbound04 extends gt {
+public class PacketClientbound04 extends gu {
 
    private int a;
    private int b;
@@ -26,7 +26,7 @@ public class PacketClientbound04 extends gt {
       var1.writeSlot(this.c);
    }
 
-   public void a(gw var1) {
+   public void a(gx var1) {
       var1.a(this);
    }
 

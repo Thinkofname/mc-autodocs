@@ -1,5 +1,5 @@
 
-public class PacketClientbound05 extends gt {
+public class PacketClientbound05 extends gu {
 
    private Position a;
 
@@ -18,7 +18,7 @@ public class PacketClientbound05 extends gt {
       var1.writePosition(this.a);
    }
 
-   public void a(gw var1) {
+   public void a(gx var1) {
       var1.a(this);
    }
 

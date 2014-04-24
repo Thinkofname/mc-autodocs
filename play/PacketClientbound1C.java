@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class PacketClientbound1C extends gt {
+public class PacketClientbound1C extends gu {
 
    private int a;
    private List b;
@@ -8,7 +8,7 @@ public class PacketClientbound1C extends gt {
 
    public PacketClientbound1C() {}
 
-   public PacketClientbound1C(int var1, um var2, boolean var3) {
+   public PacketClientbound1C(int var1, us var2, boolean var3) {
       this.a = var1;
       if(var3) {
          this.b = var2.c();
@@ -20,15 +20,15 @@ public class PacketClientbound1C extends gt {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.b = um.b(var1);
+      this.b = us.b(var1);
    }
 
    public void write(PacketBuffer var1) {
       var1.writeVarInt(this.a);
-      um.a(this.b, var1);
+      us.a(this.b, var1);
    }
 
-   public void a(gw var1) {
+   public void a(gx var1) {
       var1.a(this);
    }
 }

@@ -3,7 +3,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
-public class PacketClientbound37 extends gt {
+public class PacketClientbound37 extends gu {
 
    private Map a;
 
@@ -14,7 +14,7 @@ public class PacketClientbound37 extends gt {
       this.a = var1;
    }
 
-   public void a(gw var1) {
+   public void a(gx var1) {
       var1.a(this);
    }
 
@@ -23,7 +23,7 @@ public class PacketClientbound37 extends gt {
       this.a = Maps.newHashMap();
 
       for(int var3 = 0; var3 < var2; ++var3) {
-         qm var4 = qu.a(var1.readString(32767));
+         qs var4 = ra.a(var1.readString(32767));
          int var5 = var1.readVarInt();
          if(var4 != null) {
             this.a.put(var4, Integer.valueOf(var5));
@@ -38,7 +38,7 @@ public class PacketClientbound37 extends gt {
 
       while(var2.hasNext()) {
          Entry var3 = (Entry)var2.next();
-         var1.writeString(((qm)var3.getKey()).e);
+         var1.writeString(((qs)var3.getKey()).e);
          var1.writeVarInt(((Integer)var3.getValue()).intValue());
       }
 

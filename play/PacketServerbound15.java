@@ -1,9 +1,9 @@
 
-public class PacketServerbound15 extends gt {
+public class PacketServerbound15 extends gu {
 
    private String a;
    private int b;
-   private aby c;
+   private acf c;
    private boolean d;
    private int e;
 
@@ -11,7 +11,7 @@ public class PacketServerbound15 extends gt {
    public void read(PacketBuffer var1) {
       this.a = var1.readString(7);
       this.b = var1.readByte();
-      this.c = aby.a(var1.readByte());
+      this.c = acf.a(var1.readByte());
       this.d = var1.readBoolean();
       this.e = var1.readUnsignedByte();
    }
@@ -24,7 +24,7 @@ public class PacketServerbound15 extends gt {
       var1.writeByte(this.e);
    }
 
-   public void a(jr var1) {
+   public void a(jv var1) {
       var1.a(this);
    }
 
@@ -32,7 +32,7 @@ public class PacketServerbound15 extends gt {
       return this.a;
    }
 
-   public aby e() {
+   public acf e() {
       return this.c;
    }
 

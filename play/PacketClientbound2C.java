@@ -1,5 +1,5 @@
 
-public class PacketClientbound2C extends gt {
+public class PacketClientbound2C extends gu {
 
    private int a;
    private int b;
@@ -10,12 +10,12 @@ public class PacketClientbound2C extends gt {
 
    public PacketClientbound2C() {}
 
-   public PacketClientbound2C(tj var1) {
-      this.a = var1.B();
-      this.b = rm.c(var1.s * 32.0D);
-      this.c = rm.c(var1.t * 32.0D);
-      this.d = rm.c(var1.u * 32.0D);
-      if(var1 instanceof yx) {
+   public PacketClientbound2C(tp var1) {
+      this.a = var1.C();
+      this.b = rs.c(var1.s * 32.0D);
+      this.c = rs.c(var1.t * 32.0D);
+      this.d = rs.c(var1.u * 32.0D);
+      if(var1 instanceof zd) {
          this.e = 1;
       }
 
@@ -37,7 +37,7 @@ public class PacketClientbound2C extends gt {
       var1.writeInt(this.d);
    }
 
-   public void a(gw var1) {
+   public void a(gx var1) {
       var1.a(this);
    }
 

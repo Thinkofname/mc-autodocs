@@ -2,7 +2,7 @@ import com.google.common.collect.Lists;
 import java.util.Collection;
 import java.util.Iterator;
 
-public class PacketClientbound3E extends gt {
+public class PacketClientbound3E extends gu {
 
    private String a = "";
    private String b = "";
@@ -16,13 +16,13 @@ public class PacketClientbound3E extends gt {
 
 
    public PacketClientbound3E() {
-      this.e = bff.a.e;
+      this.e = bio.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
    }
 
-   public PacketClientbound3E(bey var1, int var2) {
-      this.e = bff.a.e;
+   public PacketClientbound3E(bih var1, int var2) {
+      this.e = bio.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
       this.a = var1.b();
@@ -42,8 +42,8 @@ public class PacketClientbound3E extends gt {
 
    }
 
-   public PacketClientbound3E(bey var1, Collection var2, int var3) {
-      this.e = bff.a.e;
+   public PacketClientbound3E(bih var1, Collection var2, int var3) {
+      this.e = bio.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
       if(var3 != 3 && var3 != 4) {
@@ -103,7 +103,7 @@ public class PacketClientbound3E extends gt {
 
    }
 
-   public void a(gw var1) {
+   public void a(gx var1) {
       var1.a(this);
    }
 }
