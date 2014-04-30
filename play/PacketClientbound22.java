@@ -14,7 +14,7 @@ public class PacketClientbound22 extends gu {
 
    public PacketClientbound22() {}
 
-   public PacketClientbound22(int var1, short[] var2, axr var3) {
+   public PacketClientbound22(int var1, short[] var2, axw var3) {
       this.b = new akr(var3.a, var3.b);
       this.d = var1;
       int var4 = 4 * var1;

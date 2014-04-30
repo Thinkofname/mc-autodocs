@@ -18,7 +18,7 @@ public class PacketClientbound21 extends gu {
 
    public PacketClientbound21() {}
 
-   public PacketClientbound21(axr var1, boolean var2, int var3) {
+   public PacketClientbound21(axw var1, boolean var2, int var3) {
       this.a = var1.a;
       this.b = var1.b;
       this.g = var2;
@@ -99,9 +99,9 @@ public class PacketClientbound21 extends gu {
       return String.format("x=%d, z=%d, full=%b, sects=%d, add=%d, size=%d", new Object[]{Integer.valueOf(this.a), Integer.valueOf(this.b), Boolean.valueOf(this.g), Integer.valueOf(this.c), Integer.valueOf(this.d), Integer.valueOf(this.h)});
    }
 
-   public static ib a(axr var0, boolean var1, int var2) {
+   public static ib a(axw var0, boolean var1, int var2) {
       int var3 = 0;
-      axu[] var4 = var0.h();
+      axz[] var4 = var0.h();
       int var5 = 0;
       ib var6 = new ib();
       byte[] var7 = i;
@@ -125,7 +125,7 @@ public class PacketClientbound21 extends gu {
          }
       }
 
-      axp var10;
+      axu var10;
       for(var8 = 0; var8 < var4.length; ++var8) {
          if(var4[var8] != null && (!var1 || !var4[var8].a()) && (var2 & 1 << var8) != 0) {
             var10 = var4[var8].j();

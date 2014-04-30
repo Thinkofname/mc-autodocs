@@ -9,7 +9,7 @@ public class PacketClientbound3C extends gu {
 
    public PacketClientbound3C() {}
 
-   public PacketClientbound3C(bii var1, int var2) {
+   public PacketClientbound3C(bin var1, int var2) {
       this.a = var1.e();
       this.b = var1.d().b();
       this.c = var1.c();
@@ -23,7 +23,7 @@ public class PacketClientbound3C extends gu {
       this.d = 1;
    }
 
-   public PacketClientbound3C(String var1, big var2) {
+   public PacketClientbound3C(String var1, bil var2) {
       this.a = var1;
       this.b = var2.b();
       this.c = 0;

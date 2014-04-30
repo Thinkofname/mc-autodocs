@@ -16,7 +16,7 @@ public class PacketClientbound27 extends gu {
 
    public PacketClientbound27() {}
 
-   public PacketClientbound27(double var1, double var3, double var5, float var7, List var8, bif var9) {
+   public PacketClientbound27(double var1, double var3, double var5, float var7, List var8, bik var9) {
       this.a = var1;
       this.b = var3;
       this.c = var5;

@@ -16,13 +16,13 @@ public class PacketClientbound3E extends gu {
 
 
    public PacketClientbound3E() {
-      this.e = bio.a.e;
+      this.e = bit.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
    }
 
-   public PacketClientbound3E(bih var1, int var2) {
-      this.e = bio.a.e;
+   public PacketClientbound3E(bim var1, int var2) {
+      this.e = bit.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
       this.a = var1.b();
@@ -42,8 +42,8 @@ public class PacketClientbound3E extends gu {
 
    }
 
-   public PacketClientbound3E(bih var1, Collection var2, int var3) {
-      this.e = bio.a.e;
+   public PacketClientbound3E(bim var1, Collection var2, int var3) {
+      this.e = bit.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
       if(var3 != 3 && var3 != 4) {

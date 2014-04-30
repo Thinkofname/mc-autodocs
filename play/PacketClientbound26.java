@@ -26,11 +26,11 @@ public class PacketClientbound26 extends gu {
       this.c = new int[var2];
       this.d = new int[var2];
       this.f = new byte[var2][];
-      this.h = !var1.isEmpty() && !((axr)var1.get(0)).p().s.p();
+      this.h = !var1.isEmpty() && !((axw)var1.get(0)).p().s.p();
       int var3 = 0;
 
       for(int var4 = 0; var4 < var2; ++var4) {
-         axr var5 = (axr)var1.get(var4);
+         axw var5 = (axw)var1.get(var4);
          ib var6 = ia.a(var5, true, '\uffff');
          if(i.length < var3 + var6.a.length) {
             byte[] var7 = new byte[var3 + var6.a.length];
