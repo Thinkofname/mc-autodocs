@@ -1,7 +1,7 @@
 
-public class PacketClientbound42 extends gu {
+public class PacketClientbound42 extends gv {
 
-   public ir a;
+   public is a;
    public int b;
    public int c;
    public int d;
@@ -10,28 +10,28 @@ public class PacketClientbound42 extends gu {
 
    public PacketClientbound42() {}
 
-   public PacketClientbound42(tc var1, ir var2) {
+   public PacketClientbound42(th var1, is var2) {
       this.a = var2;
-      uj var3 = var1.c();
-      switch(iq.a[var2.ordinal()]) {
+      uo var3 = var1.c();
+      switch(ir.a[var2.ordinal()]) {
       case 1:
          this.d = var1.f();
-         this.c = var3 == null?-1:var3.C();
+         this.c = var3 == null?-1:var3.D();
          break;
       case 2:
-         this.b = var1.h().C();
-         this.c = var3 == null?-1:var3.C();
+         this.b = var1.h().D();
+         this.c = var3 == null?-1:var3.D();
          this.e = var1.b().c();
       }
 
    }
 
    public void read(PacketBuffer var1) {
-      this.a = (ir)ir.d.get(Integer.valueOf(var1.readUnsignedByte()));
-      if(this.a == ir.b) {
+      this.a = (is)is.d.get(Integer.valueOf(var1.readUnsignedByte()));
+      if(this.a == is.b) {
          this.d = var1.readVarInt();
          this.c = var1.readInt();
-      } else if(this.a == ir.c) {
+      } else if(this.a == is.c) {
          this.b = var1.readVarInt();
          this.c = var1.readInt();
          this.e = var1.readString(32767);
@@ -41,10 +41,10 @@ public class PacketClientbound42 extends gu {
 
    public void write(PacketBuffer var1) {
       var1.writeByte(this.a.e);
-      if(this.a == ir.b) {
+      if(this.a == is.b) {
          var1.writeVarInt(this.d);
          var1.writeInt(this.c);
-      } else if(this.a == ir.c) {
+      } else if(this.a == is.c) {
          var1.writeVarInt(this.b);
          var1.writeInt(this.c);
          var1.writeString(this.e);
@@ -52,7 +52,7 @@ public class PacketClientbound42 extends gu {
 
    }
 
-   public void a(gx var1) {
+   public void a(gy var1) {
       var1.a(this);
    }
 

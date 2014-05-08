@@ -1,5 +1,5 @@
 
-public class PacketServerbound12 extends gu {
+public class PacketServerbound12 extends gv {
 
    private Position a;
    private String[] b;
@@ -24,7 +24,7 @@ public class PacketServerbound12 extends gu {
 
    }
 
-   public void a(jv var1) {
+   public void a(jz var1) {
       var1.a(this);
    }
 

@@ -1,5 +1,5 @@
 
-public class PacketClientbound03 extends gu {
+public class PacketClientbound03 extends gv {
 
    private long a;
    private long b;
@@ -29,7 +29,7 @@ public class PacketClientbound03 extends gu {
       var1.writeLong(this.b);
    }
 
-   public void a(gx var1) {
+   public void a(gy var1) {
       var1.a(this);
    }
 

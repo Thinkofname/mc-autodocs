@@ -1,5 +1,5 @@
 
-public class PacketClientbound0E extends gu {
+public class PacketClientbound0E extends gv {
 
    private int a;
    private int b;
@@ -16,17 +16,17 @@ public class PacketClientbound0E extends gu {
 
    public PacketClientbound0E() {}
 
-   public PacketClientbound0E(tp var1, int var2) {
+   public PacketClientbound0E(tu var1, int var2) {
       this(var1, var2, 0);
    }
 
-   public PacketClientbound0E(tp var1, int var2, int var3) {
-      this.a = var1.C();
-      this.b = rs.c(var1.s * 32.0D);
-      this.c = rs.c(var1.t * 32.0D);
-      this.d = rs.c(var1.u * 32.0D);
-      this.h = rs.d(var1.z * 256.0F / 360.0F);
-      this.i = rs.d(var1.y * 256.0F / 360.0F);
+   public PacketClientbound0E(tu var1, int var2, int var3) {
+      this.a = var1.D();
+      this.b = rx.c(var1.s * 32.0D);
+      this.c = rx.c(var1.t * 32.0D);
+      this.d = rx.c(var1.u * 32.0D);
+      this.h = rx.d(var1.z * 256.0F / 360.0F);
+      this.i = rx.d(var1.y * 256.0F / 360.0F);
       this.j = var2;
       this.k = var3;
       if(var3 > 0) {
@@ -99,7 +99,7 @@ public class PacketClientbound0E extends gu {
 
    }
 
-   public void a(gx var1) {
+   public void a(gy var1) {
       var1.a(this);
    }
 

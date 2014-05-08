@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class PacketClientbound0F extends gu {
+public class PacketClientbound0F extends gv {
 
    private int a;
    private int b;
@@ -13,18 +13,18 @@ public class PacketClientbound0F extends gu {
    private byte i;
    private byte j;
    private byte k;
-   private us l;
+   private ux l;
    private List m;
 
 
    public PacketClientbound0F() {}
 
-   public PacketClientbound0F(uj var1) {
-      this.a = var1.C();
-      this.b = (byte)tv.a(var1);
-      this.c = rs.c(var1.s * 32.0D);
-      this.d = rs.c(var1.t * 32.0D);
-      this.e = rs.c(var1.u * 32.0D);
+   public PacketClientbound0F(uo var1) {
+      this.a = var1.D();
+      this.b = (byte)ua.a(var1);
+      this.c = rx.c(var1.s * 32.0D);
+      this.d = rx.c(var1.t * 32.0D);
+      this.e = rx.c(var1.u * 32.0D);
       this.i = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.j = (byte)((int)(var1.z * 256.0F / 360.0F));
       this.k = (byte)((int)(var1.aI * 256.0F / 360.0F));
@@ -59,7 +59,7 @@ public class PacketClientbound0F extends gu {
       this.f = (int)(var4 * 8000.0D);
       this.g = (int)(var6 * 8000.0D);
       this.h = (int)(var8 * 8000.0D);
-      this.l = var1.E();
+      this.l = var1.F();
    }
 
    public void read(PacketBuffer var1) {
@@ -74,7 +74,7 @@ public class PacketClientbound0F extends gu {
       this.f = var1.readShort();
       this.g = var1.readShort();
       this.h = var1.readShort();
-      this.m = us.b(var1);
+      this.m = ux.b(var1);
    }
 
    public void write(PacketBuffer var1) {
@@ -92,7 +92,7 @@ public class PacketClientbound0F extends gu {
       this.l.a(var1);
    }
 
-   public void a(gx var1) {
+   public void a(gy var1) {
       var1.a(this);
    }
 

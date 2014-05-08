@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
-public class PacketClientbound0C extends gu {
+public class PacketClientbound0C extends gv {
 
    private int a;
    private GameProfile b;
@@ -14,23 +14,23 @@ public class PacketClientbound0C extends gu {
    private byte f;
    private byte g;
    private int h;
-   private us i;
+   private ux i;
    private List j;
 
 
    public PacketClientbound0C() {}
 
-   public PacketClientbound0C(acc var1) {
-      this.a = var1.C();
-      this.b = var1.bO();
-      this.c = rs.c(var1.s * 32.0D);
-      this.d = rs.c(var1.t * 32.0D);
-      this.e = rs.c(var1.u * 32.0D);
+   public PacketClientbound0C(ach var1) {
+      this.a = var1.D();
+      this.b = var1.bP();
+      this.c = rx.c(var1.s * 32.0D);
+      this.d = rx.c(var1.t * 32.0D);
+      this.e = rx.c(var1.u * 32.0D);
       this.f = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.g = (byte)((int)(var1.z * 256.0F / 360.0F));
       ItemStack var2 = var1.bg.h();
-      this.h = var2 == null?0:agi.b(var2.b());
-      this.i = var1.E();
+      this.h = var2 == null?0:agn.b(var2.b());
+      this.i = var1.F();
    }
 
    public void read(PacketBuffer var1) {
@@ -52,7 +52,7 @@ public class PacketClientbound0C extends gu {
       this.f = var1.readByte();
       this.g = var1.readByte();
       this.h = var1.readShort();
-      this.j = us.b(var1);
+      this.j = ux.b(var1);
    }
 
    public void write(PacketBuffer var1) {
@@ -67,7 +67,7 @@ public class PacketClientbound0C extends gu {
          Property var4 = (Property)var3.next();
          var1.writeString(var4.getName());
          var1.writeString(var4.getValue());
-         var1.writeString(var4.getSignature());
+         var1.writeString(var4.getSignature() == null?"":var4.getSignature());
       }
 
       var1.writeInt(this.c);
@@ -79,7 +79,7 @@ public class PacketClientbound0C extends gu {
       this.i.a(var1);
    }
 
-   public void a(gx var1) {
+   public void a(gy var1) {
       var1.a(this);
    }
 

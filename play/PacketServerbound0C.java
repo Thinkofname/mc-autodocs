@@ -1,5 +1,5 @@
 
-public class PacketServerbound0C extends gu {
+public class PacketServerbound0C extends gv {
 
    private float a;
    private float b;
@@ -30,7 +30,7 @@ public class PacketServerbound0C extends gu {
       var1.writeByte(var2);
    }
 
-   public void a(jv var1) {
+   public void a(jz var1) {
       var1.a(this);
    }
 

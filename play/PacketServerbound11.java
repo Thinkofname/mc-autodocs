@@ -1,11 +1,11 @@
 
-public class PacketServerbound11 extends gu {
+public class PacketServerbound11 extends gv {
 
    private int a;
    private int b;
 
 
-   public void a(jv var1) {
+   public void a(jz var1) {
       var1.a(this);
    }
 

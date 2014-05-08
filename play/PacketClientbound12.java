@@ -1,5 +1,5 @@
 
-public class PacketClientbound12 extends gu {
+public class PacketClientbound12 extends gv {
 
    private int a;
    private int b;
@@ -9,8 +9,8 @@ public class PacketClientbound12 extends gu {
 
    public PacketClientbound12() {}
 
-   public PacketClientbound12(tp var1) {
-      this(var1.C(), var1.v, var1.w, var1.x);
+   public PacketClientbound12(tu var1) {
+      this(var1.D(), var1.v, var1.w, var1.x);
    }
 
    public PacketClientbound12(int var1, double var2, double var4, double var6) {
@@ -59,7 +59,7 @@ public class PacketClientbound12 extends gu {
       var1.writeShort(this.d);
    }
 
-   public void a(gx var1) {
+   public void a(gy var1) {
       var1.a(this);
    }
 

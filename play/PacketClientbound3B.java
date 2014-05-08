@@ -1,15 +1,15 @@
 
-public class PacketClientbound3B extends gu {
+public class PacketClientbound3B extends gv {
 
    private String a;
    private String b;
-   private biy c;
+   private bje c;
    private int d;
 
 
    public PacketClientbound3B() {}
 
-   public PacketClientbound3B(bil var1, int var2) {
+   public PacketClientbound3B(bir var1, int var2) {
       this.a = var1.b();
       this.b = var1.d();
       this.c = var1.c().c();
@@ -21,7 +21,7 @@ public class PacketClientbound3B extends gu {
       this.d = var1.readByte();
       if(this.d == 0 || this.d == 2) {
          this.b = var1.readString(32);
-         this.c = biy.a(var1.readString(16));
+         this.c = bje.a(var1.readString(16));
       }
 
    }
@@ -36,7 +36,7 @@ public class PacketClientbound3B extends gu {
 
    }
 
-   public void a(gx var1) {
+   public void a(gy var1) {
       var1.a(this);
    }
 }

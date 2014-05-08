@@ -1,5 +1,5 @@
 
-public class PacketServerbound04 extends kj {
+public class PacketServerbound04 extends kn {
 
    public PacketServerbound04() {
       this.g = true;

@@ -1,5 +1,5 @@
 
-public class PacketServerbound03 extends gu {
+public class PacketServerbound03 extends gv {
 
    protected double a;
    protected double b;
@@ -11,7 +11,7 @@ public class PacketServerbound03 extends gu {
    protected boolean h;
 
 
-   public void a(jv var1) {
+   public void a(jz var1) {
       var1.a(this);
    }
 
