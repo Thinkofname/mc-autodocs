@@ -12,11 +12,11 @@ public class PacketServerbound18 extends gv {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = var1.d();
+      this.a = var1.readUUID();
    }
 
    public void write(PacketBuffer var1) {
-      var1.a(this.a);
+      var1.writeUUID(this.a);
    }
 
    public void a(jz var1) {

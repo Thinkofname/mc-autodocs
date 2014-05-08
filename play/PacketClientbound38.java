@@ -28,7 +28,7 @@ public class PacketClientbound38 extends gv {
       int var2 = var1.readVarInt();
 
       for(int var3 = 0; var3 < var2; ++var3) {
-         UUID var4 = var1.d();
+         UUID var4 = var1.readUUID();
          String var5 = null;
          int var6 = 0;
          all var7 = null;
@@ -57,7 +57,7 @@ public class PacketClientbound38 extends gv {
 
       while(var2.hasNext()) {
          iw var3 = (iw)var2.next();
-         var1.a(var3.a());
+         var1.writeUUID(var3.a());
          switch(iu.a[this.a.ordinal()]) {
          case 1:
             var1.writeString(var3.b());

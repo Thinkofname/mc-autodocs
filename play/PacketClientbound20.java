@@ -35,7 +35,7 @@ public class PacketClientbound20 extends gv {
          int var8 = var1.readVarInt();
 
          for(int var9 = 0; var9 < var8; ++var9) {
-            UUID var10 = var1.d();
+            UUID var10 = var1.readUUID();
             var7.add(new vc(var10, "Unknown synced attribute modifier", var1.readDouble(), var1.readByte()));
          }
 
@@ -58,7 +58,7 @@ public class PacketClientbound20 extends gv {
 
          while(var4.hasNext()) {
             vc var5 = (vc)var4.next();
-            var1.a(var5.a());
+            var1.writeUUID(var5.a());
             var1.writeDouble(var5.d());
             var1.writeByte(var5.c());
          }
