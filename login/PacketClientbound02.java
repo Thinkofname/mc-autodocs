@@ -1,7 +1,7 @@
 import com.mojang.authlib.GameProfile;
 import java.util.UUID;
 
-public class PacketClientbound02 extends gv {
+public class PacketClientbound02 extends gx {
 
    private GameProfile a;
 
@@ -25,7 +25,7 @@ public class PacketClientbound02 extends gv {
       var1.writeString(this.a.getName());
    }
 
-   public void a(lf var1) {
+   public void a(lj var1) {
       var1.a(this);
    }
 

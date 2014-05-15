@@ -1,23 +1,23 @@
 
-public class PacketClientbound41 extends gv {
+public class PacketClientbound41 extends gx {
 
-   private sr a;
+   private sv a;
    private boolean b;
 
 
    public PacketClientbound41() {}
 
-   public PacketClientbound41(sr var1, boolean var2) {
+   public PacketClientbound41(sv var1, boolean var2) {
       this.a = var1;
       this.b = var2;
    }
 
-   public void a(gy var1) {
+   public void a(ha var1) {
       var1.a(this);
    }
 
    public void read(PacketBuffer var1) {
-      this.a = sr.a(var1.readUnsignedByte());
+      this.a = sv.a(var1.readUnsignedByte());
    }
 
    public void write(PacketBuffer var1) {

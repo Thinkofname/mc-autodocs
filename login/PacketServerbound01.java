@@ -2,7 +2,7 @@ import io.netty.buffer.ByteBuf;
 import java.security.PrivateKey;
 import javax.crypto.SecretKey;
 
-public class PacketServerbound01 extends gv {
+public class PacketServerbound01 extends gx {
 
    private byte[] a = new byte[0];
    private byte[] b = new byte[0];
@@ -18,15 +18,15 @@ public class PacketServerbound01 extends gv {
       a(var1, this.b);
    }
 
-   public void a(lj var1) {
+   public void a(ln var1) {
       var1.a(this);
    }
 
    public SecretKey a(PrivateKey var1) {
-      return rj.a(var1, this.a);
+      return rn.a(var1, this.a);
    }
 
    public byte[] b(PrivateKey var1) {
-      return var1 == null?this.b:rj.b(var1, this.b);
+      return var1 == null?this.b:rn.b(var1, this.b);
    }
 }

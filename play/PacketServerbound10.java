@@ -1,11 +1,11 @@
 
-public class PacketServerbound10 extends gv {
+public class PacketServerbound10 extends gx {
 
    private int a;
    private ItemStack b;
 
 
-   public void a(jz var1) {
+   public void a(kd var1) {
       var1.a(this);
    }
 

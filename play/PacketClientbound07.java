@@ -1,32 +1,32 @@
 
-public class PacketClientbound07 extends gv {
+public class PacketClientbound07 extends gx {
 
    private int a;
-   private sr b;
-   private all c;
-   private aln d;
+   private sv b;
+   private alp c;
+   private alr d;
 
 
    public PacketClientbound07() {}
 
-   public PacketClientbound07(int var1, sr var2, aln var3, all var4) {
+   public PacketClientbound07(int var1, sv var2, alr var3, alp var4) {
       this.a = var1;
       this.b = var2;
       this.c = var4;
       this.d = var3;
    }
 
-   public void a(gy var1) {
+   public void a(ha var1) {
       var1.a(this);
    }
 
    public void read(PacketBuffer var1) {
       this.a = var1.readInt();
-      this.b = sr.a(var1.readUnsignedByte());
-      this.c = all.a(var1.readUnsignedByte());
-      this.d = aln.a(var1.readString(16));
+      this.b = sv.a(var1.readUnsignedByte());
+      this.c = alp.a(var1.readUnsignedByte());
+      this.d = alr.a(var1.readString(16));
       if(this.d == null) {
-         this.d = aln.b;
+         this.d = alr.b;
       }
 
    }

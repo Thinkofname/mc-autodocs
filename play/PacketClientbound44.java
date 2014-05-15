@@ -1,7 +1,7 @@
 
-public class PacketClientbound44 extends gv {
+public class PacketClientbound44 extends gx {
 
-   private je a;
+   private jg a;
    private int b;
    private double c;
    private double d;
@@ -14,7 +14,7 @@ public class PacketClientbound44 extends gv {
 
    public PacketClientbound44() {}
 
-   public PacketClientbound44(axx var1, je var2) {
+   public PacketClientbound44(ayb var1, jg var2) {
       this.a = var2;
       this.c = var1.f();
       this.d = var1.g();
@@ -27,8 +27,8 @@ public class PacketClientbound44 extends gv {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = je.a()[var1.readVarInt()];
-      switch(jd.a[this.a.ordinal()]) {
+      this.a = jg.a()[var1.readVarInt()];
+      switch(jf.a[this.a.ordinal()]) {
       case 1:
          this.e = var1.readDouble();
          break;
@@ -61,8 +61,8 @@ public class PacketClientbound44 extends gv {
    }
 
    public void write(PacketBuffer var1) {
-      var1.writeVarInt(je.a(this.a));
-      switch(jd.a[this.a.ordinal()]) {
+      var1.writeVarInt(jg.a(this.a));
+      switch(jf.a[this.a.ordinal()]) {
       case 1:
          var1.writeDouble(this.e);
          break;
@@ -94,7 +94,7 @@ public class PacketClientbound44 extends gv {
 
    }
 
-   public void a(gy var1) {
+   public void a(ha var1) {
       var1.a(this);
    }
 }

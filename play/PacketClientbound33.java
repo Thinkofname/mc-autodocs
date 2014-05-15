@@ -1,5 +1,5 @@
 
-public class PacketClientbound33 extends gv {
+public class PacketClientbound33 extends gx {
 
    private Position a;
    private String[] b;
@@ -31,7 +31,7 @@ public class PacketClientbound33 extends gv {
 
    }
 
-   public void a(gy var1) {
+   public void a(ha var1) {
       var1.a(this);
    }
 }

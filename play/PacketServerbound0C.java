@@ -1,5 +1,5 @@
 
-public class PacketServerbound0C extends gv {
+public class PacketServerbound0C extends gx {
 
    private float a;
    private float b;
@@ -30,7 +30,7 @@ public class PacketServerbound0C extends gv {
       var1.writeByte(var2);
    }
 
-   public void a(jz var1) {
+   public void a(kd var1) {
       var1.a(this);
    }
 

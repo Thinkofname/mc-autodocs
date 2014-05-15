@@ -1,5 +1,5 @@
 
-public class PacketClientbound06 extends gv {
+public class PacketClientbound06 extends gx {
 
    private float a;
    private int b;
@@ -26,7 +26,7 @@ public class PacketClientbound06 extends gv {
       var1.writeFloat(this.c);
    }
 
-   public void a(gy var1) {
+   public void a(ha var1) {
       var1.a(this);
    }
 }

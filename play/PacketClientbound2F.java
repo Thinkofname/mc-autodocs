@@ -1,5 +1,5 @@
 
-public class PacketClientbound2F extends gv {
+public class PacketClientbound2F extends gx {
 
    private int a;
    private int b;
@@ -14,7 +14,7 @@ public class PacketClientbound2F extends gv {
       this.c = var3 == null?null:var3.m();
    }
 
-   public void a(gy var1) {
+   public void a(ha var1) {
       var1.a(this);
    }
 

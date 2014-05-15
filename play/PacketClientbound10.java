@@ -1,15 +1,15 @@
 
-public class PacketClientbound10 extends gv {
+public class PacketClientbound10 extends gx {
 
    private int a;
    private Position b;
-   private dq c;
+   private dr c;
    private String d;
 
 
    public PacketClientbound10() {}
 
-   public PacketClientbound10(uu var1) {
+   public PacketClientbound10(uy var1) {
       this.a = var1.D();
       this.b = var1.h();
       this.c = var1.b;
@@ -18,9 +18,9 @@ public class PacketClientbound10 extends gv {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.d = var1.readString(uv.A);
+      this.d = var1.readString(uz.A);
       this.b = var1.readPosition();
-      this.c = dq.b(var1.readUnsignedByte());
+      this.c = dr.b(var1.readUnsignedByte());
    }
 
    public void write(PacketBuffer var1) {
@@ -30,7 +30,7 @@ public class PacketClientbound10 extends gv {
       var1.writeByte(this.c.b());
    }
 
-   public void a(gy var1) {
+   public void a(ha var1) {
       var1.a(this);
    }
 

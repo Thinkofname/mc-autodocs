@@ -1,12 +1,12 @@
 
-public class PacketClientbound40 extends gv {
+public class PacketClientbound40 extends gx {
 
-   private gk a;
+   private gl a;
 
 
    public PacketClientbound40() {}
 
-   public PacketClientbound40(gk var1) {
+   public PacketClientbound40(gl var1) {
       this.a = var1;
    }
 
@@ -18,7 +18,7 @@ public class PacketClientbound40 extends gv {
       var1.a(this.a);
    }
 
-   public void a(gy var1) {
+   public void a(ha var1) {
       var1.a(this);
    }
 

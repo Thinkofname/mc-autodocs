@@ -1,7 +1,7 @@
 
-public class PacketClientbound2A extends gv {
+public class PacketClientbound2A extends gx {
 
-   private ea a;
+   private eb a;
    private float b;
    private float c;
    private float d;
@@ -15,7 +15,7 @@ public class PacketClientbound2A extends gv {
 
    public PacketClientbound2A() {}
 
-   public PacketClientbound2A(ea var1, float var2, float var3, float var4, float var5, float var6, float var7, float var8, int var9, int ... var10) {
+   public PacketClientbound2A(eb var1, float var2, float var3, float var4, float var5, float var6, float var7, float var8, int var9, int ... var10) {
       this.a = var1;
       this.b = var2;
       this.c = var3;
@@ -29,9 +29,9 @@ public class PacketClientbound2A extends gv {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = ea.a(var1.readInt());
+      this.a = eb.a(var1.readInt());
       if(this.a == null) {
-         this.a = ea.J;
+         this.a = eb.J;
       }
 
       this.b = var1.readFloat();
@@ -71,7 +71,7 @@ public class PacketClientbound2A extends gv {
 
    }
 
-   public void a(gy var1) {
+   public void a(ha var1) {
       var1.a(this);
    }
 }
