@@ -1,28 +1,28 @@
 
-public class PacketServerbound16 extends gx {
+public class PacketServerbound16 implements gx {
 
-   private kh a;
+   private kk a;
 
 
    public PacketServerbound16() {}
 
-   public PacketServerbound16(kh var1) {
+   public PacketServerbound16(kk var1) {
       this.a = var1;
    }
 
    public void read(PacketBuffer var1) {
-      this.a = kh.a()[var1.readUnsignedByte() % kh.a().length];
+      this.a = (kk)var1.a(kk.class);
    }
 
    public void write(PacketBuffer var1) {
-      var1.writeByte(kh.a(this.a));
+      var1.a(this.a);
    }
 
-   public void a(kd var1) {
+   public void a(kg var1) {
       var1.a(this);
    }
 
-   public kh c() {
+   public kk a() {
       return this.a;
    }
 }

@@ -1,6 +1,5 @@
-import org.apache.commons.lang3.ArrayUtils;
 
-public class PacketClientbound3A extends gx {
+public class PacketClientbound3A implements gx {
 
    private String[] a;
 
@@ -32,11 +31,7 @@ public class PacketClientbound3A extends gx {
 
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
-   }
-
-   public String b() {
-      return String.format("candidates=\'%s\'", new Object[]{ArrayUtils.toString(this.a)});
    }
 }

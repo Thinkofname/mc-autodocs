@@ -1,5 +1,5 @@
 
-public class PacketClientbound32 extends gx {
+public class PacketClientbound32 implements gx {
 
    private int a;
    private short b;
@@ -14,7 +14,7 @@ public class PacketClientbound32 extends gx {
       this.c = var3;
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
    }
 
@@ -28,9 +28,5 @@ public class PacketClientbound32 extends gx {
       var1.writeByte(this.a);
       var1.writeShort(this.b);
       var1.writeBoolean(this.c);
-   }
-
-   public String b() {
-      return String.format("id=%d, uid=%d, accepted=%b", new Object[]{Integer.valueOf(this.a), Short.valueOf(this.b), Boolean.valueOf(this.c)});
    }
 }

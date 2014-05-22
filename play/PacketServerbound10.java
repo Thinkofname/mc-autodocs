@@ -1,11 +1,11 @@
 
-public class PacketServerbound10 extends gx {
+public class PacketServerbound10 implements gx {
 
    private int a;
    private ItemStack b;
 
 
-   public void a(kd var1) {
+   public void a(kg var1) {
       var1.a(this);
    }
 
@@ -19,11 +19,11 @@ public class PacketServerbound10 extends gx {
       var1.writeSlot(this.b);
    }
 
-   public int c() {
+   public int a() {
       return this.a;
    }
 
-   public ItemStack d() {
+   public ItemStack b() {
       return this.b;
    }
 }

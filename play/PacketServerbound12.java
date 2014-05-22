@@ -1,5 +1,5 @@
 
-public class PacketServerbound12 extends gx {
+public class PacketServerbound12 implements gx {
 
    private Position a;
    private String[] b;
@@ -24,15 +24,15 @@ public class PacketServerbound12 extends gx {
 
    }
 
-   public void a(kd var1) {
+   public void a(kg var1) {
       var1.a(this);
    }
 
-   public Position c() {
+   public Position a() {
       return this.a;
    }
 
-   public String[] d() {
+   public String[] b() {
       return this.b;
    }
 }

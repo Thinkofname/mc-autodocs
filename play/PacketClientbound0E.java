@@ -1,5 +1,5 @@
 
-public class PacketClientbound0E extends gx {
+public class PacketClientbound0E implements gx {
 
    private int a;
    private int b;
@@ -16,17 +16,17 @@ public class PacketClientbound0E extends gx {
 
    public PacketClientbound0E() {}
 
-   public PacketClientbound0E(ty var1, int var2) {
+   public PacketClientbound0E(ub var1, int var2) {
       this(var1, var2, 0);
    }
 
-   public PacketClientbound0E(ty var1, int var2, int var3) {
+   public PacketClientbound0E(ub var1, int var2, int var3) {
       this.a = var1.D();
-      this.b = sb.c(var1.s * 32.0D);
-      this.c = sb.c(var1.t * 32.0D);
-      this.d = sb.c(var1.u * 32.0D);
-      this.h = sb.d(var1.z * 256.0F / 360.0F);
-      this.i = sb.d(var1.y * 256.0F / 360.0F);
+      this.b = sd.c(var1.s * 32.0D);
+      this.c = sd.c(var1.t * 32.0D);
+      this.d = sd.c(var1.u * 32.0D);
+      this.h = sd.d(var1.z * 256.0F / 360.0F);
+      this.i = sd.d(var1.y * 256.0F / 360.0F);
       this.j = var2;
       this.k = var3;
       if(var3 > 0) {
@@ -99,12 +99,8 @@ public class PacketClientbound0E extends gx {
 
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
-   }
-
-   public String b() {
-      return String.format("id=%d, type=%d, x=%.2f, y=%.2f, z=%.2f", new Object[]{Integer.valueOf(this.a), Integer.valueOf(this.j), Float.valueOf((float)this.b / 32.0F), Float.valueOf((float)this.c / 32.0F), Float.valueOf((float)this.d / 32.0F)});
    }
 
    public void a(int var1) {

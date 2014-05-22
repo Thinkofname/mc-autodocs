@@ -1,5 +1,5 @@
 
-public class PacketClientbound2A extends gx {
+public class PacketClientbound2A implements gx {
 
    private eb a;
    private float b;
@@ -71,7 +71,7 @@ public class PacketClientbound2A extends gx {
 
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
    }
 }

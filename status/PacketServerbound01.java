@@ -1,5 +1,5 @@
 
-public class PacketServerbound01 extends gx {
+public class PacketServerbound01 implements gx {
 
    private long a;
 
@@ -12,15 +12,11 @@ public class PacketServerbound01 extends gx {
       var1.writeLong(this.a);
    }
 
-   public void a(lz var1) {
+   public void a(mc var1) {
       var1.a(this);
    }
 
-   public boolean a() {
-      return true;
-   }
-
-   public long c() {
+   public long a() {
       return this.a;
    }
 }

@@ -1,5 +1,5 @@
 
-public class PacketServerbound00 extends gx {
+public class PacketServerbound00 implements gx {
 
    private int a;
    private String b;
@@ -21,19 +21,15 @@ public class PacketServerbound00 extends gx {
       var1.writeVarInt(this.d.c());
    }
 
-   public void a(li var1) {
+   public void a(ll var1) {
       var1.a(this);
    }
 
-   public boolean a() {
-      return true;
-   }
-
-   public fv c() {
+   public fv a() {
       return this.d;
    }
 
-   public int d() {
+   public int b() {
       return this.a;
    }
 }

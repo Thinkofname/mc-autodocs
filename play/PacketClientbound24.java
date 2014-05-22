@@ -1,15 +1,15 @@
 
-public class PacketClientbound24 extends gx {
+public class PacketClientbound24 implements gx {
 
    private Position a;
    private int b;
    private int c;
-   private ans d;
+   private anv d;
 
 
    public PacketClientbound24() {}
 
-   public PacketClientbound24(Position var1, ans var2, int var3, int var4) {
+   public PacketClientbound24(Position var1, anv var2, int var3, int var4) {
       this.a = var1;
       this.b = var3;
       this.c = var4;
@@ -20,17 +20,17 @@ public class PacketClientbound24 extends gx {
       this.a = var1.readPosition();
       this.b = var1.readUnsignedByte();
       this.c = var1.readUnsignedByte();
-      this.d = ans.f(var1.readVarInt() & 4095);
+      this.d = anv.f(var1.readVarInt() & 4095);
    }
 
    public void write(PacketBuffer var1) {
       var1.writePosition(this.a);
       var1.writeByte(this.b);
       var1.writeByte(this.c);
-      var1.writeVarInt(ans.b(this.d) & 4095);
+      var1.writeVarInt(anv.b(this.d) & 4095);
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
    }
 }

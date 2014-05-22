@@ -1,5 +1,5 @@
 
-public class PacketClientbound2D extends gx {
+public class PacketClientbound2D implements gx {
 
    private int a;
    private String b;
@@ -26,14 +26,14 @@ public class PacketClientbound2D extends gx {
       this.e = var5;
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
    }
 
    public void read(PacketBuffer var1) {
       this.a = var1.readUnsignedByte();
       this.b = var1.readString(32);
-      this.c = var1.b();
+      this.c = var1.d();
       this.d = var1.readUnsignedByte();
       if(this.b.equals("EntityHorse")) {
          this.e = var1.readInt();

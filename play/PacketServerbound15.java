@@ -1,9 +1,9 @@
 
-public class PacketServerbound15 extends gx {
+public class PacketServerbound15 implements gx {
 
    private String a;
    private int b;
-   private aco c;
+   private acr c;
    private boolean d;
    private int e;
 
@@ -11,7 +11,7 @@ public class PacketServerbound15 extends gx {
    public void read(PacketBuffer var1) {
       this.a = var1.readString(7);
       this.b = var1.readByte();
-      this.c = aco.a(var1.readByte());
+      this.c = acr.a(var1.readByte());
       this.d = var1.readBoolean();
       this.e = var1.readUnsignedByte();
    }
@@ -24,27 +24,23 @@ public class PacketServerbound15 extends gx {
       var1.writeByte(this.e);
    }
 
-   public void a(kd var1) {
+   public void a(kg var1) {
       var1.a(this);
    }
 
-   public String c() {
+   public String a() {
       return this.a;
    }
 
-   public aco e() {
+   public acr c() {
       return this.c;
    }
 
-   public boolean f() {
+   public boolean d() {
       return this.d;
    }
 
-   public int g() {
+   public int e() {
       return this.e;
-   }
-
-   public String b() {
-      return String.format("lang=\'%s\', view=%d, chat=%s, col=%b, modelCustomisation=%b", new Object[]{this.a, Integer.valueOf(this.b), this.c, Boolean.valueOf(this.d), Integer.valueOf(this.e)});
    }
 }

@@ -1,6 +1,6 @@
 import java.util.Set;
 
-public class PacketClientbound08 extends gx {
+public class PacketClientbound08 implements gx {
 
    private double a;
    private double b;
@@ -27,7 +27,7 @@ public class PacketClientbound08 extends gx {
       this.c = var1.readDouble();
       this.d = var1.readFloat();
       this.e = var1.readFloat();
-      this.f = gz.a(var1.readUnsignedByte());
+      this.f = hb.a(var1.readUnsignedByte());
    }
 
    public void write(PacketBuffer var1) {
@@ -36,10 +36,10 @@ public class PacketClientbound08 extends gx {
       var1.writeDouble(this.c);
       var1.writeFloat(this.d);
       var1.writeFloat(this.e);
-      var1.writeByte(gz.a(this.f));
+      var1.writeByte(hb.a(this.f));
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
    }
 }

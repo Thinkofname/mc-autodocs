@@ -1,5 +1,5 @@
 
-public class PacketClientbound13 extends gx {
+public class PacketClientbound13 implements gx {
 
    private int[] a;
 
@@ -28,21 +28,7 @@ public class PacketClientbound13 extends gx {
 
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
-   }
-
-   public String b() {
-      StringBuilder var1 = new StringBuilder();
-
-      for(int var2 = 0; var2 < this.a.length; ++var2) {
-         if(var2 > 0) {
-            var1.append(", ");
-         }
-
-         var1.append(this.a[var2]);
-      }
-
-      return String.format("entities=%d[%s]", new Object[]{Integer.valueOf(this.a.length), var1});
    }
 }

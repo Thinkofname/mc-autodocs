@@ -1,5 +1,5 @@
 
-public class PacketClientbound16 extends im {
+public class PacketClientbound16 extends io {
 
    public PacketClientbound16() {
       this.g = true;
@@ -22,9 +22,5 @@ public class PacketClientbound16 extends im {
       super.b(var1);
       var1.writeByte(this.e);
       var1.writeByte(this.f);
-   }
-
-   public String b() {
-      return super.b() + String.format(", yRot=%d, xRot=%d", new Object[]{Byte.valueOf(this.e), Byte.valueOf(this.f)});
    }
 }

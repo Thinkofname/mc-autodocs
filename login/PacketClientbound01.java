@@ -1,7 +1,6 @@
-import io.netty.buffer.ByteBuf;
 import java.security.PublicKey;
 
-public class PacketClientbound01 extends gx {
+public class PacketClientbound01 implements gx {
 
    private String a;
    private PublicKey b;
@@ -18,17 +17,17 @@ public class PacketClientbound01 extends gx {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readString(20);
-      this.b = rn.a(a((ByteBuf)var1));
-      this.c = a((ByteBuf)var1);
+      this.b = rp.a(var1.a());
+      this.c = var1.a();
    }
 
    public void write(PacketBuffer var1) {
       var1.writeString(this.a);
-      a(var1, this.b.getEncoded());
-      a(var1, this.c);
+      var1.a(this.b.getEncoded());
+      var1.a(this.c);
    }
 
-   public void a(lj var1) {
+   public void a(lm var1) {
       var1.a(this);
    }
 }

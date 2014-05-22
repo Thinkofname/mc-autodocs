@@ -1,5 +1,5 @@
 
-public class PacketServerbound0E extends gx {
+public class PacketServerbound0E implements gx {
 
    private int a;
    private int b;
@@ -9,7 +9,7 @@ public class PacketServerbound0E extends gx {
    private int f;
 
 
-   public void a(kd var1) {
+   public void a(kg var1) {
       var1.a(this);
    }
 
@@ -31,31 +31,27 @@ public class PacketServerbound0E extends gx {
       var1.writeSlot(this.e);
    }
 
-   public String b() {
-      return this.e != null?String.format("id=%d, slot=%d, button=%d, type=%d, itemid=%d, itemcount=%d, itemaux=%d", new Object[]{Integer.valueOf(this.a), Integer.valueOf(this.b), Integer.valueOf(this.c), Integer.valueOf(this.f), Integer.valueOf(agr.b(this.e.b())), Integer.valueOf(this.e.b), Integer.valueOf(this.e.k())}):String.format("id=%d, slot=%d, button=%d, type=%d, itemid=-1", new Object[]{Integer.valueOf(this.a), Integer.valueOf(this.b), Integer.valueOf(this.c), Integer.valueOf(this.f)});
-   }
-
-   public int c() {
+   public int a() {
       return this.a;
    }
 
-   public int d() {
+   public int b() {
       return this.b;
    }
 
-   public int e() {
+   public int c() {
       return this.c;
    }
 
-   public short f() {
+   public short d() {
       return this.d;
    }
 
-   public ItemStack g() {
+   public ItemStack e() {
       return this.e;
    }
 
-   public int h() {
+   public int f() {
       return this.f;
    }
 }

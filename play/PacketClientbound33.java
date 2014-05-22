@@ -1,5 +1,5 @@
 
-public class PacketClientbound33 extends gx {
+public class PacketClientbound33 implements gx {
 
    private Position a;
    private String[] b;
@@ -31,7 +31,7 @@ public class PacketClientbound33 extends gx {
 
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
    }
 }

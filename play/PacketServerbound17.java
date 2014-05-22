@@ -1,5 +1,5 @@
 
-public class PacketServerbound17 extends gx {
+public class PacketServerbound17 implements gx {
 
    private String a;
    private int b;
@@ -25,15 +25,15 @@ public class PacketServerbound17 extends gx {
 
    }
 
-   public void a(kd var1) {
+   public void a(kg var1) {
       var1.a(this);
    }
 
-   public String c() {
+   public String a() {
       return this.a;
    }
 
-   public byte[] e() {
+   public byte[] c() {
       return this.c;
    }
 }

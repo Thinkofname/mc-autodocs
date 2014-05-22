@@ -1,5 +1,5 @@
 
-public class PacketClientbound25 extends gx {
+public class PacketClientbound25 implements gx {
 
    private int a;
    private Position b;
@@ -26,7 +26,7 @@ public class PacketClientbound25 extends gx {
       var1.writeByte(this.c);
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
    }
 }

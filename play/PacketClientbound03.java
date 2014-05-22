@@ -1,5 +1,5 @@
 
-public class PacketClientbound03 extends gx {
+public class PacketClientbound03 implements gx {
 
    private long a;
    private long b;
@@ -29,11 +29,7 @@ public class PacketClientbound03 extends gx {
       var1.writeLong(this.b);
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
-   }
-
-   public String b() {
-      return String.format("time=%d,dtime=%d", new Object[]{Long.valueOf(this.a), Long.valueOf(this.b)});
    }
 }

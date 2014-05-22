@@ -4,7 +4,7 @@ import java.util.zip.DataFormatException;
 import java.util.zip.Deflater;
 import java.util.zip.Inflater;
 
-public class PacketClientbound26 extends gx {
+public class PacketClientbound26 implements gx {
 
    private int[] a;
    private int[] b;
@@ -26,12 +26,12 @@ public class PacketClientbound26 extends gx {
       this.c = new int[var2];
       this.d = new int[var2];
       this.f = new byte[var2][];
-      this.h = !var1.isEmpty() && !((ayg)var1.get(0)).p().s.p();
+      this.h = !var1.isEmpty() && !((ayj)var1.get(0)).p().s.p();
       int var3 = 0;
 
       for(int var4 = 0; var4 < var2; ++var4) {
-         ayg var5 = (ayg)var1.get(var4);
-         ie var6 = id.a(var5, true, '\uffff');
+         ayj var5 = (ayj)var1.get(var4);
+         ih var6 = ig.a(var5, true, '\uffff');
          if(i.length < var3 + var6.a.length) {
             byte[] var7 = new byte[var3 + var6.a.length];
             System.arraycopy(i, 0, var7, 0, i.length);
@@ -60,7 +60,7 @@ public class PacketClientbound26 extends gx {
 
    }
 
-   public static int c() {
+   public static int a() {
       return 5;
    }
 
@@ -78,7 +78,7 @@ public class PacketClientbound26 extends gx {
       }
 
       var1.readBytes(i, 0, this.g);
-      byte[] var3 = new byte[id.c() * var2];
+      byte[] var3 = new byte[ig.a() * var2];
       Inflater var4 = new Inflater();
       var4.setInput(i, 0, this.g);
 
@@ -134,22 +134,8 @@ public class PacketClientbound26 extends gx {
 
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
-   }
-
-   public String b() {
-      StringBuilder var1 = new StringBuilder();
-
-      for(int var2 = 0; var2 < this.a.length; ++var2) {
-         if(var2 > 0) {
-            var1.append(", ");
-         }
-
-         var1.append(String.format("{x=%d, z=%d, sections=%d, adds=%d, data=%d}", new Object[]{Integer.valueOf(this.a[var2]), Integer.valueOf(this.b[var2]), Integer.valueOf(this.c[var2]), Integer.valueOf(this.d[var2]), Integer.valueOf(this.f[var2].length)}));
-      }
-
-      return String.format("size=%d, chunks=%d[%s]", new Object[]{Integer.valueOf(this.g), Integer.valueOf(this.a.length), var1});
    }
 
 }

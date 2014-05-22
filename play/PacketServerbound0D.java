@@ -1,10 +1,10 @@
 
-public class PacketServerbound0D extends gx {
+public class PacketServerbound0D implements gx {
 
    private int a;
 
 
-   public void a(kd var1) {
+   public void a(kg var1) {
       var1.a(this);
    }
 

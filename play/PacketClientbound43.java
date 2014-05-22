@@ -1,12 +1,12 @@
 
-public class PacketClientbound43 extends gx {
+public class PacketClientbound43 implements gx {
 
    public int a;
 
 
    public PacketClientbound43() {}
 
-   public PacketClientbound43(ty var1) {
+   public PacketClientbound43(ub var1) {
       this.a = var1.D();
    }
 
@@ -18,11 +18,7 @@ public class PacketClientbound43 extends gx {
       var1.writeVarInt(this.a);
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
-   }
-
-   public String b() {
-      return "cameraId=" + this.a;
    }
 }

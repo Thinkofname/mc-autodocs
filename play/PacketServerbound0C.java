@@ -1,5 +1,5 @@
 
-public class PacketServerbound0C extends gx {
+public class PacketServerbound0C implements gx {
 
    private float a;
    private float b;
@@ -30,23 +30,23 @@ public class PacketServerbound0C extends gx {
       var1.writeByte(var2);
    }
 
-   public void a(kd var1) {
+   public void a(kg var1) {
       var1.a(this);
    }
 
-   public float c() {
+   public float a() {
       return this.a;
    }
 
-   public float d() {
+   public float b() {
       return this.b;
    }
 
-   public boolean e() {
+   public boolean c() {
       return this.c;
    }
 
-   public boolean f() {
+   public boolean d() {
       return this.d;
    }
 }

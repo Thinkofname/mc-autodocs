@@ -1,5 +1,5 @@
 
-public class PacketClientbound00 extends gx {
+public class PacketClientbound00 implements gx {
 
    private int a;
 
@@ -10,7 +10,7 @@ public class PacketClientbound00 extends gx {
       this.a = var1;
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
    }
 
@@ -20,9 +20,5 @@ public class PacketClientbound00 extends gx {
 
    public void write(PacketBuffer var1) {
       var1.writeInt(this.a);
-   }
-
-   public boolean a() {
-      return true;
    }
 }

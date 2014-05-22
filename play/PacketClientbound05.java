@@ -1,5 +1,5 @@
 
-public class PacketClientbound05 extends gx {
+public class PacketClientbound05 implements gx {
 
    private Position a;
 
@@ -18,15 +18,7 @@ public class PacketClientbound05 extends gx {
       var1.writePosition(this.a);
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
-   }
-
-   public boolean a() {
-      return false;
-   }
-
-   public String b() {
-      return String.format("pos=" + this.a, new Object[0]);
    }
 }

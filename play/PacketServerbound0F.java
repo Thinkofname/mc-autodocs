@@ -1,12 +1,12 @@
 
-public class PacketServerbound0F extends gx {
+public class PacketServerbound0F implements gx {
 
    private int a;
    private short b;
    private boolean c;
 
 
-   public void a(kd var1) {
+   public void a(kg var1) {
       var1.a(this);
    }
 
@@ -22,15 +22,11 @@ public class PacketServerbound0F extends gx {
       var1.writeByte(this.c?1:0);
    }
 
-   public String b() {
-      return String.format("id=%d, uid=%d, accepted=%b", new Object[]{Integer.valueOf(this.a), Short.valueOf(this.b), Boolean.valueOf(this.c)});
-   }
-
-   public int c() {
+   public int a() {
       return this.a;
    }
 
-   public short d() {
+   public short b() {
       return this.b;
    }
 }

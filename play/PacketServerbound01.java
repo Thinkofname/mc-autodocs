@@ -1,5 +1,5 @@
 
-public class PacketServerbound01 extends gx {
+public class PacketServerbound01 implements gx {
 
    private String a;
 
@@ -22,15 +22,11 @@ public class PacketServerbound01 extends gx {
       var1.writeString(this.a);
    }
 
-   public void a(kd var1) {
+   public void a(kg var1) {
       var1.a(this);
    }
 
-   public String b() {
-      return String.format("message=\'%s\'", new Object[]{this.a});
-   }
-
-   public String c() {
+   public String a() {
       return this.a;
    }
 }

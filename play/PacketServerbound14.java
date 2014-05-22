@@ -1,6 +1,6 @@
 import org.apache.commons.lang3.StringUtils;
 
-public class PacketServerbound14 extends gx {
+public class PacketServerbound14 implements gx {
 
    private String a;
 
@@ -19,15 +19,11 @@ public class PacketServerbound14 extends gx {
       var1.writeString(StringUtils.substring(this.a, 0, 32767));
    }
 
-   public void a(kd var1) {
+   public void a(kg var1) {
       var1.a(this);
    }
 
-   public String c() {
+   public String a() {
       return this.a;
-   }
-
-   public String b() {
-      return String.format("message=\'%s\'", new Object[]{this.a});
    }
 }

@@ -1,32 +1,32 @@
 
-public class PacketServerbound0B extends gx {
+public class PacketServerbound0B implements gx {
 
    private int a;
-   private kz b;
+   private lc b;
    private int c;
 
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.b = kz.a(var1.readUnsignedByte());
+      this.b = (lc)var1.a(lc.class);
       this.c = var1.readVarInt();
    }
 
    public void write(PacketBuffer var1) {
       var1.writeVarInt(this.a);
-      var1.writeByte(kz.a(this.b));
+      var1.a(this.b);
       var1.writeVarInt(this.c);
    }
 
-   public void a(kd var1) {
+   public void a(kg var1) {
       var1.a(this);
    }
 
-   public kz d() {
+   public lc b() {
       return this.b;
    }
 
-   public int e() {
+   public int c() {
       return this.c;
    }
 }

@@ -1,5 +1,5 @@
 
-public class PacketServerbound05 extends kr {
+public class PacketServerbound05 extends ku {
 
    public PacketServerbound05() {
       this.h = true;

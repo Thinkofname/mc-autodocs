@@ -1,5 +1,5 @@
 
-public class PacketServerbound03 extends gx {
+public class PacketServerbound03 implements gx {
 
    protected double a;
    protected double b;
@@ -11,7 +11,7 @@ public class PacketServerbound03 extends gx {
    protected boolean h;
 
 
-   public void a(kd var1) {
+   public void a(kg var1) {
       var1.a(this);
    }
 
@@ -23,35 +23,35 @@ public class PacketServerbound03 extends gx {
       var1.writeByte(this.f?1:0);
    }
 
-   public double c() {
+   public double a() {
       return this.a;
    }
 
-   public double d() {
+   public double b() {
       return this.b;
    }
 
-   public double e() {
+   public double c() {
       return this.c;
    }
 
-   public float f() {
+   public float d() {
       return this.d;
    }
 
-   public float g() {
+   public float e() {
       return this.e;
    }
 
-   public boolean h() {
+   public boolean f() {
       return this.f;
    }
 
-   public boolean i() {
+   public boolean g() {
       return this.g;
    }
 
-   public boolean j() {
+   public boolean h() {
       return this.h;
    }
 

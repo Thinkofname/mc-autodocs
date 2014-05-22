@@ -1,5 +1,5 @@
 
-public class PacketClientbound34 extends gx {
+public class PacketClientbound34 implements gx {
 
    private int a;
    private byte[] b;
@@ -24,11 +24,7 @@ public class PacketClientbound34 extends gx {
       var1.writeBytes(this.b);
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
-   }
-
-   public String b() {
-      return String.format("id=%d, length=%d", new Object[]{Integer.valueOf(this.a), Integer.valueOf(this.b.length)});
    }
 }

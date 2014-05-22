@@ -1,5 +1,5 @@
 
-public class PacketClientbound00 extends gx {
+public class PacketClientbound00 implements gx {
 
    private gl a;
 
@@ -11,18 +11,14 @@ public class PacketClientbound00 extends gx {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = var1.b();
+      this.a = var1.d();
    }
 
    public void write(PacketBuffer var1) {
       var1.a(this.a);
    }
 
-   public void a(lj var1) {
+   public void a(lm var1) {
       var1.a(this);
-   }
-
-   public boolean a() {
-      return true;
    }
 }

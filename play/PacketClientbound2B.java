@@ -1,5 +1,5 @@
 
-public class PacketClientbound2B extends gx {
+public class PacketClientbound2B implements gx {
 
    public static final String[] a = new String[]{"tile.bed.notValid", null, null, "gameMode.changed"};
    private int b;
@@ -23,7 +23,7 @@ public class PacketClientbound2B extends gx {
       var1.writeFloat(this.c);
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
    }
 

@@ -1,5 +1,5 @@
 
-public class PacketClientbound19 extends gx {
+public class PacketClientbound19 implements gx {
 
    private int a;
    private byte b;
@@ -7,7 +7,7 @@ public class PacketClientbound19 extends gx {
 
    public PacketClientbound19() {}
 
-   public PacketClientbound19(ty var1, byte var2) {
+   public PacketClientbound19(ub var1, byte var2) {
       this.a = var1.D();
       this.b = var2;
    }
@@ -22,11 +22,7 @@ public class PacketClientbound19 extends gx {
       var1.writeByte(this.b);
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
-   }
-
-   public String b() {
-      return String.format("id=%d, rot=%d", new Object[]{Integer.valueOf(this.a), Byte.valueOf(this.b)});
    }
 }

@@ -1,5 +1,5 @@
 
-public class PacketClientbound39 extends gx {
+public class PacketClientbound39 implements gx {
 
    private boolean a;
    private boolean b;
@@ -11,7 +11,7 @@ public class PacketClientbound39 extends gx {
 
    public PacketClientbound39() {}
 
-   public PacketClientbound39(aci var1) {
+   public PacketClientbound39(acl var1) {
       this.a(var1.a);
       this.b(var1.b);
       this.c(var1.c);
@@ -32,19 +32,19 @@ public class PacketClientbound39 extends gx {
 
    public void write(PacketBuffer var1) {
       byte var2 = 0;
-      if(this.c()) {
+      if(this.a()) {
          var2 = (byte)(var2 | 1);
       }
 
-      if(this.d()) {
+      if(this.b()) {
          var2 = (byte)(var2 | 2);
       }
 
-      if(this.e()) {
+      if(this.c()) {
          var2 = (byte)(var2 | 4);
       }
 
-      if(this.f()) {
+      if(this.d()) {
          var2 = (byte)(var2 | 8);
       }
 
@@ -53,15 +53,11 @@ public class PacketClientbound39 extends gx {
       var1.writeFloat(this.f);
    }
 
-   public void a(ha var1) {
+   public void a(hc var1) {
       var1.a(this);
    }
 
-   public String b() {
-      return String.format("invuln=%b, flying=%b, canfly=%b, instabuild=%b, flyspeed=%.4f, walkspped=%.4f", new Object[]{Boolean.valueOf(this.c()), Boolean.valueOf(this.d()), Boolean.valueOf(this.e()), Boolean.valueOf(this.f()), Float.valueOf(this.g()), Float.valueOf(this.h())});
-   }
-
-   public boolean c() {
+   public boolean a() {
       return this.a;
    }
 
@@ -69,7 +65,7 @@ public class PacketClientbound39 extends gx {
       this.a = var1;
    }
 
-   public boolean d() {
+   public boolean b() {
       return this.b;
    }
 
@@ -77,7 +73,7 @@ public class PacketClientbound39 extends gx {
       this.b = var1;
    }
 
-   public boolean e() {
+   public boolean c() {
       return this.c;
    }
 
@@ -85,7 +81,7 @@ public class PacketClientbound39 extends gx {
       this.c = var1;
    }
 
-   public boolean f() {
+   public boolean d() {
       return this.d;
    }
 
@@ -93,16 +89,8 @@ public class PacketClientbound39 extends gx {
       this.d = var1;
    }
 
-   public float g() {
-      return this.e;
-   }
-
    public void a(float var1) {
       this.e = var1;
-   }
-
-   public float h() {
-      return this.f;
    }
 
    public void b(float var1) {
