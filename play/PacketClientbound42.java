@@ -27,7 +27,7 @@ public class PacketClientbound42 implements gx {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = (iw)var1.a(iw.class);
+      this.a = (iw)var1.readEnum(iw.class);
       if(this.a == iw.b) {
          this.d = var1.readVarInt();
          this.c = var1.readInt();
@@ -40,7 +40,7 @@ public class PacketClientbound42 implements gx {
    }
 
    public void write(PacketBuffer var1) {
-      var1.a(this.a);
+      var1.writeEnum(this.a);
       if(this.a == iw.b) {
          var1.writeVarInt(this.d);
          var1.writeInt(this.c);

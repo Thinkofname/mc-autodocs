@@ -36,7 +36,7 @@ public class PacketClientbound38 implements gx {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = (iz)var1.a(iz.class);
+      this.a = (iz)var1.readEnum(iz.class);
       int var2 = var1.readVarInt();
 
       for(int var3 = 0; var3 < var2; ++var3) {
@@ -79,7 +79,7 @@ public class PacketClientbound38 implements gx {
    }
 
    public void write(PacketBuffer var1) {
-      var1.a(this.a);
+      var1.writeEnum(this.a);
       var1.writeVarInt(this.b.size());
       Iterator var2 = this.b.iterator();
 

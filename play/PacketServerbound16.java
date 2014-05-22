@@ -11,11 +11,11 @@ public class PacketServerbound16 implements gx {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = (kk)var1.a(kk.class);
+      this.a = (kk)var1.readEnum(kk.class);
    }
 
    public void write(PacketBuffer var1) {
-      var1.a(this.a);
+      var1.writeEnum(this.a);
    }
 
    public void a(kg var1) {

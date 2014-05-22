@@ -27,7 +27,7 @@ public class PacketClientbound44 implements gx {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = (ji)var1.a(ji.class);
+      this.a = (ji)var1.readEnum(ji.class);
       switch(jh.a[this.a.ordinal()]) {
       case 1:
          this.e = var1.readDouble();
@@ -61,7 +61,7 @@ public class PacketClientbound44 implements gx {
    }
 
    public void write(PacketBuffer var1) {
-      var1.a(this.a);
+      var1.writeEnum(this.a);
       switch(jh.a[this.a.ordinal()]) {
       case 1:
          var1.writeDouble(this.e);

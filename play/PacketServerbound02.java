@@ -7,12 +7,12 @@ public class PacketServerbound02 implements gx {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.b = (ks)var1.a(ks.class);
+      this.b = (ks)var1.readEnum(ks.class);
    }
 
    public void write(PacketBuffer var1) {
       var1.writeVarInt(this.a);
-      var1.a(this.b);
+      var1.writeEnum(this.b);
    }
 
    public void a(kg var1) {
