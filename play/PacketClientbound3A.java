@@ -1,5 +1,5 @@
 
-public class PacketClientbound3A implements gx {
+public class PacketClientbound3A implements ha {
 
    private String[] a;
 
@@ -31,7 +31,7 @@ public class PacketClientbound3A implements gx {
 
    }
 
-   public void a(hc var1) {
+   public void a(hg var1) {
       var1.a(this);
    }
 }

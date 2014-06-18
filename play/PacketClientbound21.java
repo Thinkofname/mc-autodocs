@@ -3,7 +3,7 @@ import java.util.zip.DataFormatException;
 import java.util.zip.Deflater;
 import java.util.zip.Inflater;
 
-public class PacketClientbound21 implements gx {
+public class PacketClientbound21 implements ha {
 
    private int a;
    private int b;
@@ -18,11 +18,11 @@ public class PacketClientbound21 implements gx {
 
    public PacketClientbound21() {}
 
-   public PacketClientbound21(ayj var1, boolean var2, int var3) {
+   public PacketClientbound21(ayt var1, boolean var2, int var3) {
       this.a = var1.a;
       this.b = var1.b;
       this.g = var2;
-      ih var4 = a(var1, var2, var3);
+      il var4 = a(var1, var2, var3);
       Deflater var5 = new Deflater(-1);
       this.d = var4.c;
       this.c = var4.b;
@@ -91,15 +91,15 @@ public class PacketClientbound21 implements gx {
       var1.writeBytes(this.e, 0, this.h);
    }
 
-   public void a(hc var1) {
+   public void a(hg var1) {
       var1.a(this);
    }
 
-   public static ih a(ayj var0, boolean var1, int var2) {
+   public static il a(ayt var0, boolean var1, int var2) {
       int var3 = 0;
-      aym[] var4 = var0.h();
+      ayx[] var4 = var0.h();
       int var5 = 0;
-      ih var6 = new ih();
+      il var6 = new il();
       byte[] var7 = i;
 
       int var8;
@@ -121,7 +121,7 @@ public class PacketClientbound21 implements gx {
          }
       }
 
-      ayh var10;
+      ayr var10;
       for(var8 = 0; var8 < var4.length; ++var8) {
          if(var4[var8] != null && (!var1 || !var4[var8].a()) && (var2 & 1 << var8) != 0) {
             var10 = var4[var8].j();

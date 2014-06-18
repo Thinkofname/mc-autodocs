@@ -1,5 +1,5 @@
 
-public class PacketClientbound01 implements gx {
+public class PacketClientbound01 implements ha {
 
    private long a;
 
@@ -18,7 +18,7 @@ public class PacketClientbound01 implements gx {
       var1.writeLong(this.a);
    }
 
-   public void a(lt var1) {
+   public void a(lx var1) {
       var1.a(this);
    }
 }

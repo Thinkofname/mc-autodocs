@@ -1,15 +1,15 @@
 
-public class PacketClientbound3B implements gx {
+public class PacketClientbound3B implements ha {
 
    private String a;
    private String b;
-   private bjl c;
+   private bla c;
    private int d;
 
 
    public PacketClientbound3B() {}
 
-   public PacketClientbound3B(biy var1, int var2) {
+   public PacketClientbound3B(bkn var1, int var2) {
       this.a = var1.b();
       this.b = var1.d();
       this.c = var1.c().c();
@@ -21,7 +21,7 @@ public class PacketClientbound3B implements gx {
       this.d = var1.readByte();
       if(this.d == 0 || this.d == 2) {
          this.b = var1.readString(32);
-         this.c = bjl.a(var1.readString(16));
+         this.c = bla.a(var1.readString(16));
       }
 
    }
@@ -36,7 +36,7 @@ public class PacketClientbound3B implements gx {
 
    }
 
-   public void a(hc var1) {
+   public void a(hg var1) {
       var1.a(this);
    }
 }

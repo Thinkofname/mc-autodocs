@@ -1,5 +1,5 @@
 
-public class PacketClientbound28 implements gx {
+public class PacketClientbound28 implements ha {
 
    private int a;
    private Position b;
@@ -30,7 +30,7 @@ public class PacketClientbound28 implements gx {
       var1.writeBoolean(this.d);
    }
 
-   public void a(hc var1) {
+   public void a(hg var1) {
       var1.a(this);
    }
 }

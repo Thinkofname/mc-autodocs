@@ -1,5 +1,5 @@
 
-public class PacketServerbound01 implements gx {
+public class PacketServerbound01 implements ha {
 
    private long a;
 
@@ -12,7 +12,7 @@ public class PacketServerbound01 implements gx {
       var1.writeLong(this.a);
    }
 
-   public void a(mc var1) {
+   public void a(mg var1) {
       var1.a(this);
    }
 

@@ -1,9 +1,9 @@
 
-public class PacketServerbound15 implements gx {
+public class PacketServerbound15 implements ha {
 
    private String a;
    private int b;
-   private acr c;
+   private acz c;
    private boolean d;
    private int e;
 
@@ -11,7 +11,7 @@ public class PacketServerbound15 implements gx {
    public void read(PacketBuffer var1) {
       this.a = var1.readString(7);
       this.b = var1.readByte();
-      this.c = acr.a(var1.readByte());
+      this.c = acz.a(var1.readByte());
       this.d = var1.readBoolean();
       this.e = var1.readUnsignedByte();
    }
@@ -24,7 +24,7 @@ public class PacketServerbound15 implements gx {
       var1.writeByte(this.e);
    }
 
-   public void a(kg var1) {
+   public void a(kk var1) {
       var1.a(this);
    }
 
@@ -32,7 +32,7 @@ public class PacketServerbound15 implements gx {
       return this.a;
    }
 
-   public acr c() {
+   public acz c() {
       return this.c;
    }
 

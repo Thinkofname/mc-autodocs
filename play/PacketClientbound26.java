@@ -4,7 +4,7 @@ import java.util.zip.DataFormatException;
 import java.util.zip.Deflater;
 import java.util.zip.Inflater;
 
-public class PacketClientbound26 implements gx {
+public class PacketClientbound26 implements ha {
 
    private int[] a;
    private int[] b;
@@ -26,12 +26,12 @@ public class PacketClientbound26 implements gx {
       this.c = new int[var2];
       this.d = new int[var2];
       this.f = new byte[var2][];
-      this.h = !var1.isEmpty() && !((ayj)var1.get(0)).p().s.p();
+      this.h = !var1.isEmpty() && !((ayt)var1.get(0)).p().s.p();
       int var3 = 0;
 
       for(int var4 = 0; var4 < var2; ++var4) {
-         ayj var5 = (ayj)var1.get(var4);
-         ih var6 = ig.a(var5, true, '\uffff');
+         ayt var5 = (ayt)var1.get(var4);
+         il var6 = ik.a(var5, true, '\uffff');
          if(i.length < var3 + var6.a.length) {
             byte[] var7 = new byte[var3 + var6.a.length];
             System.arraycopy(i, 0, var7, 0, i.length);
@@ -78,7 +78,7 @@ public class PacketClientbound26 implements gx {
       }
 
       var1.readBytes(i, 0, this.g);
-      byte[] var3 = new byte[ig.a() * var2];
+      byte[] var3 = new byte[ik.a() * var2];
       Inflater var4 = new Inflater();
       var4.setInput(i, 0, this.g);
 
@@ -134,7 +134,7 @@ public class PacketClientbound26 implements gx {
 
    }
 
-   public void a(hc var1) {
+   public void a(hg var1) {
       var1.a(this);
    }
 

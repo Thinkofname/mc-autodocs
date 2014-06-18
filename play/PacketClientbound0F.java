@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class PacketClientbound0F implements gx {
+public class PacketClientbound0F implements ha {
 
    private int a;
    private int b;
@@ -13,7 +13,7 @@ public class PacketClientbound0F implements gx {
    private byte i;
    private byte j;
    private byte k;
-   private ve l;
+   private vf l;
    private List m;
 
 
@@ -22,9 +22,9 @@ public class PacketClientbound0F implements gx {
    public PacketClientbound0F(uv var1) {
       this.a = var1.D();
       this.b = (byte)uh.a(var1);
-      this.c = sd.c(var1.s * 32.0D);
-      this.d = sd.c(var1.t * 32.0D);
-      this.e = sd.c(var1.u * 32.0D);
+      this.c = sh.c(var1.s * 32.0D);
+      this.d = sh.c(var1.t * 32.0D);
+      this.e = sh.c(var1.u * 32.0D);
       this.i = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.j = (byte)((int)(var1.z * 256.0F / 360.0F));
       this.k = (byte)((int)(var1.aI * 256.0F / 360.0F));
@@ -74,7 +74,7 @@ public class PacketClientbound0F implements gx {
       this.f = var1.readShort();
       this.g = var1.readShort();
       this.h = var1.readShort();
-      this.m = ve.b(var1);
+      this.m = vf.b(var1);
    }
 
    public void write(PacketBuffer var1) {
@@ -92,7 +92,7 @@ public class PacketClientbound0F implements gx {
       this.l.a(var1);
    }
 
-   public void a(hc var1) {
+   public void a(hg var1) {
       var1.a(this);
    }
 }

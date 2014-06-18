@@ -2,7 +2,7 @@ import com.google.common.collect.Lists;
 import java.util.Iterator;
 import java.util.List;
 
-public class PacketClientbound27 implements gx {
+public class PacketClientbound27 implements ha {
 
    private double a;
    private double b;
@@ -16,7 +16,7 @@ public class PacketClientbound27 implements gx {
 
    public PacketClientbound27() {}
 
-   public PacketClientbound27(double var1, double var3, double var5, float var7, List var8, bix var9) {
+   public PacketClientbound27(double var1, double var3, double var5, float var7, List var8, bkm var9) {
       this.a = var1;
       this.b = var3;
       this.c = var5;
@@ -79,7 +79,7 @@ public class PacketClientbound27 implements gx {
       var1.writeFloat(this.h);
    }
 
-   public void a(hc var1) {
+   public void a(hg var1) {
       var1.a(this);
    }
 }

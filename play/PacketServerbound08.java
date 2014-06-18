@@ -1,5 +1,5 @@
 
-public class PacketServerbound08 implements gx {
+public class PacketServerbound08 implements ha {
 
    private static final Position a = new Position(-1, -1, -1);
    private Position b;
@@ -19,7 +19,7 @@ public class PacketServerbound08 implements gx {
    public PacketServerbound08(Position var1, int var2, ItemStack var3, float var4, float var5, float var6) {
       this.b = var1;
       this.c = var2;
-      this.d = var3 != null?var3.m():null;
+      this.d = var3 != null?var3.k():null;
       this.e = var4;
       this.f = var5;
       this.g = var6;
@@ -43,7 +43,7 @@ public class PacketServerbound08 implements gx {
       var1.writeByte((int)(this.g * 16.0F));
    }
 
-   public void a(kg var1) {
+   public void a(kk var1) {
       var1.a(this);
    }
 

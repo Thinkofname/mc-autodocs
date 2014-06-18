@@ -1,18 +1,18 @@
 
-public class PacketClientbound01 implements gx {
+public class PacketClientbound01 implements ha {
 
    private int a;
    private boolean b;
-   private als c;
+   private amc c;
    private int d;
-   private sy e;
+   private tb e;
    private int f;
-   private alu g;
+   private ame g;
 
 
    public PacketClientbound01() {}
 
-   public PacketClientbound01(int var1, als var2, boolean var3, int var4, sy var5, int var6, alu var7) {
+   public PacketClientbound01(int var1, amc var2, boolean var3, int var4, tb var5, int var6, ame var7) {
       this.a = var1;
       this.d = var4;
       this.e = var5;
@@ -27,13 +27,13 @@ public class PacketClientbound01 implements gx {
       short var2 = var1.readUnsignedByte();
       this.b = (var2 & 8) == 8;
       int var3 = var2 & -9;
-      this.c = als.a(var3);
+      this.c = amc.a(var3);
       this.d = var1.readByte();
-      this.e = sy.a(var1.readUnsignedByte());
+      this.e = tb.a(var1.readUnsignedByte());
       this.f = var1.readUnsignedByte();
-      this.g = alu.a(var1.readString(16));
+      this.g = ame.a(var1.readString(16));
       if(this.g == null) {
-         this.g = alu.b;
+         this.g = ame.b;
       }
 
    }
@@ -52,7 +52,7 @@ public class PacketClientbound01 implements gx {
       var1.writeString(this.g.a());
    }
 
-   public void a(hc var1) {
+   public void a(hg var1) {
       var1.a(this);
    }
 }

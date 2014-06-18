@@ -1,5 +1,5 @@
 
-public class PacketClientbound04 implements gx {
+public class PacketClientbound04 implements ha {
 
    private int a;
    private int b;
@@ -11,7 +11,7 @@ public class PacketClientbound04 implements gx {
    public PacketClientbound04(int var1, int var2, ItemStack var3) {
       this.a = var1;
       this.b = var2;
-      this.c = var3 == null?null:var3.m();
+      this.c = var3 == null?null:var3.k();
    }
 
    public void read(PacketBuffer var1) {
@@ -26,7 +26,7 @@ public class PacketClientbound04 implements gx {
       var1.writeSlot(this.c);
    }
 
-   public void a(hc var1) {
+   public void a(hg var1) {
       var1.a(this);
    }
 }

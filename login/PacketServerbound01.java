@@ -1,7 +1,7 @@
 import java.security.PrivateKey;
 import javax.crypto.SecretKey;
 
-public class PacketServerbound01 implements gx {
+public class PacketServerbound01 implements ha {
 
    private byte[] a = new byte[0];
    private byte[] b = new byte[0];
@@ -17,15 +17,15 @@ public class PacketServerbound01 implements gx {
       var1.a(this.b);
    }
 
-   public void a(lq var1) {
+   public void a(lu var1) {
       var1.a(this);
    }
 
    public SecretKey a(PrivateKey var1) {
-      return rp.a(var1, this.a);
+      return rt.a(var1, this.a);
    }
 
    public byte[] b(PrivateKey var1) {
-      return var1 == null?this.b:rp.b(var1, this.b);
+      return var1 == null?this.b:rt.b(var1, this.b);
    }
 }

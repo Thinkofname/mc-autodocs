@@ -1,6 +1,6 @@
 import org.apache.commons.lang3.StringUtils;
 
-public class PacketServerbound14 implements gx {
+public class PacketServerbound14 implements ha {
 
    private String a;
 
@@ -19,7 +19,7 @@ public class PacketServerbound14 implements gx {
       var1.writeString(StringUtils.substring(this.a, 0, 32767));
    }
 
-   public void a(kg var1) {
+   public void a(kk var1) {
       var1.a(this);
    }
 

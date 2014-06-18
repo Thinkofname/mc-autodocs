@@ -1,16 +1,16 @@
 
-public class PacketServerbound12 implements gx {
+public class PacketServerbound12 implements ha {
 
    private Position a;
-   private String[] b;
+   private gn[] b;
 
 
    public void read(PacketBuffer var1) {
       this.a = var1.readPosition();
-      this.b = new String[4];
+      this.b = new gn[4];
 
       for(int var2 = 0; var2 < 4; ++var2) {
-         this.b[var2] = var1.readString(15);
+         this.b[var2] = var1.d();
       }
 
    }
@@ -19,12 +19,12 @@ public class PacketServerbound12 implements gx {
       var1.writePosition(this.a);
 
       for(int var2 = 0; var2 < 4; ++var2) {
-         var1.writeString(this.b[var2]);
+         var1.a(this.b[var2]);
       }
 
    }
 
-   public void a(kg var1) {
+   public void a(kk var1) {
       var1.a(this);
    }
 
@@ -32,7 +32,7 @@ public class PacketServerbound12 implements gx {
       return this.a;
    }
 
-   public String[] b() {
+   public gn[] b() {
       return this.b;
    }
 }

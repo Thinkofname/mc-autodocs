@@ -1,5 +1,5 @@
 
-public class PacketClientbound36 implements gx {
+public class PacketClientbound36 implements ha {
 
    private Position a;
 
@@ -10,7 +10,7 @@ public class PacketClientbound36 implements gx {
       this.a = var1;
    }
 
-   public void a(hc var1) {
+   public void a(hg var1) {
       var1.a(this);
    }
 

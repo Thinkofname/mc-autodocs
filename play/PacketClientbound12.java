@@ -1,5 +1,5 @@
 
-public class PacketClientbound12 implements gx {
+public class PacketClientbound12 implements ha {
 
    private int a;
    private int b;
@@ -59,7 +59,7 @@ public class PacketClientbound12 implements gx {
       var1.writeShort(this.d);
    }
 
-   public void a(hc var1) {
+   public void a(hg var1) {
       var1.a(this);
    }
 }

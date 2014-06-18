@@ -1,5 +1,5 @@
 
-public class PacketServerbound03 implements gx {
+public class PacketServerbound03 implements ha {
 
    protected double a;
    protected double b;
@@ -11,7 +11,7 @@ public class PacketServerbound03 implements gx {
    protected boolean h;
 
 
-   public void a(kg var1) {
+   public void a(kk var1) {
       var1.a(this);
    }
 

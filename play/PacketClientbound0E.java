@@ -1,5 +1,5 @@
 
-public class PacketClientbound0E implements gx {
+public class PacketClientbound0E implements ha {
 
    private int a;
    private int b;
@@ -22,11 +22,11 @@ public class PacketClientbound0E implements gx {
 
    public PacketClientbound0E(ub var1, int var2, int var3) {
       this.a = var1.D();
-      this.b = sd.c(var1.s * 32.0D);
-      this.c = sd.c(var1.t * 32.0D);
-      this.d = sd.c(var1.u * 32.0D);
-      this.h = sd.d(var1.z * 256.0F / 360.0F);
-      this.i = sd.d(var1.y * 256.0F / 360.0F);
+      this.b = sh.c(var1.s * 32.0D);
+      this.c = sh.c(var1.t * 32.0D);
+      this.d = sh.c(var1.u * 32.0D);
+      this.h = sh.d(var1.z * 256.0F / 360.0F);
+      this.i = sh.d(var1.y * 256.0F / 360.0F);
       this.j = var2;
       this.k = var3;
       if(var3 > 0) {
@@ -99,7 +99,7 @@ public class PacketClientbound0E implements gx {
 
    }
 
-   public void a(hc var1) {
+   public void a(hg var1) {
       var1.a(this);
    }
 

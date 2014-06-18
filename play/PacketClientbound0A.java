@@ -1,5 +1,5 @@
 
-public class PacketClientbound0A implements gx {
+public class PacketClientbound0A implements ha {
 
    private int a;
    private Position b;
@@ -7,7 +7,7 @@ public class PacketClientbound0A implements gx {
 
    public PacketClientbound0A() {}
 
-   public PacketClientbound0A(aco var1, Position var2) {
+   public PacketClientbound0A(acw var1, Position var2) {
       this.a = var1.D();
       this.b = var2;
    }
@@ -22,7 +22,7 @@ public class PacketClientbound0A implements gx {
       var1.writePosition(this.b);
    }
 
-   public void a(hc var1) {
+   public void a(hg var1) {
       var1.a(this);
    }
 }

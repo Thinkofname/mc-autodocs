@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class PacketClientbound30 implements gx {
+public class PacketClientbound30 implements ha {
 
    private int a;
    private ItemStack[] b;
@@ -14,7 +14,7 @@ public class PacketClientbound30 implements gx {
 
       for(int var3 = 0; var3 < this.b.length; ++var3) {
          ItemStack var4 = (ItemStack)var2.get(var3);
-         this.b[var3] = var4 == null?null:var4.m();
+         this.b[var3] = var4 == null?null:var4.k();
       }
 
    }
@@ -43,7 +43,7 @@ public class PacketClientbound30 implements gx {
 
    }
 
-   public void a(hc var1) {
+   public void a(hg var1) {
       var1.a(this);
    }
 }

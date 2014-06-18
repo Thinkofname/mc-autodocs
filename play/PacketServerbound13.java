@@ -1,5 +1,5 @@
 
-public class PacketServerbound13 implements gx {
+public class PacketServerbound13 implements ha {
 
    private boolean a;
    private boolean b;
@@ -11,7 +11,7 @@ public class PacketServerbound13 implements gx {
 
    public PacketServerbound13() {}
 
-   public PacketServerbound13(acl var1) {
+   public PacketServerbound13(act var1) {
       this.a(var1.a);
       this.b(var1.b);
       this.c(var1.c);
@@ -53,7 +53,7 @@ public class PacketServerbound13 implements gx {
       var1.writeFloat(this.f);
    }
 
-   public void a(kg var1) {
+   public void a(kk var1) {
       var1.a(this);
    }
 

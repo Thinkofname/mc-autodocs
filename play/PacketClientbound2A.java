@@ -1,7 +1,7 @@
 
-public class PacketClientbound2A implements gx {
+public class PacketClientbound2A implements ha {
 
-   private eb a;
+   private ed a;
    private float b;
    private float c;
    private float d;
@@ -15,7 +15,7 @@ public class PacketClientbound2A implements gx {
 
    public PacketClientbound2A() {}
 
-   public PacketClientbound2A(eb var1, float var2, float var3, float var4, float var5, float var6, float var7, float var8, int var9, int ... var10) {
+   public PacketClientbound2A(ed var1, float var2, float var3, float var4, float var5, float var6, float var7, float var8, int var9, int ... var10) {
       this.a = var1;
       this.b = var2;
       this.c = var3;
@@ -29,9 +29,9 @@ public class PacketClientbound2A implements gx {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = eb.a(var1.readInt());
+      this.a = ed.a(var1.readInt());
       if(this.a == null) {
-         this.a = eb.J;
+         this.a = ed.J;
       }
 
       this.b = var1.readFloat();
@@ -42,7 +42,7 @@ public class PacketClientbound2A implements gx {
       this.g = var1.readFloat();
       this.h = var1.readFloat();
       this.i = var1.readInt();
-      int var2 = this.a.c();
+      int var2 = this.a.d();
       this.j = new int[var2];
 
       for(int var3 = 0; var3 < var2; ++var3) {
@@ -52,7 +52,7 @@ public class PacketClientbound2A implements gx {
    }
 
    public void write(PacketBuffer var1) {
-      var1.writeInt(this.a.b());
+      var1.writeInt(this.a.c());
       var1.writeFloat(this.b);
       var1.writeFloat(this.c);
       var1.writeFloat(this.d);
@@ -71,7 +71,7 @@ public class PacketClientbound2A implements gx {
 
    }
 
-   public void a(hc var1) {
+   public void a(hg var1) {
       var1.a(this);
    }
 }

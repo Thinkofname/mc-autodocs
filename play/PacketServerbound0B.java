@@ -1,14 +1,14 @@
 
-public class PacketServerbound0B implements gx {
+public class PacketServerbound0B implements ha {
 
    private int a;
-   private lc b;
+   private lg b;
    private int c;
 
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.b = (lc)var1.readEnum(lc.class);
+      this.b = (lg)var1.readEnum(lg.class);
       this.c = var1.readVarInt();
    }
 
@@ -18,11 +18,11 @@ public class PacketServerbound0B implements gx {
       var1.writeVarInt(this.c);
    }
 
-   public void a(kg var1) {
+   public void a(kk var1) {
       var1.a(this);
    }
 
-   public lc b() {
+   public lg b() {
       return this.b;
    }
 

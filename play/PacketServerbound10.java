@@ -1,11 +1,11 @@
 
-public class PacketServerbound10 implements gx {
+public class PacketServerbound10 implements ha {
 
    private int a;
    private ItemStack b;
 
 
-   public void a(kg var1) {
+   public void a(kk var1) {
       var1.a(this);
    }
 

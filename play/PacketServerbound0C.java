@@ -1,5 +1,5 @@
 
-public class PacketServerbound0C implements gx {
+public class PacketServerbound0C implements ha {
 
    private float a;
    private float b;
@@ -30,7 +30,7 @@ public class PacketServerbound0C implements gx {
       var1.writeByte(var2);
    }
 
-   public void a(kg var1) {
+   public void a(kk var1) {
       var1.a(this);
    }
 

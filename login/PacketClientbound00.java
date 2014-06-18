@@ -1,12 +1,12 @@
 
-public class PacketClientbound00 implements gx {
+public class PacketClientbound00 implements ha {
 
-   private gl a;
+   private gn a;
 
 
    public PacketClientbound00() {}
 
-   public PacketClientbound00(gl var1) {
+   public PacketClientbound00(gn var1) {
       this.a = var1;
    }
 
@@ -18,7 +18,7 @@ public class PacketClientbound00 implements gx {
       var1.a(this.a);
    }
 
-   public void a(lm var1) {
+   public void a(lq var1) {
       var1.a(this);
    }
 }

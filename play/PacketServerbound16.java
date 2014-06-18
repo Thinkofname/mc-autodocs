@@ -1,28 +1,28 @@
 
-public class PacketServerbound16 implements gx {
+public class PacketServerbound16 implements ha {
 
-   private kk a;
+   private ko a;
 
 
    public PacketServerbound16() {}
 
-   public PacketServerbound16(kk var1) {
+   public PacketServerbound16(ko var1) {
       this.a = var1;
    }
 
    public void read(PacketBuffer var1) {
-      this.a = (kk)var1.readEnum(kk.class);
+      this.a = (ko)var1.readEnum(ko.class);
    }
 
    public void write(PacketBuffer var1) {
       var1.writeEnum(this.a);
    }
 
-   public void a(kg var1) {
+   public void a(kk var1) {
       var1.a(this);
    }
 
-   public kk a() {
+   public ko a() {
       return this.a;
    }
 }

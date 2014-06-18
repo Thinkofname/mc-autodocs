@@ -1,5 +1,5 @@
 
-public class PacketClientbound3D implements gx {
+public class PacketClientbound3D implements ha {
 
    private int a;
    private String b;
@@ -7,7 +7,7 @@ public class PacketClientbound3D implements gx {
 
    public PacketClientbound3D() {}
 
-   public PacketClientbound3D(int var1, biy var2) {
+   public PacketClientbound3D(int var1, bkn var2) {
       this.a = var1;
       if(var2 == null) {
          this.b = "";
@@ -27,7 +27,7 @@ public class PacketClientbound3D implements gx {
       var1.writeString(this.b);
    }
 
-   public void a(hc var1) {
+   public void a(hg var1) {
       var1.a(this);
    }
 }

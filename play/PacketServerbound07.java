@@ -1,15 +1,15 @@
 
-public class PacketServerbound07 implements gx {
+public class PacketServerbound07 implements ha {
 
    private Position a;
-   private dr b;
-   private la c;
+   private dt b;
+   private le c;
 
 
    public void read(PacketBuffer var1) {
-      this.c = (la)var1.readEnum(la.class);
+      this.c = (le)var1.readEnum(le.class);
       this.a = var1.readPosition();
-      this.b = dr.a(var1.readUnsignedByte());
+      this.b = dt.a(var1.readUnsignedByte());
    }
 
    public void write(PacketBuffer var1) {
@@ -18,7 +18,7 @@ public class PacketServerbound07 implements gx {
       var1.writeByte(this.b.a());
    }
 
-   public void a(kg var1) {
+   public void a(kk var1) {
       var1.a(this);
    }
 
@@ -26,11 +26,11 @@ public class PacketServerbound07 implements gx {
       return this.a;
    }
 
-   public dr b() {
+   public dt b() {
       return this.b;
    }
 
-   public la c() {
+   public le c() {
       return this.c;
    }
 }

@@ -1,5 +1,5 @@
 
-public class PacketClientbound17 extends io {
+public class PacketClientbound17 extends is {
 
    public PacketClientbound17() {
       this.g = true;

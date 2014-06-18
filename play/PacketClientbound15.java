@@ -1,5 +1,5 @@
 
-public class PacketClientbound15 extends io {
+public class PacketClientbound15 extends is {
 
    public PacketClientbound15() {}
 

@@ -1,32 +1,32 @@
 
-public class PacketClientbound07 implements gx {
+public class PacketClientbound07 implements ha {
 
    private int a;
-   private sy b;
-   private als c;
-   private alu d;
+   private tb b;
+   private amc c;
+   private ame d;
 
 
    public PacketClientbound07() {}
 
-   public PacketClientbound07(int var1, sy var2, alu var3, als var4) {
+   public PacketClientbound07(int var1, tb var2, ame var3, amc var4) {
       this.a = var1;
       this.b = var2;
       this.c = var4;
       this.d = var3;
    }
 
-   public void a(hc var1) {
+   public void a(hg var1) {
       var1.a(this);
    }
 
    public void read(PacketBuffer var1) {
       this.a = var1.readInt();
-      this.b = sy.a(var1.readUnsignedByte());
-      this.c = als.a(var1.readUnsignedByte());
-      this.d = alu.a(var1.readString(16));
+      this.b = tb.a(var1.readUnsignedByte());
+      this.c = amc.a(var1.readUnsignedByte());
+      this.d = ame.a(var1.readString(16));
       if(this.d == null) {
-         this.d = alu.b;
+         this.d = ame.b;
       }
 
    }

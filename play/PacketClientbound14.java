@@ -1,5 +1,5 @@
 
-public class PacketClientbound14 implements gx {
+public class PacketClientbound14 implements ha {
 
    protected int a;
    protected byte b;
@@ -24,7 +24,7 @@ public class PacketClientbound14 implements gx {
       var1.writeVarInt(this.a);
    }
 
-   public void a(hc var1) {
+   public void a(hg var1) {
       var1.a(this);
    }
 
