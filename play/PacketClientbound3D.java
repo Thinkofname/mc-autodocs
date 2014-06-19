@@ -7,7 +7,7 @@ public class PacketClientbound3D implements ha {
 
    public PacketClientbound3D() {}
 
-   public PacketClientbound3D(int var1, bkn var2) {
+   public PacketClientbound3D(int var1, bkp var2) {
       this.a = var1;
       if(var2 == null) {
          this.b = "";

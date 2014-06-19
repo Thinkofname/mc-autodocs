@@ -16,13 +16,13 @@ public class PacketClientbound3E implements ha {
 
 
    public PacketClientbound3E() {
-      this.e = bkv.a.e;
+      this.e = bkx.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
    }
 
-   public PacketClientbound3E(bko var1, int var2) {
-      this.e = bkv.a.e;
+   public PacketClientbound3E(bkq var1, int var2) {
+      this.e = bkx.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
       this.a = var1.b();
@@ -42,8 +42,8 @@ public class PacketClientbound3E implements ha {
 
    }
 
-   public PacketClientbound3E(bko var1, Collection var2, int var3) {
-      this.e = bkv.a.e;
+   public PacketClientbound3E(bkq var1, Collection var2, int var3) {
+      this.e = bkx.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
       if(var3 != 3 && var3 != 4) {

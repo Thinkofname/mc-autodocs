@@ -2,17 +2,18 @@
 public class PacketClientbound17 extends is {
 
    public PacketClientbound17() {
-      this.g = true;
+      this.h = true;
    }
 
-   public PacketClientbound17(int var1, byte var2, byte var3, byte var4, byte var5, byte var6) {
+   public PacketClientbound17(int var1, byte var2, byte var3, byte var4, byte var5, byte var6, boolean var7) {
       super(var1);
       this.b = var2;
       this.c = var3;
       this.d = var4;
       this.e = var5;
       this.f = var6;
-      this.g = true;
+      this.g = var7;
+      this.h = true;
    }
 
    public void read(PacketBuffer var1) {
@@ -22,6 +23,7 @@ public class PacketClientbound17 extends is {
       this.d = var1.readByte();
       this.e = var1.readByte();
       this.f = var1.readByte();
+      this.g = var1.readBoolean();
    }
 
    public void write(PacketBuffer var1) {
@@ -31,5 +33,6 @@ public class PacketClientbound17 extends is {
       var1.writeByte(this.d);
       var1.writeByte(this.e);
       var1.writeByte(this.f);
+      var1.writeBoolean(this.g);
    }
 }

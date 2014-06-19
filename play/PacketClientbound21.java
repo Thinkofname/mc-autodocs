@@ -18,7 +18,7 @@ public class PacketClientbound21 implements ha {
 
    public PacketClientbound21() {}
 
-   public PacketClientbound21(ayt var1, boolean var2, int var3) {
+   public PacketClientbound21(ayv var1, boolean var2, int var3) {
       this.a = var1.a;
       this.b = var1.b;
       this.g = var2;
@@ -95,9 +95,9 @@ public class PacketClientbound21 implements ha {
       var1.a(this);
    }
 
-   public static il a(ayt var0, boolean var1, int var2) {
+   public static il a(ayv var0, boolean var1, int var2) {
       int var3 = 0;
-      ayx[] var4 = var0.h();
+      ayz[] var4 = var0.h();
       int var5 = 0;
       il var6 = new il();
       byte[] var7 = i;
@@ -121,7 +121,7 @@ public class PacketClientbound21 implements ha {
          }
       }
 
-      ayr var10;
+      ayt var10;
       for(var8 = 0; var8 < var4.length; ++var8) {
          if(var4[var8] != null && (!var1 || !var4[var8].a()) && (var2 & 1 << var8) != 0) {
             var10 = var4[var8].j();

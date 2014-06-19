@@ -26,11 +26,11 @@ public class PacketClientbound26 implements ha {
       this.c = new int[var2];
       this.d = new int[var2];
       this.f = new byte[var2][];
-      this.h = !var1.isEmpty() && !((ayt)var1.get(0)).p().s.p();
+      this.h = !var1.isEmpty() && !((ayv)var1.get(0)).p().s.p();
       int var3 = 0;
 
       for(int var4 = 0; var4 < var2; ++var4) {
-         ayt var5 = (ayt)var1.get(var4);
+         ayv var5 = (ayv)var1.get(var4);
          il var6 = ik.a(var5, true, '\uffff');
          if(i.length < var3 + var6.a.length) {
             byte[] var7 = new byte[var3 + var6.a.length];

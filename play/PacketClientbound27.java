@@ -16,7 +16,7 @@ public class PacketClientbound27 implements ha {
 
    public PacketClientbound27() {}
 
-   public PacketClientbound27(double var1, double var3, double var5, float var7, List var8, bkm var9) {
+   public PacketClientbound27(double var1, double var3, double var5, float var7, List var8, bko var9) {
       this.a = var1;
       this.b = var3;
       this.c = var5;

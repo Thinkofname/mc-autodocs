@@ -8,6 +8,7 @@ public class PacketClientbound14 implements ha {
    protected byte e;
    protected byte f;
    protected boolean g;
+   protected boolean h;
 
 
    public PacketClientbound14() {}

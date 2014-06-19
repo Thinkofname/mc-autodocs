@@ -14,7 +14,7 @@ public class PacketClientbound22 implements ha {
 
    public PacketClientbound22() {}
 
-   public PacketClientbound22(int var1, short[] var2, ayt var3) {
+   public PacketClientbound22(int var1, short[] var2, ayv var3) {
       this.b = new aln(var3.a, var3.b);
       this.d = var1;
       int var4 = 4 * var1;

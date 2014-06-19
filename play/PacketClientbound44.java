@@ -14,7 +14,7 @@ public class PacketClientbound44 implements ha {
 
    public PacketClientbound44() {}
 
-   public PacketClientbound44(ayo var1, jm var2) {
+   public PacketClientbound44(ayq var1, jm var2) {
       this.a = var2;
       this.c = var1.f();
       this.d = var1.g();

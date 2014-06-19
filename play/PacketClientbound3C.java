@@ -9,7 +9,7 @@ public class PacketClientbound3C implements ha {
 
    public PacketClientbound3C() {}
 
-   public PacketClientbound3C(bkp var1) {
+   public PacketClientbound3C(bkr var1) {
       this.a = var1.e();
       this.b = var1.d().b();
       this.c = var1.c();
@@ -23,7 +23,7 @@ public class PacketClientbound3C implements ha {
       this.d = jz.b;
    }
 
-   public PacketClientbound3C(String var1, bkn var2) {
+   public PacketClientbound3C(String var1, bkp var2) {
       this.a = var1;
       this.b = var2.b();
       this.c = 0;
