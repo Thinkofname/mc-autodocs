@@ -80,7 +80,7 @@ public class PacketClientbound26 implements hb {
 
       try {
          var4.inflate(var3);
-      } catch (DataFormatException var12) {
+      } catch (DataFormatException var15) {
          throw new IOException("Bad compressed data format");
       } finally {
          var4.end();
@@ -93,22 +93,20 @@ public class PacketClientbound26 implements hb {
          this.b[var6] = var1.readInt();
          this.c[var6] = var1.readShort();
          int var7 = 0;
-         byte var8 = 0;
 
-         int var9;
-         for(var9 = 0; var9 < 16; ++var9) {
-            var7 += this.c[var6] >> var9 & 1;
+         int var8;
+         for(var8 = 0; var8 < 16; ++var8) {
+            var7 += this.c[var6] >> var8 & 1;
          }
 
-         var9 = 2048 * 4 * var7 + 256;
-         var9 += 2048 * var8;
-         if(this.g) {
-            var9 += 2048 * var7;
-         }
-
-         this.e[var6] = new byte[var9];
-         System.arraycopy(var3, var5, this.e[var6], 0, var9);
-         var5 += var9;
+         var8 = var7 * 8192;
+         int var9 = var7 * 4096 / 2;
+         int var10 = this.g?var7 * 4096 / 2:0;
+         short var11 = 256;
+         int var12 = var8 + var9 + var10 + var11;
+         this.e[var6] = new byte[var12];
+         System.arraycopy(var3, var5, this.e[var6], 0, var12);
+         var5 += var12;
       }
 
    }

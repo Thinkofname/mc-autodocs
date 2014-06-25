@@ -59,21 +59,21 @@ public class PacketClientbound21 implements hb {
          var2 += this.c >> var3 & 1;
       }
 
-      var3 = 12288 * var2;
-      if(this.f) {
-         var3 += 256;
-      }
-
-      this.e = new byte[var3];
-      Inflater var4 = new Inflater();
-      var4.setInput(h, 0, this.g);
+      var3 = var2 * 8192;
+      int var4 = var2 * 4096 / 2;
+      int var5 = var2 * 4096 / 2;
+      short var6 = 256;
+      int var7 = var3 + var4 + var5 + var6;
+      this.e = new byte[var7];
+      Inflater var8 = new Inflater();
+      var8.setInput(h, 0, this.g);
 
       try {
-         var4.inflate(this.e);
-      } catch (DataFormatException var9) {
+         var8.inflate(this.e);
+      } catch (DataFormatException var13) {
          throw new IOException("Bad compressed data format");
       } finally {
-         var4.end();
+         var8.end();
       }
 
    }
