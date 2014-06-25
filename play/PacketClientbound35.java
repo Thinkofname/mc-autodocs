@@ -1,14 +1,14 @@
 
-public class PacketClientbound35 implements ha {
+public class PacketClientbound35 implements hb {
 
    private Position a;
    private int b;
-   private er c;
+   private es c;
 
 
    public PacketClientbound35() {}
 
-   public PacketClientbound35(Position var1, int var2, er var3) {
+   public PacketClientbound35(Position var1, int var2, es var3) {
       this.a = var1;
       this.b = var2;
       this.c = var3;
@@ -26,7 +26,7 @@ public class PacketClientbound35 implements ha {
       var1.a(this.c);
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 }

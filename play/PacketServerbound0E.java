@@ -1,5 +1,5 @@
 
-public class PacketServerbound0E implements ha {
+public class PacketServerbound0E implements hb {
 
    private int a;
    private int b;
@@ -9,7 +9,7 @@ public class PacketServerbound0E implements ha {
    private int f;
 
 
-   public void a(kk var1) {
+   public void a(kl var1) {
       var1.a(this);
    }
 

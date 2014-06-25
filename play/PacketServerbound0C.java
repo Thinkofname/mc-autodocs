@@ -1,5 +1,5 @@
 
-public class PacketServerbound0C implements ha {
+public class PacketServerbound0C implements hb {
 
    private float a;
    private float b;
@@ -30,7 +30,7 @@ public class PacketServerbound0C implements ha {
       var1.writeByte(var2);
    }
 
-   public void a(kk var1) {
+   public void a(kl var1) {
       var1.a(this);
    }
 

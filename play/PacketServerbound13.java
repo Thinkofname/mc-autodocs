@@ -1,5 +1,5 @@
 
-public class PacketServerbound13 implements ha {
+public class PacketServerbound13 implements hb {
 
    private boolean a;
    private boolean b;
@@ -11,7 +11,7 @@ public class PacketServerbound13 implements ha {
 
    public PacketServerbound13() {}
 
-   public PacketServerbound13(act var1) {
+   public PacketServerbound13(acv var1) {
       this.a(var1.a);
       this.b(var1.b);
       this.c(var1.c);
@@ -53,7 +53,7 @@ public class PacketServerbound13 implements ha {
       var1.writeFloat(this.f);
    }
 
-   public void a(kk var1) {
+   public void a(kl var1) {
       var1.a(this);
    }
 

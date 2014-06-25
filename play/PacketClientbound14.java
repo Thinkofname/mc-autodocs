@@ -1,5 +1,5 @@
 
-public class PacketClientbound14 implements ha {
+public class PacketClientbound14 implements hb {
 
    protected int a;
    protected byte b;
@@ -25,7 +25,7 @@ public class PacketClientbound14 implements ha {
       var1.writeVarInt(this.a);
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 

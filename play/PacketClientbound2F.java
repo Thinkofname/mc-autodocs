@@ -1,5 +1,5 @@
 
-public class PacketClientbound2F implements ha {
+public class PacketClientbound2F implements hb {
 
    private int a;
    private int b;
@@ -14,7 +14,7 @@ public class PacketClientbound2F implements ha {
       this.c = var3 == null?null:var3.k();
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 

@@ -1,7 +1,7 @@
 
-public class PacketClientbound42 implements ha {
+public class PacketClientbound42 implements hb {
 
-   public ja a;
+   public jb a;
    public int b;
    public int c;
    public int d;
@@ -10,10 +10,10 @@ public class PacketClientbound42 implements ha {
 
    public PacketClientbound42() {}
 
-   public PacketClientbound42(to var1, ja var2) {
+   public PacketClientbound42(tq var1, jb var2) {
       this.a = var2;
-      uv var3 = var1.c();
-      switch(iz.a[var2.ordinal()]) {
+      ux var3 = var1.c();
+      switch(ja.a[var2.ordinal()]) {
       case 1:
          this.d = var1.f();
          this.c = var3 == null?-1:var3.D();
@@ -27,11 +27,11 @@ public class PacketClientbound42 implements ha {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = (ja)var1.readEnum(ja.class);
-      if(this.a == ja.b) {
+      this.a = (jb)var1.readEnum(jb.class);
+      if(this.a == jb.b) {
          this.d = var1.readVarInt();
          this.c = var1.readInt();
-      } else if(this.a == ja.c) {
+      } else if(this.a == jb.c) {
          this.b = var1.readVarInt();
          this.c = var1.readInt();
          this.e = var1.readString(32767);
@@ -41,10 +41,10 @@ public class PacketClientbound42 implements ha {
 
    public void write(PacketBuffer var1) {
       var1.writeEnum(this.a);
-      if(this.a == ja.b) {
+      if(this.a == jb.b) {
          var1.writeVarInt(this.d);
          var1.writeInt(this.c);
-      } else if(this.a == ja.c) {
+      } else if(this.a == jb.c) {
          var1.writeVarInt(this.b);
          var1.writeInt(this.c);
          var1.writeString(this.e);
@@ -52,7 +52,7 @@ public class PacketClientbound42 implements ha {
 
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 }

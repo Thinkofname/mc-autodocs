@@ -1,5 +1,5 @@
 
-public class PacketClientbound0E implements ha {
+public class PacketClientbound0E implements hb {
 
    private int a;
    private int b;
@@ -16,17 +16,17 @@ public class PacketClientbound0E implements ha {
 
    public PacketClientbound0E() {}
 
-   public PacketClientbound0E(ub var1, int var2) {
+   public PacketClientbound0E(ud var1, int var2) {
       this(var1, var2, 0);
    }
 
-   public PacketClientbound0E(ub var1, int var2, int var3) {
+   public PacketClientbound0E(ud var1, int var2, int var3) {
       this.a = var1.D();
-      this.b = sh.c(var1.s * 32.0D);
-      this.c = sh.c(var1.t * 32.0D);
-      this.d = sh.c(var1.u * 32.0D);
-      this.h = sh.d(var1.z * 256.0F / 360.0F);
-      this.i = sh.d(var1.y * 256.0F / 360.0F);
+      this.b = si.c(var1.s * 32.0D);
+      this.c = si.c(var1.t * 32.0D);
+      this.d = si.c(var1.u * 32.0D);
+      this.h = si.d(var1.z * 256.0F / 360.0F);
+      this.i = si.d(var1.y * 256.0F / 360.0F);
       this.j = var2;
       this.k = var3;
       if(var3 > 0) {
@@ -99,7 +99,7 @@ public class PacketClientbound0E implements ha {
 
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 

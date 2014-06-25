@@ -1,14 +1,14 @@
 
-public class PacketServerbound0B implements ha {
+public class PacketServerbound0B implements hb {
 
    private int a;
-   private lg b;
+   private lh b;
    private int c;
 
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.b = (lg)var1.readEnum(lg.class);
+      this.b = (lh)var1.readEnum(lh.class);
       this.c = var1.readVarInt();
    }
 
@@ -18,11 +18,11 @@ public class PacketServerbound0B implements ha {
       var1.writeVarInt(this.c);
    }
 
-   public void a(kk var1) {
+   public void a(kl var1) {
       var1.a(this);
    }
 
-   public lg b() {
+   public lh b() {
       return this.b;
    }
 

@@ -1,15 +1,15 @@
 
-public class PacketClientbound3B implements ha {
+public class PacketClientbound3B implements hb {
 
    private String a;
    private String b;
-   private blc c;
+   private blh c;
    private int d;
 
 
    public PacketClientbound3B() {}
 
-   public PacketClientbound3B(bkp var1, int var2) {
+   public PacketClientbound3B(bku var1, int var2) {
       this.a = var1.b();
       this.b = var1.d();
       this.c = var1.c().c();
@@ -21,7 +21,7 @@ public class PacketClientbound3B implements ha {
       this.d = var1.readByte();
       if(this.d == 0 || this.d == 2) {
          this.b = var1.readString(32);
-         this.c = blc.a(var1.readString(16));
+         this.c = blh.a(var1.readString(16));
       }
 
    }
@@ -36,7 +36,7 @@ public class PacketClientbound3B implements ha {
 
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 }

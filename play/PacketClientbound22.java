@@ -4,18 +4,18 @@ import java.io.IOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class PacketClientbound22 implements ha {
+public class PacketClientbound22 implements hb {
 
    private static final Logger a = LogManager.getLogger();
-   private aln b;
+   private alq b;
    private byte[] c;
    private int d;
 
 
    public PacketClientbound22() {}
 
-   public PacketClientbound22(int var1, short[] var2, ayv var3) {
-      this.b = new aln(var3.a, var3.b);
+   public PacketClientbound22(int var1, short[] var2, ayy var3) {
+      this.b = new alq(var3.a, var3.b);
       this.d = var1;
       int var4 = 4 * var1;
 
@@ -28,7 +28,7 @@ public class PacketClientbound22 implements ha {
             int var9 = var2[var7] >> 8 & 15;
             int var10 = var2[var7] & 255;
             var6.writeShort(var2[var7]);
-            var6.writeShort((short)((aof.a(var3.a(var8, var10, var9)) & 4095) << 4 | var3.b(var8, var10, var9) & 15));
+            var6.writeShort((short)((aoi.a(var3.a(var8, var10, var9)) & 4095) << 4 | var3.b(var8, var10, var9) & 15));
          }
 
          this.c = var5.toByteArray();
@@ -43,7 +43,7 @@ public class PacketClientbound22 implements ha {
    }
 
    public void read(PacketBuffer var1) {
-      this.b = new aln(var1.readInt(), var1.readInt());
+      this.b = new alq(var1.readInt(), var1.readInt());
       this.d = var1.readShort() & '\uffff';
       int var2 = var1.readInt();
       if(var2 > 0) {
@@ -66,7 +66,7 @@ public class PacketClientbound22 implements ha {
 
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 

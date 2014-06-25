@@ -1,5 +1,5 @@
 
-public class PacketServerbound03 implements ha {
+public class PacketServerbound03 implements hb {
 
    protected double a;
    protected double b;
@@ -11,7 +11,7 @@ public class PacketServerbound03 implements ha {
    protected boolean h;
 
 
-   public void a(kk var1) {
+   public void a(kl var1) {
       var1.a(this);
    }
 

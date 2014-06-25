@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class PacketClientbound1C implements ha {
+public class PacketClientbound1C implements hb {
 
    private int a;
    private List b;
@@ -8,7 +8,7 @@ public class PacketClientbound1C implements ha {
 
    public PacketClientbound1C() {}
 
-   public PacketClientbound1C(int var1, vf var2, boolean var3) {
+   public PacketClientbound1C(int var1, vh var2, boolean var3) {
       this.a = var1;
       if(var3) {
          this.b = var2.c();
@@ -20,15 +20,15 @@ public class PacketClientbound1C implements ha {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.b = vf.b(var1);
+      this.b = vh.b(var1);
    }
 
    public void write(PacketBuffer var1) {
       var1.writeVarInt(this.a);
-      vf.a(this.b, var1);
+      vh.a(this.b, var1);
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 }

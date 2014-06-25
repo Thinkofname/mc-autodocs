@@ -4,46 +4,46 @@ import com.mojang.authlib.properties.Property;
 import java.util.Iterator;
 import java.util.List;
 
-public class PacketClientbound38 implements ha {
+public class PacketClientbound38 implements hb {
 
-   private jd a;
+   private je a;
    private final List b = Lists.newArrayList();
 
 
    public PacketClientbound38() {}
 
-   public PacketClientbound38(jd var1, ox ... var2) {
+   public PacketClientbound38(je var1, oy ... var2) {
       this.a = var1;
-      ox[] var3 = var2;
+      oy[] var3 = var2;
       int var4 = var2.length;
 
       for(int var5 = 0; var5 < var4; ++var5) {
-         ox var6 = var3[var5];
-         this.b.add(new je(this, var6.bR(), var6.h, var6.c.b()));
+         oy var6 = var3[var5];
+         this.b.add(new jf(this, var6.bT(), var6.h, var6.c.b()));
       }
 
    }
 
-   public PacketClientbound38(jd var1, Iterable var2) {
+   public PacketClientbound38(je var1, Iterable var2) {
       this.a = var1;
       Iterator var3 = var2.iterator();
 
       while(var3.hasNext()) {
-         ox var4 = (ox)var3.next();
-         this.b.add(new je(this, var4.bR(), var4.h, var4.c.b()));
+         oy var4 = (oy)var3.next();
+         this.b.add(new jf(this, var4.bT(), var4.h, var4.c.b()));
       }
 
    }
 
    public void read(PacketBuffer var1) {
-      this.a = (jd)var1.readEnum(jd.class);
+      this.a = (je)var1.readEnum(je.class);
       int var2 = var1.readVarInt();
 
       for(int var3 = 0; var3 < var2; ++var3) {
          GameProfile var4 = null;
          int var5 = 0;
-         amc var6 = null;
-         switch(jc.a[this.a.ordinal()]) {
+         amf var6 = null;
+         switch(jd.a[this.a.ordinal()]) {
          case 1:
             var4 = new GameProfile(var1.readUUID(), var1.readString(16));
             int var7 = var1.readVarInt();
@@ -58,12 +58,12 @@ public class PacketClientbound38 implements ha {
                }
             }
 
-            var6 = amc.a(var1.readVarInt());
+            var6 = amf.a(var1.readVarInt());
             var5 = var1.readVarInt();
             break;
          case 2:
             var4 = new GameProfile(var1.readUUID(), (String)null);
-            var6 = amc.a(var1.readVarInt());
+            var6 = amf.a(var1.readVarInt());
             break;
          case 3:
             var4 = new GameProfile(var1.readUUID(), (String)null);
@@ -73,7 +73,7 @@ public class PacketClientbound38 implements ha {
             var4 = new GameProfile(var1.readUUID(), (String)null);
          }
 
-         this.b.add(new je(this, var4, var5, var6));
+         this.b.add(new jf(this, var4, var5, var6));
       }
 
    }
@@ -84,8 +84,8 @@ public class PacketClientbound38 implements ha {
       Iterator var2 = this.b.iterator();
 
       while(var2.hasNext()) {
-         je var3 = (je)var2.next();
-         switch(jc.a[this.a.ordinal()]) {
+         jf var3 = (jf)var2.next();
+         switch(jd.a[this.a.ordinal()]) {
          case 1:
             var1.writeUUID(var3.a().getId());
             var1.writeString(var3.a().getName());
@@ -122,7 +122,7 @@ public class PacketClientbound38 implements ha {
 
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 }

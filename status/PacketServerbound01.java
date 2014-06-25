@@ -1,5 +1,5 @@
 
-public class PacketServerbound01 implements ha {
+public class PacketServerbound01 implements hb {
 
    private long a;
 
@@ -12,7 +12,7 @@ public class PacketServerbound01 implements ha {
       var1.writeLong(this.a);
    }
 
-   public void a(mg var1) {
+   public void a(mh var1) {
       var1.a(this);
    }
 

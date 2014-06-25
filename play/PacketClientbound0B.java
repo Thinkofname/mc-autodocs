@@ -1,5 +1,5 @@
 
-public class PacketClientbound0B implements ha {
+public class PacketClientbound0B implements hb {
 
    private int a;
    private int b;
@@ -7,7 +7,7 @@ public class PacketClientbound0B implements ha {
 
    public PacketClientbound0B() {}
 
-   public PacketClientbound0B(ub var1, int var2) {
+   public PacketClientbound0B(ud var1, int var2) {
       this.a = var1.D();
       this.b = var2;
    }
@@ -22,7 +22,7 @@ public class PacketClientbound0B implements ha {
       var1.writeByte(this.b);
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 }

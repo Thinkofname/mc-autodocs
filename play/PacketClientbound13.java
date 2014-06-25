@@ -1,5 +1,5 @@
 
-public class PacketClientbound13 implements ha {
+public class PacketClientbound13 implements hb {
 
    private int[] a;
 
@@ -28,7 +28,7 @@ public class PacketClientbound13 implements ha {
 
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 }

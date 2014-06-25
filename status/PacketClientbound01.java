@@ -1,5 +1,5 @@
 
-public class PacketClientbound01 implements ha {
+public class PacketClientbound01 implements hb {
 
    private long a;
 
@@ -18,7 +18,7 @@ public class PacketClientbound01 implements ha {
       var1.writeLong(this.a);
    }
 
-   public void a(lx var1) {
+   public void a(ly var1) {
       var1.a(this);
    }
 }

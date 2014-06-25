@@ -1,10 +1,10 @@
 
-public class PacketServerbound00 implements ha {
+public class PacketServerbound00 implements hb {
 
    private int a;
 
 
-   public void a(kk var1) {
+   public void a(kl var1) {
       var1.a(this);
    }
 

@@ -1,12 +1,12 @@
 
-public class PacketClientbound40 implements ha {
+public class PacketClientbound40 implements hb {
 
-   private gn a;
+   private go a;
 
 
    public PacketClientbound40() {}
 
-   public PacketClientbound40(gn var1) {
+   public PacketClientbound40(go var1) {
       this.a = var1;
    }
 
@@ -18,7 +18,7 @@ public class PacketClientbound40 implements ha {
       var1.a(this.a);
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 }

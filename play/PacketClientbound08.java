@@ -1,6 +1,6 @@
 import java.util.Set;
 
-public class PacketClientbound08 implements ha {
+public class PacketClientbound08 implements hb {
 
    private double a;
    private double b;
@@ -27,7 +27,7 @@ public class PacketClientbound08 implements ha {
       this.c = var1.readDouble();
       this.d = var1.readFloat();
       this.e = var1.readFloat();
-      this.f = hf.a(var1.readUnsignedByte());
+      this.f = hg.a(var1.readUnsignedByte());
    }
 
    public void write(PacketBuffer var1) {
@@ -36,10 +36,10 @@ public class PacketClientbound08 implements ha {
       var1.writeDouble(this.c);
       var1.writeFloat(this.d);
       var1.writeFloat(this.e);
-      var1.writeByte(hf.a(this.f));
+      var1.writeByte(hg.a(this.f));
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 }

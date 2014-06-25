@@ -1,7 +1,7 @@
 import com.mojang.authlib.GameProfile;
 import java.util.UUID;
 
-public class PacketServerbound00 implements ha {
+public class PacketServerbound00 implements hb {
 
    private GameProfile a;
 
@@ -20,7 +20,7 @@ public class PacketServerbound00 implements ha {
       var1.writeString(this.a.getName());
    }
 
-   public void a(lu var1) {
+   public void a(lv var1) {
       var1.a(this);
    }
 

@@ -1,5 +1,5 @@
 
-public class PacketClientbound11 implements ha {
+public class PacketClientbound11 implements hb {
 
    private int a;
    private int b;
@@ -10,11 +10,11 @@ public class PacketClientbound11 implements ha {
 
    public PacketClientbound11() {}
 
-   public PacketClientbound11(uq var1) {
+   public PacketClientbound11(us var1) {
       this.a = var1.D();
-      this.b = sh.c(var1.s * 32.0D);
-      this.c = sh.c(var1.t * 32.0D);
-      this.d = sh.c(var1.u * 32.0D);
+      this.b = si.c(var1.s * 32.0D);
+      this.c = si.c(var1.t * 32.0D);
+      this.d = si.c(var1.u * 32.0D);
       this.e = var1.f();
    }
 
@@ -34,7 +34,7 @@ public class PacketClientbound11 implements ha {
       var1.writeShort(this.e);
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 }

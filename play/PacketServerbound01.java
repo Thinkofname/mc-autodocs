@@ -1,5 +1,5 @@
 
-public class PacketServerbound01 implements ha {
+public class PacketServerbound01 implements hb {
 
    private String a;
 
@@ -22,7 +22,7 @@ public class PacketServerbound01 implements ha {
       var1.writeString(this.a);
    }
 
-   public void a(kk var1) {
+   public void a(kl var1) {
       var1.a(this);
    }
 

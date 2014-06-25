@@ -1,28 +1,28 @@
 
-public class PacketServerbound16 implements ha {
+public class PacketServerbound16 implements hb {
 
-   private ko a;
+   private kp a;
 
 
    public PacketServerbound16() {}
 
-   public PacketServerbound16(ko var1) {
+   public PacketServerbound16(kp var1) {
       this.a = var1;
    }
 
    public void read(PacketBuffer var1) {
-      this.a = (ko)var1.readEnum(ko.class);
+      this.a = (kp)var1.readEnum(kp.class);
    }
 
    public void write(PacketBuffer var1) {
       var1.writeEnum(this.a);
    }
 
-   public void a(kk var1) {
+   public void a(kl var1) {
       var1.a(this);
    }
 
-   public ko a() {
+   public kp a() {
       return this.a;
    }
 }

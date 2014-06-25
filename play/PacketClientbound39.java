@@ -1,5 +1,5 @@
 
-public class PacketClientbound39 implements ha {
+public class PacketClientbound39 implements hb {
 
    private boolean a;
    private boolean b;
@@ -11,7 +11,7 @@ public class PacketClientbound39 implements ha {
 
    public PacketClientbound39() {}
 
-   public PacketClientbound39(act var1) {
+   public PacketClientbound39(acv var1) {
       this.a(var1.a);
       this.b(var1.b);
       this.c(var1.c);
@@ -53,7 +53,7 @@ public class PacketClientbound39 implements ha {
       var1.writeFloat(this.f);
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 

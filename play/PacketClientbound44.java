@@ -1,7 +1,7 @@
 
-public class PacketClientbound44 implements ha {
+public class PacketClientbound44 implements hb {
 
-   private jm a;
+   private jn a;
    private int b;
    private double c;
    private double d;
@@ -14,7 +14,7 @@ public class PacketClientbound44 implements ha {
 
    public PacketClientbound44() {}
 
-   public PacketClientbound44(ayq var1, jm var2) {
+   public PacketClientbound44(ayt var1, jn var2) {
       this.a = var2;
       this.c = var1.f();
       this.d = var1.g();
@@ -27,8 +27,8 @@ public class PacketClientbound44 implements ha {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = (jm)var1.readEnum(jm.class);
-      switch(jl.a[this.a.ordinal()]) {
+      this.a = (jn)var1.readEnum(jn.class);
+      switch(jm.a[this.a.ordinal()]) {
       case 1:
          this.e = var1.readDouble();
          break;
@@ -62,7 +62,7 @@ public class PacketClientbound44 implements ha {
 
    public void write(PacketBuffer var1) {
       var1.writeEnum(this.a);
-      switch(jl.a[this.a.ordinal()]) {
+      switch(jm.a[this.a.ordinal()]) {
       case 1:
          var1.writeDouble(this.e);
          break;
@@ -94,7 +94,7 @@ public class PacketClientbound44 implements ha {
 
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 }

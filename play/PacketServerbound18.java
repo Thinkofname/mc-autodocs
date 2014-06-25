@@ -1,6 +1,6 @@
 import java.util.UUID;
 
-public class PacketServerbound18 implements ha {
+public class PacketServerbound18 implements hb {
 
    private UUID a;
 
@@ -19,11 +19,11 @@ public class PacketServerbound18 implements ha {
       var1.writeUUID(this.a);
    }
 
-   public void a(kk var1) {
+   public void a(kl var1) {
       var1.a(this);
    }
 
-   public ub a(ou var1) {
+   public ud a(ov var1) {
       return var1.a(this.a);
    }
 }

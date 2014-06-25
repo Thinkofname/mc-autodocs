@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.UUID;
 
-public class PacketClientbound0C implements ha {
+public class PacketClientbound0C implements hb {
 
    private int a;
    private UUID b;
@@ -11,22 +11,22 @@ public class PacketClientbound0C implements ha {
    private byte f;
    private byte g;
    private int h;
-   private vf i;
+   private vh i;
    private List j;
 
 
    public PacketClientbound0C() {}
 
-   public PacketClientbound0C(acw var1) {
+   public PacketClientbound0C(acy var1) {
       this.a = var1.D();
-      this.b = var1.bR().getId();
-      this.c = sh.c(var1.s * 32.0D);
-      this.d = sh.c(var1.t * 32.0D);
-      this.e = sh.c(var1.u * 32.0D);
+      this.b = var1.bT().getId();
+      this.c = si.c(var1.s * 32.0D);
+      this.d = si.c(var1.t * 32.0D);
+      this.e = si.c(var1.u * 32.0D);
       this.f = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.g = (byte)((int)(var1.z * 256.0F / 360.0F));
       ItemStack var2 = var1.bg.h();
-      this.h = var2 == null?0:ahb.b(var2.b());
+      this.h = var2 == null?0:ahe.b(var2.b());
       this.i = var1.F();
    }
 
@@ -39,7 +39,7 @@ public class PacketClientbound0C implements ha {
       this.f = var1.readByte();
       this.g = var1.readByte();
       this.h = var1.readShort();
-      this.j = vf.b(var1);
+      this.j = vh.b(var1);
    }
 
    public void write(PacketBuffer var1) {
@@ -54,7 +54,7 @@ public class PacketClientbound0C implements ha {
       this.i.a(var1);
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 }

@@ -1,6 +1,6 @@
 import java.security.PublicKey;
 
-public class PacketClientbound01 implements ha {
+public class PacketClientbound01 implements hb {
 
    private String a;
    private PublicKey b;
@@ -17,7 +17,7 @@ public class PacketClientbound01 implements ha {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readString(20);
-      this.b = rt.a(var1.a());
+      this.b = ru.a(var1.a());
       this.c = var1.a();
    }
 
@@ -27,7 +27,7 @@ public class PacketClientbound01 implements ha {
       var1.a(this.c);
    }
 
-   public void a(lq var1) {
+   public void a(lr var1) {
       var1.a(this);
    }
 }

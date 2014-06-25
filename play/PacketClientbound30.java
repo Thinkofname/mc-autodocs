@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class PacketClientbound30 implements ha {
+public class PacketClientbound30 implements hb {
 
    private int a;
    private ItemStack[] b;
@@ -43,7 +43,7 @@ public class PacketClientbound30 implements ha {
 
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 }

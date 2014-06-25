@@ -3,36 +3,34 @@ import java.util.zip.DataFormatException;
 import java.util.zip.Deflater;
 import java.util.zip.Inflater;
 
-public class PacketClientbound21 implements ha {
+public class PacketClientbound21 implements hb {
 
    private int a;
    private int b;
    private int c;
-   private int d;
+   private byte[] d;
    private byte[] e;
-   private byte[] f;
-   private boolean g;
-   private int h;
-   private static byte[] i = new byte[196864];
+   private boolean f;
+   private int g;
+   private static byte[] h = new byte[196864];
 
 
    public PacketClientbound21() {}
 
-   public PacketClientbound21(ayv var1, boolean var2, int var3) {
+   public PacketClientbound21(ayy var1, boolean var2, int var3) {
       this.a = var1.a;
       this.b = var1.b;
-      this.g = var2;
-      il var4 = a(var1, var2, var3);
+      this.f = var2;
+      im var4 = a(var1, var2, var3);
       Deflater var5 = new Deflater(-1);
-      this.d = var4.c;
       this.c = var4.b;
 
       try {
-         this.f = var4.a;
+         this.e = var4.a;
          var5.setInput(var4.a, 0, var4.a.length);
          var5.finish();
-         this.e = new byte[var4.a.length];
-         this.h = var5.deflate(this.e);
+         this.d = new byte[var4.a.length];
+         this.g = var5.deflate(this.d);
       } finally {
          var5.end();
       }
@@ -46,15 +44,14 @@ public class PacketClientbound21 implements ha {
    public void read(PacketBuffer var1) {
       this.a = var1.readInt();
       this.b = var1.readInt();
-      this.g = var1.readBoolean();
+      this.f = var1.readBoolean();
       this.c = var1.readShort();
-      this.d = var1.readShort();
-      this.h = var1.readInt();
-      if(i.length < this.h) {
-         i = new byte[this.h];
+      this.g = var1.readInt();
+      if(h.length < this.g) {
+         h = new byte[this.g];
       }
 
-      var1.readBytes(i, 0, this.h);
+      var1.readBytes(h, 0, this.g);
       int var2 = 0;
 
       int var3;
@@ -63,16 +60,16 @@ public class PacketClientbound21 implements ha {
       }
 
       var3 = 12288 * var2;
-      if(this.g) {
+      if(this.f) {
          var3 += 256;
       }
 
-      this.f = new byte[var3];
+      this.e = new byte[var3];
       Inflater var4 = new Inflater();
-      var4.setInput(i, 0, this.h);
+      var4.setInput(h, 0, this.g);
 
       try {
-         var4.inflate(this.f);
+         var4.inflate(this.e);
       } catch (DataFormatException var9) {
          throw new IOException("Bad compressed data format");
       } finally {
@@ -84,89 +81,71 @@ public class PacketClientbound21 implements ha {
    public void write(PacketBuffer var1) {
       var1.writeInt(this.a);
       var1.writeInt(this.b);
-      var1.writeBoolean(this.g);
+      var1.writeBoolean(this.f);
       var1.writeShort((short)(this.c & '\uffff'));
-      var1.writeShort((short)(this.d & '\uffff'));
-      var1.writeInt(this.h);
-      var1.writeBytes(this.e, 0, this.h);
+      var1.writeInt(this.g);
+      var1.writeBytes(this.d, 0, this.g);
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 
-   public static il a(ayv var0, boolean var1, int var2) {
+   public static im a(ayy var0, boolean var1, int var2) {
       int var3 = 0;
-      ayz[] var4 = var0.h();
-      int var5 = 0;
-      il var6 = new il();
-      byte[] var7 = i;
+      azc[] var4 = var0.h();
+      im var5 = new im();
+      byte[] var6 = h;
 
-      int var8;
-      for(var8 = 0; var8 < var4.length; ++var8) {
-         if(var4[var8] != null && (!var1 || !var4[var8].a()) && (var2 & 1 << var8) != 0) {
-            var6.b |= 1 << var8;
-            if(var4[var8].i() != null) {
-               var6.c |= 1 << var8;
-               ++var5;
+      int var7;
+      for(var7 = 0; var7 < var4.length; ++var7) {
+         if(var4[var7] != null && (!var1 || !var4[var7].a()) && (var2 & 1 << var7) != 0) {
+            var5.b |= 1 << var7;
+         }
+      }
+
+      for(var7 = 0; var7 < var4.length; ++var7) {
+         if(var4[var7] != null && (!var1 || !var4[var7].a()) && (var2 & 1 << var7) != 0) {
+            char[] var8 = var4[var7].g();
+            char[] var9 = var8;
+            int var10 = var8.length;
+
+            for(int var11 = 0; var11 < var10; ++var11) {
+               char var12 = var9[var11];
+               var6[var3++] = (byte)(var12 & 255);
+               var6[var3++] = (byte)(var12 >> 8 & 255);
             }
          }
       }
 
-      for(var8 = 0; var8 < var4.length; ++var8) {
-         if(var4[var8] != null && (!var1 || !var4[var8].a()) && (var2 & 1 << var8) != 0) {
-            byte[] var9 = var4[var8].g();
-            System.arraycopy(var9, 0, var7, var3, var9.length);
-            var3 += var9.length;
-         }
-      }
-
-      ayt var10;
-      for(var8 = 0; var8 < var4.length; ++var8) {
-         if(var4[var8] != null && (!var1 || !var4[var8].a()) && (var2 & 1 << var8) != 0) {
-            var10 = var4[var8].j();
-            System.arraycopy(var10.b(), 0, var7, var3, var10.b().length);
-            var3 += var10.b().length;
-         }
-      }
-
-      for(var8 = 0; var8 < var4.length; ++var8) {
-         if(var4[var8] != null && (!var1 || !var4[var8].a()) && (var2 & 1 << var8) != 0) {
-            var10 = var4[var8].k();
-            System.arraycopy(var10.b(), 0, var7, var3, var10.b().length);
-            var3 += var10.b().length;
+      ayw var13;
+      for(var7 = 0; var7 < var4.length; ++var7) {
+         if(var4[var7] != null && (!var1 || !var4[var7].a()) && (var2 & 1 << var7) != 0) {
+            var13 = var4[var7].h();
+            System.arraycopy(var13.b(), 0, var6, var3, var13.b().length);
+            var3 += var13.b().length;
          }
       }
 
       if(!var0.p().s.p()) {
-         for(var8 = 0; var8 < var4.length; ++var8) {
-            if(var4[var8] != null && (!var1 || !var4[var8].a()) && (var2 & 1 << var8) != 0) {
-               var10 = var4[var8].l();
-               System.arraycopy(var10.b(), 0, var7, var3, var10.b().length);
-               var3 += var10.b().length;
-            }
-         }
-      }
-
-      if(var5 > 0) {
-         for(var8 = 0; var8 < var4.length; ++var8) {
-            if(var4[var8] != null && (!var1 || !var4[var8].a()) && var4[var8].i() != null && (var2 & 1 << var8) != 0) {
-               var10 = var4[var8].i();
-               System.arraycopy(var10.b(), 0, var7, var3, var10.b().length);
-               var3 += var10.b().length;
+         for(var7 = 0; var7 < var4.length; ++var7) {
+            if(var4[var7] != null && (!var1 || !var4[var7].a()) && (var2 & 1 << var7) != 0) {
+               var13 = var4[var7].i();
+               System.arraycopy(var13.b(), 0, var6, var3, var13.b().length);
+               var3 += var13.b().length;
             }
          }
       }
 
       if(var1) {
-         byte[] var11 = var0.k();
-         System.arraycopy(var11, 0, var7, var3, var11.length);
-         var3 += var11.length;
+         byte[] var14 = var0.k();
+         System.arraycopy(var14, 0, var6, var3, var14.length);
+         var3 += var14.length;
       }
 
-      var6.a = new byte[var3];
-      System.arraycopy(var7, 0, var6.a, 0, var3);
-      return var6;
+      var5.a = new byte[var3];
+      System.arraycopy(var6, 0, var5.a, 0, var3);
+      return var5;
    }
 
 }

@@ -1,12 +1,12 @@
 
-public class PacketClientbound43 implements ha {
+public class PacketClientbound43 implements hb {
 
    public int a;
 
 
    public PacketClientbound43() {}
 
-   public PacketClientbound43(ub var1) {
+   public PacketClientbound43(ud var1) {
       this.a = var1.D();
    }
 
@@ -18,7 +18,7 @@ public class PacketClientbound43 implements ha {
       var1.writeVarInt(this.a);
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 }

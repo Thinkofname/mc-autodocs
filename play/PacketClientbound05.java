@@ -1,5 +1,5 @@
 
-public class PacketClientbound05 implements ha {
+public class PacketClientbound05 implements hb {
 
    private Position a;
 
@@ -18,7 +18,7 @@ public class PacketClientbound05 implements ha {
       var1.writePosition(this.a);
    }
 
-   public void a(hg var1) {
+   public void a(hh var1) {
       var1.a(this);
    }
 }
