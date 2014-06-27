@@ -4,12 +4,12 @@ public class PacketClientbound24 implements hb {
    private Position a;
    private int b;
    private int c;
-   private aoi d;
+   private aoj d;
 
 
    public PacketClientbound24() {}
 
-   public PacketClientbound24(Position var1, aoi var2, int var3, int var4) {
+   public PacketClientbound24(Position var1, aoj var2, int var3, int var4) {
       this.a = var1;
       this.b = var3;
       this.c = var4;
@@ -20,14 +20,14 @@ public class PacketClientbound24 implements hb {
       this.a = var1.readPosition();
       this.b = var1.readUnsignedByte();
       this.c = var1.readUnsignedByte();
-      this.d = aoi.d(var1.readVarInt() & 4095);
+      this.d = aoj.d(var1.readVarInt() & 4095);
    }
 
    public void write(PacketBuffer var1) {
       var1.writePosition(this.a);
       var1.writeByte(this.b);
       var1.writeByte(this.c);
-      var1.writeVarInt(aoi.a(this.d) & 4095);
+      var1.writeVarInt(aoj.a(this.d) & 4095);
    }
 
    public void a(hh var1) {

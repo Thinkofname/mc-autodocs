@@ -1,7 +1,7 @@
 
 public class PacketClientbound44 implements hb {
 
-   private jn a;
+   private jo a;
    private int b;
    private double c;
    private double d;
@@ -14,7 +14,7 @@ public class PacketClientbound44 implements hb {
 
    public PacketClientbound44() {}
 
-   public PacketClientbound44(ayt var1, jn var2) {
+   public PacketClientbound44(ayu var1, jo var2) {
       this.a = var2;
       this.c = var1.f();
       this.d = var1.g();
@@ -27,8 +27,8 @@ public class PacketClientbound44 implements hb {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = (jn)var1.readEnum(jn.class);
-      switch(jm.a[this.a.ordinal()]) {
+      this.a = (jo)var1.readEnum(jo.class);
+      switch(jn.a[this.a.ordinal()]) {
       case 1:
          this.e = var1.readDouble();
          break;
@@ -62,7 +62,7 @@ public class PacketClientbound44 implements hb {
 
    public void write(PacketBuffer var1) {
       var1.writeEnum(this.a);
-      switch(jm.a[this.a.ordinal()]) {
+      switch(jn.a[this.a.ordinal()]) {
       case 1:
          var1.writeDouble(this.e);
          break;

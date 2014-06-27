@@ -9,7 +9,7 @@ public class PacketServerbound0E implements hb {
    private int f;
 
 
-   public void a(kl var1) {
+   public void a(km var1) {
       var1.a(this);
    }
 

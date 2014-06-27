@@ -10,12 +10,12 @@ public class PacketClientbound2C implements hb {
 
    public PacketClientbound2C() {}
 
-   public PacketClientbound2C(ud var1) {
+   public PacketClientbound2C(ue var1) {
       this.a = var1.D();
-      this.b = si.c(var1.s * 32.0D);
-      this.c = si.c(var1.t * 32.0D);
-      this.d = si.c(var1.u * 32.0D);
-      if(var1 instanceof zu) {
+      this.b = sj.c(var1.s * 32.0D);
+      this.c = sj.c(var1.t * 32.0D);
+      this.d = sj.c(var1.u * 32.0D);
+      if(var1 instanceof zv) {
          this.e = 1;
       }
 

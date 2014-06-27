@@ -21,7 +21,7 @@ public class PacketServerbound00 implements hb {
       var1.writeVarInt(this.d.a());
    }
 
-   public void a(lq var1) {
+   public void a(lr var1) {
       var1.a(this);
    }
 

@@ -10,11 +10,11 @@ public class PacketClientbound11 implements hb {
 
    public PacketClientbound11() {}
 
-   public PacketClientbound11(us var1) {
+   public PacketClientbound11(ut var1) {
       this.a = var1.D();
-      this.b = si.c(var1.s * 32.0D);
-      this.c = si.c(var1.t * 32.0D);
-      this.d = si.c(var1.u * 32.0D);
+      this.b = sj.c(var1.s * 32.0D);
+      this.c = sj.c(var1.t * 32.0D);
+      this.d = sj.c(var1.u * 32.0D);
       this.e = var1.f();
    }
 

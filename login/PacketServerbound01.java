@@ -17,15 +17,15 @@ public class PacketServerbound01 implements hb {
       var1.a(this.b);
    }
 
-   public void a(lv var1) {
+   public void a(lw var1) {
       var1.a(this);
    }
 
    public SecretKey a(PrivateKey var1) {
-      return ru.a(var1, this.a);
+      return rv.a(var1, this.a);
    }
 
    public byte[] b(PrivateKey var1) {
-      return var1 == null?this.b:ru.b(var1, this.b);
+      return var1 == null?this.b:rv.b(var1, this.b);
    }
 }

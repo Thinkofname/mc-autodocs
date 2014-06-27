@@ -9,7 +9,7 @@ public class PacketClientbound12 implements hb {
 
    public PacketClientbound12() {}
 
-   public PacketClientbound12(ud var1) {
+   public PacketClientbound12(ue var1) {
       this(var1.D(), var1.v, var1.w, var1.x);
    }
 

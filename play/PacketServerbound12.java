@@ -24,7 +24,7 @@ public class PacketServerbound12 implements hb {
 
    }
 
-   public void a(kl var1) {
+   public void a(km var1) {
       var1.a(this);
    }
 

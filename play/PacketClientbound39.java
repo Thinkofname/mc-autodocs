@@ -11,7 +11,7 @@ public class PacketClientbound39 implements hb {
 
    public PacketClientbound39() {}
 
-   public PacketClientbound39(acv var1) {
+   public PacketClientbound39(acw var1) {
       this.a(var1.a);
       this.b(var1.b);
       this.c(var1.c);

@@ -2,12 +2,12 @@
 public class PacketServerbound02 implements hb {
 
    private int a;
-   private kx b;
+   private ky b;
 
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.b = (kx)var1.readEnum(kx.class);
+      this.b = (ky)var1.readEnum(ky.class);
    }
 
    public void write(PacketBuffer var1) {
@@ -15,15 +15,15 @@ public class PacketServerbound02 implements hb {
       var1.writeEnum(this.b);
    }
 
-   public void a(kl var1) {
+   public void a(km var1) {
       var1.a(this);
    }
 
-   public ud a(alx var1) {
+   public ue a(aly var1) {
       return var1.a(this.a);
    }
 
-   public kx a() {
+   public ky a() {
       return this.b;
    }
 }

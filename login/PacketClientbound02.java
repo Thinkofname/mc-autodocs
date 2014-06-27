@@ -25,7 +25,7 @@ public class PacketClientbound02 implements hb {
       var1.writeString(this.a.getName());
    }
 
-   public void a(lr var1) {
+   public void a(ls var1) {
       var1.a(this);
    }
 }

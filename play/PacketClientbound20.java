@@ -18,8 +18,8 @@ public class PacketClientbound20 implements hb {
       Iterator var3 = var2.iterator();
 
       while(var3.hasNext()) {
-         vl var4 = (vl)var3.next();
-         this.b.add(new kj(this, var4.a().a(), var4.b(), var4.c()));
+         vm var4 = (vm)var3.next();
+         this.b.add(new kk(this, var4.a().a(), var4.b(), var4.c()));
       }
 
    }
@@ -36,10 +36,10 @@ public class PacketClientbound20 implements hb {
 
          for(int var9 = 0; var9 < var8; ++var9) {
             UUID var10 = var1.readUUID();
-            var7.add(new vm(var10, "Unknown synced attribute modifier", var1.readDouble(), var1.readByte()));
+            var7.add(new vn(var10, "Unknown synced attribute modifier", var1.readDouble(), var1.readByte()));
          }
 
-         this.b.add(new kj(this, var4, var5, var7));
+         this.b.add(new kk(this, var4, var5, var7));
       }
 
    }
@@ -50,14 +50,14 @@ public class PacketClientbound20 implements hb {
       Iterator var2 = this.b.iterator();
 
       while(var2.hasNext()) {
-         kj var3 = (kj)var2.next();
+         kk var3 = (kk)var2.next();
          var1.writeString(var3.a());
          var1.writeDouble(var3.b());
          var1.writeVarInt(var3.c().size());
          Iterator var4 = var3.c().iterator();
 
          while(var4.hasNext()) {
-            vm var5 = (vm)var4.next();
+            vn var5 = (vn)var4.next();
             var1.writeUUID(var5.a());
             var1.writeDouble(var5.d());
             var1.writeByte(var5.c());

@@ -20,7 +20,7 @@ public class PacketClientbound29 implements hb {
       this.d = (int)(var6 * 8.0D);
       this.e = var8;
       this.f = (int)(var9 * 63.0F);
-      var9 = si.a(var9, 0.0F, 255.0F);
+      var9 = sj.a(var9, 0.0F, 255.0F);
    }
 
    public void read(PacketBuffer var1) {

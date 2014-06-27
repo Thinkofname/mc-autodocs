@@ -1,14 +1,14 @@
 
 public class PacketClientbound33 implements hb {
 
-   private alx a;
+   private aly a;
    private Position b;
    private go[] c;
 
 
    public PacketClientbound33() {}
 
-   public PacketClientbound33(alx var1, Position var2, go[] var3) {
+   public PacketClientbound33(aly var1, Position var2, go[] var3) {
       this.a = var1;
       this.b = var2;
       this.c = new go[]{var3[0], var3[1], var3[2], var3[3]};

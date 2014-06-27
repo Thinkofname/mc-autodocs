@@ -5,7 +5,7 @@ public class PacketServerbound10 implements hb {
    private ItemStack b;
 
 
-   public void a(kl var1) {
+   public void a(km var1) {
       var1.a(this);
    }
 

@@ -3,7 +3,7 @@ public class PacketServerbound15 implements hb {
 
    private String a;
    private int b;
-   private adb c;
+   private adc c;
    private boolean d;
    private int e;
 
@@ -11,7 +11,7 @@ public class PacketServerbound15 implements hb {
    public void read(PacketBuffer var1) {
       this.a = var1.readString(7);
       this.b = var1.readByte();
-      this.c = adb.a(var1.readByte());
+      this.c = adc.a(var1.readByte());
       this.d = var1.readBoolean();
       this.e = var1.readUnsignedByte();
    }
@@ -24,7 +24,7 @@ public class PacketServerbound15 implements hb {
       var1.writeByte(this.e);
    }
 
-   public void a(kl var1) {
+   public void a(km var1) {
       var1.a(this);
    }
 
@@ -32,7 +32,7 @@ public class PacketServerbound15 implements hb {
       return this.a;
    }
 
-   public adb c() {
+   public adc c() {
       return this.c;
    }
 

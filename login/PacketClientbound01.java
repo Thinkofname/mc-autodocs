@@ -17,7 +17,7 @@ public class PacketClientbound01 implements hb {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readString(20);
-      this.b = ru.a(var1.a());
+      this.b = rv.a(var1.a());
       this.c = var1.a();
    }
 
@@ -27,7 +27,7 @@ public class PacketClientbound01 implements hb {
       var1.a(this.c);
    }
 
-   public void a(lr var1) {
+   public void a(ls var1) {
       var1.a(this);
    }
 }

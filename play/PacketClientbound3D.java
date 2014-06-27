@@ -7,7 +7,7 @@ public class PacketClientbound3D implements hb {
 
    public PacketClientbound3D() {}
 
-   public PacketClientbound3D(int var1, bku var2) {
+   public PacketClientbound3D(int var1, bkv var2) {
       this.a = var1;
       if(var2 == null) {
          this.b = "";

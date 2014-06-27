@@ -30,7 +30,7 @@ public class PacketServerbound0C implements hb {
       var1.writeByte(var2);
    }
 
-   public void a(kl var1) {
+   public void a(km var1) {
       var1.a(this);
    }
 

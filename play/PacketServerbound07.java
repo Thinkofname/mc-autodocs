@@ -3,11 +3,11 @@ public class PacketServerbound07 implements hb {
 
    private Position a;
    private du b;
-   private lf c;
+   private lg c;
 
 
    public void read(PacketBuffer var1) {
-      this.c = (lf)var1.readEnum(lf.class);
+      this.c = (lg)var1.readEnum(lg.class);
       this.a = var1.readPosition();
       this.b = du.a(var1.readUnsignedByte());
    }
@@ -18,7 +18,7 @@ public class PacketServerbound07 implements hb {
       var1.writeByte(this.b.a());
    }
 
-   public void a(kl var1) {
+   public void a(km var1) {
       var1.a(this);
    }
 
@@ -30,7 +30,7 @@ public class PacketServerbound07 implements hb {
       return this.b;
    }
 
-   public lf c() {
+   public lg c() {
       return this.c;
    }
 }

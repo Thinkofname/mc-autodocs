@@ -11,7 +11,7 @@ public class PacketServerbound03 implements hb {
    protected boolean h;
 
 
-   public void a(kl var1) {
+   public void a(km var1) {
       var1.a(this);
    }
 

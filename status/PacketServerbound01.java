@@ -12,7 +12,7 @@ public class PacketServerbound01 implements hb {
       var1.writeLong(this.a);
    }
 
-   public void a(mh var1) {
+   public void a(mi var1) {
       var1.a(this);
    }
 

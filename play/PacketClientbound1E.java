@@ -7,7 +7,7 @@ public class PacketClientbound1E implements hb {
 
    public PacketClientbound1E() {}
 
-   public PacketClientbound1E(int var1, tz var2) {
+   public PacketClientbound1E(int var1, ua var2) {
       this.a = var1;
       this.b = var2.a();
    }

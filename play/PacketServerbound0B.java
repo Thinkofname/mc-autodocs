@@ -2,13 +2,13 @@
 public class PacketServerbound0B implements hb {
 
    private int a;
-   private lh b;
+   private li b;
    private int c;
 
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.b = (lh)var1.readEnum(lh.class);
+      this.b = (li)var1.readEnum(li.class);
       this.c = var1.readVarInt();
    }
 
@@ -18,11 +18,11 @@ public class PacketServerbound0B implements hb {
       var1.writeVarInt(this.c);
    }
 
-   public void a(kl var1) {
+   public void a(km var1) {
       var1.a(this);
    }
 
-   public lh b() {
+   public li b() {
       return this.b;
    }
 

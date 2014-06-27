@@ -18,7 +18,7 @@ public class PacketClientbound01 implements hb {
       var1.writeLong(this.a);
    }
 
-   public void a(ly var1) {
+   public void a(lz var1) {
       var1.a(this);
    }
 }

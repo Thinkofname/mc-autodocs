@@ -23,7 +23,7 @@ public class PacketClientbound37 implements hb {
       this.a = Maps.newHashMap();
 
       for(int var3 = 0; var3 < var2; ++var3) {
-         ri var4 = rq.a(var1.readString(32767));
+         rj var4 = rr.a(var1.readString(32767));
          int var5 = var1.readVarInt();
          if(var4 != null) {
             this.a.put(var4, Integer.valueOf(var5));
@@ -38,7 +38,7 @@ public class PacketClientbound37 implements hb {
 
       while(var2.hasNext()) {
          Entry var3 = (Entry)var2.next();
-         var1.writeString(((ri)var3.getKey()).e);
+         var1.writeString(((rj)var3.getKey()).e);
          var1.writeVarInt(((Integer)var3.getValue()).intValue());
       }
 

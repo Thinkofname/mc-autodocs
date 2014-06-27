@@ -1,13 +1,13 @@
 
 public class PacketClientbound41 implements hb {
 
-   private td a;
+   private te a;
    private boolean b;
 
 
    public PacketClientbound41() {}
 
-   public PacketClientbound41(td var1, boolean var2) {
+   public PacketClientbound41(te var1, boolean var2) {
       this.a = var1;
       this.b = var2;
    }
@@ -17,7 +17,7 @@ public class PacketClientbound41 implements hb {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = td.a(var1.readUnsignedByte());
+      this.a = te.a(var1.readUnsignedByte());
    }
 
    public void write(PacketBuffer var1) {

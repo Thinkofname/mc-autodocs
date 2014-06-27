@@ -24,12 +24,12 @@ public class PacketClientbound26 implements hb {
       this.b = new int[var2];
       this.c = new int[var2];
       this.e = new byte[var2][];
-      this.g = !var1.isEmpty() && !((ayy)var1.get(0)).p().s.p();
+      this.g = !var1.isEmpty() && !((ayz)var1.get(0)).p().s.p();
       int var3 = 0;
 
       for(int var4 = 0; var4 < var2; ++var4) {
-         ayy var5 = (ayy)var1.get(var4);
-         im var6 = il.a(var5, true, '\uffff');
+         ayz var5 = (ayz)var1.get(var4);
+         in var6 = im.a(var5, true, '\uffff');
          if(h.length < var3 + var6.a.length) {
             byte[] var7 = new byte[var3 + var6.a.length];
             System.arraycopy(h, 0, var7, 0, h.length);
@@ -74,7 +74,7 @@ public class PacketClientbound26 implements hb {
       }
 
       var1.readBytes(h, 0, this.f);
-      byte[] var3 = new byte[il.a() * var2];
+      byte[] var3 = new byte[im.a() * var2];
       Inflater var4 = new Inflater();
       var4.setInput(h, 0, this.f);
 

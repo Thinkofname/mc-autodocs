@@ -22,7 +22,7 @@ public class PacketServerbound01 implements hb {
       var1.writeString(this.a);
    }
 
-   public void a(kl var1) {
+   public void a(km var1) {
       var1.a(this);
    }
 

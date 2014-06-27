@@ -6,7 +6,7 @@ public class PacketClientbound43 implements hb {
 
    public PacketClientbound43() {}
 
-   public PacketClientbound43(ud var1) {
+   public PacketClientbound43(ue var1) {
       this.a = var1.D();
    }
 

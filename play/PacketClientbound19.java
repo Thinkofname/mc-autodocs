@@ -7,7 +7,7 @@ public class PacketClientbound19 implements hb {
 
    public PacketClientbound19() {}
 
-   public PacketClientbound19(ud var1, byte var2) {
+   public PacketClientbound19(ue var1, byte var2) {
       this.a = var1.D();
       this.b = var2;
    }

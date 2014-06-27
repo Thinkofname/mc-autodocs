@@ -5,7 +5,7 @@ public class PacketServerbound11 implements hb {
    private int b;
 
 
-   public void a(kl var1) {
+   public void a(km var1) {
       var1.a(this);
    }
 

@@ -17,11 +17,11 @@ public class PacketClientbound21 implements hb {
 
    public PacketClientbound21() {}
 
-   public PacketClientbound21(ayy var1, boolean var2, int var3) {
+   public PacketClientbound21(ayz var1, boolean var2, int var3) {
       this.a = var1.a;
       this.b = var1.b;
       this.f = var2;
-      im var4 = a(var1, var2, var3);
+      in var4 = a(var1, var2, var3);
       Deflater var5 = new Deflater(-1);
       this.c = var4.b;
 
@@ -91,10 +91,10 @@ public class PacketClientbound21 implements hb {
       var1.a(this);
    }
 
-   public static im a(ayy var0, boolean var1, int var2) {
+   public static in a(ayz var0, boolean var1, int var2) {
       int var3 = 0;
-      azc[] var4 = var0.h();
-      im var5 = new im();
+      azd[] var4 = var0.h();
+      in var5 = new in();
       byte[] var6 = h;
 
       int var7;
@@ -118,7 +118,7 @@ public class PacketClientbound21 implements hb {
          }
       }
 
-      ayw var13;
+      ayx var13;
       for(var7 = 0; var7 < var4.length; ++var7) {
          if(var4[var7] != null && (!var1 || !var4[var7].a()) && (var2 & 1 << var7) != 0) {
             var13 = var4[var7].h();

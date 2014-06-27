@@ -16,13 +16,13 @@ public class PacketClientbound3E implements hb {
 
 
    public PacketClientbound3E() {
-      this.e = blc.a.e;
+      this.e = bld.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
    }
 
-   public PacketClientbound3E(bkv var1, int var2) {
-      this.e = blc.a.e;
+   public PacketClientbound3E(bkw var1, int var2) {
+      this.e = bld.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
       this.a = var1.b();
@@ -42,8 +42,8 @@ public class PacketClientbound3E implements hb {
 
    }
 
-   public PacketClientbound3E(bkv var1, Collection var2, int var3) {
-      this.e = blc.a.e;
+   public PacketClientbound3E(bkw var1, Collection var2, int var3) {
+      this.e = bld.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
       if(var3 != 3 && var3 != 4) {

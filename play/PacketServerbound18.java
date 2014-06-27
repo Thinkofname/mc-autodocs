@@ -19,11 +19,11 @@ public class PacketServerbound18 implements hb {
       var1.writeUUID(this.a);
    }
 
-   public void a(kl var1) {
+   public void a(km var1) {
       var1.a(this);
    }
 
-   public ud a(ov var1) {
+   public ue a(ow var1) {
       return var1.a(this.a);
    }
 }

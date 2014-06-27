@@ -43,7 +43,7 @@ public class PacketServerbound08 implements hb {
       var1.writeByte((int)(this.g * 16.0F));
    }
 
-   public void a(kl var1) {
+   public void a(km var1) {
       var1.a(this);
    }
 

@@ -2,28 +2,24 @@
 public class PacketClientbound23 implements hb {
 
    private Position a;
-   private aoi b;
-   private int c;
+   private ayb b;
 
 
    public PacketClientbound23() {}
 
-   public PacketClientbound23(alx var1, Position var2) {
+   public PacketClientbound23(aly var1, Position var2) {
       this.a = var2;
-      this.b = var1.c(var2);
-      this.c = var1.g(var2);
+      this.b = var1.q(var2);
    }
 
    public void read(PacketBuffer var1) {
       this.a = var1.readPosition();
-      this.b = aoi.d(var1.readVarInt());
-      this.c = var1.readUnsignedByte();
+      this.b = (ayb)aoj.e.a(var1.readVarInt());
    }
 
    public void write(PacketBuffer var1) {
       var1.writePosition(this.a);
-      var1.writeVarInt(aoi.a(this.b));
-      var1.writeByte(this.c);
+      var1.writeVarInt(aoj.e.b(this.b));
    }
 
    public void a(hh var1) {

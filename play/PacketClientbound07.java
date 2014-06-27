@@ -2,14 +2,14 @@
 public class PacketClientbound07 implements hb {
 
    private int a;
-   private td b;
-   private amf c;
-   private amh d;
+   private te b;
+   private amg c;
+   private ami d;
 
 
    public PacketClientbound07() {}
 
-   public PacketClientbound07(int var1, td var2, amh var3, amf var4) {
+   public PacketClientbound07(int var1, te var2, ami var3, amg var4) {
       this.a = var1;
       this.b = var2;
       this.c = var4;
@@ -22,11 +22,11 @@ public class PacketClientbound07 implements hb {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readInt();
-      this.b = td.a(var1.readUnsignedByte());
-      this.c = amf.a(var1.readUnsignedByte());
-      this.d = amh.a(var1.readString(16));
+      this.b = te.a(var1.readUnsignedByte());
+      this.c = amg.a(var1.readUnsignedByte());
+      this.d = ami.a(var1.readString(16));
       if(this.d == null) {
-         this.d = amh.b;
+         this.d = ami.b;
       }
 
    }

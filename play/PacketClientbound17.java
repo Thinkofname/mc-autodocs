@@ -1,5 +1,5 @@
 
-public class PacketClientbound17 extends it {
+public class PacketClientbound17 extends iu {
 
    public PacketClientbound17() {
       this.h = true;

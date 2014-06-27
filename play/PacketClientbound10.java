@@ -9,7 +9,7 @@ public class PacketClientbound10 implements hb {
 
    public PacketClientbound10() {}
 
-   public PacketClientbound10(ve var1) {
+   public PacketClientbound10(vf var1) {
       this.a = var1.D();
       this.b = var1.i();
       this.c = var1.b;
@@ -18,7 +18,7 @@ public class PacketClientbound10 implements hb {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.d = var1.readString(vf.A);
+      this.d = var1.readString(vg.A);
       this.b = var1.readPosition();
       this.c = du.b(var1.readUnsignedByte());
    }

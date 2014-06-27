@@ -19,7 +19,7 @@ public class PacketServerbound14 implements hb {
       var1.writeString(StringUtils.substring(this.a, 0, 32767));
    }
 
-   public void a(kl var1) {
+   public void a(km var1) {
       var1.a(this);
    }
 

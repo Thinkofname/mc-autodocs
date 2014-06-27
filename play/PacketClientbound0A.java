@@ -7,7 +7,7 @@ public class PacketClientbound0A implements hb {
 
    public PacketClientbound0A() {}
 
-   public PacketClientbound0A(acy var1, Position var2) {
+   public PacketClientbound0A(acz var1, Position var2) {
       this.a = var1.D();
       this.b = var2;
    }

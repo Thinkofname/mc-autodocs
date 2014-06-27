@@ -18,7 +18,7 @@ public class PacketClientbound00 implements hb {
       var1.a(this.a);
    }
 
-   public void a(lr var1) {
+   public void a(ls var1) {
       var1.a(this);
    }
 }

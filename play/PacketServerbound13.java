@@ -11,7 +11,7 @@ public class PacketServerbound13 implements hb {
 
    public PacketServerbound13() {}
 
-   public PacketServerbound13(acv var1) {
+   public PacketServerbound13(acw var1) {
       this.a(var1.a);
       this.b(var1.b);
       this.c(var1.c);
@@ -53,7 +53,7 @@ public class PacketServerbound13 implements hb {
       var1.writeFloat(this.f);
    }
 
-   public void a(kl var1) {
+   public void a(km var1) {
       var1.a(this);
    }
 

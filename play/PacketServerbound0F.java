@@ -6,7 +6,7 @@ public class PacketServerbound0F implements hb {
    private boolean c;
 
 
-   public void a(kl var1) {
+   public void a(km var1) {
       var1.a(this);
    }
 
