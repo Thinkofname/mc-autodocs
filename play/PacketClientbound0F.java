@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class PacketClientbound0F implements hb {
+public class PacketClientbound0F implements hf {
 
    private int a;
    private int b;
@@ -13,18 +13,18 @@ public class PacketClientbound0F implements hb {
    private byte i;
    private byte j;
    private byte k;
-   private vi l;
+   private vq l;
    private List m;
 
 
    public PacketClientbound0F() {}
 
-   public PacketClientbound0F(uy var1) {
+   public PacketClientbound0F(vg var1) {
       this.a = var1.D();
-      this.b = (byte)uk.a(var1);
-      this.c = sj.c(var1.s * 32.0D);
-      this.d = sj.c(var1.t * 32.0D);
-      this.e = sj.c(var1.u * 32.0D);
+      this.b = (byte)us.a(var1);
+      this.c = sr.c(var1.s * 32.0D);
+      this.d = sr.c(var1.t * 32.0D);
+      this.e = sr.c(var1.u * 32.0D);
       this.i = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.j = (byte)((int)(var1.z * 256.0F / 360.0F));
       this.k = (byte)((int)(var1.aI * 256.0F / 360.0F));
@@ -74,7 +74,7 @@ public class PacketClientbound0F implements hb {
       this.f = var1.readShort();
       this.g = var1.readShort();
       this.h = var1.readShort();
-      this.m = vi.b(var1);
+      this.m = vq.b(var1);
    }
 
    public void write(PacketBuffer var1) {
@@ -92,7 +92,7 @@ public class PacketClientbound0F implements hb {
       this.l.a(var1);
    }
 
-   public void a(hh var1) {
+   public void a(hl var1) {
       var1.a(this);
    }
 }

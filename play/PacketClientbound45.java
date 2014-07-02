@@ -1,8 +1,8 @@
 
-public class PacketClientbound45 implements hb {
+public class PacketClientbound45 implements hf {
 
-   private kf a;
-   private go b;
+   private kj a;
+   private gs b;
    private int c;
    private int d;
    private int e;
@@ -10,15 +10,15 @@ public class PacketClientbound45 implements hb {
 
    public PacketClientbound45() {}
 
-   public PacketClientbound45(kf var1, go var2) {
+   public PacketClientbound45(kj var1, gs var2) {
       this(var1, var2, -1, -1, -1);
    }
 
    public PacketClientbound45(int var1, int var2, int var3) {
-      this(kf.c, (go)null, var1, var2, var3);
+      this(kj.c, (gs)null, var1, var2, var3);
    }
 
-   public PacketClientbound45(kf var1, go var2, int var3, int var4, int var5) {
+   public PacketClientbound45(kj var1, gs var2, int var3, int var4, int var5) {
       this.a = var1;
       this.b = var2;
       this.c = var3;
@@ -27,12 +27,12 @@ public class PacketClientbound45 implements hb {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = (kf)var1.readEnum(kf.class);
-      if(this.a == kf.a || this.a == kf.b) {
+      this.a = (kj)var1.readEnum(kj.class);
+      if(this.a == kj.a || this.a == kj.b) {
          this.b = var1.d();
       }
 
-      if(this.a == kf.c) {
+      if(this.a == kj.c) {
          this.c = var1.readInt();
          this.d = var1.readInt();
          this.e = var1.readInt();
@@ -42,11 +42,11 @@ public class PacketClientbound45 implements hb {
 
    public void write(PacketBuffer var1) {
       var1.writeEnum(this.a);
-      if(this.a == kf.a || this.a == kf.b) {
+      if(this.a == kj.a || this.a == kj.b) {
          var1.a(this.b);
       }
 
-      if(this.a == kf.c) {
+      if(this.a == kj.c) {
          var1.writeInt(this.c);
          var1.writeInt(this.d);
          var1.writeInt(this.e);
@@ -54,7 +54,7 @@ public class PacketClientbound45 implements hb {
 
    }
 
-   public void a(hh var1) {
+   public void a(hl var1) {
       var1.a(this);
    }
 }

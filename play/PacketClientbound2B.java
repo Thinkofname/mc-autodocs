@@ -1,5 +1,5 @@
 
-public class PacketClientbound2B implements hb {
+public class PacketClientbound2B implements hf {
 
    public static final String[] a = new String[]{"tile.bed.notValid", null, null, "gameMode.changed"};
    private int b;
@@ -23,7 +23,7 @@ public class PacketClientbound2B implements hb {
       var1.writeFloat(this.c);
    }
 
-   public void a(hh var1) {
+   public void a(hl var1) {
       var1.a(this);
    }
 

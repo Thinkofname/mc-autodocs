@@ -1,6 +1,6 @@
 import org.apache.commons.lang3.StringUtils;
 
-public class PacketServerbound14 implements hb {
+public class PacketServerbound14 implements hf {
 
    private String a;
 
@@ -19,7 +19,7 @@ public class PacketServerbound14 implements hb {
       var1.writeString(StringUtils.substring(this.a, 0, 32767));
    }
 
-   public void a(km var1) {
+   public void a(kq var1) {
       var1.a(this);
    }
 

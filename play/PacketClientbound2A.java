@@ -1,7 +1,7 @@
 
-public class PacketClientbound2A implements hb {
+public class PacketClientbound2A implements hf {
 
-   private ee a;
+   private eg a;
    private float b;
    private float c;
    private float d;
@@ -15,7 +15,7 @@ public class PacketClientbound2A implements hb {
 
    public PacketClientbound2A() {}
 
-   public PacketClientbound2A(ee var1, float var2, float var3, float var4, float var5, float var6, float var7, float var8, int var9, int ... var10) {
+   public PacketClientbound2A(eg var1, float var2, float var3, float var4, float var5, float var6, float var7, float var8, int var9, int ... var10) {
       this.a = var1;
       this.b = var2;
       this.c = var3;
@@ -29,9 +29,9 @@ public class PacketClientbound2A implements hb {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = ee.a(var1.readInt());
+      this.a = eg.a(var1.readInt());
       if(this.a == null) {
-         this.a = ee.J;
+         this.a = eg.J;
       }
 
       this.b = var1.readFloat();
@@ -71,7 +71,7 @@ public class PacketClientbound2A implements hb {
 
    }
 
-   public void a(hh var1) {
+   public void a(hl var1) {
       var1.a(this);
    }
 }

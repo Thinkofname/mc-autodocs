@@ -1,5 +1,5 @@
 
-public class PacketClientbound18 implements hb {
+public class PacketClientbound18 implements hf {
 
    private int a;
    private int b;
@@ -12,11 +12,11 @@ public class PacketClientbound18 implements hb {
 
    public PacketClientbound18() {}
 
-   public PacketClientbound18(ue var1) {
+   public PacketClientbound18(um var1) {
       this.a = var1.D();
-      this.b = sj.c(var1.s * 32.0D);
-      this.c = sj.c(var1.t * 32.0D);
-      this.d = sj.c(var1.u * 32.0D);
+      this.b = sr.c(var1.s * 32.0D);
+      this.c = sr.c(var1.t * 32.0D);
+      this.d = sr.c(var1.u * 32.0D);
       this.e = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.f = (byte)((int)(var1.z * 256.0F / 360.0F));
       this.g = var1.C;
@@ -52,7 +52,7 @@ public class PacketClientbound18 implements hb {
       var1.writeBoolean(this.g);
    }
 
-   public void a(hh var1) {
+   public void a(hl var1) {
       var1.a(this);
    }
 }

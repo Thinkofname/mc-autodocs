@@ -1,5 +1,5 @@
 
-public class PacketClientbound28 implements hb {
+public class PacketClientbound28 implements hf {
 
    private int a;
    private Position b;
@@ -30,7 +30,7 @@ public class PacketClientbound28 implements hb {
       var1.writeBoolean(this.d);
    }
 
-   public void a(hh var1) {
+   public void a(hl var1) {
       var1.a(this);
    }
 }

@@ -1,32 +1,32 @@
 
-public class PacketClientbound07 implements hb {
+public class PacketClientbound07 implements hf {
 
    private int a;
-   private te b;
-   private amg c;
-   private ami d;
+   private tm b;
+   private amx c;
+   private amz d;
 
 
    public PacketClientbound07() {}
 
-   public PacketClientbound07(int var1, te var2, ami var3, amg var4) {
+   public PacketClientbound07(int var1, tm var2, amz var3, amx var4) {
       this.a = var1;
       this.b = var2;
       this.c = var4;
       this.d = var3;
    }
 
-   public void a(hh var1) {
+   public void a(hl var1) {
       var1.a(this);
    }
 
    public void read(PacketBuffer var1) {
       this.a = var1.readInt();
-      this.b = te.a(var1.readUnsignedByte());
-      this.c = amg.a(var1.readUnsignedByte());
-      this.d = ami.a(var1.readString(16));
+      this.b = tm.a(var1.readUnsignedByte());
+      this.c = amx.a(var1.readUnsignedByte());
+      this.d = amz.a(var1.readString(16));
       if(this.d == null) {
-         this.d = ami.b;
+         this.d = amz.b;
       }
 
    }

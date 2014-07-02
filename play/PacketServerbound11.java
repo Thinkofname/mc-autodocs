@@ -1,11 +1,11 @@
 
-public class PacketServerbound11 implements hb {
+public class PacketServerbound11 implements hf {
 
    private int a;
    private int b;
 
 
-   public void a(km var1) {
+   public void a(kq var1) {
       var1.a(this);
    }
 

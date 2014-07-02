@@ -1,5 +1,5 @@
 
-public class PacketClientbound00 implements hb {
+public class PacketClientbound00 implements hf {
 
    private int a;
 
@@ -10,7 +10,7 @@ public class PacketClientbound00 implements hb {
       this.a = var1;
    }
 
-   public void a(hh var1) {
+   public void a(hl var1) {
       var1.a(this);
    }
 

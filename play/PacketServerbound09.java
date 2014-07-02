@@ -1,5 +1,5 @@
 
-public class PacketServerbound09 implements hb {
+public class PacketServerbound09 implements hf {
 
    private int a;
 
@@ -12,7 +12,7 @@ public class PacketServerbound09 implements hb {
       var1.writeShort(this.a);
    }
 
-   public void a(km var1) {
+   public void a(kq var1) {
       var1.a(this);
    }
 

@@ -4,7 +4,7 @@ import java.util.zip.DataFormatException;
 import java.util.zip.Deflater;
 import java.util.zip.Inflater;
 
-public class PacketClientbound26 implements hb {
+public class PacketClientbound26 implements hf {
 
    private int[] a;
    private int[] b;
@@ -24,12 +24,12 @@ public class PacketClientbound26 implements hb {
       this.b = new int[var2];
       this.c = new int[var2];
       this.e = new byte[var2][];
-      this.g = !var1.isEmpty() && !((ayz)var1.get(0)).p().s.p();
+      this.g = !var1.isEmpty() && !((azs)var1.get(0)).p().s.p();
       int var3 = 0;
 
       for(int var4 = 0; var4 < var2; ++var4) {
-         ayz var5 = (ayz)var1.get(var4);
-         in var6 = im.a(var5, true, '\uffff');
+         azs var5 = (azs)var1.get(var4);
+         ir var6 = iq.a(var5, true, '\uffff');
          if(h.length < var3 + var6.a.length) {
             byte[] var7 = new byte[var3 + var6.a.length];
             System.arraycopy(h, 0, var7, 0, h.length);
@@ -74,7 +74,7 @@ public class PacketClientbound26 implements hb {
       }
 
       var1.readBytes(h, 0, this.f);
-      byte[] var3 = new byte[im.a() * var2];
+      byte[] var3 = new byte[iq.a() * var2];
       Inflater var4 = new Inflater();
       var4.setInput(h, 0, this.f);
 
@@ -125,7 +125,7 @@ public class PacketClientbound26 implements hb {
 
    }
 
-   public void a(hh var1) {
+   public void a(hl var1) {
       var1.a(this);
    }
 

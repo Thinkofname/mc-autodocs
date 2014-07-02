@@ -3,7 +3,7 @@ import java.util.zip.DataFormatException;
 import java.util.zip.Deflater;
 import java.util.zip.Inflater;
 
-public class PacketClientbound21 implements hb {
+public class PacketClientbound21 implements hf {
 
    private int a;
    private int b;
@@ -17,11 +17,11 @@ public class PacketClientbound21 implements hb {
 
    public PacketClientbound21() {}
 
-   public PacketClientbound21(ayz var1, boolean var2, int var3) {
+   public PacketClientbound21(azs var1, boolean var2, int var3) {
       this.a = var1.a;
       this.b = var1.b;
       this.f = var2;
-      in var4 = a(var1, var2, var3);
+      ir var4 = a(var1, var2, var3);
       Deflater var5 = new Deflater(-1);
       this.c = var4.b;
 
@@ -87,14 +87,14 @@ public class PacketClientbound21 implements hb {
       var1.writeBytes(this.d, 0, this.g);
    }
 
-   public void a(hh var1) {
+   public void a(hl var1) {
       var1.a(this);
    }
 
-   public static in a(ayz var0, boolean var1, int var2) {
+   public static ir a(azs var0, boolean var1, int var2) {
       int var3 = 0;
-      azd[] var4 = var0.h();
-      in var5 = new in();
+      azw[] var4 = var0.h();
+      ir var5 = new ir();
       byte[] var6 = h;
 
       int var7;
@@ -118,7 +118,7 @@ public class PacketClientbound21 implements hb {
          }
       }
 
-      ayx var13;
+      azq var13;
       for(var7 = 0; var7 < var4.length; ++var7) {
          if(var4[var7] != null && (!var1 || !var4[var7].a()) && (var2 & 1 << var7) != 0) {
             var13 = var4[var7].h();

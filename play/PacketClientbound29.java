@@ -1,6 +1,6 @@
 import org.apache.commons.lang3.Validate;
 
-public class PacketClientbound29 implements hb {
+public class PacketClientbound29 implements hf {
 
    private String a;
    private int b;
@@ -20,7 +20,7 @@ public class PacketClientbound29 implements hb {
       this.d = (int)(var6 * 8.0D);
       this.e = var8;
       this.f = (int)(var9 * 63.0F);
-      var9 = sj.a(var9, 0.0F, 255.0F);
+      var9 = sr.a(var9, 0.0F, 255.0F);
    }
 
    public void read(PacketBuffer var1) {
@@ -41,7 +41,7 @@ public class PacketClientbound29 implements hb {
       var1.writeByte(this.f);
    }
 
-   public void a(hh var1) {
+   public void a(hl var1) {
       var1.a(this);
    }
 }

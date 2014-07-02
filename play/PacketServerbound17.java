@@ -1,5 +1,5 @@
 
-public class PacketServerbound17 implements hb {
+public class PacketServerbound17 implements hf {
 
    private String a;
    private int b;
@@ -25,7 +25,7 @@ public class PacketServerbound17 implements hb {
 
    }
 
-   public void a(km var1) {
+   public void a(kq var1) {
       var1.a(this);
    }
 

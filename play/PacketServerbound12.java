@@ -1,13 +1,13 @@
 
-public class PacketServerbound12 implements hb {
+public class PacketServerbound12 implements hf {
 
    private Position a;
-   private go[] b;
+   private gs[] b;
 
 
    public void read(PacketBuffer var1) {
       this.a = var1.readPosition();
-      this.b = new go[4];
+      this.b = new gs[4];
 
       for(int var2 = 0; var2 < 4; ++var2) {
          this.b[var2] = var1.d();
@@ -24,7 +24,7 @@ public class PacketServerbound12 implements hb {
 
    }
 
-   public void a(km var1) {
+   public void a(kq var1) {
       var1.a(this);
    }
 
@@ -32,7 +32,7 @@ public class PacketServerbound12 implements hb {
       return this.a;
    }
 
-   public go[] b() {
+   public gs[] b() {
       return this.b;
    }
 }

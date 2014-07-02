@@ -1,7 +1,7 @@
 import java.security.PrivateKey;
 import javax.crypto.SecretKey;
 
-public class PacketServerbound01 implements hb {
+public class PacketServerbound01 implements hf {
 
    private byte[] a = new byte[0];
    private byte[] b = new byte[0];
@@ -17,15 +17,15 @@ public class PacketServerbound01 implements hb {
       var1.a(this.b);
    }
 
-   public void a(lw var1) {
+   public void a(ma var1) {
       var1.a(this);
    }
 
    public SecretKey a(PrivateKey var1) {
-      return rv.a(var1, this.a);
+      return sc.a(var1, this.a);
    }
 
    public byte[] b(PrivateKey var1) {
-      return var1 == null?this.b:rv.b(var1, this.b);
+      return var1 == null?this.b:sc.b(var1, this.b);
    }
 }
