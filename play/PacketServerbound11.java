@@ -1,11 +1,11 @@
 
-public class PacketServerbound11 implements hf {
+public class PacketServerbound11 implements hz {
 
    private int a;
    private int b;
 
 
-   public void a(kq var1) {
+   public void a(ll var1) {
       var1.a(this);
    }
 

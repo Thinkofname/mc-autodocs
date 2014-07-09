@@ -1,18 +1,18 @@
 
-public class PacketClientbound01 implements hf {
+public class PacketClientbound01 implements hz {
 
    private int a;
    private boolean b;
-   private amx c;
+   private apu c;
    private int d;
-   private tm e;
+   private vc e;
    private int f;
-   private amz g;
+   private apw g;
 
 
    public PacketClientbound01() {}
 
-   public PacketClientbound01(int var1, amx var2, boolean var3, int var4, tm var5, int var6, amz var7) {
+   public PacketClientbound01(int var1, apu var2, boolean var3, int var4, vc var5, int var6, apw var7) {
       this.a = var1;
       this.d = var4;
       this.e = var5;
@@ -27,13 +27,13 @@ public class PacketClientbound01 implements hf {
       short var2 = var1.readUnsignedByte();
       this.b = (var2 & 8) == 8;
       int var3 = var2 & -9;
-      this.c = amx.a(var3);
+      this.c = apu.a(var3);
       this.d = var1.readByte();
-      this.e = tm.a(var1.readUnsignedByte());
+      this.e = vc.a(var1.readUnsignedByte());
       this.f = var1.readUnsignedByte();
-      this.g = amz.a(var1.readString(16));
+      this.g = apw.a(var1.readString(16));
       if(this.g == null) {
-         this.g = amz.b;
+         this.g = apw.b;
       }
 
    }
@@ -52,7 +52,7 @@ public class PacketClientbound01 implements hf {
       var1.writeString(this.g.a());
    }
 
-   public void a(hl var1) {
+   public void a(ig var1) {
       var1.a(this);
    }
 }

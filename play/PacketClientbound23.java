@@ -1,28 +1,28 @@
 
-public class PacketClientbound23 implements hf {
+public class PacketClientbound23 implements hz {
 
    private Position a;
-   private ayu b;
+   private bbt b;
 
 
    public PacketClientbound23() {}
 
-   public PacketClientbound23(amp var1, Position var2) {
+   public PacketClientbound23(apm var1, Position var2) {
       this.a = var2;
-      this.b = var1.p(var2);
+      this.b = var1.o(var2);
    }
 
    public void read(PacketBuffer var1) {
       this.a = var1.readPosition();
-      this.b = (ayu)apa.e.a(var1.readVarInt());
+      this.b = (bbt)ary.d.a(var1.readVarInt());
    }
 
    public void write(PacketBuffer var1) {
       var1.writePosition(this.a);
-      var1.writeVarInt(apa.e.b(this.b));
+      var1.writeVarInt(ary.d.b(this.b));
    }
 
-   public void a(hl var1) {
+   public void a(ig var1) {
       var1.a(this);
    }
 }

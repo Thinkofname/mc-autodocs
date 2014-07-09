@@ -1,10 +1,10 @@
 
-public class PacketServerbound0D implements hf {
+public class PacketServerbound0D implements hz {
 
    private int a;
 
 
-   public void a(kq var1) {
+   public void a(ll var1) {
       var1.a(this);
    }
 

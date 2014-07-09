@@ -1,6 +1,6 @@
 import java.security.PublicKey;
 
-public class PacketClientbound01 implements hf {
+public class PacketClientbound01 implements hz {
 
    private String a;
    private PublicKey b;
@@ -17,7 +17,7 @@ public class PacketClientbound01 implements hf {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readString(20);
-      this.b = sc.a(var1.a());
+      this.b = tp.a(var1.a());
       this.c = var1.a();
    }
 
@@ -27,7 +27,7 @@ public class PacketClientbound01 implements hf {
       var1.a(this.c);
    }
 
-   public void a(lw var1) {
+   public void a(mt var1) {
       var1.a(this);
    }
 }

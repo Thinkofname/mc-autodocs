@@ -1,22 +1,22 @@
 
-public class PacketClientbound33 implements hf {
+public class PacketClientbound33 implements hz {
 
-   private amp a;
+   private apm a;
    private Position b;
-   private gs[] c;
+   private hk[] c;
 
 
    public PacketClientbound33() {}
 
-   public PacketClientbound33(amp var1, Position var2, gs[] var3) {
+   public PacketClientbound33(apm var1, Position var2, hk[] var3) {
       this.a = var1;
       this.b = var2;
-      this.c = new gs[]{var3[0], var3[1], var3[2], var3[3]};
+      this.c = new hk[]{var3[0], var3[1], var3[2], var3[3]};
    }
 
    public void read(PacketBuffer var1) {
       this.b = var1.readPosition();
-      this.c = new gs[4];
+      this.c = new hk[4];
 
       for(int var2 = 0; var2 < 4; ++var2) {
          this.c[var2] = var1.d();
@@ -33,7 +33,7 @@ public class PacketClientbound33 implements hf {
 
    }
 
-   public void a(hl var1) {
+   public void a(ig var1) {
       var1.a(this);
    }
 }

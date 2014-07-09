@@ -1,13 +1,13 @@
 
-public class PacketServerbound02 implements hf {
+public class PacketServerbound02 implements hz {
 
    private int a;
-   private lc b;
+   private lx b;
 
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.b = (lc)var1.readEnum(lc.class);
+      this.b = (lx)var1.readEnum(lx.class);
    }
 
    public void write(PacketBuffer var1) {
@@ -15,15 +15,15 @@ public class PacketServerbound02 implements hf {
       var1.writeEnum(this.b);
    }
 
-   public void a(kq var1) {
+   public void a(ll var1) {
       var1.a(this);
    }
 
-   public um a(amp var1) {
+   public we a(apm var1) {
       return var1.a(this.a);
    }
 
-   public lc a() {
+   public lx a() {
       return this.b;
    }
 }

@@ -1,9 +1,9 @@
 
-public class PacketServerbound15 implements hf {
+public class PacketServerbound15 implements hz {
 
    private String a;
    private int b;
-   private adt c;
+   private agh c;
    private boolean d;
    private int e;
 
@@ -11,7 +11,7 @@ public class PacketServerbound15 implements hf {
    public void read(PacketBuffer var1) {
       this.a = var1.readString(7);
       this.b = var1.readByte();
-      this.c = adt.a(var1.readByte());
+      this.c = agh.a(var1.readByte());
       this.d = var1.readBoolean();
       this.e = var1.readUnsignedByte();
    }
@@ -24,7 +24,7 @@ public class PacketServerbound15 implements hf {
       var1.writeByte(this.e);
    }
 
-   public void a(kq var1) {
+   public void a(ll var1) {
       var1.a(this);
    }
 
@@ -32,7 +32,7 @@ public class PacketServerbound15 implements hf {
       return this.a;
    }
 
-   public adt c() {
+   public agh c() {
       return this.c;
    }
 

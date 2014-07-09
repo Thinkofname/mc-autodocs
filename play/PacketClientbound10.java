@@ -1,15 +1,15 @@
 
-public class PacketClientbound10 implements hf {
+public class PacketClientbound10 implements hz {
 
    private int a;
    private Position b;
-   private dw c;
+   private ei c;
    private String d;
 
 
    public PacketClientbound10() {}
 
-   public PacketClientbound10(vn var1) {
+   public PacketClientbound10(xf var1) {
       this.a = var1.D();
       this.b = var1.m();
       this.c = var1.b;
@@ -18,9 +18,9 @@ public class PacketClientbound10 implements hf {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.d = var1.readString(vo.A);
+      this.d = var1.readString(xg.A);
       this.b = var1.readPosition();
-      this.c = dw.b(var1.readUnsignedByte());
+      this.c = ei.b(var1.readUnsignedByte());
    }
 
    public void write(PacketBuffer var1) {
@@ -30,7 +30,7 @@ public class PacketClientbound10 implements hf {
       var1.writeByte(this.c.b());
    }
 
-   public void a(hl var1) {
+   public void a(ig var1) {
       var1.a(this);
    }
 }

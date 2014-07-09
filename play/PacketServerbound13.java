@@ -1,5 +1,5 @@
 
-public class PacketServerbound13 implements hf {
+public class PacketServerbound13 implements hz {
 
    private boolean a;
    private boolean b;
@@ -11,7 +11,7 @@ public class PacketServerbound13 implements hf {
 
    public PacketServerbound13() {}
 
-   public PacketServerbound13(adn var1) {
+   public PacketServerbound13(agb var1) {
       this.a(var1.a);
       this.b(var1.b);
       this.c(var1.c);
@@ -53,7 +53,7 @@ public class PacketServerbound13 implements hf {
       var1.writeFloat(this.f);
    }
 
-   public void a(kq var1) {
+   public void a(ll var1) {
       var1.a(this);
    }
 

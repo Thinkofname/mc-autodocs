@@ -1,7 +1,7 @@
 import com.mojang.authlib.GameProfile;
 import java.util.UUID;
 
-public class PacketServerbound00 implements hf {
+public class PacketServerbound00 implements hz {
 
    private GameProfile a;
 
@@ -20,7 +20,7 @@ public class PacketServerbound00 implements hf {
       var1.writeString(this.a.getName());
    }
 
-   public void a(ma var1) {
+   public void a(my var1) {
       var1.a(this);
    }
 

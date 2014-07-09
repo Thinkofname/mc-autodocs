@@ -1,40 +1,40 @@
 
-public class PacketClientbound3C implements hf {
+public class PacketClientbound3C implements hz {
 
    private String a = "";
    private String b = "";
    private int c;
-   private kf d;
+   private la d;
 
 
    public PacketClientbound3C() {}
 
-   public PacketClientbound3C(blq var1) {
+   public PacketClientbound3C(bpo var1) {
       this.a = var1.e();
       this.b = var1.d().b();
       this.c = var1.c();
-      this.d = kf.a;
+      this.d = la.a;
    }
 
    public PacketClientbound3C(String var1) {
       this.a = var1;
       this.b = "";
       this.c = 0;
-      this.d = kf.b;
+      this.d = la.b;
    }
 
-   public PacketClientbound3C(String var1, blo var2) {
+   public PacketClientbound3C(String var1, bpm var2) {
       this.a = var1;
       this.b = var2.b();
       this.c = 0;
-      this.d = kf.b;
+      this.d = la.b;
    }
 
    public void read(PacketBuffer var1) {
       this.a = var1.readString(40);
-      this.d = (kf)var1.readEnum(kf.class);
+      this.d = (la)var1.readEnum(la.class);
       this.b = var1.readString(16);
-      if(this.d != kf.b) {
+      if(this.d != la.b) {
          this.c = var1.readVarInt();
       }
 
@@ -44,13 +44,13 @@ public class PacketClientbound3C implements hf {
       var1.writeString(this.a);
       var1.writeEnum(this.d);
       var1.writeString(this.b);
-      if(this.d != kf.b) {
+      if(this.d != la.b) {
          var1.writeVarInt(this.c);
       }
 
    }
 
-   public void a(hl var1) {
+   public void a(ig var1) {
       var1.a(this);
    }
 }

@@ -1,5 +1,5 @@
 
-public class PacketServerbound08 implements hf {
+public class PacketServerbound08 implements hz {
 
    private static final Position a = new Position(-1, -1, -1);
    private Position b;
@@ -43,7 +43,7 @@ public class PacketServerbound08 implements hf {
       var1.writeByte((int)(this.g * 16.0F));
    }
 
-   public void a(kq var1) {
+   public void a(ll var1) {
       var1.a(this);
    }
 

@@ -1,5 +1,5 @@
 
-public class PacketClientbound16 extends iy {
+public class PacketClientbound16 extends jt {
 
    public PacketClientbound16() {
       this.h = true;

@@ -1,7 +1,7 @@
 
-public class PacketClientbound2A implements hf {
+public class PacketClientbound2A implements hz {
 
-   private eg a;
+   private et a;
    private float b;
    private float c;
    private float d;
@@ -15,7 +15,7 @@ public class PacketClientbound2A implements hf {
 
    public PacketClientbound2A() {}
 
-   public PacketClientbound2A(eg var1, float var2, float var3, float var4, float var5, float var6, float var7, float var8, int var9, int ... var10) {
+   public PacketClientbound2A(et var1, float var2, float var3, float var4, float var5, float var6, float var7, float var8, int var9, int ... var10) {
       this.a = var1;
       this.b = var2;
       this.c = var3;
@@ -29,9 +29,9 @@ public class PacketClientbound2A implements hf {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = eg.a(var1.readInt());
+      this.a = et.a(var1.readInt());
       if(this.a == null) {
-         this.a = eg.J;
+         this.a = et.J;
       }
 
       this.b = var1.readFloat();
@@ -61,17 +61,15 @@ public class PacketClientbound2A implements hf {
       var1.writeFloat(this.g);
       var1.writeFloat(this.h);
       var1.writeInt(this.i);
-      int[] var2 = this.j;
-      int var3 = var2.length;
+      int var2 = this.a.d();
 
-      for(int var4 = 0; var4 < var3; ++var4) {
-         int var5 = var2[var4];
-         var1.writeVarInt(var5);
+      for(int var3 = 0; var3 < var2; ++var3) {
+         var1.writeVarInt(this.j[var3]);
       }
 
    }
 
-   public void a(hl var1) {
+   public void a(ig var1) {
       var1.a(this);
    }
 }

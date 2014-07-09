@@ -1,5 +1,5 @@
 
-public class PacketServerbound03 implements hf {
+public class PacketServerbound03 implements hz {
 
    protected double a;
    protected double b;
@@ -11,7 +11,7 @@ public class PacketServerbound03 implements hf {
    protected boolean h;
 
 
-   public void a(kq var1) {
+   public void a(ll var1) {
       var1.a(this);
    }
 

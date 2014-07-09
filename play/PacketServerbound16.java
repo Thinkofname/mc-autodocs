@@ -1,28 +1,28 @@
 
-public class PacketServerbound16 implements hf {
+public class PacketServerbound16 implements hz {
 
-   private ku a;
+   private lp a;
 
 
    public PacketServerbound16() {}
 
-   public PacketServerbound16(ku var1) {
+   public PacketServerbound16(lp var1) {
       this.a = var1;
    }
 
    public void read(PacketBuffer var1) {
-      this.a = (ku)var1.readEnum(ku.class);
+      this.a = (lp)var1.readEnum(lp.class);
    }
 
    public void write(PacketBuffer var1) {
       var1.writeEnum(this.a);
    }
 
-   public void a(kq var1) {
+   public void a(ll var1) {
       var1.a(this);
    }
 
-   public ku a() {
+   public lp a() {
       return this.a;
    }
 }

@@ -1,5 +1,5 @@
 
-public class PacketClientbound1F implements hf {
+public class PacketClientbound1F implements hz {
 
    private float a;
    private int b;
@@ -26,7 +26,7 @@ public class PacketClientbound1F implements hf {
       var1.writeVarInt(this.b);
    }
 
-   public void a(hl var1) {
+   public void a(ig var1) {
       var1.a(this);
    }
 }

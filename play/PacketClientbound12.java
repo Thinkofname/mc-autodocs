@@ -1,5 +1,5 @@
 
-public class PacketClientbound12 implements hf {
+public class PacketClientbound12 implements hz {
 
    private int a;
    private int b;
@@ -9,7 +9,7 @@ public class PacketClientbound12 implements hf {
 
    public PacketClientbound12() {}
 
-   public PacketClientbound12(um var1) {
+   public PacketClientbound12(we var1) {
       this(var1.D(), var1.v, var1.w, var1.x);
    }
 
@@ -59,7 +59,7 @@ public class PacketClientbound12 implements hf {
       var1.writeShort(this.d);
    }
 
-   public void a(hl var1) {
+   public void a(ig var1) {
       var1.a(this);
    }
 }

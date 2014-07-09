@@ -2,7 +2,7 @@ import com.google.common.collect.Lists;
 import java.util.Collection;
 import java.util.Iterator;
 
-public class PacketClientbound3E implements hf {
+public class PacketClientbound3E implements hz {
 
    private String a = "";
    private String b = "";
@@ -16,13 +16,13 @@ public class PacketClientbound3E implements hf {
 
 
    public PacketClientbound3E() {
-      this.e = blw.a.e;
+      this.e = bpu.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
    }
 
-   public PacketClientbound3E(blp var1, int var2) {
-      this.e = blw.a.e;
+   public PacketClientbound3E(bpn var1, int var2) {
+      this.e = bpu.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
       this.a = var1.b();
@@ -42,8 +42,8 @@ public class PacketClientbound3E implements hf {
 
    }
 
-   public PacketClientbound3E(blp var1, Collection var2, int var3) {
-      this.e = blw.a.e;
+   public PacketClientbound3E(bpn var1, Collection var2, int var3) {
+      this.e = bpu.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
       if(var3 != 3 && var3 != 4) {
@@ -103,7 +103,7 @@ public class PacketClientbound3E implements hf {
 
    }
 
-   public void a(hl var1) {
+   public void a(ig var1) {
       var1.a(this);
    }
 }
