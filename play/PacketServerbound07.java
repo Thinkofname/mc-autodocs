@@ -3,11 +3,11 @@ public class PacketServerbound07 implements hz {
 
    private Position a;
    private ei b;
-   private mf c;
+   private mg c;
 
 
    public void read(PacketBuffer var1) {
-      this.c = (mf)var1.readEnum(mf.class);
+      this.c = (mg)var1.readEnum(mg.class);
       this.a = var1.readPosition();
       this.b = ei.a(var1.readUnsignedByte());
    }
@@ -18,7 +18,7 @@ public class PacketServerbound07 implements hz {
       var1.writeByte(this.b.a());
    }
 
-   public void a(ll var1) {
+   public void a(lm var1) {
       var1.a(this);
    }
 
@@ -30,7 +30,7 @@ public class PacketServerbound07 implements hz {
       return this.b;
    }
 
-   public mf c() {
+   public mg c() {
       return this.c;
    }
 }

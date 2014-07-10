@@ -17,7 +17,7 @@ public class PacketClientbound01 implements hz {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readString(20);
-      this.b = tp.a(var1.a());
+      this.b = tr.a(var1.a());
       this.c = var1.a();
    }
 
@@ -27,7 +27,7 @@ public class PacketClientbound01 implements hz {
       var1.a(this.c);
    }
 
-   public void a(mt var1) {
+   public void a(mu var1) {
       var1.a(this);
    }
 }

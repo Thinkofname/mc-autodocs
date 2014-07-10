@@ -1,14 +1,14 @@
 
 public class PacketClientbound33 implements hz {
 
-   private apm a;
+   private apo a;
    private Position b;
    private hk[] c;
 
 
    public PacketClientbound33() {}
 
-   public PacketClientbound33(apm var1, Position var2, hk[] var3) {
+   public PacketClientbound33(apo var1, Position var2, hk[] var3) {
       this.a = var1;
       this.b = var2;
       this.c = new hk[]{var3[0], var3[1], var3[2], var3[3]};

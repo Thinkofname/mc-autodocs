@@ -21,7 +21,7 @@ public class PacketServerbound00 implements hz {
       var1.writeVarInt(this.d.a());
    }
 
-   public void a(mr var1) {
+   public void a(ms var1) {
       var1.a(this);
    }
 

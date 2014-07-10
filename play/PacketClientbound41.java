@@ -1,13 +1,13 @@
 
 public class PacketClientbound41 implements hz {
 
-   private vc a;
+   private ve a;
    private boolean b;
 
 
    public PacketClientbound41() {}
 
-   public PacketClientbound41(vc var1, boolean var2) {
+   public PacketClientbound41(ve var1, boolean var2) {
       this.a = var1;
       this.b = var2;
    }
@@ -17,7 +17,7 @@ public class PacketClientbound41 implements hz {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = vc.a(var1.readUnsignedByte());
+      this.a = ve.a(var1.readUnsignedByte());
    }
 
    public void write(PacketBuffer var1) {

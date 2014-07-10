@@ -19,7 +19,7 @@ public class PacketServerbound14 implements hz {
       var1.writeString(StringUtils.substring(this.a, 0, 32767));
    }
 
-   public void a(ll var1) {
+   public void a(lm var1) {
       var1.a(this);
    }
 

@@ -6,7 +6,7 @@ public class PacketServerbound0F implements hz {
    private boolean c;
 
 
-   public void a(ll var1) {
+   public void a(lm var1) {
       var1.a(this);
    }
 

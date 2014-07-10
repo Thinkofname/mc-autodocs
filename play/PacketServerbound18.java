@@ -19,11 +19,11 @@ public class PacketServerbound18 implements hz {
       var1.writeUUID(this.a);
    }
 
-   public void a(ll var1) {
+   public void a(lm var1) {
       var1.a(this);
    }
 
-   public we a(qg var1) {
+   public wg a(qi var1) {
       return var1.a(this.a);
    }
 }

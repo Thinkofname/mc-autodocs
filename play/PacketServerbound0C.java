@@ -30,7 +30,7 @@ public class PacketServerbound0C implements hz {
       var1.writeByte(var2);
    }
 
-   public void a(ll var1) {
+   public void a(lm var1) {
       var1.a(this);
    }
 

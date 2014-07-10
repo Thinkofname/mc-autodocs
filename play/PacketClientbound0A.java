@@ -7,8 +7,8 @@ public class PacketClientbound0A implements hz {
 
    public PacketClientbound0A() {}
 
-   public PacketClientbound0A(age var1, Position var2) {
-      this.a = var1.D();
+   public PacketClientbound0A(agg var1, Position var2) {
+      this.a = var1.E();
       this.b = var2;
    }
 

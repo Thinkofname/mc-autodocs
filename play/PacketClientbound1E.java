@@ -7,7 +7,7 @@ public class PacketClientbound1E implements hz {
 
    public PacketClientbound1E() {}
 
-   public PacketClientbound1E(int var1, vz var2) {
+   public PacketClientbound1E(int var1, wb var2) {
       this.a = var1;
       this.b = var2.a();
    }

@@ -1,14 +1,14 @@
 
 public class PacketClientbound22 implements hz {
 
-   private apf a;
+   private aph a;
    private ix[] b;
 
 
    public PacketClientbound22() {}
 
-   public PacketClientbound22(int var1, short[] var2, bcw var3) {
-      this.a = new apf(var3.a, var3.b);
+   public PacketClientbound22(int var1, short[] var2, bdb var3) {
+      this.a = new aph(var3.a, var3.b);
       this.b = new ix[var1];
 
       for(int var4 = 0; var4 < this.b.length; ++var4) {
@@ -18,11 +18,11 @@ public class PacketClientbound22 implements hz {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = new apf(var1.readInt(), var1.readInt());
+      this.a = new aph(var1.readInt(), var1.readInt());
       this.b = new ix[var1.readVarInt()];
 
       for(int var2 = 0; var2 < this.b.length; ++var2) {
-         this.b[var2] = new ix(this, var1.readShort(), (bbt)ary.d.a(var1.readVarInt()));
+         this.b[var2] = new ix(this, var1.readShort(), (bbx)asa.d.a(var1.readVarInt()));
       }
 
    }
@@ -37,7 +37,7 @@ public class PacketClientbound22 implements hz {
       for(int var4 = 0; var4 < var3; ++var4) {
          ix var5 = var2[var4];
          var1.writeShort(var5.b());
-         var1.writeVarInt(ary.d.b(var5.c()));
+         var1.writeVarInt(asa.d.b(var5.c()));
       }
 
    }
@@ -47,7 +47,7 @@ public class PacketClientbound22 implements hz {
    }
 
    // $FF: synthetic method
-   static apf a(PacketClientbound22 var0) {
+   static aph a(PacketClientbound22 var0) {
       return var0.a;
    }
 }

@@ -2,14 +2,14 @@
 public class PacketClientbound07 implements hz {
 
    private int a;
-   private vc b;
-   private apu c;
-   private apw d;
+   private ve b;
+   private apw c;
+   private apy d;
 
 
    public PacketClientbound07() {}
 
-   public PacketClientbound07(int var1, vc var2, apw var3, apu var4) {
+   public PacketClientbound07(int var1, ve var2, apy var3, apw var4) {
       this.a = var1;
       this.b = var2;
       this.c = var4;
@@ -22,11 +22,11 @@ public class PacketClientbound07 implements hz {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readInt();
-      this.b = vc.a(var1.readUnsignedByte());
-      this.c = apu.a(var1.readUnsignedByte());
-      this.d = apw.a(var1.readString(16));
+      this.b = ve.a(var1.readUnsignedByte());
+      this.c = apw.a(var1.readUnsignedByte());
+      this.d = apy.a(var1.readString(16));
       if(this.d == null) {
-         this.d = apw.b;
+         this.d = apy.b;
       }
 
    }

@@ -12,7 +12,7 @@ public class PacketServerbound09 implements hz {
       var1.writeShort(this.a);
    }
 
-   public void a(ll var1) {
+   public void a(lm var1) {
       var1.a(this);
    }
 

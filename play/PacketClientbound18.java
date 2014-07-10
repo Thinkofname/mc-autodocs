@@ -12,11 +12,11 @@ public class PacketClientbound18 implements hz {
 
    public PacketClientbound18() {}
 
-   public PacketClientbound18(we var1) {
-      this.a = var1.D();
-      this.b = ue.c(var1.s * 32.0D);
-      this.c = ue.c(var1.t * 32.0D);
-      this.d = ue.c(var1.u * 32.0D);
+   public PacketClientbound18(wg var1) {
+      this.a = var1.E();
+      this.b = ug.c(var1.s * 32.0D);
+      this.c = ug.c(var1.t * 32.0D);
+      this.d = ug.c(var1.u * 32.0D);
       this.e = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.f = (byte)((int)(var1.z * 256.0F / 360.0F));
       this.g = var1.C;

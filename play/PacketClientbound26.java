@@ -15,11 +15,11 @@ public class PacketClientbound26 implements hz {
       this.a = new int[var2];
       this.b = new int[var2];
       this.c = new jm[var2];
-      this.d = !var1.isEmpty() && !((bcw)var1.get(0)).p().s.p();
+      this.d = !((bdb)var1.get(0)).p().t.p();
 
       for(int var3 = 0; var3 < var2; ++var3) {
-         bcw var4 = (bcw)var1.get(var3);
-         jm var5 = jl.a(var4, true, '\uffff');
+         bdb var4 = (bdb)var1.get(var3);
+         jm var5 = jl.a(var4, true, this.d, '\uffff');
          this.a[var3] = var4.a;
          this.b[var3] = var4.b;
          this.c[var3] = var5;
@@ -39,7 +39,7 @@ public class PacketClientbound26 implements hz {
          this.a[var3] = var1.readInt();
          this.b[var3] = var1.readInt();
          this.c[var3] = new jm();
-         this.c[var3].b = var1.readShort();
+         this.c[var3].b = var1.readShort() & '\uffff';
          this.c[var3].a = new byte[jl.a(Integer.bitCount(this.c[var3].b), this.d, true)];
       }
 

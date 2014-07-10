@@ -16,7 +16,7 @@ public class PacketClientbound27 implements hz {
 
    public PacketClientbound27() {}
 
-   public PacketClientbound27(double var1, double var3, double var5, float var7, List var8, bpk var9) {
+   public PacketClientbound27(double var1, double var3, double var5, float var7, List var8, bpp var9) {
       this.a = var1;
       this.b = var3;
       this.c = var5;

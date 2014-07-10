@@ -5,7 +5,7 @@ public class PacketServerbound10 implements hz {
    private ItemStack b;
 
 
-   public void a(ll var1) {
+   public void a(lm var1) {
       var1.a(this);
    }
 

@@ -4,7 +4,7 @@ public class PacketClientbound34 implements hz {
 
    private int a;
    private byte b;
-   private bnr[] c;
+   private bnw[] c;
    private int d;
    private int e;
    private int f;
@@ -17,7 +17,7 @@ public class PacketClientbound34 implements hz {
    public PacketClientbound34(int var1, byte var2, Collection var3, byte[] var4, int var5, int var6, int var7, int var8) {
       this.a = var1;
       this.b = var2;
-      this.c = (bnr[])var3.toArray(new bnr[var3.size()]);
+      this.c = (bnw[])var3.toArray(new bnw[var3.size()]);
       this.d = var5;
       this.e = var6;
       this.f = var7;
@@ -35,11 +35,11 @@ public class PacketClientbound34 implements hz {
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
       this.b = var1.readByte();
-      this.c = new bnr[var1.readVarInt()];
+      this.c = new bnw[var1.readVarInt()];
 
       for(int var2 = 0; var2 < this.c.length; ++var2) {
          short var3 = (short)var1.readByte();
-         this.c[var2] = new bnr((byte)(var3 >> 4 & 15), var1.readByte(), var1.readByte(), (byte)(var3 & 15));
+         this.c[var2] = new bnw((byte)(var3 >> 4 & 15), var1.readByte(), var1.readByte(), (byte)(var3 & 15));
       }
 
       this.f = var1.readUnsignedByte();
@@ -56,11 +56,11 @@ public class PacketClientbound34 implements hz {
       var1.writeVarInt(this.a);
       var1.writeByte(this.b);
       var1.writeVarInt(this.c.length);
-      bnr[] var2 = this.c;
+      bnw[] var2 = this.c;
       int var3 = var2.length;
 
       for(int var4 = 0; var4 < var3; ++var4) {
-         bnr var5 = var2[var4];
+         bnw var5 = var2[var4];
          var1.writeByte((var5.a() & 15) << 4 | var5.d() & 15);
          var1.writeByte(var5.b());
          var1.writeByte(var5.c());

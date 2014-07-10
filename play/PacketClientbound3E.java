@@ -16,13 +16,13 @@ public class PacketClientbound3E implements hz {
 
 
    public PacketClientbound3E() {
-      this.e = bpu.a.e;
+      this.e = bpz.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
    }
 
-   public PacketClientbound3E(bpn var1, int var2) {
-      this.e = bpu.a.e;
+   public PacketClientbound3E(bps var1, int var2) {
+      this.e = bpz.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
       this.a = var1.b();
@@ -42,8 +42,8 @@ public class PacketClientbound3E implements hz {
 
    }
 
-   public PacketClientbound3E(bpn var1, Collection var2, int var3) {
-      this.e = bpu.a.e;
+   public PacketClientbound3E(bps var1, Collection var2, int var3) {
+      this.e = bpz.a.e;
       this.f = -1;
       this.g = Lists.newArrayList();
       if(var3 != 3 && var3 != 4) {

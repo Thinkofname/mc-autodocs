@@ -18,7 +18,7 @@ public class PacketClientbound01 implements hz {
       var1.writeLong(this.a);
    }
 
-   public void a(nd var1) {
+   public void a(ne var1) {
       var1.a(this);
    }
 }

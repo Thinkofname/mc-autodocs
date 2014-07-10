@@ -2,13 +2,13 @@
 public class PacketServerbound0B implements hz {
 
    private int a;
-   private mh b;
+   private mi b;
    private int c;
 
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.b = (mh)var1.readEnum(mh.class);
+      this.b = (mi)var1.readEnum(mi.class);
       this.c = var1.readVarInt();
    }
 
@@ -18,11 +18,11 @@ public class PacketServerbound0B implements hz {
       var1.writeVarInt(this.c);
    }
 
-   public void a(ll var1) {
+   public void a(lm var1) {
       var1.a(this);
    }
 
-   public mh b() {
+   public mi b() {
       return this.b;
    }
 

@@ -10,11 +10,11 @@ public class PacketClientbound11 implements hz {
 
    public PacketClientbound11() {}
 
-   public PacketClientbound11(wt var1) {
-      this.a = var1.D();
-      this.b = ue.c(var1.s * 32.0D);
-      this.c = ue.c(var1.t * 32.0D);
-      this.d = ue.c(var1.u * 32.0D);
+   public PacketClientbound11(wv var1) {
+      this.a = var1.E();
+      this.b = ug.c(var1.s * 32.0D);
+      this.c = ug.c(var1.t * 32.0D);
+      this.d = ug.c(var1.u * 32.0D);
       this.e = var1.i();
    }
 

@@ -17,15 +17,15 @@ public class PacketServerbound01 implements hz {
       var1.a(this.b);
    }
 
-   public void a(my var1) {
+   public void a(mz var1) {
       var1.a(this);
    }
 
    public SecretKey a(PrivateKey var1) {
-      return tp.a(var1, this.a);
+      return tr.a(var1, this.a);
    }
 
    public byte[] b(PrivateKey var1) {
-      return var1 == null?this.b:tp.b(var1, this.b);
+      return var1 == null?this.b:tr.b(var1, this.b);
    }
 }

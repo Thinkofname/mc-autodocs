@@ -10,17 +10,17 @@ public class PacketClientbound42 implements hz {
 
    public PacketClientbound42() {}
 
-   public PacketClientbound42(vp var1, kb var2) {
+   public PacketClientbound42(vr var1, kb var2) {
       this.a = var2;
-      wy var3 = var1.c();
+      xa var3 = var1.c();
       switch(ka.a[var2.ordinal()]) {
       case 1:
          this.d = var1.f();
-         this.c = var3 == null?-1:var3.D();
+         this.c = var3 == null?-1:var3.E();
          break;
       case 2:
-         this.b = var1.h().D();
-         this.c = var3 == null?-1:var3.D();
+         this.b = var1.h().E();
+         this.c = var3 == null?-1:var3.E();
          this.e = var1.b().c();
       }
 

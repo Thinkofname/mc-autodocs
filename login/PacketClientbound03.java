@@ -18,7 +18,7 @@ public class PacketClientbound03 implements hz {
       var1.writeVarInt(this.a);
    }
 
-   public void a(mt var1) {
+   public void a(mu var1) {
       var1.a(this);
    }
 }

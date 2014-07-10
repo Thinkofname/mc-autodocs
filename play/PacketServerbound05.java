@@ -1,5 +1,5 @@
 
-public class PacketServerbound05 extends lz {
+public class PacketServerbound05 extends ma {
 
    public PacketServerbound05() {
       this.h = true;

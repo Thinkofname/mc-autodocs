@@ -1,24 +1,27 @@
 
-public class PacketClientbound00 implements hz {
+public class PacketClientbound47 implements hz {
 
    private hk a;
+   private hk b;
 
 
-   public PacketClientbound00() {}
+   public PacketClientbound47() {}
 
-   public PacketClientbound00(hk var1) {
+   public PacketClientbound47(hk var1) {
       this.a = var1;
    }
 
    public void read(PacketBuffer var1) {
       this.a = var1.d();
+      this.b = var1.d();
    }
 
    public void write(PacketBuffer var1) {
       var1.a(this.a);
+      var1.a(this.b);
    }
 
-   public void a(mu var1) {
+   public void a(ig var1) {
       var1.a(this);
    }
 }

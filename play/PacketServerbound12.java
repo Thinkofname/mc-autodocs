@@ -24,7 +24,7 @@ public class PacketServerbound12 implements hz {
 
    }
 
-   public void a(ll var1) {
+   public void a(lm var1) {
       var1.a(this);
    }
 

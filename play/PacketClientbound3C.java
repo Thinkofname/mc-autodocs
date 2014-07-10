@@ -9,7 +9,7 @@ public class PacketClientbound3C implements hz {
 
    public PacketClientbound3C() {}
 
-   public PacketClientbound3C(bpo var1) {
+   public PacketClientbound3C(bpt var1) {
       this.a = var1.e();
       this.b = var1.d().b();
       this.c = var1.c();
@@ -23,7 +23,7 @@ public class PacketClientbound3C implements hz {
       this.d = la.b;
    }
 
-   public PacketClientbound3C(String var1, bpm var2) {
+   public PacketClientbound3C(String var1, bpr var2) {
       this.a = var1;
       this.b = var2.b();
       this.c = 0;

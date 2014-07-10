@@ -11,7 +11,7 @@ public class PacketServerbound13 implements hz {
 
    public PacketServerbound13() {}
 
-   public PacketServerbound13(agb var1) {
+   public PacketServerbound13(agd var1) {
       this.a(var1.a);
       this.b(var1.b);
       this.c(var1.c);
@@ -53,7 +53,7 @@ public class PacketServerbound13 implements hz {
       var1.writeFloat(this.f);
    }
 
-   public void a(ll var1) {
+   public void a(lm var1) {
       var1.a(this);
    }
 

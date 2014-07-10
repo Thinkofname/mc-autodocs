@@ -9,8 +9,8 @@ public class PacketClientbound10 implements hz {
 
    public PacketClientbound10() {}
 
-   public PacketClientbound10(xf var1) {
-      this.a = var1.D();
+   public PacketClientbound10(xh var1) {
+      this.a = var1.E();
       this.b = var1.m();
       this.c = var1.b;
       this.d = var1.c.B;
@@ -18,7 +18,7 @@ public class PacketClientbound10 implements hz {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.d = var1.readString(xg.A);
+      this.d = var1.readString(xi.A);
       this.b = var1.readPosition();
       this.c = ei.b(var1.readUnsignedByte());
    }

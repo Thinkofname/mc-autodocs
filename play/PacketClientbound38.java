@@ -12,14 +12,14 @@ public class PacketClientbound38 implements hz {
 
    public PacketClientbound38() {}
 
-   public PacketClientbound38(ke var1, qj ... var2) {
+   public PacketClientbound38(ke var1, ql ... var2) {
       this.a = var1;
-      qj[] var3 = var2;
+      ql[] var3 = var2;
       int var4 = var2.length;
 
       for(int var5 = 0; var5 < var4; ++var5) {
-         qj var6 = var3[var5];
-         this.b.add(new kf(this, var6.bV(), var6.h, var6.c.b()));
+         ql var6 = var3[var5];
+         this.b.add(new kf(this, var6.bW(), var6.h, var6.c.b(), var6.D()));
       }
 
    }
@@ -29,8 +29,8 @@ public class PacketClientbound38 implements hz {
       Iterator var3 = var2.iterator();
 
       while(var3.hasNext()) {
-         qj var4 = (qj)var3.next();
-         this.b.add(new kf(this, var4.bV(), var4.h, var4.c.b()));
+         ql var4 = (ql)var3.next();
+         this.b.add(new kf(this, var4.bW(), var4.h, var4.c.b(), var4.D()));
       }
 
    }
@@ -42,28 +42,32 @@ public class PacketClientbound38 implements hz {
       for(int var3 = 0; var3 < var2; ++var3) {
          GameProfile var4 = null;
          int var5 = 0;
-         apu var6 = null;
+         apw var6 = null;
+         hk var7 = null;
          switch(kd.a[this.a.ordinal()]) {
          case 1:
             var4 = new GameProfile(var1.readUUID(), var1.readString(16));
-            int var7 = var1.readVarInt();
+            int var8 = var1.readVarInt();
 
-            for(int var8 = 0; var8 < var7; ++var8) {
-               String var9 = var1.readString(32767);
+            for(int var9 = 0; var9 < var8; ++var9) {
                String var10 = var1.readString(32767);
+               String var11 = var1.readString(32767);
                if(var1.readBoolean()) {
-                  var4.getProperties().put(var9, new Property(var9, var10, var1.readString(32767)));
+                  var4.getProperties().put(var10, new Property(var10, var11, var1.readString(32767)));
                } else {
-                  var4.getProperties().put(var9, new Property(var9, var10));
+                  var4.getProperties().put(var10, new Property(var10, var11));
                }
             }
 
-            var6 = apu.a(var1.readVarInt());
+            var6 = apw.a(var1.readVarInt());
             var5 = var1.readVarInt();
+            if(var1.readBoolean()) {
+               var7 = var1.d();
+            }
             break;
          case 2:
             var4 = new GameProfile(var1.readUUID(), (String)null);
-            var6 = apu.a(var1.readVarInt());
+            var6 = apw.a(var1.readVarInt());
             break;
          case 3:
             var4 = new GameProfile(var1.readUUID(), (String)null);
@@ -71,9 +75,15 @@ public class PacketClientbound38 implements hz {
             break;
          case 4:
             var4 = new GameProfile(var1.readUUID(), (String)null);
+            if(var1.readBoolean()) {
+               var7 = var1.d();
+            }
+            break;
+         case 5:
+            var4 = new GameProfile(var1.readUUID(), (String)null);
          }
 
-         this.b.add(new kf(this, var4, var5, var6));
+         this.b.add(new kf(this, var4, var5, var6, var7));
       }
 
    }
@@ -106,6 +116,12 @@ public class PacketClientbound38 implements hz {
 
             var1.writeVarInt(var3.c().a());
             var1.writeVarInt(var3.b());
+            if(var3.d() == null) {
+               var1.writeBoolean(false);
+            } else {
+               var1.writeBoolean(true);
+               var1.a(var3.d());
+            }
             break;
          case 2:
             var1.writeUUID(var3.a().getId());
@@ -116,6 +132,15 @@ public class PacketClientbound38 implements hz {
             var1.writeVarInt(var3.b());
             break;
          case 4:
+            var1.writeUUID(var3.a().getId());
+            if(var3.d() == null) {
+               var1.writeBoolean(false);
+            } else {
+               var1.writeBoolean(true);
+               var1.a(var3.d());
+            }
+            break;
+         case 5:
             var1.writeUUID(var3.a().getId());
          }
       }

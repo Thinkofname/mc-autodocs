@@ -9,8 +9,8 @@ public class PacketClientbound12 implements hz {
 
    public PacketClientbound12() {}
 
-   public PacketClientbound12(we var1) {
-      this(var1.D(), var1.v, var1.w, var1.x);
+   public PacketClientbound12(wg var1) {
+      this(var1.E(), var1.v, var1.w, var1.x);
    }
 
    public PacketClientbound12(int var1, double var2, double var4, double var6) {

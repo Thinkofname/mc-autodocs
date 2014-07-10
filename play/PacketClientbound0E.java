@@ -16,17 +16,17 @@ public class PacketClientbound0E implements hz {
 
    public PacketClientbound0E() {}
 
-   public PacketClientbound0E(we var1, int var2) {
+   public PacketClientbound0E(wg var1, int var2) {
       this(var1, var2, 0);
    }
 
-   public PacketClientbound0E(we var1, int var2, int var3) {
-      this.a = var1.D();
-      this.b = ue.c(var1.s * 32.0D);
-      this.c = ue.c(var1.t * 32.0D);
-      this.d = ue.c(var1.u * 32.0D);
-      this.h = ue.d(var1.z * 256.0F / 360.0F);
-      this.i = ue.d(var1.y * 256.0F / 360.0F);
+   public PacketClientbound0E(wg var1, int var2, int var3) {
+      this.a = var1.E();
+      this.b = ug.c(var1.s * 32.0D);
+      this.c = ug.c(var1.t * 32.0D);
+      this.d = ug.c(var1.u * 32.0D);
+      this.h = ug.d(var1.z * 256.0F / 360.0F);
+      this.i = ug.d(var1.y * 256.0F / 360.0F);
       this.j = var2;
       this.k = var3;
       if(var3 > 0) {

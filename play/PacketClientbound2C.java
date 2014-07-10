@@ -10,12 +10,12 @@ public class PacketClientbound2C implements hz {
 
    public PacketClientbound2C() {}
 
-   public PacketClientbound2C(we var1) {
-      this.a = var1.D();
-      this.b = ue.c(var1.s * 32.0D);
-      this.c = ue.c(var1.t * 32.0D);
-      this.d = ue.c(var1.u * 32.0D);
-      if(var1 instanceof acu) {
+   public PacketClientbound2C(wg var1) {
+      this.a = var1.E();
+      this.b = ug.c(var1.s * 32.0D);
+      this.c = ug.c(var1.t * 32.0D);
+      this.d = ug.c(var1.u * 32.0D);
+      if(var1 instanceof acw) {
          this.e = 1;
       }
 

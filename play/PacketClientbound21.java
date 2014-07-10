@@ -9,11 +9,11 @@ public class PacketClientbound21 implements hz {
 
    public PacketClientbound21() {}
 
-   public PacketClientbound21(bcw var1, boolean var2, int var3) {
+   public PacketClientbound21(bdb var1, boolean var2, int var3) {
       this.a = var1.a;
       this.b = var1.b;
       this.d = var2;
-      this.c = a(var1, var2, var3);
+      this.c = a(var1, var2, !var1.p().t.p(), var3);
    }
 
    public void read(PacketBuffer var1) {
@@ -45,60 +45,60 @@ public class PacketClientbound21 implements hz {
       return var3 + var4 + var5 + var6;
    }
 
-   public static jm a(bcw var0, boolean var1, int var2) {
-      bda[] var3 = var0.h();
-      jm var4 = new jm();
+   public static jm a(bdb var0, boolean var1, boolean var2, int var3) {
+      bdf[] var4 = var0.h();
+      jm var5 = new jm();
 
-      int var5;
-      for(var5 = 0; var5 < var3.length; ++var5) {
-         if(var3[var5] != null && (!var1 || !var3[var5].a()) && (var2 & 1 << var5) != 0) {
-            var4.b |= 1 << var5;
+      int var6;
+      for(var6 = 0; var6 < var4.length; ++var6) {
+         if(var4[var6] != null && (!var1 || !var4[var6].a()) && (var3 & 1 << var6) != 0) {
+            var5.b |= 1 << var6;
          }
       }
 
-      var4.a = new byte[a(Integer.bitCount(var4.b), true, var1)];
-      var5 = 0;
+      var5.a = new byte[a(Integer.bitCount(var5.b), var2, var1)];
+      var6 = 0;
 
-      int var6;
-      for(var6 = 0; var6 < var3.length; ++var6) {
-         if(var3[var6] != null && (!var1 || !var3[var6].a()) && (var2 & 1 << var6) != 0) {
-            char[] var7 = var3[var6].g();
-            char[] var8 = var7;
-            int var9 = var7.length;
+      int var7;
+      for(var7 = 0; var7 < var4.length; ++var7) {
+         if(var4[var7] != null && (!var1 || !var4[var7].a()) && (var3 & 1 << var7) != 0) {
+            char[] var8 = var4[var7].g();
+            char[] var9 = var8;
+            int var10 = var8.length;
 
-            for(int var10 = 0; var10 < var9; ++var10) {
-               char var11 = var8[var10];
-               var4.a[var5++] = (byte)(var11 & 255);
-               var4.a[var5++] = (byte)(var11 >> 8 & 255);
+            for(int var11 = 0; var11 < var10; ++var11) {
+               char var12 = var9[var11];
+               var5.a[var6++] = (byte)(var12 & 255);
+               var5.a[var6++] = (byte)(var12 >> 8 & 255);
             }
          }
       }
 
-      bcu var12;
-      for(var6 = 0; var6 < var3.length; ++var6) {
-         if(var3[var6] != null && (!var1 || !var3[var6].a()) && (var2 & 1 << var6) != 0) {
-            var12 = var3[var6].h();
-            System.arraycopy(var12.b(), 0, var4.a, var5, var12.b().length);
-            var5 += var12.b().length;
+      bcz var13;
+      for(var7 = 0; var7 < var4.length; ++var7) {
+         if(var4[var7] != null && (!var1 || !var4[var7].a()) && (var3 & 1 << var7) != 0) {
+            var13 = var4[var7].h();
+            System.arraycopy(var13.b(), 0, var5.a, var6, var13.b().length);
+            var6 += var13.b().length;
          }
       }
 
-      if(!var0.p().s.p()) {
-         for(var6 = 0; var6 < var3.length; ++var6) {
-            if(var3[var6] != null && (!var1 || !var3[var6].a()) && (var2 & 1 << var6) != 0) {
-               var12 = var3[var6].i();
-               System.arraycopy(var12.b(), 0, var4.a, var5, var12.b().length);
-               var5 += var12.b().length;
+      if(var2) {
+         for(var7 = 0; var7 < var4.length; ++var7) {
+            if(var4[var7] != null && (!var1 || !var4[var7].a()) && (var3 & 1 << var7) != 0) {
+               var13 = var4[var7].i();
+               System.arraycopy(var13.b(), 0, var5.a, var6, var13.b().length);
+               var6 += var13.b().length;
             }
          }
       }
 
       if(var1) {
-         byte[] var13 = var0.k();
-         System.arraycopy(var13, 0, var4.a, var5, var13.length);
-         int var10000 = var5 + var13.length;
+         byte[] var14 = var0.k();
+         System.arraycopy(var14, 0, var5.a, var6, var14.length);
+         int var10000 = var6 + var14.length;
       }
 
-      return var4;
+      return var5;
    }
 }

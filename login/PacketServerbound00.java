@@ -20,7 +20,7 @@ public class PacketServerbound00 implements hz {
       var1.writeString(this.a.getName());
    }
 
-   public void a(my var1) {
+   public void a(mz var1) {
       var1.a(this);
    }
 

@@ -6,8 +6,8 @@ public class PacketClientbound43 implements hz {
 
    public PacketClientbound43() {}
 
-   public PacketClientbound43(we var1) {
-      this.a = var1.D();
+   public PacketClientbound43(wg var1) {
+      this.a = var1.E();
    }
 
    public void read(PacketBuffer var1) {

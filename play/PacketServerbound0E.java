@@ -9,7 +9,7 @@ public class PacketServerbound0E implements hz {
    private int f;
 
 
-   public void a(ll var1) {
+   public void a(lm var1) {
       var1.a(this);
    }
 

@@ -1,28 +1,28 @@
 
 public class PacketServerbound16 implements hz {
 
-   private lp a;
+   private lq a;
 
 
    public PacketServerbound16() {}
 
-   public PacketServerbound16(lp var1) {
+   public PacketServerbound16(lq var1) {
       this.a = var1;
    }
 
    public void read(PacketBuffer var1) {
-      this.a = (lp)var1.readEnum(lp.class);
+      this.a = (lq)var1.readEnum(lq.class);
    }
 
    public void write(PacketBuffer var1) {
       var1.writeEnum(this.a);
    }
 
-   public void a(ll var1) {
+   public void a(lm var1) {
       var1.a(this);
    }
 
-   public lp a() {
+   public lq a() {
       return this.a;
    }
 }

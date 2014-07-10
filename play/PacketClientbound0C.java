@@ -11,23 +11,23 @@ public class PacketClientbound0C implements hz {
    private byte f;
    private byte g;
    private int h;
-   private xi i;
+   private xk i;
    private List j;
 
 
    public PacketClientbound0C() {}
 
-   public PacketClientbound0C(age var1) {
-      this.a = var1.D();
-      this.b = var1.bV().getId();
-      this.c = ue.c(var1.s * 32.0D);
-      this.d = ue.c(var1.t * 32.0D);
-      this.e = ue.c(var1.u * 32.0D);
+   public PacketClientbound0C(agg var1) {
+      this.a = var1.E();
+      this.b = var1.bW().getId();
+      this.c = ug.c(var1.s * 32.0D);
+      this.d = ug.c(var1.t * 32.0D);
+      this.e = ug.c(var1.u * 32.0D);
       this.f = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.g = (byte)((int)(var1.z * 256.0F / 360.0F));
       ItemStack var2 = var1.bg.h();
-      this.h = var2 == null?0:ako.b(var2.b());
-      this.i = var1.F();
+      this.h = var2 == null?0:akq.b(var2.b());
+      this.i = var1.G();
    }
 
    public void read(PacketBuffer var1) {
@@ -39,7 +39,7 @@ public class PacketClientbound0C implements hz {
       this.f = var1.readByte();
       this.g = var1.readByte();
       this.h = var1.readShort();
-      this.j = xi.b(var1);
+      this.j = xk.b(var1);
    }
 
    public void write(PacketBuffer var1) {

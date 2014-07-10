@@ -3,16 +3,16 @@ public class PacketClientbound01 implements hz {
 
    private int a;
    private boolean b;
-   private apu c;
+   private apw c;
    private int d;
-   private vc e;
+   private ve e;
    private int f;
-   private apw g;
+   private apy g;
 
 
    public PacketClientbound01() {}
 
-   public PacketClientbound01(int var1, apu var2, boolean var3, int var4, vc var5, int var6, apw var7) {
+   public PacketClientbound01(int var1, apw var2, boolean var3, int var4, ve var5, int var6, apy var7) {
       this.a = var1;
       this.d = var4;
       this.e = var5;
@@ -27,13 +27,13 @@ public class PacketClientbound01 implements hz {
       short var2 = var1.readUnsignedByte();
       this.b = (var2 & 8) == 8;
       int var3 = var2 & -9;
-      this.c = apu.a(var3);
+      this.c = apw.a(var3);
       this.d = var1.readByte();
-      this.e = vc.a(var1.readUnsignedByte());
+      this.e = ve.a(var1.readUnsignedByte());
       this.f = var1.readUnsignedByte();
-      this.g = apw.a(var1.readString(16));
+      this.g = apy.a(var1.readString(16));
       if(this.g == null) {
-         this.g = apw.b;
+         this.g = apy.b;
       }
 
    }
