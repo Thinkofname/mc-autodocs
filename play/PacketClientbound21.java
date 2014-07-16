@@ -9,7 +9,7 @@ public class PacketClientbound21 implements hz {
 
    public PacketClientbound21() {}
 
-   public PacketClientbound21(bdb var1, boolean var2, int var3) {
+   public PacketClientbound21(bdl var1, boolean var2, int var3) {
       this.a = var1.a;
       this.b = var1.b;
       this.d = var2;
@@ -45,8 +45,8 @@ public class PacketClientbound21 implements hz {
       return var3 + var4 + var5 + var6;
    }
 
-   public static jm a(bdb var0, boolean var1, boolean var2, int var3) {
-      bdf[] var4 = var0.h();
+   public static jm a(bdl var0, boolean var1, boolean var2, int var3) {
+      bdp[] var4 = var0.h();
       jm var5 = new jm();
 
       int var6;
@@ -74,7 +74,7 @@ public class PacketClientbound21 implements hz {
          }
       }
 
-      bcz var13;
+      bdj var13;
       for(var7 = 0; var7 < var4.length; ++var7) {
          if(var4[var7] != null && (!var1 || !var4[var7].a()) && (var3 & 1 << var7) != 0) {
             var13 = var4[var7].h();

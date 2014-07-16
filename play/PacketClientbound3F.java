@@ -1,3 +1,4 @@
+import java.io.IOException;
 
 public class PacketClientbound3F implements hz {
 
@@ -14,20 +15,25 @@ public class PacketClientbound3F implements hz {
    public PacketClientbound3F(String var1, byte[] var2) {
       this.a = var1;
       this.b = var2;
-      if(var2.length >= 1048576) {
+      if(var2.length > 1048576) {
          throw new IllegalArgumentException("Payload may not be larger than 1048576 bytes");
       }
    }
 
    public void read(PacketBuffer var1) {
       this.a = var1.readString(20);
-      this.b = new byte[var1.readUnsignedShort()];
-      var1.readBytes(this.b);
+      int var2 = var1.readVarInt();
+      if(var2 >= 0 && var2 <= 1048576) {
+         this.b = new byte[var2];
+         var1.readBytes(this.b);
+      } else {
+         throw new IOException("Payload may not be larger than 1048576 bytes");
+      }
    }
 
    public void write(PacketBuffer var1) {
       var1.writeString(this.a);
-      var1.writeShort(this.b.length);
+      var1.writeVarInt(this.b.length);
       var1.writeBytes(this.b);
    }
 

@@ -1,28 +1,26 @@
+import java.io.IOException;
 
 public class PacketServerbound17 implements hz {
 
    private String a;
-   private int b;
-   private byte[] c;
+   private byte[] b;
 
 
    public void read(PacketBuffer var1) {
       this.a = var1.readString(20);
-      this.b = var1.readShort();
-      if(this.b > 0 && this.b < 32767) {
-         this.c = new byte[this.b];
-         var1.readBytes(this.c);
+      int var2 = var1.readVarInt();
+      if(var2 >= 0 && var2 <= 32767) {
+         this.b = new byte[var2];
+         var1.readBytes(this.b);
+      } else {
+         throw new IOException("Payload may not be larger than 32767 bytes");
       }
-
    }
 
    public void write(PacketBuffer var1) {
       var1.writeString(this.a);
-      var1.writeShort((short)this.b);
-      if(this.c != null) {
-         var1.writeBytes(this.c);
-      }
-
+      var1.writeVarInt(this.b.length);
+      var1.writeBytes(this.b);
    }
 
    public void a(lm var1) {
@@ -33,7 +31,7 @@ public class PacketServerbound17 implements hz {
       return this.a;
    }
 
-   public byte[] c() {
-      return this.c;
+   public byte[] b() {
+      return this.b;
    }
 }

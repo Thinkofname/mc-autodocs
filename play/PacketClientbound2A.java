@@ -10,22 +10,24 @@ public class PacketClientbound2A implements hz {
    private float g;
    private float h;
    private int i;
-   private int[] j;
+   private boolean j;
+   private int[] k;
 
 
    public PacketClientbound2A() {}
 
-   public PacketClientbound2A(et var1, float var2, float var3, float var4, float var5, float var6, float var7, float var8, int var9, int ... var10) {
+   public PacketClientbound2A(et var1, boolean var2, float var3, float var4, float var5, float var6, float var7, float var8, float var9, int var10, int ... var11) {
       this.a = var1;
-      this.b = var2;
-      this.c = var3;
-      this.d = var4;
-      this.e = var5;
-      this.f = var6;
-      this.g = var7;
-      this.h = var8;
-      this.i = var9;
-      this.j = var10;
+      this.j = var2;
+      this.b = var3;
+      this.c = var4;
+      this.d = var5;
+      this.e = var6;
+      this.f = var7;
+      this.g = var8;
+      this.h = var9;
+      this.i = var10;
+      this.k = var11;
    }
 
    public void read(PacketBuffer var1) {
@@ -34,6 +36,7 @@ public class PacketClientbound2A implements hz {
          this.a = et.J;
       }
 
+      this.j = var1.readBoolean();
       this.b = var1.readFloat();
       this.c = var1.readFloat();
       this.d = var1.readFloat();
@@ -43,16 +46,17 @@ public class PacketClientbound2A implements hz {
       this.h = var1.readFloat();
       this.i = var1.readInt();
       int var2 = this.a.d();
-      this.j = new int[var2];
+      this.k = new int[var2];
 
       for(int var3 = 0; var3 < var2; ++var3) {
-         this.j[var3] = var1.readVarInt();
+         this.k[var3] = var1.readVarInt();
       }
 
    }
 
    public void write(PacketBuffer var1) {
       var1.writeInt(this.a.c());
+      var1.writeBoolean(this.j);
       var1.writeFloat(this.b);
       var1.writeFloat(this.c);
       var1.writeFloat(this.d);
@@ -64,7 +68,7 @@ public class PacketClientbound2A implements hz {
       int var2 = this.a.d();
 
       for(int var3 = 0; var3 < var2; ++var3) {
-         var1.writeVarInt(this.j[var3]);
+         var1.writeVarInt(this.k[var3]);
       }
 
    }

@@ -2,7 +2,7 @@
 public class PacketClientbound23 implements hz {
 
    private Position a;
-   private bbx b;
+   private bcg b;
 
 
    public PacketClientbound23() {}
@@ -14,12 +14,12 @@ public class PacketClientbound23 implements hz {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readPosition();
-      this.b = (bbx)asa.d.a(var1.readVarInt());
+      this.b = (bcg)asf.d.a(var1.readVarInt());
    }
 
    public void write(PacketBuffer var1) {
       var1.writePosition(this.a);
-      var1.writeVarInt(asa.d.b(this.b));
+      var1.writeVarInt(asf.d.b(this.b));
    }
 
    public void a(ig var1) {

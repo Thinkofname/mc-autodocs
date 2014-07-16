@@ -7,7 +7,7 @@ public class PacketClientbound3D implements hz {
 
    public PacketClientbound3D() {}
 
-   public PacketClientbound3D(int var1, bpr var2) {
+   public PacketClientbound3D(int var1, bqb var2) {
       this.a = var1;
       if(var2 == null) {
          this.b = "";

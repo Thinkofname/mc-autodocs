@@ -1,7 +1,7 @@
 
 public class PacketClientbound2B implements hz {
 
-   public static final String[] a = new String[]{"tile.bed.notValid", null, null, "gameMode.changed"};
+   public static final String[] a = new String[]{"tile.bed.notValid"};
    private int b;
    private float c;
 

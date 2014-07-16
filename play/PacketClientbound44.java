@@ -14,7 +14,7 @@ public class PacketClientbound44 implements hz {
 
    public PacketClientbound44() {}
 
-   public PacketClientbound44(bcv var1, kn var2) {
+   public PacketClientbound44(bdf var1, kn var2) {
       this.a = var2;
       this.c = var1.f();
       this.d = var1.g();
