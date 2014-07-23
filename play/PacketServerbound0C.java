@@ -1,5 +1,5 @@
 
-public class PacketServerbound0C implements hz {
+public class PacketServerbound0C implements ib {
 
    private float a;
    private float b;
@@ -30,7 +30,7 @@ public class PacketServerbound0C implements hz {
       var1.writeByte(var2);
    }
 
-   public void a(lm var1) {
+   public void a(lo var1) {
       var1.a(this);
    }
 

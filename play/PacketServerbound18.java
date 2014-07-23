@@ -1,6 +1,6 @@
 import java.util.UUID;
 
-public class PacketServerbound18 implements hz {
+public class PacketServerbound18 implements ib {
 
    private UUID a;
 
@@ -19,11 +19,11 @@ public class PacketServerbound18 implements hz {
       var1.writeUUID(this.a);
    }
 
-   public void a(lm var1) {
+   public void a(lo var1) {
       var1.a(this);
    }
 
-   public wg a(qi var1) {
+   public wi a(qk var1) {
       return var1.a(this.a);
    }
 }

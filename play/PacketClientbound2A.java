@@ -1,7 +1,7 @@
 
-public class PacketClientbound2A implements hz {
+public class PacketClientbound2A implements ib {
 
-   private et a;
+   private ev a;
    private float b;
    private float c;
    private float d;
@@ -16,7 +16,7 @@ public class PacketClientbound2A implements hz {
 
    public PacketClientbound2A() {}
 
-   public PacketClientbound2A(et var1, boolean var2, float var3, float var4, float var5, float var6, float var7, float var8, float var9, int var10, int ... var11) {
+   public PacketClientbound2A(ev var1, boolean var2, float var3, float var4, float var5, float var6, float var7, float var8, float var9, int var10, int ... var11) {
       this.a = var1;
       this.j = var2;
       this.b = var3;
@@ -31,9 +31,9 @@ public class PacketClientbound2A implements hz {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = et.a(var1.readInt());
+      this.a = ev.a(var1.readInt());
       if(this.a == null) {
-         this.a = et.J;
+         this.a = ev.J;
       }
 
       this.j = var1.readBoolean();
@@ -73,7 +73,7 @@ public class PacketClientbound2A implements hz {
 
    }
 
-   public void a(ig var1) {
+   public void a(ii var1) {
       var1.a(this);
    }
 }

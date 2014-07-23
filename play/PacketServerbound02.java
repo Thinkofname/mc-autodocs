@@ -1,13 +1,13 @@
 
-public class PacketServerbound02 implements hz {
+public class PacketServerbound02 implements ib {
 
    private int a;
-   private ly b;
+   private ma b;
 
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.b = (ly)var1.readEnum(ly.class);
+      this.b = (ma)var1.readEnum(ma.class);
    }
 
    public void write(PacketBuffer var1) {
@@ -15,15 +15,15 @@ public class PacketServerbound02 implements hz {
       var1.writeEnum(this.b);
    }
 
-   public void a(lm var1) {
+   public void a(lo var1) {
       var1.a(this);
    }
 
-   public wg a(apo var1) {
+   public wi a(apv var1) {
       return var1.a(this.a);
    }
 
-   public ly a() {
+   public ma a() {
       return this.b;
    }
 }

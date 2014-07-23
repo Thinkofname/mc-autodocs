@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class PacketClientbound0F implements hz {
+public class PacketClientbound0F implements ib {
 
    private int a;
    private int b;
@@ -13,18 +13,18 @@ public class PacketClientbound0F implements hz {
    private byte i;
    private byte j;
    private byte k;
-   private xk l;
+   private xm l;
    private List m;
 
 
    public PacketClientbound0F() {}
 
-   public PacketClientbound0F(xa var1) {
+   public PacketClientbound0F(xc var1) {
       this.a = var1.E();
-      this.b = (byte)wm.a(var1);
-      this.c = ug.c(var1.s * 32.0D);
-      this.d = ug.c(var1.t * 32.0D);
-      this.e = ug.c(var1.u * 32.0D);
+      this.b = (byte)wo.a(var1);
+      this.c = ui.c(var1.s * 32.0D);
+      this.d = ui.c(var1.t * 32.0D);
+      this.e = ui.c(var1.u * 32.0D);
       this.i = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.j = (byte)((int)(var1.z * 256.0F / 360.0F));
       this.k = (byte)((int)(var1.aI * 256.0F / 360.0F));
@@ -74,7 +74,7 @@ public class PacketClientbound0F implements hz {
       this.f = var1.readShort();
       this.g = var1.readShort();
       this.h = var1.readShort();
-      this.m = xk.b(var1);
+      this.m = xm.b(var1);
    }
 
    public void write(PacketBuffer var1) {
@@ -92,7 +92,7 @@ public class PacketClientbound0F implements hz {
       this.l.a(var1);
    }
 
-   public void a(ig var1) {
+   public void a(ii var1) {
       var1.a(this);
    }
 }

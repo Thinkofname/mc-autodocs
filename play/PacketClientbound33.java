@@ -1,22 +1,22 @@
 
-public class PacketClientbound33 implements hz {
+public class PacketClientbound33 implements ib {
 
-   private apo a;
+   private apv a;
    private Position b;
-   private hk[] c;
+   private hm[] c;
 
 
    public PacketClientbound33() {}
 
-   public PacketClientbound33(apo var1, Position var2, hk[] var3) {
+   public PacketClientbound33(apv var1, Position var2, hm[] var3) {
       this.a = var1;
       this.b = var2;
-      this.c = new hk[]{var3[0], var3[1], var3[2], var3[3]};
+      this.c = new hm[]{var3[0], var3[1], var3[2], var3[3]};
    }
 
    public void read(PacketBuffer var1) {
       this.b = var1.readPosition();
-      this.c = new hk[4];
+      this.c = new hm[4];
 
       for(int var2 = 0; var2 < 4; ++var2) {
          this.c[var2] = var1.d();
@@ -33,7 +33,7 @@ public class PacketClientbound33 implements hz {
 
    }
 
-   public void a(ig var1) {
+   public void a(ii var1) {
       var1.a(this);
    }
 }

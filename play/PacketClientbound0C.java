@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.UUID;
 
-public class PacketClientbound0C implements hz {
+public class PacketClientbound0C implements ib {
 
    private int a;
    private UUID b;
@@ -11,22 +11,22 @@ public class PacketClientbound0C implements hz {
    private byte f;
    private byte g;
    private int h;
-   private xk i;
+   private xm i;
    private List j;
 
 
    public PacketClientbound0C() {}
 
-   public PacketClientbound0C(agg var1) {
+   public PacketClientbound0C(agi var1) {
       this.a = var1.E();
-      this.b = var1.bW().getId();
-      this.c = ug.c(var1.s * 32.0D);
-      this.d = ug.c(var1.t * 32.0D);
-      this.e = ug.c(var1.u * 32.0D);
+      this.b = var1.bX().getId();
+      this.c = ui.c(var1.s * 32.0D);
+      this.d = ui.c(var1.t * 32.0D);
+      this.e = ui.c(var1.u * 32.0D);
       this.f = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.g = (byte)((int)(var1.z * 256.0F / 360.0F));
       ItemStack var2 = var1.bg.h();
-      this.h = var2 == null?0:akq.b(var2.b());
+      this.h = var2 == null?0:akt.b(var2.b());
       this.i = var1.G();
    }
 
@@ -39,7 +39,7 @@ public class PacketClientbound0C implements hz {
       this.f = var1.readByte();
       this.g = var1.readByte();
       this.h = var1.readShort();
-      this.j = xk.b(var1);
+      this.j = xm.b(var1);
    }
 
    public void write(PacketBuffer var1) {
@@ -54,7 +54,7 @@ public class PacketClientbound0C implements hz {
       this.i.a(var1);
    }
 
-   public void a(ig var1) {
+   public void a(ii var1) {
       var1.a(this);
    }
 }

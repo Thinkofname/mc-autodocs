@@ -1,17 +1,17 @@
 
-public class PacketClientbound02 implements hz {
+public class PacketClientbound02 implements ib {
 
-   private hk a;
+   private hm a;
    private byte b;
 
 
    public PacketClientbound02() {}
 
-   public PacketClientbound02(hk var1) {
+   public PacketClientbound02(hm var1) {
       this(var1, (byte)1);
    }
 
-   public PacketClientbound02(hk var1, byte var2) {
+   public PacketClientbound02(hm var1, byte var2) {
       this.a = var1;
       this.b = var2;
    }
@@ -26,7 +26,7 @@ public class PacketClientbound02 implements hz {
       var1.writeByte(this.b);
    }
 
-   public void a(ig var1) {
+   public void a(ii var1) {
       var1.a(this);
    }
 

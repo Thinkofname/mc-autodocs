@@ -2,7 +2,7 @@ import com.google.common.collect.Lists;
 import java.util.Iterator;
 import java.util.List;
 
-public class PacketClientbound27 implements hz {
+public class PacketClientbound27 implements ib {
 
    private double a;
    private double b;
@@ -16,7 +16,7 @@ public class PacketClientbound27 implements hz {
 
    public PacketClientbound27() {}
 
-   public PacketClientbound27(double var1, double var3, double var5, float var7, List var8, bpz var9) {
+   public PacketClientbound27(double var1, double var3, double var5, float var7, List var8, bqm var9) {
       this.a = var1;
       this.b = var3;
       this.c = var5;
@@ -79,7 +79,7 @@ public class PacketClientbound27 implements hz {
       var1.writeFloat(this.h);
    }
 
-   public void a(ig var1) {
+   public void a(ii var1) {
       var1.a(this);
    }
 }

@@ -1,14 +1,14 @@
 
-public class PacketClientbound35 implements hz {
+public class PacketClientbound35 implements ib {
 
    private Position a;
    private int b;
-   private fj c;
+   private fl c;
 
 
    public PacketClientbound35() {}
 
-   public PacketClientbound35(Position var1, int var2, fj var3) {
+   public PacketClientbound35(Position var1, int var2, fl var3) {
       this.a = var1;
       this.b = var2;
       this.c = var3;
@@ -26,7 +26,7 @@ public class PacketClientbound35 implements hz {
       var1.a(this.c);
    }
 
-   public void a(ig var1) {
+   public void a(ii var1) {
       var1.a(this);
    }
 }

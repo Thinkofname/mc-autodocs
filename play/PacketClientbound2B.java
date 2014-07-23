@@ -1,5 +1,5 @@
 
-public class PacketClientbound2B implements hz {
+public class PacketClientbound2B implements ib {
 
    public static final String[] a = new String[]{"tile.bed.notValid"};
    private int b;
@@ -23,7 +23,7 @@ public class PacketClientbound2B implements hz {
       var1.writeFloat(this.c);
    }
 
-   public void a(ig var1) {
+   public void a(ii var1) {
       var1.a(this);
    }
 

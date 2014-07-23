@@ -1,6 +1,6 @@
 import org.apache.commons.lang3.StringUtils;
 
-public class PacketServerbound14 implements hz {
+public class PacketServerbound14 implements ib {
 
    private String a;
 
@@ -19,7 +19,7 @@ public class PacketServerbound14 implements hz {
       var1.writeString(StringUtils.substring(this.a, 0, 32767));
    }
 
-   public void a(lm var1) {
+   public void a(lo var1) {
       var1.a(this);
    }
 

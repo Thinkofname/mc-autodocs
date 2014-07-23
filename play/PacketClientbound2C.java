@@ -1,5 +1,5 @@
 
-public class PacketClientbound2C implements hz {
+public class PacketClientbound2C implements ib {
 
    private int a;
    private int b;
@@ -10,12 +10,12 @@ public class PacketClientbound2C implements hz {
 
    public PacketClientbound2C() {}
 
-   public PacketClientbound2C(wg var1) {
+   public PacketClientbound2C(wi var1) {
       this.a = var1.E();
-      this.b = ug.c(var1.s * 32.0D);
-      this.c = ug.c(var1.t * 32.0D);
-      this.d = ug.c(var1.u * 32.0D);
-      if(var1 instanceof acw) {
+      this.b = ui.c(var1.s * 32.0D);
+      this.c = ui.c(var1.t * 32.0D);
+      this.d = ui.c(var1.u * 32.0D);
+      if(var1 instanceof acy) {
          this.e = 1;
       }
 
@@ -37,7 +37,7 @@ public class PacketClientbound2C implements hz {
       var1.writeInt(this.d);
    }
 
-   public void a(ig var1) {
+   public void a(ii var1) {
       var1.a(this);
    }
 }

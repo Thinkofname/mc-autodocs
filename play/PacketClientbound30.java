@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class PacketClientbound30 implements hz {
+public class PacketClientbound30 implements ib {
 
    private int a;
    private ItemStack[] b;
@@ -43,7 +43,7 @@ public class PacketClientbound30 implements hz {
 
    }
 
-   public void a(ig var1) {
+   public void a(ii var1) {
       var1.a(this);
    }
 }

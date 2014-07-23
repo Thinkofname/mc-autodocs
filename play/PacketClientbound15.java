@@ -1,5 +1,5 @@
 
-public class PacketClientbound15 extends jt {
+public class PacketClientbound15 extends jv {
 
    public PacketClientbound15() {}
 

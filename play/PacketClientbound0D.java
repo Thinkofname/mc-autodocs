@@ -1,5 +1,5 @@
 
-public class PacketClientbound0D implements hz {
+public class PacketClientbound0D implements ib {
 
    private int a;
    private int b;
@@ -22,7 +22,7 @@ public class PacketClientbound0D implements hz {
       var1.writeVarInt(this.b);
    }
 
-   public void a(ig var1) {
+   public void a(ii var1) {
       var1.a(this);
    }
 }

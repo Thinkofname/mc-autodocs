@@ -1,12 +1,12 @@
 
-public class PacketClientbound40 implements hz {
+public class PacketClientbound40 implements ib {
 
-   private hk a;
+   private hm a;
 
 
    public PacketClientbound40() {}
 
-   public PacketClientbound40(hk var1) {
+   public PacketClientbound40(hm var1) {
       this.a = var1;
    }
 
@@ -18,7 +18,7 @@ public class PacketClientbound40 implements hz {
       var1.a(this.a);
    }
 
-   public void a(ig var1) {
+   public void a(ii var1) {
       var1.a(this);
    }
 }

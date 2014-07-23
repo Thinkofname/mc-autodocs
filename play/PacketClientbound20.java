@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
-public class PacketClientbound20 implements hz {
+public class PacketClientbound20 implements ib {
 
    private int a;
    private final List b = Lists.newArrayList();
@@ -18,8 +18,8 @@ public class PacketClientbound20 implements hz {
       Iterator var3 = var2.iterator();
 
       while(var3.hasNext()) {
-         xo var4 = (xo)var3.next();
-         this.b.add(new lk(this, var4.a().a(), var4.b(), var4.c()));
+         xq var4 = (xq)var3.next();
+         this.b.add(new lm(this, var4.a().a(), var4.b(), var4.c()));
       }
 
    }
@@ -36,10 +36,10 @@ public class PacketClientbound20 implements hz {
 
          for(int var9 = 0; var9 < var8; ++var9) {
             UUID var10 = var1.readUUID();
-            var7.add(new xp(var10, "Unknown synced attribute modifier", var1.readDouble(), var1.readByte()));
+            var7.add(new xr(var10, "Unknown synced attribute modifier", var1.readDouble(), var1.readByte()));
          }
 
-         this.b.add(new lk(this, var4, var5, var7));
+         this.b.add(new lm(this, var4, var5, var7));
       }
 
    }
@@ -50,14 +50,14 @@ public class PacketClientbound20 implements hz {
       Iterator var2 = this.b.iterator();
 
       while(var2.hasNext()) {
-         lk var3 = (lk)var2.next();
+         lm var3 = (lm)var2.next();
          var1.writeString(var3.a());
          var1.writeDouble(var3.b());
          var1.writeVarInt(var3.c().size());
          Iterator var4 = var3.c().iterator();
 
          while(var4.hasNext()) {
-            xp var5 = (xp)var4.next();
+            xr var5 = (xr)var4.next();
             var1.writeUUID(var5.a());
             var1.writeDouble(var5.d());
             var1.writeByte(var5.c());
@@ -66,7 +66,7 @@ public class PacketClientbound20 implements hz {
 
    }
 
-   public void a(ig var1) {
+   public void a(ii var1) {
       var1.a(this);
    }
 }

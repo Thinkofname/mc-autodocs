@@ -1,5 +1,5 @@
 
-public class PacketClientbound05 implements hz {
+public class PacketClientbound05 implements ib {
 
    private Position a;
 
@@ -18,7 +18,7 @@ public class PacketClientbound05 implements hz {
       var1.writePosition(this.a);
    }
 
-   public void a(ig var1) {
+   public void a(ii var1) {
       var1.a(this);
    }
 }

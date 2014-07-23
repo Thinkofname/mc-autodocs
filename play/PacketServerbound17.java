@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public class PacketServerbound17 implements hz {
+public class PacketServerbound17 implements ib {
 
    private String a;
    private byte[] b;
@@ -23,7 +23,7 @@ public class PacketServerbound17 implements hz {
       var1.writeBytes(this.b);
    }
 
-   public void a(lm var1) {
+   public void a(lo var1) {
       var1.a(this);
    }
 

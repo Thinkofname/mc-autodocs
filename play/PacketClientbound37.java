@@ -3,7 +3,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
-public class PacketClientbound37 implements hz {
+public class PacketClientbound37 implements ib {
 
    private Map a;
 
@@ -14,7 +14,7 @@ public class PacketClientbound37 implements hz {
       this.a = var1;
    }
 
-   public void a(ig var1) {
+   public void a(ii var1) {
       var1.a(this);
    }
 
@@ -23,7 +23,7 @@ public class PacketClientbound37 implements hz {
       this.a = Maps.newHashMap();
 
       for(int var3 = 0; var3 < var2; ++var3) {
-         te var4 = tm.a(var1.readString(32767));
+         tg var4 = to.a(var1.readString(32767));
          int var5 = var1.readVarInt();
          if(var4 != null) {
             this.a.put(var4, Integer.valueOf(var5));
@@ -38,7 +38,7 @@ public class PacketClientbound37 implements hz {
 
       while(var2.hasNext()) {
          Entry var3 = (Entry)var2.next();
-         var1.writeString(((te)var3.getKey()).e);
+         var1.writeString(((tg)var3.getKey()).e);
          var1.writeVarInt(((Integer)var3.getValue()).intValue());
       }
 

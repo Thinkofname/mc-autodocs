@@ -1,5 +1,5 @@
 
-public class PacketClientbound39 implements hz {
+public class PacketClientbound39 implements ib {
 
    private boolean a;
    private boolean b;
@@ -11,7 +11,7 @@ public class PacketClientbound39 implements hz {
 
    public PacketClientbound39() {}
 
-   public PacketClientbound39(agd var1) {
+   public PacketClientbound39(agf var1) {
       this.a(var1.a);
       this.b(var1.b);
       this.c(var1.c);
@@ -53,7 +53,7 @@ public class PacketClientbound39 implements hz {
       var1.writeFloat(this.f);
    }
 
-   public void a(ig var1) {
+   public void a(ii var1) {
       var1.a(this);
    }
 

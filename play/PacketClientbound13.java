@@ -1,5 +1,5 @@
 
-public class PacketClientbound13 implements hz {
+public class PacketClientbound13 implements ib {
 
    private int[] a;
 
@@ -28,7 +28,7 @@ public class PacketClientbound13 implements hz {
 
    }
 
-   public void a(ig var1) {
+   public void a(ii var1) {
       var1.a(this);
    }
 }

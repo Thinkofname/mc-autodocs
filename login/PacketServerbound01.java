@@ -1,7 +1,7 @@
 import java.security.PrivateKey;
 import javax.crypto.SecretKey;
 
-public class PacketServerbound01 implements hz {
+public class PacketServerbound01 implements ib {
 
    private byte[] a = new byte[0];
    private byte[] b = new byte[0];
@@ -17,15 +17,15 @@ public class PacketServerbound01 implements hz {
       var1.a(this.b);
    }
 
-   public void a(mz var1) {
+   public void a(nb var1) {
       var1.a(this);
    }
 
    public SecretKey a(PrivateKey var1) {
-      return tr.a(var1, this.a);
+      return tt.a(var1, this.a);
    }
 
    public byte[] b(PrivateKey var1) {
-      return var1 == null?this.b:tr.b(var1, this.b);
+      return var1 == null?this.b:tt.b(var1, this.b);
    }
 }

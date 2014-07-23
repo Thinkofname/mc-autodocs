@@ -1,5 +1,5 @@
 
-public class PacketClientbound18 implements hz {
+public class PacketClientbound18 implements ib {
 
    private int a;
    private int b;
@@ -12,11 +12,11 @@ public class PacketClientbound18 implements hz {
 
    public PacketClientbound18() {}
 
-   public PacketClientbound18(wg var1) {
+   public PacketClientbound18(wi var1) {
       this.a = var1.E();
-      this.b = ug.c(var1.s * 32.0D);
-      this.c = ug.c(var1.t * 32.0D);
-      this.d = ug.c(var1.u * 32.0D);
+      this.b = ui.c(var1.s * 32.0D);
+      this.c = ui.c(var1.t * 32.0D);
+      this.d = ui.c(var1.u * 32.0D);
       this.e = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.f = (byte)((int)(var1.z * 256.0F / 360.0F));
       this.g = var1.C;
@@ -52,7 +52,7 @@ public class PacketClientbound18 implements hz {
       var1.writeBoolean(this.g);
    }
 
-   public void a(ig var1) {
+   public void a(ii var1) {
       var1.a(this);
    }
 }
