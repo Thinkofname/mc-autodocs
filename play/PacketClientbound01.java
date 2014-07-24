@@ -3,17 +3,17 @@ public class PacketClientbound01 implements ib {
 
    private int a;
    private boolean b;
-   private aqd c;
+   private aqi c;
    private int d;
-   private vg e;
+   private vi e;
    private int f;
-   private aqf g;
+   private aqk g;
    private boolean h;
 
 
    public PacketClientbound01() {}
 
-   public PacketClientbound01(int var1, aqd var2, boolean var3, int var4, vg var5, int var6, aqf var7, boolean var8) {
+   public PacketClientbound01(int var1, aqi var2, boolean var3, int var4, vi var5, int var6, aqk var7, boolean var8) {
       this.a = var1;
       this.d = var4;
       this.e = var5;
@@ -29,13 +29,13 @@ public class PacketClientbound01 implements ib {
       short var2 = var1.readUnsignedByte();
       this.b = (var2 & 8) == 8;
       int var3 = var2 & -9;
-      this.c = aqd.a(var3);
+      this.c = aqi.a(var3);
       this.d = var1.readByte();
-      this.e = vg.a(var1.readUnsignedByte());
+      this.e = vi.a(var1.readUnsignedByte());
       this.f = var1.readUnsignedByte();
-      this.g = aqf.a(var1.readString(16));
+      this.g = aqk.a(var1.readString(16));
       if(this.g == null) {
-         this.g = aqf.b;
+         this.g = aqk.b;
       }
 
       this.h = var1.readBoolean();

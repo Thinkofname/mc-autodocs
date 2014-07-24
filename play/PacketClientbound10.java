@@ -9,7 +9,7 @@ public class PacketClientbound10 implements ib {
 
    public PacketClientbound10() {}
 
-   public PacketClientbound10(xj var1) {
+   public PacketClientbound10(xo var1) {
       this.a = var1.E();
       this.b = var1.m();
       this.c = var1.b;
@@ -18,7 +18,7 @@ public class PacketClientbound10 implements ib {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readVarInt();
-      this.d = var1.readString(xk.A);
+      this.d = var1.readString(xp.A);
       this.b = var1.readPosition();
       this.c = ek.b(var1.readUnsignedByte());
    }

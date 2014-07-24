@@ -7,7 +7,7 @@ public class PacketClientbound1E implements ib {
 
    public PacketClientbound1E() {}
 
-   public PacketClientbound1E(int var1, wd var2) {
+   public PacketClientbound1E(int var1, wf var2) {
       this.a = var1;
       this.b = var2.a();
    }

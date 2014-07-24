@@ -3,7 +3,7 @@ public class PacketServerbound15 implements ib {
 
    private String a;
    private int b;
-   private agl c;
+   private agq c;
    private boolean d;
    private int e;
 
@@ -11,7 +11,7 @@ public class PacketServerbound15 implements ib {
    public void read(PacketBuffer var1) {
       this.a = var1.readString(7);
       this.b = var1.readByte();
-      this.c = agl.a(var1.readByte());
+      this.c = agq.a(var1.readByte());
       this.d = var1.readBoolean();
       this.e = var1.readUnsignedByte();
    }
@@ -32,7 +32,7 @@ public class PacketServerbound15 implements ib {
       return this.a;
    }
 
-   public agl c() {
+   public agq c() {
       return this.c;
    }
 

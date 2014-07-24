@@ -18,7 +18,7 @@ public class PacketClientbound20 implements ib {
       Iterator var3 = var2.iterator();
 
       while(var3.hasNext()) {
-         xq var4 = (xq)var3.next();
+         xv var4 = (xv)var3.next();
          this.b.add(new lm(this, var4.a().a(), var4.b(), var4.c()));
       }
 
@@ -36,7 +36,7 @@ public class PacketClientbound20 implements ib {
 
          for(int var9 = 0; var9 < var8; ++var9) {
             UUID var10 = var1.readUUID();
-            var7.add(new xr(var10, "Unknown synced attribute modifier", var1.readDouble(), var1.readByte()));
+            var7.add(new xw(var10, "Unknown synced attribute modifier", var1.readDouble(), var1.readByte()));
          }
 
          this.b.add(new lm(this, var4, var5, var7));
@@ -57,7 +57,7 @@ public class PacketClientbound20 implements ib {
          Iterator var4 = var3.c().iterator();
 
          while(var4.hasNext()) {
-            xr var5 = (xr)var4.next();
+            xw var5 = (xw)var4.next();
             var1.writeUUID(var5.a());
             var1.writeDouble(var5.d());
             var1.writeByte(var5.c());

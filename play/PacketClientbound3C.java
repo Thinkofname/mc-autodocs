@@ -9,7 +9,7 @@ public class PacketClientbound3C implements ib {
 
    public PacketClientbound3C() {}
 
-   public PacketClientbound3C(bqq var1) {
+   public PacketClientbound3C(bqv var1) {
       this.a = var1.e();
       this.b = var1.d().b();
       this.c = var1.c();
@@ -23,7 +23,7 @@ public class PacketClientbound3C implements ib {
       this.d = lc.b;
    }
 
-   public PacketClientbound3C(String var1, bqo var2) {
+   public PacketClientbound3C(String var1, bqt var2) {
       this.a = var1;
       this.b = var2.b();
       this.c = 0;

@@ -17,7 +17,7 @@ public class PacketClientbound01 implements ib {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readString(20);
-      this.b = tt.a(var1.a());
+      this.b = tv.a(var1.a());
       this.c = var1.a();
    }
 

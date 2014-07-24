@@ -23,7 +23,7 @@ public class PacketServerbound18 implements ib {
       var1.a(this);
    }
 
-   public wi a(qk var1) {
+   public wk a(ql var1) {
       return var1.a(this.a);
    }
 }

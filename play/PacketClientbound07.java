@@ -2,14 +2,14 @@
 public class PacketClientbound07 implements ib {
 
    private int a;
-   private vg b;
-   private aqd c;
-   private aqf d;
+   private vi b;
+   private aqi c;
+   private aqk d;
 
 
    public PacketClientbound07() {}
 
-   public PacketClientbound07(int var1, vg var2, aqf var3, aqd var4) {
+   public PacketClientbound07(int var1, vi var2, aqk var3, aqi var4) {
       this.a = var1;
       this.b = var2;
       this.c = var4;
@@ -22,11 +22,11 @@ public class PacketClientbound07 implements ib {
 
    public void read(PacketBuffer var1) {
       this.a = var1.readInt();
-      this.b = vg.a(var1.readUnsignedByte());
-      this.c = aqd.a(var1.readUnsignedByte());
-      this.d = aqf.a(var1.readString(16));
+      this.b = vi.a(var1.readUnsignedByte());
+      this.c = aqi.a(var1.readUnsignedByte());
+      this.d = aqk.a(var1.readString(16));
       if(this.d == null) {
-         this.d = aqf.b;
+         this.d = aqk.b;
       }
 
    }

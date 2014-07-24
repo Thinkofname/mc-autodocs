@@ -12,13 +12,13 @@ public class PacketClientbound38 implements ib {
 
    public PacketClientbound38() {}
 
-   public PacketClientbound38(kg var1, qn ... var2) {
+   public PacketClientbound38(kg var1, qo ... var2) {
       this.a = var1;
-      qn[] var3 = var2;
+      qo[] var3 = var2;
       int var4 = var2.length;
 
       for(int var5 = 0; var5 < var4; ++var5) {
-         qn var6 = var3[var5];
+         qo var6 = var3[var5];
          this.b.add(new kh(this, var6.bX(), var6.h, var6.c.b(), var6.D()));
       }
 
@@ -29,7 +29,7 @@ public class PacketClientbound38 implements ib {
       Iterator var3 = var2.iterator();
 
       while(var3.hasNext()) {
-         qn var4 = (qn)var3.next();
+         qo var4 = (qo)var3.next();
          this.b.add(new kh(this, var4.bX(), var4.h, var4.c.b(), var4.D()));
       }
 
@@ -42,7 +42,7 @@ public class PacketClientbound38 implements ib {
       for(int var3 = 0; var3 < var2; ++var3) {
          GameProfile var4 = null;
          int var5 = 0;
-         aqd var6 = null;
+         aqi var6 = null;
          hm var7 = null;
          switch(kf.a[this.a.ordinal()]) {
          case 1:
@@ -59,7 +59,7 @@ public class PacketClientbound38 implements ib {
                }
             }
 
-            var6 = aqd.a(var1.readVarInt());
+            var6 = aqi.a(var1.readVarInt());
             var5 = var1.readVarInt();
             if(var1.readBoolean()) {
                var7 = var1.d();
@@ -67,7 +67,7 @@ public class PacketClientbound38 implements ib {
             break;
          case 2:
             var4 = new GameProfile(var1.readUUID(), (String)null);
-            var6 = aqd.a(var1.readVarInt());
+            var6 = aqi.a(var1.readVarInt());
             break;
          case 3:
             var4 = new GameProfile(var1.readUUID(), (String)null);

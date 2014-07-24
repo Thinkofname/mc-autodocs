@@ -19,7 +19,7 @@ public class PacketServerbound02 implements ib {
       var1.a(this);
    }
 
-   public wi a(apv var1) {
+   public wk a(aqa var1) {
       return var1.a(this.a);
    }
 

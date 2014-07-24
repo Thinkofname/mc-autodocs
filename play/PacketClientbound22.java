@@ -1,14 +1,14 @@
 
 public class PacketClientbound22 implements ib {
 
-   private apo a;
+   private apt a;
    private iz[] b;
 
 
    public PacketClientbound22() {}
 
-   public PacketClientbound22(int var1, short[] var2, bdy var3) {
-      this.a = new apo(var3.a, var3.b);
+   public PacketClientbound22(int var1, short[] var2, bed var3) {
+      this.a = new apt(var3.a, var3.b);
       this.b = new iz[var1];
 
       for(int var4 = 0; var4 < this.b.length; ++var4) {
@@ -18,11 +18,11 @@ public class PacketClientbound22 implements ib {
    }
 
    public void read(PacketBuffer var1) {
-      this.a = new apo(var1.readInt(), var1.readInt());
+      this.a = new apt(var1.readInt(), var1.readInt());
       this.b = new iz[var1.readVarInt()];
 
       for(int var2 = 0; var2 < this.b.length; ++var2) {
-         this.b[var2] = new iz(this, var1.readShort(), (bct)asq.d.a(var1.readVarInt()));
+         this.b[var2] = new iz(this, var1.readShort(), (bcy)asv.d.a(var1.readVarInt()));
       }
 
    }
@@ -37,7 +37,7 @@ public class PacketClientbound22 implements ib {
       for(int var4 = 0; var4 < var3; ++var4) {
          iz var5 = var2[var4];
          var1.writeShort(var5.b());
-         var1.writeVarInt(asq.d.b(var5.c()));
+         var1.writeVarInt(asv.d.b(var5.c()));
       }
 
    }
@@ -47,7 +47,7 @@ public class PacketClientbound22 implements ib {
    }
 
    // $FF: synthetic method
-   static apo a(PacketClientbound22 var0) {
+   static apt a(PacketClientbound22 var0) {
       return var0.a;
    }
 }

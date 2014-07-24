@@ -9,7 +9,7 @@ public class PacketClientbound21 implements ib {
 
    public PacketClientbound21() {}
 
-   public PacketClientbound21(bdy var1, boolean var2, int var3) {
+   public PacketClientbound21(bed var1, boolean var2, int var3) {
       this.a = var1.a;
       this.b = var1.b;
       this.d = var2;
@@ -45,8 +45,8 @@ public class PacketClientbound21 implements ib {
       return var3 + var4 + var5 + var6;
    }
 
-   public static jo a(bdy var0, boolean var1, boolean var2, int var3) {
-      bec[] var4 = var0.h();
+   public static jo a(bed var0, boolean var1, boolean var2, int var3) {
+      beh[] var4 = var0.h();
       jo var5 = new jo();
 
       int var6;
@@ -74,7 +74,7 @@ public class PacketClientbound21 implements ib {
          }
       }
 
-      bdw var13;
+      beb var13;
       for(var7 = 0; var7 < var4.length; ++var7) {
          if(var4[var7] != null && (!var1 || !var4[var7].a()) && (var3 & 1 << var7) != 0) {
             var13 = var4[var7].h();

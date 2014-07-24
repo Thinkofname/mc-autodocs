@@ -22,10 +22,10 @@ public class PacketServerbound01 implements ib {
    }
 
    public SecretKey a(PrivateKey var1) {
-      return tt.a(var1, this.a);
+      return tv.a(var1, this.a);
    }
 
    public byte[] b(PrivateKey var1) {
-      return var1 == null?this.b:tt.b(var1, this.b);
+      return var1 == null?this.b:tv.b(var1, this.b);
    }
 }

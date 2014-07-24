@@ -12,11 +12,11 @@ public class PacketClientbound18 implements ib {
 
    public PacketClientbound18() {}
 
-   public PacketClientbound18(wi var1) {
+   public PacketClientbound18(wk var1) {
       this.a = var1.E();
-      this.b = ui.c(var1.s * 32.0D);
-      this.c = ui.c(var1.t * 32.0D);
-      this.d = ui.c(var1.u * 32.0D);
+      this.b = uk.c(var1.s * 32.0D);
+      this.c = uk.c(var1.t * 32.0D);
+      this.d = uk.c(var1.u * 32.0D);
       this.e = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.f = (byte)((int)(var1.z * 256.0F / 360.0F));
       this.g = var1.C;

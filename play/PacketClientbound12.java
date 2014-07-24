@@ -9,7 +9,7 @@ public class PacketClientbound12 implements ib {
 
    public PacketClientbound12() {}
 
-   public PacketClientbound12(wi var1) {
+   public PacketClientbound12(wk var1) {
       this(var1.E(), var1.v, var1.w, var1.x);
    }
 

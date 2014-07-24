@@ -13,18 +13,18 @@ public class PacketClientbound0F implements ib {
    private byte i;
    private byte j;
    private byte k;
-   private xm l;
+   private xr l;
    private List m;
 
 
    public PacketClientbound0F() {}
 
-   public PacketClientbound0F(xc var1) {
+   public PacketClientbound0F(xh var1) {
       this.a = var1.E();
-      this.b = (byte)wo.a(var1);
-      this.c = ui.c(var1.s * 32.0D);
-      this.d = ui.c(var1.t * 32.0D);
-      this.e = ui.c(var1.u * 32.0D);
+      this.b = (byte)wq.a(var1);
+      this.c = uk.c(var1.s * 32.0D);
+      this.d = uk.c(var1.t * 32.0D);
+      this.e = uk.c(var1.u * 32.0D);
       this.i = (byte)((int)(var1.y * 256.0F / 360.0F));
       this.j = (byte)((int)(var1.z * 256.0F / 360.0F));
       this.k = (byte)((int)(var1.aI * 256.0F / 360.0F));
@@ -74,7 +74,7 @@ public class PacketClientbound0F implements ib {
       this.f = var1.readShort();
       this.g = var1.readShort();
       this.h = var1.readShort();
-      this.m = xm.b(var1);
+      this.m = xr.b(var1);
    }
 
    public void write(PacketBuffer var1) {

@@ -1,14 +1,14 @@
 
 public class PacketClientbound33 implements ib {
 
-   private apv a;
+   private aqa a;
    private Position b;
    private hm[] c;
 
 
    public PacketClientbound33() {}
 
-   public PacketClientbound33(apv var1, Position var2, hm[] var3) {
+   public PacketClientbound33(aqa var1, Position var2, hm[] var3) {
       this.a = var1;
       this.b = var2;
       this.c = new hm[]{var3[0], var3[1], var3[2], var3[3]};

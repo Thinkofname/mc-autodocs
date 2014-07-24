@@ -7,7 +7,7 @@ public class PacketClientbound0A implements ib {
 
    public PacketClientbound0A() {}
 
-   public PacketClientbound0A(agi var1, Position var2) {
+   public PacketClientbound0A(agn var1, Position var2) {
       this.a = var1.E();
       this.b = var2;
    }

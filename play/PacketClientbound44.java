@@ -14,7 +14,7 @@ public class PacketClientbound44 implements ib {
 
    public PacketClientbound44() {}
 
-   public PacketClientbound44(bds var1, kp var2) {
+   public PacketClientbound44(bdx var1, kp var2) {
       this.a = var2;
       this.c = var1.f();
       this.d = var1.g();

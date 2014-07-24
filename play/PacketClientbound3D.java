@@ -7,7 +7,7 @@ public class PacketClientbound3D implements ib {
 
    public PacketClientbound3D() {}
 
-   public PacketClientbound3D(int var1, bqo var2) {
+   public PacketClientbound3D(int var1, bqt var2) {
       this.a = var1;
       if(var2 == null) {
          this.b = "";

@@ -16,17 +16,17 @@ public class PacketClientbound0E implements ib {
 
    public PacketClientbound0E() {}
 
-   public PacketClientbound0E(wi var1, int var2) {
+   public PacketClientbound0E(wk var1, int var2) {
       this(var1, var2, 0);
    }
 
-   public PacketClientbound0E(wi var1, int var2, int var3) {
+   public PacketClientbound0E(wk var1, int var2, int var3) {
       this.a = var1.E();
-      this.b = ui.c(var1.s * 32.0D);
-      this.c = ui.c(var1.t * 32.0D);
-      this.d = ui.c(var1.u * 32.0D);
-      this.h = ui.d(var1.z * 256.0F / 360.0F);
-      this.i = ui.d(var1.y * 256.0F / 360.0F);
+      this.b = uk.c(var1.s * 32.0D);
+      this.c = uk.c(var1.t * 32.0D);
+      this.d = uk.c(var1.u * 32.0D);
+      this.h = uk.d(var1.z * 256.0F / 360.0F);
+      this.i = uk.d(var1.y * 256.0F / 360.0F);
       this.j = var2;
       this.k = var3;
       if(var3 > 0) {

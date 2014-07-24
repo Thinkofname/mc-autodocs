@@ -10,11 +10,11 @@ public class PacketClientbound11 implements ib {
 
    public PacketClientbound11() {}
 
-   public PacketClientbound11(wx var1) {
+   public PacketClientbound11(xc var1) {
       this.a = var1.E();
-      this.b = ui.c(var1.s * 32.0D);
-      this.c = ui.c(var1.t * 32.0D);
-      this.d = ui.c(var1.u * 32.0D);
+      this.b = uk.c(var1.s * 32.0D);
+      this.c = uk.c(var1.t * 32.0D);
+      this.d = uk.c(var1.u * 32.0D);
       this.e = var1.i();
    }
 

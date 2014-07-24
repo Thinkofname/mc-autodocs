@@ -10,12 +10,12 @@ public class PacketClientbound2C implements ib {
 
    public PacketClientbound2C() {}
 
-   public PacketClientbound2C(wi var1) {
+   public PacketClientbound2C(wk var1) {
       this.a = var1.E();
-      this.b = ui.c(var1.s * 32.0D);
-      this.c = ui.c(var1.t * 32.0D);
-      this.d = ui.c(var1.u * 32.0D);
-      if(var1 instanceof acy) {
+      this.b = uk.c(var1.s * 32.0D);
+      this.c = uk.c(var1.t * 32.0D);
+      this.d = uk.c(var1.u * 32.0D);
+      if(var1 instanceof add) {
          this.e = 1;
       }
 

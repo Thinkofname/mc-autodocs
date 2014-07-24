@@ -10,9 +10,9 @@ public class PacketClientbound42 implements ib {
 
    public PacketClientbound42() {}
 
-   public PacketClientbound42(vt var1, kd var2) {
+   public PacketClientbound42(vv var1, kd var2) {
       this.a = var2;
-      xc var3 = var1.c();
+      xh var3 = var1.c();
       switch(kc.a[var2.ordinal()]) {
       case 1:
          this.d = var1.f();

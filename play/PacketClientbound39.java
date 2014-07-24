@@ -11,7 +11,7 @@ public class PacketClientbound39 implements ib {
 
    public PacketClientbound39() {}
 
-   public PacketClientbound39(agf var1) {
+   public PacketClientbound39(agk var1) {
       this.a(var1.a);
       this.b(var1.b);
       this.c(var1.c);
