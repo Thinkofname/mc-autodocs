@@ -14,16 +14,16 @@ import org.apache.logging.log4j.LogManager;
 
 public enum Protocols {
 
-   a("HANDSHAKING", 0, -1),
-   b("PLAY", 1, 0),
-   c("STATUS", 2, 1),
-   d("LOGIN", 3, 2);
+   HANDSHAKING("HANDSHAKING", 0, -1),
+   PLAY("PLAY", 1, 0),
+   STATUS("STATUS", 2, 1),
+   LOGIN("LOGIN", 3, 2);
    private static final TIntObjectMap e = new TIntObjectHashMap();
    private static final Map f = Maps.newHashMap();
    private final int g;
    private final Map h;
    // $FF: synthetic field
-   private static final Protocols[] i = new Protocols[]{a, b, c, d};
+   private static final Protocols[] i = new Protocols[]{HANDSHAKING, PLAY, STATUS, LOGIN};
 
 
    private Protocols(String arg_0, int arg_1, int arg_2) {
