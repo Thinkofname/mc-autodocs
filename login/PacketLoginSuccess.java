@@ -5,6 +5,7 @@ import java.util.UUID;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
+import net.minecraft.network.PacketHandlerLoginClientbound;
 
 public class PacketLoginSuccess implements Packet {
 
@@ -30,13 +31,13 @@ public class PacketLoginSuccess implements Packet {
       out.writeString(this.a.getName());
    }
 
-   public void a(mw arg_0) {
-      arg_0.a(this);
+   public void handle(PacketHandlerLoginClientbound handler) {
+      handler.handle(this);
    }
 
    // $FF: synthetic method
    // $FF: bridge method
-   public void handle(PacketHandler arg_0) {
-      this.a((mw)arg_0);
+   public void handle(PacketHandler handler) {
+      this.handle((PacketHandlerLoginClientbound)handler);
    }
 }

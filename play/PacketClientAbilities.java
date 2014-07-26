@@ -3,6 +3,7 @@ package net.minecraft.network.play;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
+import net.minecraft.network.PacketHandlerPlayServerbound;
 
 public class PacketClientAbilities implements Packet {
 
@@ -58,8 +59,8 @@ public class PacketClientAbilities implements Packet {
       out.writeFloat(this.f);
    }
 
-   public void a(lo arg_0) {
-      arg_0.a(this);
+   public void handle(PacketHandlerPlayServerbound handler) {
+      handler.handle(this);
    }
 
    public boolean a() {
@@ -104,7 +105,7 @@ public class PacketClientAbilities implements Packet {
 
    // $FF: synthetic method
    // $FF: bridge method
-   public void handle(PacketHandler arg_0) {
-      this.a((lo)arg_0);
+   public void handle(PacketHandler handler) {
+      this.handle((PacketHandlerPlayServerbound)handler);
    }
 }

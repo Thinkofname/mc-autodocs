@@ -4,6 +4,7 @@ import java.security.PublicKey;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
+import net.minecraft.network.PacketHandlerLoginClientbound;
 
 public class PacketEncryptionRequest implements Packet {
 
@@ -32,13 +33,13 @@ public class PacketEncryptionRequest implements Packet {
       out.writeByteArray(this.c);
    }
 
-   public void a(mw arg_0) {
-      arg_0.a(this);
+   public void handle(PacketHandlerLoginClientbound handler) {
+      handler.handle(this);
    }
 
    // $FF: synthetic method
    // $FF: bridge method
-   public void handle(PacketHandler arg_0) {
-      this.a((mw)arg_0);
+   public void handle(PacketHandler handler) {
+      this.handle((PacketHandlerLoginClientbound)handler);
    }
 }

@@ -2,6 +2,7 @@ package net.minecraft.network.play;
 
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
+import net.minecraft.network.PacketHandlerPlayServerbound;
 import net.minecraft.network.play.PacketPlayer;
 
 public class PacketPlayerPositionAndLook extends PacketPlayer {
@@ -31,7 +32,7 @@ public class PacketPlayerPositionAndLook extends PacketPlayer {
 
    // $FF: synthetic method
    // $FF: bridge method
-   public void handle(PacketHandler arg_0) {
-      super.a((lo)arg_0);
+   public void handle(PacketHandler handler) {
+      super.handle((PacketHandlerPlayServerbound)handler);
    }
 }

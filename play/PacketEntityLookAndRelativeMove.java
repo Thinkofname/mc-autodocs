@@ -2,6 +2,7 @@ package net.minecraft.network.play;
 
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
+import net.minecraft.network.PacketHandlerPlayClientbound;
 import net.minecraft.network.play.PacketEntity;
 
 public class PacketEntityLookAndRelativeMove extends PacketEntity {
@@ -43,7 +44,7 @@ public class PacketEntityLookAndRelativeMove extends PacketEntity {
 
    // $FF: synthetic method
    // $FF: bridge method
-   public void handle(PacketHandler arg_0) {
-      super.a((ii)arg_0);
+   public void handle(PacketHandler handler) {
+      super.handle((PacketHandlerPlayClientbound)handler);
    }
 }

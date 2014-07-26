@@ -3,6 +3,7 @@ package net.minecraft.network.handshaking;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
+import net.minecraft.network.PacketHandlerHandshakingServerbound;
 import net.minecraft.network.Protocols;
 
 public class PacketHandshake implements Packet {
@@ -27,8 +28,8 @@ public class PacketHandshake implements Packet {
       out.writeVarInt(this.d.a());
    }
 
-   public void a(mu arg_0) {
-      arg_0.a(this);
+   public void handle(PacketHandlerHandshakingServerbound handler) {
+      handler.handle(this);
    }
 
    public Protocols a() {
@@ -41,7 +42,7 @@ public class PacketHandshake implements Packet {
 
    // $FF: synthetic method
    // $FF: bridge method
-   public void handle(PacketHandler arg_0) {
-      this.a((mu)arg_0);
+   public void handle(PacketHandler handler) {
+      this.handle((PacketHandlerHandshakingServerbound)handler);
    }
 }

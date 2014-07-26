@@ -6,6 +6,7 @@ import net.minecraft.chat.IChatMessage;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
+import net.minecraft.network.PacketHandlerStatusClientbound;
 
 public class PacketStatusResponse implements Packet {
 
@@ -27,14 +28,14 @@ public class PacketStatusResponse implements Packet {
       out.writeString(a.toJson(this.b));
    }
 
-   public void a(ng arg_0) {
-      arg_0.a(this);
+   public void handle(PacketHandlerStatusClientbound handler) {
+      handler.handle(this);
    }
 
    // $FF: synthetic method
    // $FF: bridge method
-   public void handle(PacketHandler arg_0) {
-      this.a((ng)arg_0);
+   public void handle(PacketHandler handler) {
+      this.handle((PacketHandlerStatusClientbound)handler);
    }
 
 }

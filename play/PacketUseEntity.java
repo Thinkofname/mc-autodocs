@@ -3,6 +3,7 @@ package net.minecraft.network.play;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
+import net.minecraft.network.PacketHandlerPlayServerbound;
 
 public class PacketUseEntity implements Packet {
 
@@ -20,8 +21,8 @@ public class PacketUseEntity implements Packet {
       out.writeEnum(this.b);
    }
 
-   public void a(lo arg_0) {
-      arg_0.a(this);
+   public void handle(PacketHandlerPlayServerbound handler) {
+      handler.handle(this);
    }
 
    public wk a(aqa arg_0) {
@@ -34,7 +35,7 @@ public class PacketUseEntity implements Packet {
 
    // $FF: synthetic method
    // $FF: bridge method
-   public void handle(PacketHandler arg_0) {
-      this.a((lo)arg_0);
+   public void handle(PacketHandler handler) {
+      this.handle((PacketHandlerPlayServerbound)handler);
    }
 }
