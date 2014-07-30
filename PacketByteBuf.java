@@ -6,6 +6,8 @@ import io.netty.buffer.ByteBufAllocator;
 import io.netty.buffer.ByteBufInputStream;
 import io.netty.buffer.ByteBufOutputStream;
 import io.netty.buffer.ByteBufProcessor;
+import io.netty.handler.codec.DecoderException;
+import io.netty.handler.codec.EncoderException;
 import io.netty.util.ReferenceCounted;
 import java.io.DataInput;
 import java.io.DataOutput;
@@ -32,7 +34,13 @@ public class PacketByteBuf extends ByteBuf {
    }
 
    public static int a(int arg_0) {
-      return (arg_0 & -128) == 0?1:((arg_0 & -16384) == 0?2:((arg_0 & -2097152) == 0?3:((arg_0 & -268435456) == 0?4:5)));
+      for(int var1 = 1; var1 < 5; ++var1) {
+         if((arg_0 & -1 << var1 * 7) == 0) {
+            return var1;
+         }
+      }
+
+      return 5;
    }
 
    public void writeByteArray(byte[] arg_0) {
@@ -44,13 +52,6 @@ public class PacketByteBuf extends ByteBuf {
       byte[] var1 = new byte[this.readVarInt()];
       this.readBytes(var1);
       return var1;
-   }
-
-   public byte[] readRemaining() {
-      int var1 = this.writerIndex();
-      byte[] var2 = new byte[var1];
-      this.getBytes(0, var2);
-      return var2;
    }
 
    public Position readPosition() {
@@ -93,6 +94,22 @@ public class PacketByteBuf extends ByteBuf {
       return var1;
    }
 
+   public long f() {
+      long var1 = 0L;
+      int var3 = 0;
+
+      byte var4;
+      do {
+         var4 = this.readByte();
+         var1 |= (long)(var4 & 127) << var3++ * 7;
+         if(var3 > 10) {
+            throw new RuntimeException("VarLong too big");
+         }
+      } while((var4 & 128) == 128);
+
+      return var1;
+   }
+
    public void writeUUID(UUID arg_0) {
       this.writeLong(arg_0.getMostSignificantBits());
       this.writeLong(arg_0.getLeastSignificantBits());
@@ -111,16 +128,29 @@ public class PacketByteBuf extends ByteBuf {
       this.writeByte(arg_0);
    }
 
+   public void b(long arg_0) {
+      while((arg_0 & -128L) != 0L) {
+         this.writeByte((int)(arg_0 & 127L) | 128);
+         arg_0 >>>= 7;
+      }
+
+      this.writeByte((int)arg_0);
+   }
+
    public void a(fl arg_0) {
       if(arg_0 == null) {
          this.writeByte(0);
       } else {
-         fx.a(arg_0, (DataOutput)(new ByteBufOutputStream(this)));
+         try {
+            fx.a(arg_0, (DataOutput)(new ByteBufOutputStream(this)));
+         } catch (IOException var3) {
+            throw new EncoderException(var3);
+         }
       }
 
    }
 
-   public fl g() {
+   public fl h() {
       int var1 = this.readerIndex();
       byte var2 = this.readByte();
       if(var2 == 0) {
@@ -135,7 +165,7 @@ public class PacketByteBuf extends ByteBuf {
       if(arg_0 == null) {
          this.writeShort(-1);
       } else {
-         this.writeShort(aky.b(arg_0.b()));
+         this.writeShort(ale.b(arg_0.b()));
          this.writeByte(arg_0.b);
          this.writeShort(arg_0.i());
          fl var2 = null;
@@ -154,8 +184,8 @@ public class PacketByteBuf extends ByteBuf {
       if(var2 >= 0) {
          byte var3 = this.readByte();
          short var4 = this.readShort();
-         var1 = new ItemStack(aky.b(var2), var3, var4);
-         var1.d(this.g());
+         var1 = new ItemStack(ale.b(var2), var3, var4);
+         var1.d(this.h());
       }
 
       return var1;
@@ -164,26 +194,27 @@ public class PacketByteBuf extends ByteBuf {
    public String readString(int arg_0) {
       int var2 = this.readVarInt();
       if(var2 > arg_0 * 4) {
-         throw new IOException("The received encoded string buffer length is longer than maximum allowed (" + var2 + " > " + arg_0 * 4 + ")");
+         throw new DecoderException("The received encoded string buffer length is longer than maximum allowed (" + var2 + " > " + arg_0 * 4 + ")");
       } else if(var2 < 0) {
-         throw new IOException("The received encoded string buffer length is less than zero! Weird string!");
+         throw new DecoderException("The received encoded string buffer length is less than zero! Weird string!");
       } else {
          String var3 = new String(this.readBytes(var2).array(), Charsets.UTF_8);
          if(var3.length() > arg_0) {
-            throw new IOException("The received string length is longer than maximum allowed (" + var2 + " > " + arg_0 + ")");
+            throw new DecoderException("The received string length is longer than maximum allowed (" + var2 + " > " + arg_0 + ")");
          } else {
             return var3;
          }
       }
    }
 
-   public void writeString(String arg_0) {
+   public PacketByteBuf writeString(String arg_0) {
       byte[] var2 = arg_0.getBytes(Charsets.UTF_8);
       if(var2.length > 32767) {
-         throw new IOException("String too big (was " + arg_0.length() + " bytes encoded, max " + 32767 + ")");
+         throw new EncoderException("String too big (was " + arg_0.length() + " bytes encoded, max " + 32767 + ")");
       } else {
          this.writeVarInt(var2.length);
          this.writeBytes(var2);
+         return this;
       }
    }
 

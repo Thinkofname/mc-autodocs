@@ -19,18 +19,18 @@ public class PacketSpawnMob implements Packet {
    private byte i;
    private byte j;
    private byte k;
-   private xr l;
+   private xu l;
    private List m;
 
 
    public PacketSpawnMob() {}
 
-   public PacketSpawnMob(xh arg_0) {
+   public PacketSpawnMob(xk arg_0) {
       this.a = arg_0.E();
-      this.b = (byte)wq.a(arg_0);
-      this.c = uk.c(arg_0.s * 32.0D);
-      this.d = uk.c(arg_0.t * 32.0D);
-      this.e = uk.c(arg_0.u * 32.0D);
+      this.b = (byte)ww.a(arg_0);
+      this.c = uq.c(arg_0.s * 32.0D);
+      this.d = uq.c(arg_0.t * 32.0D);
+      this.e = uq.c(arg_0.u * 32.0D);
       this.i = (byte)((int)(arg_0.y * 256.0F / 360.0F));
       this.j = (byte)((int)(arg_0.z * 256.0F / 360.0F));
       this.k = (byte)((int)(arg_0.aI * 256.0F / 360.0F));
@@ -80,7 +80,7 @@ public class PacketSpawnMob implements Packet {
       this.f = in.readShort();
       this.g = in.readShort();
       this.h = in.readShort();
-      this.m = xr.b(in);
+      this.m = xu.b(in);
    }
 
    public void write(PacketByteBuf out) {

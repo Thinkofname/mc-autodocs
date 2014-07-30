@@ -10,37 +10,37 @@ public class PacketUpdateScore implements Packet {
    private String a = "";
    private String b = "";
    private int c;
-   private lc d;
+   private ld d;
 
 
    public PacketUpdateScore() {}
 
-   public PacketUpdateScore(bqv arg_0) {
+   public PacketUpdateScore(brc arg_0) {
       this.a = arg_0.e();
       this.b = arg_0.d().b();
       this.c = arg_0.c();
-      this.d = lc.a;
+      this.d = ld.a;
    }
 
    public PacketUpdateScore(String arg_0) {
       this.a = arg_0;
       this.b = "";
       this.c = 0;
-      this.d = lc.b;
+      this.d = ld.b;
    }
 
-   public PacketUpdateScore(String arg_0, bqt arg_1) {
+   public PacketUpdateScore(String arg_0, bra arg_1) {
       this.a = arg_0;
       this.b = arg_1.b();
       this.c = 0;
-      this.d = lc.b;
+      this.d = ld.b;
    }
 
    public void read(PacketByteBuf in) {
       this.a = in.readString(40);
-      this.d = (lc)in.readEnum(lc.class);
+      this.d = (ld)in.readEnum(ld.class);
       this.b = in.readString(16);
-      if(this.d != lc.b) {
+      if(this.d != ld.b) {
          this.c = in.readVarInt();
       }
 
@@ -50,7 +50,7 @@ public class PacketUpdateScore implements Packet {
       out.writeString(this.a);
       out.writeEnum(this.d);
       out.writeString(this.b);
-      if(this.d != lc.b) {
+      if(this.d != ld.b) {
          out.writeVarInt(this.c);
       }
 

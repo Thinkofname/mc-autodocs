@@ -15,7 +15,7 @@ public class PacketChunkData implements Packet {
 
    public PacketChunkData() {}
 
-   public PacketChunkData(bed arg_0, boolean arg_1, int arg_2) {
+   public PacketChunkData(bek arg_0, boolean arg_1, int arg_2) {
       this.a = arg_0.a;
       this.b = arg_0.b;
       this.d = arg_1;
@@ -51,8 +51,8 @@ public class PacketChunkData implements Packet {
       return var3 + var4 + var5 + var6;
    }
 
-   public static jo a(bed arg_0, boolean arg_1, boolean arg_2, int arg_3) {
-      beh[] var4 = arg_0.h();
+   public static jo a(bek arg_0, boolean arg_1, boolean arg_2, int arg_3) {
+      beo[] var4 = arg_0.h();
       jo var5 = new jo();
 
       int var6;
@@ -80,7 +80,7 @@ public class PacketChunkData implements Packet {
          }
       }
 
-      beb var13;
+      bei var13;
       for(var7 = 0; var7 < var4.length; ++var7) {
          if(var4[var7] != null && (!arg_1 || !var4[var7].a()) && (arg_3 & 1 << var7) != 0) {
             var13 = var4[var7].h();

@@ -10,18 +10,18 @@ import net.minecraft.network.PacketHandlerStatusClientbound;
 
 public class PacketStatusResponse implements Packet {
 
-   private static final Gson a = (new GsonBuilder()).registerTypeAdapter(nn.class, new no()).registerTypeAdapter(nk.class, new nl()).registerTypeAdapter(nj.class, new nm()).registerTypeHierarchyAdapter(IChatMessage.class, new hn()).registerTypeHierarchyAdapter(ht.class, new hv()).registerTypeAdapterFactory(new ui()).create();
-   private nj b;
+   private static final Gson a = (new GsonBuilder()).registerTypeAdapter(nq.class, new nr()).registerTypeAdapter(nn.class, new no()).registerTypeAdapter(nm.class, new np()).registerTypeHierarchyAdapter(IChatMessage.class, new hn()).registerTypeHierarchyAdapter(ht.class, new hv()).registerTypeAdapterFactory(new uo()).create();
+   private nm b;
 
 
    public PacketStatusResponse() {}
 
-   public PacketStatusResponse(nj arg_0) {
+   public PacketStatusResponse(nm arg_0) {
       this.b = arg_0;
    }
 
    public void read(PacketByteBuf in) {
-      this.b = (nj)a.fromJson(in.readString(32767), nj.class);
+      this.b = (nm)a.fromJson(in.readString(32767), nm.class);
    }
 
    public void write(PacketByteBuf out) {

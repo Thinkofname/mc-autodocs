@@ -14,7 +14,7 @@ public class PacketUseBed implements Packet {
 
    public PacketUseBed() {}
 
-   public PacketUseBed(agn arg_0, Position arg_1) {
+   public PacketUseBed(agt arg_0, Position arg_1) {
       this.a = arg_0.E();
       this.b = arg_1;
    }

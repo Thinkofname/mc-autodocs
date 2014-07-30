@@ -24,7 +24,7 @@ public class PacketUpdateBlockEntity implements Packet {
    public void read(PacketByteBuf in) {
       this.a = in.readPosition();
       this.b = in.readUnsignedByte();
-      this.c = in.g();
+      this.c = in.h();
    }
 
    public void write(PacketByteBuf out) {

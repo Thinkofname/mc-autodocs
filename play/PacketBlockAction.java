@@ -11,12 +11,12 @@ public class PacketBlockAction implements Packet {
    private Position a;
    private int b;
    private int c;
-   private asv d;
+   private atc d;
 
 
    public PacketBlockAction() {}
 
-   public PacketBlockAction(Position arg_0, asv arg_1, int arg_2, int arg_3) {
+   public PacketBlockAction(Position arg_0, atc arg_1, int arg_2, int arg_3) {
       this.a = arg_0;
       this.b = arg_2;
       this.c = arg_3;
@@ -27,14 +27,14 @@ public class PacketBlockAction implements Packet {
       this.a = in.readPosition();
       this.b = in.readUnsignedByte();
       this.c = in.readUnsignedByte();
-      this.d = asv.d(in.readVarInt() & 4095);
+      this.d = atc.d(in.readVarInt() & 4095);
    }
 
    public void write(PacketByteBuf out) {
       out.writePosition(this.a);
       out.writeByte(this.b);
       out.writeByte(this.c);
-      out.writeVarInt(asv.a(this.d) & 4095);
+      out.writeVarInt(atc.a(this.d) & 4095);
    }
 
    public void handle(PacketHandlerPlayClientbound handler) {

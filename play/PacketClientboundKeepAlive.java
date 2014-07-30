@@ -21,11 +21,11 @@ public class PacketClientboundKeepAlive implements Packet {
    }
 
    public void read(PacketByteBuf in) {
-      this.a = in.readInt();
+      this.a = in.readVarInt();
    }
 
    public void write(PacketByteBuf out) {
-      out.writeInt(this.a);
+      out.writeVarInt(this.a);
    }
 
    // $FF: synthetic method

@@ -16,11 +16,11 @@ public class PacketSpawnExperienceOrb implements Packet {
 
    public PacketSpawnExperienceOrb() {}
 
-   public PacketSpawnExperienceOrb(xc arg_0) {
+   public PacketSpawnExperienceOrb(xf arg_0) {
       this.a = arg_0.E();
-      this.b = uk.c(arg_0.s * 32.0D);
-      this.c = uk.c(arg_0.t * 32.0D);
-      this.d = uk.c(arg_0.u * 32.0D);
+      this.b = uq.c(arg_0.s * 32.0D);
+      this.c = uq.c(arg_0.t * 32.0D);
+      this.d = uq.c(arg_0.u * 32.0D);
       this.e = arg_0.i();
    }
 

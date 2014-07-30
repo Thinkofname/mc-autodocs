@@ -1,44 +1,28 @@
 package net.minecraft.network.play;
 
-import net.minecraft.math.Position;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayServerbound;
 
-public class PacketPlayerDigging implements Packet {
+public class PacketServerbound25 implements Packet {
 
-   private Position a;
-   private ek b;
-   private mj c;
+   private String a;
+   private mo b;
 
 
    public void read(PacketByteBuf in) {
-      this.c = (mj)in.readEnum(mj.class);
-      this.a = in.readPosition();
-      this.b = ek.a(in.readUnsignedByte());
+      this.a = in.readString(40);
+      this.b = (mo)in.readEnum(mo.class);
    }
 
    public void write(PacketByteBuf out) {
-      out.writeEnum(this.c);
-      out.writePosition(this.a);
-      out.writeByte(this.b.a());
+      out.writeString(this.a);
+      out.writeEnum(this.b);
    }
 
    public void handle(PacketHandlerPlayServerbound handler) {
       handler.handle(this);
-   }
-
-   public Position a() {
-      return this.a;
-   }
-
-   public ek b() {
-      return this.b;
-   }
-
-   public mj c() {
-      return this.c;
    }
 
    // $FF: synthetic method

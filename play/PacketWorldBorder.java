@@ -7,20 +7,20 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 
 public class PacketWorldBorder implements Packet {
 
-   private kp a;
+   private kq a;
    private int b;
    private double c;
    private double d;
    private double e;
    private double f;
-   private int g;
+   private long g;
    private int h;
    private int i;
 
 
    public PacketWorldBorder() {}
 
-   public PacketWorldBorder(bdx arg_0, kp arg_1) {
+   public PacketWorldBorder(bee arg_0, kq arg_1) {
       this.a = arg_1;
       this.c = arg_0.f();
       this.d = arg_0.g();
@@ -33,15 +33,15 @@ public class PacketWorldBorder implements Packet {
    }
 
    public void read(PacketByteBuf in) {
-      this.a = (kp)in.readEnum(kp.class);
-      switch(ko.a[this.a.ordinal()]) {
+      this.a = (kq)in.readEnum(kq.class);
+      switch(kp.a[this.a.ordinal()]) {
       case 1:
          this.e = in.readDouble();
          break;
       case 2:
          this.f = in.readDouble();
          this.e = in.readDouble();
-         this.g = in.readVarInt();
+         this.g = in.f();
          break;
       case 3:
          this.c = in.readDouble();
@@ -58,7 +58,7 @@ public class PacketWorldBorder implements Packet {
          this.d = in.readDouble();
          this.f = in.readDouble();
          this.e = in.readDouble();
-         this.g = in.readVarInt();
+         this.g = in.f();
          this.b = in.readVarInt();
          this.i = in.readVarInt();
          this.h = in.readVarInt();
@@ -68,14 +68,14 @@ public class PacketWorldBorder implements Packet {
 
    public void write(PacketByteBuf out) {
       out.writeEnum(this.a);
-      switch(ko.a[this.a.ordinal()]) {
+      switch(kp.a[this.a.ordinal()]) {
       case 1:
          out.writeDouble(this.e);
          break;
       case 2:
          out.writeDouble(this.f);
          out.writeDouble(this.e);
-         out.writeVarInt(this.g);
+         out.b(this.g);
          break;
       case 3:
          out.writeDouble(this.c);
@@ -92,7 +92,7 @@ public class PacketWorldBorder implements Packet {
          out.writeDouble(this.d);
          out.writeDouble(this.f);
          out.writeDouble(this.e);
-         out.writeVarInt(this.g);
+         out.b(this.g);
          out.writeVarInt(this.b);
          out.writeVarInt(this.i);
          out.writeVarInt(this.h);

@@ -29,7 +29,7 @@ public class PacketStatistics implements Packet {
       this.a = Maps.newHashMap();
 
       for(int var3 = 0; var3 < var2; ++var3) {
-         ti var4 = tq.a(in.readString(32767));
+         tl var4 = tt.a(in.readString(32767));
          int var5 = in.readVarInt();
          if(var4 != null) {
             this.a.put(var4, Integer.valueOf(var5));
@@ -44,7 +44,7 @@ public class PacketStatistics implements Packet {
 
       while(var2.hasNext()) {
          Entry var3 = (Entry)var2.next();
-         out.writeString(((ti)var3.getKey()).e);
+         out.writeString(((tl)var3.getKey()).e);
          out.writeVarInt(((Integer)var3.getValue()).intValue());
       }
 

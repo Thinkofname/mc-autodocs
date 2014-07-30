@@ -7,14 +7,14 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 
 public class PacketMultiBlockChange implements Packet {
 
-   private apt a;
+   private apz a;
    private iz[] b;
 
 
    public PacketMultiBlockChange() {}
 
-   public PacketMultiBlockChange(int arg_0, short[] arg_1, bed arg_2) {
-      this.a = new apt(arg_2.a, arg_2.b);
+   public PacketMultiBlockChange(int arg_0, short[] arg_1, bek arg_2) {
+      this.a = new apz(arg_2.a, arg_2.b);
       this.b = new iz[arg_0];
 
       for(int var4 = 0; var4 < this.b.length; ++var4) {
@@ -24,11 +24,11 @@ public class PacketMultiBlockChange implements Packet {
    }
 
    public void read(PacketByteBuf in) {
-      this.a = new apt(in.readInt(), in.readInt());
+      this.a = new apz(in.readInt(), in.readInt());
       this.b = new iz[in.readVarInt()];
 
       for(int var2 = 0; var2 < this.b.length; ++var2) {
-         this.b[var2] = new iz(this, in.readShort(), (bcy)asv.d.a(in.readVarInt()));
+         this.b[var2] = new iz(this, in.readShort(), (bdf)atc.d.a(in.readVarInt()));
       }
 
    }
@@ -43,7 +43,7 @@ public class PacketMultiBlockChange implements Packet {
       for(int var4 = 0; var4 < var3; ++var4) {
          iz var5 = var2[var4];
          out.writeShort(var5.b());
-         out.writeVarInt(asv.d.b(var5.c()));
+         out.writeVarInt(atc.d.b(var5.c()));
       }
 
    }
@@ -59,7 +59,7 @@ public class PacketMultiBlockChange implements Packet {
    }
 
    // $FF: synthetic method
-   public static apt a(PacketMultiBlockChange arg_0) {
+   public static apz a(PacketMultiBlockChange arg_0) {
       return arg_0.a;
    }
 }

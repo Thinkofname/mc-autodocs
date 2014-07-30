@@ -14,7 +14,7 @@ public class PacketAttachEntity implements Packet {
 
    public PacketAttachEntity() {}
 
-   public PacketAttachEntity(int arg_0, wk arg_1, wk arg_2) {
+   public PacketAttachEntity(int arg_0, wq arg_1, wq arg_2) {
       this.a = arg_0;
       this.b = arg_1.E();
       this.c = arg_2 != null?arg_2.E():-1;

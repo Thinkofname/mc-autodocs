@@ -16,6 +16,7 @@ import net.minecraft.network.play.PacketHeldItemChange;
 import net.minecraft.network.play.PacketPlayer;
 import net.minecraft.network.play.PacketPlayerBlockPlacement;
 import net.minecraft.network.play.PacketPlayerDigging;
+import net.minecraft.network.play.PacketServerbound25;
 import net.minecraft.network.play.PacketServerboundKeepAlive;
 import net.minecraft.network.play.PacketSpectate;
 import net.minecraft.network.play.PacketSteerVehicle;
@@ -69,4 +70,6 @@ public interface PacketHandlerPlayServerbound extends PacketHandler {
    void handle(PacketPlayerBlockPlacement var1);
 
    void handle(PacketSpectate var1);
+
+   void handle(PacketServerbound25 var1);
 }

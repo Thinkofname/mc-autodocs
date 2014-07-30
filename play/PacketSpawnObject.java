@@ -22,17 +22,17 @@ public class PacketSpawnObject implements Packet {
 
    public PacketSpawnObject() {}
 
-   public PacketSpawnObject(wk arg_0, int arg_1) {
+   public PacketSpawnObject(wq arg_0, int arg_1) {
       this(arg_0, arg_1, 0);
    }
 
-   public PacketSpawnObject(wk arg_0, int arg_1, int arg_2) {
+   public PacketSpawnObject(wq arg_0, int arg_1, int arg_2) {
       this.a = arg_0.E();
-      this.b = uk.c(arg_0.s * 32.0D);
-      this.c = uk.c(arg_0.t * 32.0D);
-      this.d = uk.c(arg_0.u * 32.0D);
-      this.h = uk.d(arg_0.z * 256.0F / 360.0F);
-      this.i = uk.d(arg_0.y * 256.0F / 360.0F);
+      this.b = uq.c(arg_0.s * 32.0D);
+      this.c = uq.c(arg_0.t * 32.0D);
+      this.d = uq.c(arg_0.u * 32.0D);
+      this.h = uq.d(arg_0.z * 256.0F / 360.0F);
+      this.i = uq.d(arg_0.y * 256.0F / 360.0F);
       this.j = arg_1;
       this.k = arg_2;
       if(arg_2 > 0) {

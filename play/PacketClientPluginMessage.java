@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import io.netty.buffer.ByteBuf;
 import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -9,15 +10,14 @@ import net.minecraft.network.PacketHandlerPlayServerbound;
 public class PacketClientPluginMessage implements Packet {
 
    private String a;
-   private byte[] b;
+   private PacketByteBuf b;
 
 
    public void read(PacketByteBuf in) {
       this.a = in.readString(20);
-      int var2 = in.readVarInt();
+      int var2 = in.readableBytes();
       if(var2 >= 0 && var2 <= 32767) {
-         this.b = new byte[var2];
-         in.readBytes(this.b);
+         this.b = new PacketByteBuf(in.readBytes(var2));
       } else {
          throw new IOException("Payload may not be larger than 32767 bytes");
       }
@@ -25,8 +25,7 @@ public class PacketClientPluginMessage implements Packet {
 
    public void write(PacketByteBuf out) {
       out.writeString(this.a);
-      out.writeVarInt(this.b.length);
-      out.writeBytes(this.b);
+      out.writeBytes((ByteBuf)this.b);
    }
 
    public void handle(PacketHandlerPlayServerbound handler) {
@@ -37,7 +36,7 @@ public class PacketClientPluginMessage implements Packet {
       return this.a;
    }
 
-   public byte[] b() {
+   public PacketByteBuf b() {
       return this.b;
    }
 
