@@ -5,7 +5,7 @@ import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayServerbound;
 
-public class PacketServerbound25 implements Packet {
+public class PacketResourcePackStatus implements Packet {
 
    private String a;
    private mo b;

@@ -94,7 +94,7 @@ public class PacketByteBuf extends ByteBuf {
       return var1;
    }
 
-   public long f() {
+   public long readVarLong() {
       long var1 = 0L;
       int var3 = 0;
 
@@ -128,7 +128,7 @@ public class PacketByteBuf extends ByteBuf {
       this.writeByte(arg_0);
    }
 
-   public void b(long arg_0) {
+   public void writeVarLong(long arg_0) {
       while((arg_0 & -128L) != 0L) {
          this.writeByte((int)(arg_0 & 127L) | 128);
          arg_0 >>>= 7;

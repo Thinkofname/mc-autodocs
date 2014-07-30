@@ -17,7 +17,6 @@ import net.minecraft.network.play.PacketClientAbilities;
 import net.minecraft.network.play.PacketClientPluginMessage;
 import net.minecraft.network.play.PacketClientSettings;
 import net.minecraft.network.play.PacketClientStatus;
-import net.minecraft.network.play.PacketClientbound72;
 import net.minecraft.network.play.PacketClientboundKeepAlive;
 import net.minecraft.network.play.PacketCloseWindow;
 import net.minecraft.network.play.PacketCollectItem;
@@ -62,12 +61,13 @@ import net.minecraft.network.play.PacketPlayerPosition;
 import net.minecraft.network.play.PacketPlayerPositionAndLook;
 import net.minecraft.network.play.PacketPlayerTeleport;
 import net.minecraft.network.play.PacketRemoveEntityEffect;
+import net.minecraft.network.play.PacketResourcePackSend;
+import net.minecraft.network.play.PacketResourcePackStatus;
 import net.minecraft.network.play.PacketRespawn;
 import net.minecraft.network.play.PacketScoreboardObjective;
 import net.minecraft.network.play.PacketServerDifficulty;
 import net.minecraft.network.play.PacketServerMessage;
 import net.minecraft.network.play.PacketServerPluginMessage;
-import net.minecraft.network.play.PacketServerbound25;
 import net.minecraft.network.play.PacketServerboundKeepAlive;
 import net.minecraft.network.play.PacketSetCompression;
 import net.minecraft.network.play.PacketSetExperience;
@@ -176,7 +176,7 @@ public enum ProtocolPlay {
       this.addPacket(ProtocolDirection.CLIENTBOUND, PacketTitle.class);
       this.addPacket(ProtocolDirection.CLIENTBOUND, PacketSetCompression.class);
       this.addPacket(ProtocolDirection.CLIENTBOUND, PacketPlayerListHeaderFooter.class);
-      this.addPacket(ProtocolDirection.CLIENTBOUND, PacketClientbound72.class);
+      this.addPacket(ProtocolDirection.CLIENTBOUND, PacketResourcePackSend.class);
       this.addPacket(ProtocolDirection.SERVERBOUND, PacketServerboundKeepAlive.class);
       this.addPacket(ProtocolDirection.SERVERBOUND, PacketChatMessage.class);
       this.addPacket(ProtocolDirection.SERVERBOUND, PacketUseEntity.class);
@@ -202,6 +202,6 @@ public enum ProtocolPlay {
       this.addPacket(ProtocolDirection.SERVERBOUND, PacketClientStatus.class);
       this.addPacket(ProtocolDirection.SERVERBOUND, PacketClientPluginMessage.class);
       this.addPacket(ProtocolDirection.SERVERBOUND, PacketSpectate.class);
-      this.addPacket(ProtocolDirection.SERVERBOUND, PacketServerbound25.class);
+      this.addPacket(ProtocolDirection.SERVERBOUND, PacketResourcePackStatus.class);
    }
 }

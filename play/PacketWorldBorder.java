@@ -41,7 +41,7 @@ public class PacketWorldBorder implements Packet {
       case 2:
          this.f = in.readDouble();
          this.e = in.readDouble();
-         this.g = in.f();
+         this.g = in.readVarLong();
          break;
       case 3:
          this.c = in.readDouble();
@@ -58,7 +58,7 @@ public class PacketWorldBorder implements Packet {
          this.d = in.readDouble();
          this.f = in.readDouble();
          this.e = in.readDouble();
-         this.g = in.f();
+         this.g = in.readVarLong();
          this.b = in.readVarInt();
          this.i = in.readVarInt();
          this.h = in.readVarInt();
@@ -75,7 +75,7 @@ public class PacketWorldBorder implements Packet {
       case 2:
          out.writeDouble(this.f);
          out.writeDouble(this.e);
-         out.b(this.g);
+         out.writeVarLong(this.g);
          break;
       case 3:
          out.writeDouble(this.c);
@@ -92,7 +92,7 @@ public class PacketWorldBorder implements Packet {
          out.writeDouble(this.d);
          out.writeDouble(this.f);
          out.writeDouble(this.e);
-         out.b(this.g);
+         out.writeVarLong(this.g);
          out.writeVarInt(this.b);
          out.writeVarInt(this.i);
          out.writeVarInt(this.h);

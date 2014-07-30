@@ -5,15 +5,15 @@ import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayClientbound;
 
-public class PacketClientbound72 implements Packet {
+public class PacketResourcePackSend implements Packet {
 
    private String a;
    private String b;
 
 
-   public PacketClientbound72() {}
+   public PacketResourcePackSend() {}
 
-   public PacketClientbound72(String arg_0, String arg_1) {
+   public PacketResourcePackSend(String arg_0, String arg_1) {
       this.a = arg_0;
       this.b = arg_1;
       if(arg_1.length() > 40) {
