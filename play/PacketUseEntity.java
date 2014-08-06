@@ -8,29 +8,44 @@ import net.minecraft.network.PacketHandlerPlayServerbound;
 public class PacketUseEntity implements Packet {
 
    private int a;
-   private mb b;
+   private mc b;
+   private brk c;
 
 
    public void read(PacketByteBuf in) {
       this.a = in.readVarInt();
-      this.b = (mb)in.readEnum(mb.class);
+      this.b = (mc)in.readEnum(mc.class);
+      if(this.b == mc.c) {
+         this.c = new brk((double)in.readFloat(), (double)in.readFloat(), (double)in.readFloat());
+      }
+
    }
 
    public void write(PacketByteBuf out) {
       out.writeVarInt(this.a);
       out.writeEnum(this.b);
+      if(this.b == mc.c) {
+         out.writeFloat((float)this.c.a);
+         out.writeFloat((float)this.c.b);
+         out.writeFloat((float)this.c.c);
+      }
+
    }
 
    public void handle(PacketHandlerPlayServerbound handler) {
       handler.handle(this);
    }
 
-   public wq a(aqh arg_0) {
+   public ws a(aqm arg_0) {
       return arg_0.a(this.a);
    }
 
-   public mb a() {
+   public mc a() {
       return this.b;
+   }
+
+   public brk b() {
+      return this.c;
    }
 
    // $FF: synthetic method

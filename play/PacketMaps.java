@@ -10,7 +10,7 @@ public class PacketMaps implements Packet {
 
    private int a;
    private byte b;
-   private bpf[] c;
+   private bpr[] c;
    private int d;
    private int e;
    private int f;
@@ -23,7 +23,7 @@ public class PacketMaps implements Packet {
    public PacketMaps(int arg_0, byte arg_1, Collection arg_2, byte[] arg_3, int arg_4, int arg_5, int arg_6, int arg_7) {
       this.a = arg_0;
       this.b = arg_1;
-      this.c = (bpf[])arg_2.toArray(new bpf[arg_2.size()]);
+      this.c = (bpr[])arg_2.toArray(new bpr[arg_2.size()]);
       this.d = arg_4;
       this.e = arg_5;
       this.f = arg_6;
@@ -41,11 +41,11 @@ public class PacketMaps implements Packet {
    public void read(PacketByteBuf in) {
       this.a = in.readVarInt();
       this.b = in.readByte();
-      this.c = new bpf[in.readVarInt()];
+      this.c = new bpr[in.readVarInt()];
 
       for(int var2 = 0; var2 < this.c.length; ++var2) {
          short var3 = (short)in.readByte();
-         this.c[var2] = new bpf((byte)(var3 >> 4 & 15), in.readByte(), in.readByte(), (byte)(var3 & 15));
+         this.c[var2] = new bpr((byte)(var3 >> 4 & 15), in.readByte(), in.readByte(), (byte)(var3 & 15));
       }
 
       this.f = in.readUnsignedByte();
@@ -62,11 +62,11 @@ public class PacketMaps implements Packet {
       out.writeVarInt(this.a);
       out.writeByte(this.b);
       out.writeVarInt(this.c.length);
-      bpf[] var2 = this.c;
+      bpr[] var2 = this.c;
       int var3 = var2.length;
 
       for(int var4 = 0; var4 < var3; ++var4) {
-         bpf var5 = var2[var4];
+         bpr var5 = var2[var4];
          out.writeByte((var5.a() & 15) << 4 | var5.d() & 15);
          out.writeByte(var5.b());
          out.writeByte(var5.c());

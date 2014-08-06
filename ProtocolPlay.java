@@ -17,6 +17,7 @@ import net.minecraft.network.play.PacketClientAbilities;
 import net.minecraft.network.play.PacketClientPluginMessage;
 import net.minecraft.network.play.PacketClientSettings;
 import net.minecraft.network.play.PacketClientStatus;
+import net.minecraft.network.play.PacketClientbound73;
 import net.minecraft.network.play.PacketClientboundKeepAlive;
 import net.minecraft.network.play.PacketCloseWindow;
 import net.minecraft.network.play.PacketCollectItem;
@@ -177,6 +178,7 @@ public enum ProtocolPlay {
       this.addPacket(ProtocolDirection.CLIENTBOUND, PacketSetCompression.class);
       this.addPacket(ProtocolDirection.CLIENTBOUND, PacketPlayerListHeaderFooter.class);
       this.addPacket(ProtocolDirection.CLIENTBOUND, PacketResourcePackSend.class);
+      this.addPacket(ProtocolDirection.CLIENTBOUND, PacketClientbound73.class);
       this.addPacket(ProtocolDirection.SERVERBOUND, PacketServerboundKeepAlive.class);
       this.addPacket(ProtocolDirection.SERVERBOUND, PacketChatMessage.class);
       this.addPacket(ProtocolDirection.SERVERBOUND, PacketUseEntity.class);

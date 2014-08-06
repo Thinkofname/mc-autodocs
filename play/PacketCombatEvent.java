@@ -7,7 +7,7 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 
 public class PacketCombatEvent implements Packet {
 
-   public kd a;
+   public ke a;
    public int b;
    public int c;
    public int d;
@@ -16,10 +16,10 @@ public class PacketCombatEvent implements Packet {
 
    public PacketCombatEvent() {}
 
-   public PacketCombatEvent(wb arg_0, kd arg_1) {
+   public PacketCombatEvent(wd arg_0, ke arg_1) {
       this.a = arg_1;
-      xk var3 = arg_0.c();
-      switch(kc.a[arg_1.ordinal()]) {
+      xj var3 = arg_0.c();
+      switch(kd.a[arg_1.ordinal()]) {
       case 1:
          this.d = arg_0.f();
          this.c = var3 == null?-1:var3.E();
@@ -33,11 +33,11 @@ public class PacketCombatEvent implements Packet {
    }
 
    public void read(PacketByteBuf in) {
-      this.a = (kd)in.readEnum(kd.class);
-      if(this.a == kd.b) {
+      this.a = (ke)in.readEnum(ke.class);
+      if(this.a == ke.b) {
          this.d = in.readVarInt();
          this.c = in.readInt();
-      } else if(this.a == kd.c) {
+      } else if(this.a == ke.c) {
          this.b = in.readVarInt();
          this.c = in.readInt();
          this.e = in.readString(32767);
@@ -47,10 +47,10 @@ public class PacketCombatEvent implements Packet {
 
    public void write(PacketByteBuf out) {
       out.writeEnum(this.a);
-      if(this.a == kd.b) {
+      if(this.a == ke.b) {
          out.writeVarInt(this.d);
          out.writeInt(this.c);
-      } else if(this.a == kd.c) {
+      } else if(this.a == ke.c) {
          out.writeVarInt(this.b);
          out.writeInt(this.c);
          out.writeString(this.e);

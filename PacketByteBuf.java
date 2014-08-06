@@ -165,7 +165,7 @@ public class PacketByteBuf extends ByteBuf {
       if(arg_0 == null) {
          this.writeShort(-1);
       } else {
-         this.writeShort(ale.b(arg_0.b()));
+         this.writeShort(ali.b(arg_0.b()));
          this.writeByte(arg_0.b);
          this.writeShort(arg_0.i());
          fl var2 = null;
@@ -184,7 +184,7 @@ public class PacketByteBuf extends ByteBuf {
       if(var2 >= 0) {
          byte var3 = this.readByte();
          short var4 = this.readShort();
-         var1 = new ItemStack(ale.b(var2), var3, var4);
+         var1 = new ItemStack(ali.b(var2), var3, var4);
          var1.d(this.h());
       }
 

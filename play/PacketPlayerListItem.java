@@ -13,45 +13,45 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 
 public class PacketPlayerListItem implements Packet {
 
-   private kg a;
+   private kh a;
    private final List b = Lists.newArrayList();
 
 
    public PacketPlayerListItem() {}
 
-   public PacketPlayerListItem(kg arg_0, qr ... arg_1) {
+   public PacketPlayerListItem(kh arg_0, qt ... arg_1) {
       this.a = arg_0;
-      qr[] var3 = arg_1;
+      qt[] var3 = arg_1;
       int var4 = arg_1.length;
 
       for(int var5 = 0; var5 < var4; ++var5) {
-         qr var6 = var3[var5];
-         this.b.add(new kh(this, var6.bX(), var6.h, var6.c.b(), var6.D()));
+         qt var6 = var3[var5];
+         this.b.add(new ki(this, var6.bY(), var6.h, var6.c.b(), var6.D()));
       }
 
    }
 
-   public PacketPlayerListItem(kg arg_0, Iterable arg_1) {
+   public PacketPlayerListItem(kh arg_0, Iterable arg_1) {
       this.a = arg_0;
       Iterator var3 = arg_1.iterator();
 
       while(var3.hasNext()) {
-         qr var4 = (qr)var3.next();
-         this.b.add(new kh(this, var4.bX(), var4.h, var4.c.b(), var4.D()));
+         qt var4 = (qt)var3.next();
+         this.b.add(new ki(this, var4.bY(), var4.h, var4.c.b(), var4.D()));
       }
 
    }
 
    public void read(PacketByteBuf in) {
-      this.a = (kg)in.readEnum(kg.class);
+      this.a = (kh)in.readEnum(kh.class);
       int var2 = in.readVarInt();
 
       for(int var3 = 0; var3 < var2; ++var3) {
          GameProfile var4 = null;
          int var5 = 0;
-         aqp var6 = null;
+         aqu var6 = null;
          IChatMessage var7 = null;
-         switch(kf.a[this.a.ordinal()]) {
+         switch(kg.a[this.a.ordinal()]) {
          case 1:
             var4 = new GameProfile(in.readUUID(), in.readString(16));
             int var8 = in.readVarInt();
@@ -66,7 +66,7 @@ public class PacketPlayerListItem implements Packet {
                }
             }
 
-            var6 = aqp.a(in.readVarInt());
+            var6 = aqu.a(in.readVarInt());
             var5 = in.readVarInt();
             if(in.readBoolean()) {
                var7 = in.readChat();
@@ -74,7 +74,7 @@ public class PacketPlayerListItem implements Packet {
             break;
          case 2:
             var4 = new GameProfile(in.readUUID(), (String)null);
-            var6 = aqp.a(in.readVarInt());
+            var6 = aqu.a(in.readVarInt());
             break;
          case 3:
             var4 = new GameProfile(in.readUUID(), (String)null);
@@ -90,7 +90,7 @@ public class PacketPlayerListItem implements Packet {
             var4 = new GameProfile(in.readUUID(), (String)null);
          }
 
-         this.b.add(new kh(this, var4, var5, var6, var7));
+         this.b.add(new ki(this, var4, var5, var6, var7));
       }
 
    }
@@ -101,8 +101,8 @@ public class PacketPlayerListItem implements Packet {
       Iterator var2 = this.b.iterator();
 
       while(var2.hasNext()) {
-         kh var3 = (kh)var2.next();
-         switch(kf.a[this.a.ordinal()]) {
+         ki var3 = (ki)var2.next();
+         switch(kg.a[this.a.ordinal()]) {
          case 1:
             out.writeUUID(var3.a().getId());
             out.writeString(var3.a().getName());

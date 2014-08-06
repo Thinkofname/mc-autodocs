@@ -7,7 +7,7 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 
 public class PacketWorldBorder implements Packet {
 
-   private kq a;
+   private kr a;
    private int b;
    private double c;
    private double d;
@@ -20,7 +20,7 @@ public class PacketWorldBorder implements Packet {
 
    public PacketWorldBorder() {}
 
-   public PacketWorldBorder(bee arg_0, kq arg_1) {
+   public PacketWorldBorder(beq arg_0, kr arg_1) {
       this.a = arg_1;
       this.c = arg_0.f();
       this.d = arg_0.g();
@@ -33,8 +33,8 @@ public class PacketWorldBorder implements Packet {
    }
 
    public void read(PacketByteBuf in) {
-      this.a = (kq)in.readEnum(kq.class);
-      switch(kp.a[this.a.ordinal()]) {
+      this.a = (kr)in.readEnum(kr.class);
+      switch(kq.a[this.a.ordinal()]) {
       case 1:
          this.e = in.readDouble();
          break;
@@ -68,7 +68,7 @@ public class PacketWorldBorder implements Packet {
 
    public void write(PacketByteBuf out) {
       out.writeEnum(this.a);
-      switch(kp.a[this.a.ordinal()]) {
+      switch(kq.a[this.a.ordinal()]) {
       case 1:
          out.writeDouble(this.e);
          break;

@@ -10,6 +10,7 @@ import net.minecraft.network.play.PacketCamera;
 import net.minecraft.network.play.PacketChangeGameState;
 import net.minecraft.network.play.PacketChangeHeldItem;
 import net.minecraft.network.play.PacketChunkData;
+import net.minecraft.network.play.PacketClientbound73;
 import net.minecraft.network.play.PacketClientboundKeepAlive;
 import net.minecraft.network.play.PacketCollectItem;
 import net.minecraft.network.play.PacketCombatEvent;
@@ -213,4 +214,6 @@ public interface PacketHandlerPlayClientbound extends PacketHandler {
    void handle(PacketPlayerListHeaderFooter var1);
 
    void handle(PacketResourcePackSend var1);
+
+   void handle(PacketClientbound73 var1);
 }

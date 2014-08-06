@@ -5,23 +5,27 @@ import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayClientbound;
 
-public class PacketCamera implements Packet {
+public class PacketClientbound73 implements Packet {
 
-   public int a;
+   private int a;
+   private fl b;
 
 
-   public PacketCamera() {}
+   public PacketClientbound73() {}
 
-   public PacketCamera(ws arg_0) {
-      this.a = arg_0.E();
+   public PacketClientbound73(int arg_0, fl arg_1) {
+      this.a = arg_0;
+      this.b = arg_1;
    }
 
    public void read(PacketByteBuf in) {
       this.a = in.readVarInt();
+      this.b = in.h();
    }
 
    public void write(PacketByteBuf out) {
       out.writeVarInt(this.a);
+      out.a(this.b);
    }
 
    public void handle(PacketHandlerPlayClientbound handler) {

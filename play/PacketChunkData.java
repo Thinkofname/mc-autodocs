@@ -9,13 +9,13 @@ public class PacketChunkData implements Packet {
 
    private int a;
    private int b;
-   private jo c;
+   private jp c;
    private boolean d;
 
 
    public PacketChunkData() {}
 
-   public PacketChunkData(bek arg_0, boolean arg_1, int arg_2) {
+   public PacketChunkData(bew arg_0, boolean arg_1, int arg_2) {
       this.a = arg_0.a;
       this.b = arg_0.b;
       this.d = arg_1;
@@ -26,7 +26,7 @@ public class PacketChunkData implements Packet {
       this.a = in.readInt();
       this.b = in.readInt();
       this.d = in.readBoolean();
-      this.c = new jo();
+      this.c = new jp();
       this.c.b = in.readShort();
       this.c.a = in.readByteArray();
    }
@@ -51,9 +51,9 @@ public class PacketChunkData implements Packet {
       return var3 + var4 + var5 + var6;
    }
 
-   public static jo a(bek arg_0, boolean arg_1, boolean arg_2, int arg_3) {
-      beo[] var4 = arg_0.h();
-      jo var5 = new jo();
+   public static jp a(bew arg_0, boolean arg_1, boolean arg_2, int arg_3) {
+      bfa[] var4 = arg_0.h();
+      jp var5 = new jp();
 
       int var6;
       for(var6 = 0; var6 < var4.length; ++var6) {
@@ -80,7 +80,7 @@ public class PacketChunkData implements Packet {
          }
       }
 
-      bei var13;
+      beu var13;
       for(var7 = 0; var7 < var4.length; ++var7) {
          if(var4[var7] != null && (!arg_1 || !var4[var7].a()) && (arg_3 & 1 << var7) != 0) {
             var13 = var4[var7].h();

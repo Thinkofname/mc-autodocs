@@ -10,11 +10,11 @@ public class PacketPlayerDigging implements Packet {
 
    private Position a;
    private ek b;
-   private mj c;
+   private mk c;
 
 
    public void read(PacketByteBuf in) {
-      this.c = (mj)in.readEnum(mj.class);
+      this.c = (mk)in.readEnum(mk.class);
       this.a = in.readPosition();
       this.b = ek.a(in.readUnsignedByte());
    }
@@ -37,7 +37,7 @@ public class PacketPlayerDigging implements Packet {
       return this.b;
    }
 
-   public mj c() {
+   public mk c() {
       return this.c;
    }
 
