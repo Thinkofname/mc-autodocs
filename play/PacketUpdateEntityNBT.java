@@ -5,15 +5,15 @@ import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayClientbound;
 
-public class PacketClientbound73 implements Packet {
+public class PacketUpdateEntityNBT implements Packet {
 
    private int a;
    private fl b;
 
 
-   public PacketClientbound73() {}
+   public PacketUpdateEntityNBT() {}
 
-   public PacketClientbound73(int arg_0, fl arg_1) {
+   public PacketUpdateEntityNBT(int arg_0, fl arg_1) {
       this.a = arg_0;
       this.b = arg_1;
    }

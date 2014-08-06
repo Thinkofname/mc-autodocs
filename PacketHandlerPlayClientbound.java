@@ -10,7 +10,6 @@ import net.minecraft.network.play.PacketCamera;
 import net.minecraft.network.play.PacketChangeGameState;
 import net.minecraft.network.play.PacketChangeHeldItem;
 import net.minecraft.network.play.PacketChunkData;
-import net.minecraft.network.play.PacketClientbound73;
 import net.minecraft.network.play.PacketClientboundKeepAlive;
 import net.minecraft.network.play.PacketCollectItem;
 import net.minecraft.network.play.PacketCombatEvent;
@@ -66,6 +65,7 @@ import net.minecraft.network.play.PacketTeams;
 import net.minecraft.network.play.PacketTimeUpdate;
 import net.minecraft.network.play.PacketTitle;
 import net.minecraft.network.play.PacketUpdateBlockEntity;
+import net.minecraft.network.play.PacketUpdateEntityNBT;
 import net.minecraft.network.play.PacketUpdateHealth;
 import net.minecraft.network.play.PacketUpdateScore;
 import net.minecraft.network.play.PacketUseBed;
@@ -215,5 +215,5 @@ public interface PacketHandlerPlayClientbound extends PacketHandler {
 
    void handle(PacketResourcePackSend var1);
 
-   void handle(PacketClientbound73 var1);
+   void handle(PacketUpdateEntityNBT var1);
 }
