@@ -17,7 +17,7 @@ public class PacketPlayerAbilities implements Packet {
 
    public PacketPlayerAbilities() {}
 
-   public PacketPlayerAbilities(ags arg_0) {
+   public PacketPlayerAbilities(agt arg_0) {
       this.a(arg_0.a);
       this.b(arg_0.b);
       this.c(arg_0.c);

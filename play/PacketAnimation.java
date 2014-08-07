@@ -13,7 +13,7 @@ public class PacketAnimation implements Packet {
 
    public PacketAnimation() {}
 
-   public PacketAnimation(ws arg_0, int arg_1) {
+   public PacketAnimation(wt arg_0, int arg_1) {
       this.a = arg_0.E();
       this.b = arg_1;
    }

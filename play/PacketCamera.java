@@ -12,7 +12,7 @@ public class PacketCamera implements Packet {
 
    public PacketCamera() {}
 
-   public PacketCamera(ws arg_0) {
+   public PacketCamera(wt arg_0) {
       this.a = arg_0.E();
    }
 

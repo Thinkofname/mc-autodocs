@@ -13,7 +13,7 @@ public class PacketEntityStatus implements Packet {
 
    public PacketEntityStatus() {}
 
-   public PacketEntityStatus(ws arg_0, byte arg_1) {
+   public PacketEntityStatus(wt arg_0, byte arg_1) {
       this.a = arg_0.E();
       this.b = arg_1;
    }

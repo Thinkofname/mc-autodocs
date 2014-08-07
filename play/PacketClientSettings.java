@@ -9,7 +9,7 @@ public class PacketClientSettings implements Packet {
 
    private String a;
    private int b;
-   private agy c;
+   private agz c;
    private boolean d;
    private int e;
 
@@ -17,7 +17,7 @@ public class PacketClientSettings implements Packet {
    public void read(PacketByteBuf in) {
       this.a = in.readString(7);
       this.b = in.readByte();
-      this.c = agy.a(in.readByte());
+      this.c = agz.a(in.readByte());
       this.d = in.readBoolean();
       this.e = in.readUnsignedByte();
    }
@@ -38,7 +38,7 @@ public class PacketClientSettings implements Packet {
       return this.a;
    }
 
-   public agy c() {
+   public agz c() {
       return this.c;
    }
 

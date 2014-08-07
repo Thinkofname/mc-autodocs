@@ -9,14 +9,14 @@ import net.minecraft.network.PacketHandlerPlayServerbound;
 public class PacketPlayerDigging implements Packet {
 
    private Position a;
-   private ek b;
-   private mk c;
+   private el b;
+   private ml c;
 
 
    public void read(PacketByteBuf in) {
-      this.c = (mk)in.readEnum(mk.class);
+      this.c = (ml)in.readEnum(ml.class);
       this.a = in.readPosition();
-      this.b = ek.a(in.readUnsignedByte());
+      this.b = el.a(in.readUnsignedByte());
    }
 
    public void write(PacketByteBuf out) {
@@ -33,11 +33,11 @@ public class PacketPlayerDigging implements Packet {
       return this.a;
    }
 
-   public ek b() {
+   public el b() {
       return this.b;
    }
 
-   public mk c() {
+   public ml c() {
       return this.c;
    }
 

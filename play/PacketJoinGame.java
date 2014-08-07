@@ -9,17 +9,17 @@ public class PacketJoinGame implements Packet {
 
    private int a;
    private boolean b;
-   private aqu c;
+   private aqv c;
    private int d;
-   private vq e;
+   private vr e;
    private int f;
-   private aqw g;
+   private aqx g;
    private boolean h;
 
 
    public PacketJoinGame() {}
 
-   public PacketJoinGame(int arg_0, aqu arg_1, boolean arg_2, int arg_3, vq arg_4, int arg_5, aqw arg_6, boolean arg_7) {
+   public PacketJoinGame(int arg_0, aqv arg_1, boolean arg_2, int arg_3, vr arg_4, int arg_5, aqx arg_6, boolean arg_7) {
       this.a = arg_0;
       this.d = arg_3;
       this.e = arg_4;
@@ -35,13 +35,13 @@ public class PacketJoinGame implements Packet {
       short var2 = in.readUnsignedByte();
       this.b = (var2 & 8) == 8;
       int var3 = var2 & -9;
-      this.c = aqu.a(var3);
+      this.c = aqv.a(var3);
       this.d = in.readByte();
-      this.e = vq.a(in.readUnsignedByte());
+      this.e = vr.a(in.readUnsignedByte());
       this.f = in.readUnsignedByte();
-      this.g = aqw.a(in.readString(16));
+      this.g = aqx.a(in.readString(16));
       if(this.g == null) {
-         this.g = aqw.b;
+         this.g = aqx.b;
       }
 
       this.h = in.readBoolean();

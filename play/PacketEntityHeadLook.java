@@ -13,7 +13,7 @@ public class PacketEntityHeadLook implements Packet {
 
    public PacketEntityHeadLook() {}
 
-   public PacketEntityHeadLook(ws arg_0, byte arg_1) {
+   public PacketEntityHeadLook(wt arg_0, byte arg_1) {
       this.a = arg_0.E();
       this.b = arg_1;
    }

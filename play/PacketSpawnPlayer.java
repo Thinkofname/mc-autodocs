@@ -18,22 +18,22 @@ public class PacketSpawnPlayer implements Packet {
    private byte f;
    private byte g;
    private int h;
-   private xr i;
+   private xs i;
    private List j;
 
 
    public PacketSpawnPlayer() {}
 
-   public PacketSpawnPlayer(agv arg_0) {
+   public PacketSpawnPlayer(agw arg_0) {
       this.a = arg_0.E();
-      this.b = arg_0.bY().getId();
-      this.c = us.c(arg_0.s * 32.0D);
-      this.d = us.c(arg_0.t * 32.0D);
-      this.e = us.c(arg_0.u * 32.0D);
+      this.b = arg_0.bZ().getId();
+      this.c = ut.c(arg_0.s * 32.0D);
+      this.d = ut.c(arg_0.t * 32.0D);
+      this.e = ut.c(arg_0.u * 32.0D);
       this.f = (byte)((int)(arg_0.y * 256.0F / 360.0F));
       this.g = (byte)((int)(arg_0.z * 256.0F / 360.0F));
       ItemStack var2 = arg_0.bg.h();
-      this.h = var2 == null?0:ali.b(var2.b());
+      this.h = var2 == null?0:alj.b(var2.b());
       this.i = arg_0.G();
    }
 
@@ -46,7 +46,7 @@ public class PacketSpawnPlayer implements Packet {
       this.f = in.readByte();
       this.g = in.readByte();
       this.h = in.readShort();
-      this.j = xr.b(in);
+      this.j = xs.b(in);
    }
 
    public void write(PacketByteBuf out) {

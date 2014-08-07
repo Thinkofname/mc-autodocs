@@ -10,12 +10,12 @@ public class PacketUpdateBlockEntity implements Packet {
 
    private Position a;
    private int b;
-   private fl c;
+   private fm c;
 
 
    public PacketUpdateBlockEntity() {}
 
-   public PacketUpdateBlockEntity(Position arg_0, int arg_1, fl arg_2) {
+   public PacketUpdateBlockEntity(Position arg_0, int arg_1, fm arg_2) {
       this.a = arg_0;
       this.b = arg_1;
       this.c = arg_2;

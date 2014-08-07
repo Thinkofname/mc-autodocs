@@ -7,7 +7,7 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 
 public class PacketParticle implements Packet {
 
-   private ev a;
+   private ew a;
    private float b;
    private float c;
    private float d;
@@ -22,7 +22,7 @@ public class PacketParticle implements Packet {
 
    public PacketParticle() {}
 
-   public PacketParticle(ev arg_0, boolean arg_1, float arg_2, float arg_3, float arg_4, float arg_5, float arg_6, float arg_7, float arg_8, int arg_9, int ... arg_10) {
+   public PacketParticle(ew arg_0, boolean arg_1, float arg_2, float arg_3, float arg_4, float arg_5, float arg_6, float arg_7, float arg_8, int arg_9, int ... arg_10) {
       this.a = arg_0;
       this.j = arg_1;
       this.b = arg_2;
@@ -37,9 +37,9 @@ public class PacketParticle implements Packet {
    }
 
    public void read(PacketByteBuf in) {
-      this.a = ev.a(in.readInt());
+      this.a = ew.a(in.readInt());
       if(this.a == null) {
-         this.a = ev.J;
+         this.a = ew.J;
       }
 
       this.j = in.readBoolean();

@@ -8,12 +8,12 @@ import net.minecraft.network.PacketHandlerPlayServerbound;
 public class PacketResourcePackStatus implements Packet {
 
    private String a;
-   private mp b;
+   private mq b;
 
 
    public void read(PacketByteBuf in) {
       this.a = in.readString(40);
-      this.b = (mp)in.readEnum(mp.class);
+      this.b = (mq)in.readEnum(mq.class);
    }
 
    public void write(PacketByteBuf out) {

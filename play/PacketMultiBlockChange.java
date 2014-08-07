@@ -7,28 +7,28 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 
 public class PacketMultiBlockChange implements Packet {
 
-   private aqe a;
-   private iz[] b;
+   private aqf a;
+   private ja[] b;
 
 
    public PacketMultiBlockChange() {}
 
-   public PacketMultiBlockChange(int arg_0, short[] arg_1, bew arg_2) {
-      this.a = new aqe(arg_2.a, arg_2.b);
-      this.b = new iz[arg_0];
+   public PacketMultiBlockChange(int arg_0, short[] arg_1, bez arg_2) {
+      this.a = new aqf(arg_2.a, arg_2.b);
+      this.b = new ja[arg_0];
 
       for(int var4 = 0; var4 < this.b.length; ++var4) {
-         this.b[var4] = new iz(this, arg_1[var4], arg_2);
+         this.b[var4] = new ja(this, arg_1[var4], arg_2);
       }
 
    }
 
    public void read(PacketByteBuf in) {
-      this.a = new aqe(in.readInt(), in.readInt());
-      this.b = new iz[in.readVarInt()];
+      this.a = new aqf(in.readInt(), in.readInt());
+      this.b = new ja[in.readVarInt()];
 
       for(int var2 = 0; var2 < this.b.length; ++var2) {
-         this.b[var2] = new iz(this, in.readShort(), (bdr)ath.d.a(in.readVarInt()));
+         this.b[var2] = new ja(this, in.readShort(), (bdu)atk.d.a(in.readVarInt()));
       }
 
    }
@@ -37,13 +37,13 @@ public class PacketMultiBlockChange implements Packet {
       out.writeInt(this.a.a);
       out.writeInt(this.a.b);
       out.writeVarInt(this.b.length);
-      iz[] var2 = this.b;
+      ja[] var2 = this.b;
       int var3 = var2.length;
 
       for(int var4 = 0; var4 < var3; ++var4) {
-         iz var5 = var2[var4];
+         ja var5 = var2[var4];
          out.writeShort(var5.b());
-         out.writeVarInt(ath.d.b(var5.c()));
+         out.writeVarInt(atk.d.b(var5.c()));
       }
 
    }
@@ -59,7 +59,7 @@ public class PacketMultiBlockChange implements Packet {
    }
 
    // $FF: synthetic method
-   public static aqe a(PacketMultiBlockChange arg_0) {
+   public static aqf a(PacketMultiBlockChange arg_0) {
       return arg_0.a;
    }
 }

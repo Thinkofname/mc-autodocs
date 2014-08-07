@@ -7,17 +7,17 @@ import net.minecraft.network.PacketHandlerPlayServerbound;
 
 public class PacketClientStatus implements Packet {
 
-   private lu a;
+   private lv a;
 
 
    public PacketClientStatus() {}
 
-   public PacketClientStatus(lu arg_0) {
+   public PacketClientStatus(lv arg_0) {
       this.a = arg_0;
    }
 
    public void read(PacketByteBuf in) {
-      this.a = (lu)in.readEnum(lu.class);
+      this.a = (lv)in.readEnum(lv.class);
    }
 
    public void write(PacketByteBuf out) {
@@ -28,7 +28,7 @@ public class PacketClientStatus implements Packet {
       handler.handle(this);
    }
 
-   public lu a() {
+   public lv a() {
       return this.a;
    }
 

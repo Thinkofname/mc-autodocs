@@ -33,7 +33,7 @@ public class PacketPlayerTeleport implements Packet {
       this.c = in.readDouble();
       this.d = in.readFloat();
       this.e = in.readFloat();
-      this.f = ih.a(in.readUnsignedByte());
+      this.f = ii.a(in.readUnsignedByte());
    }
 
    public void write(PacketByteBuf out) {
@@ -42,7 +42,7 @@ public class PacketPlayerTeleport implements Packet {
       out.writeDouble(this.c);
       out.writeFloat(this.d);
       out.writeFloat(this.e);
-      out.writeByte(ih.a(this.f));
+      out.writeByte(ii.a(this.f));
    }
 
    public void handle(PacketHandlerPlayClientbound handler) {

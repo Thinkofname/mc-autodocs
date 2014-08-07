@@ -26,7 +26,7 @@ public class PacketSoundEffect implements Packet {
       this.d = (int)(arg_5 * 8.0D);
       this.e = var8;
       this.f = (int)(var9 * 63.0F);
-      var9 = us.a(var9, 0.0F, 255.0F);
+      var9 = ut.a(var9, 0.0F, 255.0F);
    }
 
    public void read(PacketByteBuf in) {

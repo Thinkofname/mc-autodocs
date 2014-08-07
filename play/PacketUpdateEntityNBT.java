@@ -8,12 +8,12 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 public class PacketUpdateEntityNBT implements Packet {
 
    private int a;
-   private fl b;
+   private fm b;
 
 
    public PacketUpdateEntityNBT() {}
 
-   public PacketUpdateEntityNBT(int arg_0, fl arg_1) {
+   public PacketUpdateEntityNBT(int arg_0, fm arg_1) {
       this.a = arg_0;
       this.b = arg_1;
    }

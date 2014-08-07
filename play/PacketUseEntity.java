@@ -8,15 +8,15 @@ import net.minecraft.network.PacketHandlerPlayServerbound;
 public class PacketUseEntity implements Packet {
 
    private int a;
-   private mc b;
-   private brk c;
+   private md b;
+   private brn c;
 
 
    public void read(PacketByteBuf in) {
       this.a = in.readVarInt();
-      this.b = (mc)in.readEnum(mc.class);
-      if(this.b == mc.c) {
-         this.c = new brk((double)in.readFloat(), (double)in.readFloat(), (double)in.readFloat());
+      this.b = (md)in.readEnum(md.class);
+      if(this.b == md.c) {
+         this.c = new brn((double)in.readFloat(), (double)in.readFloat(), (double)in.readFloat());
       }
 
    }
@@ -24,7 +24,7 @@ public class PacketUseEntity implements Packet {
    public void write(PacketByteBuf out) {
       out.writeVarInt(this.a);
       out.writeEnum(this.b);
-      if(this.b == mc.c) {
+      if(this.b == md.c) {
          out.writeFloat((float)this.c.a);
          out.writeFloat((float)this.c.b);
          out.writeFloat((float)this.c.c);
@@ -36,15 +36,15 @@ public class PacketUseEntity implements Packet {
       handler.handle(this);
    }
 
-   public ws a(aqm arg_0) {
+   public wt a(aqn arg_0) {
       return arg_0.a(this.a);
    }
 
-   public mc a() {
+   public md a() {
       return this.b;
    }
 
-   public brk b() {
+   public brn b() {
       return this.c;
    }
 

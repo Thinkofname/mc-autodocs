@@ -63,11 +63,11 @@ public class PacketByteBuf extends ByteBuf {
    }
 
    public IChatMessage readChat() {
-      return hn.a(this.readString(32767));
+      return ho.a(this.readString(32767));
    }
 
    public void writeChat(IChatMessage arg_0) {
-      this.writeString(hn.a(arg_0));
+      this.writeString(ho.a(arg_0));
    }
 
    public Enum readEnum(Class arg_0) {
@@ -137,12 +137,12 @@ public class PacketByteBuf extends ByteBuf {
       this.writeByte((int)arg_0);
    }
 
-   public void a(fl arg_0) {
+   public void a(fm arg_0) {
       if(arg_0 == null) {
          this.writeByte(0);
       } else {
          try {
-            fx.a(arg_0, (DataOutput)(new ByteBufOutputStream(this)));
+            fy.a(arg_0, (DataOutput)(new ByteBufOutputStream(this)));
          } catch (IOException var3) {
             throw new EncoderException(var3);
          }
@@ -150,14 +150,14 @@ public class PacketByteBuf extends ByteBuf {
 
    }
 
-   public fl h() {
+   public fm h() {
       int var1 = this.readerIndex();
       byte var2 = this.readByte();
       if(var2 == 0) {
          return null;
       } else {
          this.readerIndex(var1);
-         return fx.a((DataInput)(new ByteBufInputStream(this)), new fv(2097152L));
+         return fy.a((DataInput)(new ByteBufInputStream(this)), new fw(2097152L));
       }
    }
 
@@ -165,10 +165,10 @@ public class PacketByteBuf extends ByteBuf {
       if(arg_0 == null) {
          this.writeShort(-1);
       } else {
-         this.writeShort(ali.b(arg_0.b()));
+         this.writeShort(alj.b(arg_0.b()));
          this.writeByte(arg_0.b);
          this.writeShort(arg_0.i());
-         fl var2 = null;
+         fm var2 = null;
          if(arg_0.b().m() || arg_0.b().p()) {
             var2 = arg_0.o();
          }
@@ -184,7 +184,7 @@ public class PacketByteBuf extends ByteBuf {
       if(var2 >= 0) {
          byte var3 = this.readByte();
          short var4 = this.readShort();
-         var1 = new ItemStack(ali.b(var2), var3, var4);
+         var1 = new ItemStack(alj.b(var2), var3, var4);
          var1.d(this.h());
       }
 

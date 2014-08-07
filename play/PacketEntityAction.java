@@ -8,13 +8,13 @@ import net.minecraft.network.PacketHandlerPlayServerbound;
 public class PacketEntityAction implements Packet {
 
    private int a;
-   private mm b;
+   private mn b;
    private int c;
 
 
    public void read(PacketByteBuf in) {
       this.a = in.readVarInt();
-      this.b = (mm)in.readEnum(mm.class);
+      this.b = (mn)in.readEnum(mn.class);
       this.c = in.readVarInt();
    }
 
@@ -28,7 +28,7 @@ public class PacketEntityAction implements Packet {
       handler.handle(this);
    }
 
-   public mm b() {
+   public mn b() {
       return this.b;
    }
 

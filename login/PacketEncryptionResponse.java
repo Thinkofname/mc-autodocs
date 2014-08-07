@@ -28,11 +28,11 @@ public class PacketEncryptionResponse implements Packet {
    }
 
    public SecretKey a(PrivateKey arg_0) {
-      return ud.a(arg_0, this.a);
+      return ue.a(arg_0, this.a);
    }
 
    public byte[] b(PrivateKey arg_0) {
-      return arg_0 == null?this.b:ud.b(arg_0, this.b);
+      return arg_0 == null?this.b:ue.b(arg_0, this.b);
    }
 
    // $FF: synthetic method

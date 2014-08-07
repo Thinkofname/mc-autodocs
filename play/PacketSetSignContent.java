@@ -9,14 +9,14 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 
 public class PacketSetSignContent implements Packet {
 
-   private aqm a;
+   private aqn a;
    private Position b;
    private IChatMessage[] c;
 
 
    public PacketSetSignContent() {}
 
-   public PacketSetSignContent(aqm arg_0, Position arg_1, IChatMessage[] arg_2) {
+   public PacketSetSignContent(aqn arg_0, Position arg_1, IChatMessage[] arg_2) {
       this.a = arg_0;
       this.b = arg_1;
       this.c = new IChatMessage[]{arg_2[0], arg_2[1], arg_2[2], arg_2[3]};
