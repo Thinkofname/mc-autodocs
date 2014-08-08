@@ -22,13 +22,13 @@ public class PacketTeams implements Packet {
 
 
    public PacketTeams() {
-      this.e = brz.a.e;
+      this.e = brz.ALWAYS.e;
       this.f = -1;
       this.g = Lists.newArrayList();
    }
 
    public PacketTeams(brs arg_0, int arg_1) {
-      this.e = brz.a.e;
+      this.e = brz.ALWAYS.e;
       this.f = -1;
       this.g = Lists.newArrayList();
       this.a = arg_0.b();
@@ -49,7 +49,7 @@ public class PacketTeams implements Packet {
    }
 
    public PacketTeams(brs arg_0, Collection arg_1, int arg_2) {
-      this.e = brz.a.e;
+      this.e = brz.ALWAYS.e;
       this.f = -1;
       this.g = Lists.newArrayList();
       if(arg_2 != 3 && arg_2 != 4) {

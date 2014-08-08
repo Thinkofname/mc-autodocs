@@ -22,7 +22,7 @@ public class PacketTitle implements Packet {
    }
 
    public PacketTitle(int arg_0, int arg_1, int arg_2) {
-      this(lj.c, (IChatMessage)null, arg_0, arg_1, arg_2);
+      this(lj.TIMES, (IChatMessage)null, arg_0, arg_1, arg_2);
    }
 
    public PacketTitle(lj arg_0, IChatMessage arg_1, int arg_2, int arg_3, int arg_4) {
@@ -35,11 +35,11 @@ public class PacketTitle implements Packet {
 
    public void read(PacketByteBuf in) {
       this.a = (lj)in.readEnum(lj.class);
-      if(this.a == lj.a || this.a == lj.b) {
+      if(this.a == lj.TITLE || this.a == lj.SUBTITLE) {
          this.b = in.readChat();
       }
 
-      if(this.a == lj.c) {
+      if(this.a == lj.TIMES) {
          this.c = in.readInt();
          this.d = in.readInt();
          this.e = in.readInt();
@@ -49,11 +49,11 @@ public class PacketTitle implements Packet {
 
    public void write(PacketByteBuf out) {
       out.writeEnum(this.a);
-      if(this.a == lj.a || this.a == lj.b) {
+      if(this.a == lj.TITLE || this.a == lj.SUBTITLE) {
          out.writeChat(this.b);
       }
 
-      if(this.a == lj.c) {
+      if(this.a == lj.TIMES) {
          out.writeInt(this.c);
          out.writeInt(this.d);
          out.writeInt(this.e);

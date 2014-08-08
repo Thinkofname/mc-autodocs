@@ -34,10 +34,10 @@ public class PacketCombatEvent implements Packet {
 
    public void read(PacketByteBuf in) {
       this.a = (kf)in.readEnum(kf.class);
-      if(this.a == kf.b) {
+      if(this.a == kf.END_COMBAT) {
          this.d = in.readVarInt();
          this.c = in.readInt();
-      } else if(this.a == kf.c) {
+      } else if(this.a == kf.ENTITY_DIED) {
          this.b = in.readVarInt();
          this.c = in.readInt();
          this.e = in.readString(32767);
@@ -47,10 +47,10 @@ public class PacketCombatEvent implements Packet {
 
    public void write(PacketByteBuf out) {
       out.writeEnum(this.a);
-      if(this.a == kf.b) {
+      if(this.a == kf.END_COMBAT) {
          out.writeVarInt(this.d);
          out.writeInt(this.c);
-      } else if(this.a == kf.c) {
+      } else if(this.a == kf.ENTITY_DIED) {
          out.writeVarInt(this.b);
          out.writeInt(this.c);
          out.writeString(this.e);

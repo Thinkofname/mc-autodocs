@@ -15,7 +15,7 @@ public class PacketUseEntity implements Packet {
    public void read(PacketByteBuf in) {
       this.a = in.readVarInt();
       this.b = (md)in.readEnum(md.class);
-      if(this.b == md.c) {
+      if(this.b == md.INTERACT_AT) {
          this.c = new brp((double)in.readFloat(), (double)in.readFloat(), (double)in.readFloat());
       }
 
@@ -24,7 +24,7 @@ public class PacketUseEntity implements Packet {
    public void write(PacketByteBuf out) {
       out.writeVarInt(this.a);
       out.writeEnum(this.b);
-      if(this.b == md.c) {
+      if(this.b == md.INTERACT_AT) {
          out.writeFloat((float)this.c.a);
          out.writeFloat((float)this.c.b);
          out.writeFloat((float)this.c.c);

@@ -39,7 +39,7 @@ public class PacketParticle implements Packet {
    public void read(PacketByteBuf in) {
       this.a = ew.a(in.readInt());
       if(this.a == null) {
-         this.a = ew.J;
+         this.a = ew.BARRIER;
       }
 
       this.j = in.readBoolean();
