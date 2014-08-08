@@ -5,7 +5,7 @@ import com.google.common.collect.Maps;
 import java.util.ArrayList;
 import java.util.Map;
 
-public enum Particles {
+public enum Particle {
 
    EXPLOSION_NORMAL("EXPLOSION_NORMAL", 0, "explode", 0, true),
    EXPLOSION_LARGE("EXPLOSION_LARGE", 1, "largeexplode", 1, true),
@@ -56,17 +56,17 @@ public enum Particles {
    private static final Map U = Maps.newHashMap();
    private static final String[] V;
    // $FF: synthetic field
-   private static final Particles[] W = new Particles[]{EXPLOSION_NORMAL, EXPLOSION_LARGE, EXPLOSION_HUGE, FIREWORKS_SPARK, WATER_BUBBLE, WATER_SPLASH, WATER_WAKE, SUSPENDED, SUSPENDED_DEPTH, CRIT, CRIT_MAGIC, SMOKE_NORMAL, SMOKE_LARGE, SPELL, SPELL_INSTANT, SPELL_MOB, SPELL_MOB_AMBIENT, SPELL_WITCH, DRIP_WATER, DRIP_LAVA, VILLAGER_ANGRY, VILLAGER_HAPPY, TOWN_AURA, NOTE, PORTAL, ENCHANTMENT_TABLE, FLAME, LAVA, FOOTSTEP, CLOUD, REDSTONE, SNOWBALL, SNOW_SHOVEL, SLIME, HEART, BARRIER, ITEM_CRACK, BLOCK_CRACK, BLOCK_DUST, WATER_DROP, ITEM_TAKE, MOB_APPEARANCE};
+   private static final Particle[] W = new Particle[]{EXPLOSION_NORMAL, EXPLOSION_LARGE, EXPLOSION_HUGE, FIREWORKS_SPARK, WATER_BUBBLE, WATER_SPLASH, WATER_WAKE, SUSPENDED, SUSPENDED_DEPTH, CRIT, CRIT_MAGIC, SMOKE_NORMAL, SMOKE_LARGE, SPELL, SPELL_INSTANT, SPELL_MOB, SPELL_MOB_AMBIENT, SPELL_WITCH, DRIP_WATER, DRIP_LAVA, VILLAGER_ANGRY, VILLAGER_HAPPY, TOWN_AURA, NOTE, PORTAL, ENCHANTMENT_TABLE, FLAME, LAVA, FOOTSTEP, CLOUD, REDSTONE, SNOWBALL, SNOW_SHOVEL, SLIME, HEART, BARRIER, ITEM_CRACK, BLOCK_CRACK, BLOCK_DUST, WATER_DROP, ITEM_TAKE, MOB_APPEARANCE};
 
 
-   private Particles(String arg_0, int arg_1, String arg_2, int arg_3, boolean arg_4, int arg_5) {
+   private Particle(String arg_0, int arg_1, String arg_2, int arg_3, boolean arg_4, int arg_5) {
       this.Q = arg_2;
       this.R = arg_3;
       this.S = arg_4;
       this.T = arg_5;
    }
 
-   private Particles(String arg_0, int arg_1, String arg_2, int arg_3, boolean arg_4) {
+   private Particle(String arg_0, int arg_1, String arg_2, int arg_3, boolean arg_4) {
       this(arg_0, arg_1, arg_2, arg_3, arg_4, 0);
    }
 
@@ -94,17 +94,17 @@ public enum Particles {
       return this.T > 0;
    }
 
-   public static Particles a(int arg_0) {
-      return (Particles)U.get(Integer.valueOf(arg_0));
+   public static Particle a(int arg_0) {
+      return (Particle)U.get(Integer.valueOf(arg_0));
    }
 
    static {
       ArrayList var0 = Lists.newArrayList();
-      Particles[] var1 = values();
+      Particle[] var1 = values();
       int var2 = var1.length;
 
       for(int var3 = 0; var3 < var2; ++var3) {
-         Particles var4 = var1[var3];
+         Particle var4 = var1[var3];
          U.put(Integer.valueOf(var4.c()), var4);
          if(!var4.b().endsWith("_")) {
             var0.add(var4.b());

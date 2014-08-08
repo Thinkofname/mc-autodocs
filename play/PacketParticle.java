@@ -4,11 +4,11 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayClientbound;
-import net.minecraft.network.enums.Particles;
+import net.minecraft.network.enums.Particle;
 
 public class PacketParticle implements Packet {
 
-   private Particles a;
+   private Particle a;
    private float b;
    private float c;
    private float d;
@@ -23,7 +23,7 @@ public class PacketParticle implements Packet {
 
    public PacketParticle() {}
 
-   public PacketParticle(Particles arg_0, boolean arg_1, float arg_2, float arg_3, float arg_4, float arg_5, float arg_6, float arg_7, float arg_8, int arg_9, int ... arg_10) {
+   public PacketParticle(Particle arg_0, boolean arg_1, float arg_2, float arg_3, float arg_4, float arg_5, float arg_6, float arg_7, float arg_8, int arg_9, int ... arg_10) {
       this.a = arg_0;
       this.j = arg_1;
       this.b = arg_2;
@@ -38,9 +38,9 @@ public class PacketParticle implements Packet {
    }
 
    public void read(PacketByteBuf in) {
-      this.a = Particles.a(in.readInt());
+      this.a = Particle.a(in.readInt());
       if(this.a == null) {
-         this.a = Particles.BARRIER;
+         this.a = Particle.BARRIER;
       }
 
       this.j = in.readBoolean();
