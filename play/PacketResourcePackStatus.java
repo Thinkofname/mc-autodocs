@@ -4,16 +4,17 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayServerbound;
+import net.minecraft.network.enums.ResourcePackStatus;
 
 public class PacketResourcePackStatus implements Packet {
 
    private String a;
-   private mq b;
+   private ResourcePackStatus b;
 
 
    public void read(PacketByteBuf in) {
       this.a = in.readString(40);
-      this.b = (mq)in.readEnum(mq.class);
+      this.b = (ResourcePackStatus)in.readEnum(ResourcePackStatus.class);
    }
 
    public void write(PacketByteBuf out) {

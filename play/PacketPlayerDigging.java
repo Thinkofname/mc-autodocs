@@ -5,16 +5,17 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayServerbound;
+import net.minecraft.network.enums.DiggingType;
 
 public class PacketPlayerDigging implements Packet {
 
    private Position a;
    private el b;
-   private ml c;
+   private DiggingType c;
 
 
    public void read(PacketByteBuf in) {
-      this.c = (ml)in.readEnum(ml.class);
+      this.c = (DiggingType)in.readEnum(DiggingType.class);
       this.a = in.readPosition();
       this.b = el.a(in.readUnsignedByte());
    }
@@ -37,7 +38,7 @@ public class PacketPlayerDigging implements Packet {
       return this.b;
    }
 
-   public ml c() {
+   public DiggingType c() {
       return this.c;
    }
 

@@ -10,16 +10,17 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayClientbound;
+import net.minecraft.network.enums.ListItemAction;
 
 public class PacketPlayerListItem implements Packet {
 
-   private ki a;
+   private ListItemAction a;
    private final List b = Lists.newArrayList();
 
 
    public PacketPlayerListItem() {}
 
-   public PacketPlayerListItem(ki arg_0, qu ... arg_1) {
+   public PacketPlayerListItem(ListItemAction arg_0, qu ... arg_1) {
       this.a = arg_0;
       qu[] var3 = arg_1;
       int var4 = arg_1.length;
@@ -31,7 +32,7 @@ public class PacketPlayerListItem implements Packet {
 
    }
 
-   public PacketPlayerListItem(ki arg_0, Iterable arg_1) {
+   public PacketPlayerListItem(ListItemAction arg_0, Iterable arg_1) {
       this.a = arg_0;
       Iterator var3 = arg_1.iterator();
 
@@ -43,7 +44,7 @@ public class PacketPlayerListItem implements Packet {
    }
 
    public void read(PacketByteBuf in) {
-      this.a = (ki)in.readEnum(ki.class);
+      this.a = (ListItemAction)in.readEnum(ListItemAction.class);
       int var2 = in.readVarInt();
 
       for(int var3 = 0; var3 < var2; ++var3) {

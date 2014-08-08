@@ -4,20 +4,21 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayServerbound;
+import net.minecraft.network.enums.StatusType;
 
 public class PacketClientStatus implements Packet {
 
-   private lv a;
+   private StatusType a;
 
 
    public PacketClientStatus() {}
 
-   public PacketClientStatus(lv arg_0) {
+   public PacketClientStatus(StatusType arg_0) {
       this.a = arg_0;
    }
 
    public void read(PacketByteBuf in) {
-      this.a = (lv)in.readEnum(lv.class);
+      this.a = (StatusType)in.readEnum(StatusType.class);
    }
 
    public void write(PacketByteBuf out) {
@@ -28,7 +29,7 @@ public class PacketClientStatus implements Packet {
       handler.handle(this);
    }
 
-   public lv a() {
+   public StatusType a() {
       return this.a;
    }
 

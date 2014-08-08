@@ -4,10 +4,11 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayClientbound;
+import net.minecraft.network.enums.WorldBorderAction;
 
 public class PacketWorldBorder implements Packet {
 
-   private ks a;
+   private WorldBorderAction a;
    private int b;
    private double c;
    private double d;
@@ -20,7 +21,7 @@ public class PacketWorldBorder implements Packet {
 
    public PacketWorldBorder() {}
 
-   public PacketWorldBorder(beu arg_0, ks arg_1) {
+   public PacketWorldBorder(beu arg_0, WorldBorderAction arg_1) {
       this.a = arg_1;
       this.c = arg_0.f();
       this.d = arg_0.g();
@@ -33,7 +34,7 @@ public class PacketWorldBorder implements Packet {
    }
 
    public void read(PacketByteBuf in) {
-      this.a = (ks)in.readEnum(ks.class);
+      this.a = (WorldBorderAction)in.readEnum(WorldBorderAction.class);
       switch(kr.a[this.a.ordinal()]) {
       case 1:
          this.e = in.readDouble();

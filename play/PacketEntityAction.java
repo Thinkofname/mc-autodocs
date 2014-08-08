@@ -4,17 +4,18 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayServerbound;
+import net.minecraft.network.enums.EntityAction;
 
 public class PacketEntityAction implements Packet {
 
    private int a;
-   private mn b;
+   private EntityAction b;
    private int c;
 
 
    public void read(PacketByteBuf in) {
       this.a = in.readVarInt();
-      this.b = (mn)in.readEnum(mn.class);
+      this.b = (EntityAction)in.readEnum(EntityAction.class);
       this.c = in.readVarInt();
    }
 
@@ -28,7 +29,7 @@ public class PacketEntityAction implements Packet {
       handler.handle(this);
    }
 
-   public mn b() {
+   public EntityAction b() {
       return this.b;
    }
 
