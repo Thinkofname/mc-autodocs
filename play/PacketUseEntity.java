@@ -9,14 +9,14 @@ public class PacketUseEntity implements Packet {
 
    private int a;
    private md b;
-   private brn c;
+   private brp c;
 
 
    public void read(PacketByteBuf in) {
       this.a = in.readVarInt();
       this.b = (md)in.readEnum(md.class);
       if(this.b == md.c) {
-         this.c = new brn((double)in.readFloat(), (double)in.readFloat(), (double)in.readFloat());
+         this.c = new brp((double)in.readFloat(), (double)in.readFloat(), (double)in.readFloat());
       }
 
    }
@@ -44,7 +44,7 @@ public class PacketUseEntity implements Packet {
       return this.b;
    }
 
-   public brn b() {
+   public brp b() {
       return this.c;
    }
 

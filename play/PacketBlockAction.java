@@ -27,7 +27,7 @@ public class PacketBlockAction implements Packet {
       this.a = in.readPosition();
       this.b = in.readUnsignedByte();
       this.c = in.readUnsignedByte();
-      this.d = atk.d(in.readVarInt() & 4095);
+      this.d = atk.c(in.readVarInt() & 4095);
    }
 
    public void write(PacketByteBuf out) {

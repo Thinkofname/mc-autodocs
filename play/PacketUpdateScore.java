@@ -15,7 +15,7 @@ public class PacketUpdateScore implements Packet {
 
    public PacketUpdateScore() {}
 
-   public PacketUpdateScore(brr arg_0) {
+   public PacketUpdateScore(brt arg_0) {
       this.a = arg_0.e();
       this.b = arg_0.d().b();
       this.c = arg_0.c();
@@ -29,7 +29,7 @@ public class PacketUpdateScore implements Packet {
       this.d = lf.b;
    }
 
-   public PacketUpdateScore(String arg_0, brp arg_1) {
+   public PacketUpdateScore(String arg_0, brr arg_1) {
       this.a = arg_0;
       this.b = arg_1.b();
       this.c = 0;

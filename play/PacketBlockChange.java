@@ -9,7 +9,7 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 public class PacketBlockChange implements Packet {
 
    private Position a;
-   private bdu b;
+   private bdv b;
 
 
    public PacketBlockChange() {}
@@ -21,7 +21,7 @@ public class PacketBlockChange implements Packet {
 
    public void read(PacketByteBuf in) {
       this.a = in.readPosition();
-      this.b = (bdu)atk.d.a(in.readVarInt());
+      this.b = (bdv)atk.d.a(in.readVarInt());
    }
 
    public void write(PacketByteBuf out) {

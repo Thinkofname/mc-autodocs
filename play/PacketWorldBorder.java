@@ -20,7 +20,7 @@ public class PacketWorldBorder implements Packet {
 
    public PacketWorldBorder() {}
 
-   public PacketWorldBorder(bet arg_0, ks arg_1) {
+   public PacketWorldBorder(beu arg_0, ks arg_1) {
       this.a = arg_1;
       this.c = arg_0.f();
       this.d = arg_0.g();

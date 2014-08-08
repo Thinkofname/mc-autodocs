@@ -13,7 +13,7 @@ public class PacketMultiBlockChange implements Packet {
 
    public PacketMultiBlockChange() {}
 
-   public PacketMultiBlockChange(int arg_0, short[] arg_1, bez arg_2) {
+   public PacketMultiBlockChange(int arg_0, short[] arg_1, bfa arg_2) {
       this.a = new aqf(arg_2.a, arg_2.b);
       this.b = new ja[arg_0];
 
@@ -28,7 +28,7 @@ public class PacketMultiBlockChange implements Packet {
       this.b = new ja[in.readVarInt()];
 
       for(int var2 = 0; var2 < this.b.length; ++var2) {
-         this.b[var2] = new ja(this, in.readShort(), (bdu)atk.d.a(in.readVarInt()));
+         this.b[var2] = new ja(this, in.readShort(), (bdv)atk.d.a(in.readVarInt()));
       }
 
    }
