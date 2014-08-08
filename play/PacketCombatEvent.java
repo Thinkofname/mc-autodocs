@@ -4,10 +4,11 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayClientbound;
+import net.minecraft.network.enums.CombatEvent;
 
 public class PacketCombatEvent implements Packet {
 
-   public kf a;
+   public CombatEvent a;
    public int b;
    public int c;
    public int d;
@@ -16,7 +17,7 @@ public class PacketCombatEvent implements Packet {
 
    public PacketCombatEvent() {}
 
-   public PacketCombatEvent(we arg_0, kf arg_1) {
+   public PacketCombatEvent(we arg_0, CombatEvent arg_1) {
       this.a = arg_1;
       xk var3 = arg_0.c();
       switch(ke.a[arg_1.ordinal()]) {
@@ -33,11 +34,11 @@ public class PacketCombatEvent implements Packet {
    }
 
    public void read(PacketByteBuf in) {
-      this.a = (kf)in.readEnum(kf.class);
-      if(this.a == kf.END_COMBAT) {
+      this.a = (CombatEvent)in.readEnum(CombatEvent.class);
+      if(this.a == CombatEvent.END_COMBAT) {
          this.d = in.readVarInt();
          this.c = in.readInt();
-      } else if(this.a == kf.ENTITY_DIED) {
+      } else if(this.a == CombatEvent.ENTITY_DIED) {
          this.b = in.readVarInt();
          this.c = in.readInt();
          this.e = in.readString(32767);
@@ -47,10 +48,10 @@ public class PacketCombatEvent implements Packet {
 
    public void write(PacketByteBuf out) {
       out.writeEnum(this.a);
-      if(this.a == kf.END_COMBAT) {
+      if(this.a == CombatEvent.END_COMBAT) {
          out.writeVarInt(this.d);
          out.writeInt(this.c);
-      } else if(this.a == kf.ENTITY_DIED) {
+      } else if(this.a == CombatEvent.ENTITY_DIED) {
          out.writeVarInt(this.b);
          out.writeInt(this.c);
          out.writeString(this.e);
