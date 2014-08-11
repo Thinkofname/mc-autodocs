@@ -21,6 +21,7 @@ import java.nio.channels.ScatteringByteChannel;
 import java.nio.charset.Charset;
 import java.util.UUID;
 import net.minecraft.chat.IChatMessage;
+import net.minecraft.inventory.Item;
 import net.minecraft.inventory.ItemStack;
 import net.minecraft.math.Position;
 
@@ -165,7 +166,7 @@ public class PacketByteBuf extends ByteBuf {
       if(arg_0 == null) {
          this.writeShort(-1);
       } else {
-         this.writeShort(alj.b(arg_0.b()));
+         this.writeShort(Item.b(arg_0.b()));
          this.writeByte(arg_0.b);
          this.writeShort(arg_0.i());
          fm var2 = null;
@@ -184,7 +185,7 @@ public class PacketByteBuf extends ByteBuf {
       if(var2 >= 0) {
          byte var3 = this.readByte();
          short var4 = this.readShort();
-         var1 = new ItemStack(alj.b(var2), var3, var4);
+         var1 = new ItemStack(Item.b(var2), var3, var4);
          var1.d(this.h());
       }
 

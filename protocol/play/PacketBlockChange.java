@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import net.minecraft.block.Block;
 import net.minecraft.math.Position;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -21,12 +22,12 @@ public class PacketBlockChange implements Packet {
 
    public void read(PacketByteBuf in) {
       this.a = in.readPosition();
-      this.b = (bdv)atk.d.a(in.readVarInt());
+      this.b = (bdv)Block.blockMap.a(in.readVarInt());
    }
 
    public void write(PacketByteBuf out) {
       out.writePosition(this.a);
-      out.writeVarInt(atk.d.b(this.b));
+      out.writeVarInt(Block.blockMap.get(this.b));
    }
 
    public void handle(PacketHandlerPlayClientbound handler) {

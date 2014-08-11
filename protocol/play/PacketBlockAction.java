@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import net.minecraft.block.Block;
 import net.minecraft.math.Position;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -11,12 +12,12 @@ public class PacketBlockAction implements Packet {
    private Position a;
    private int b;
    private int c;
-   private atk d;
+   private Block d;
 
 
    public PacketBlockAction() {}
 
-   public PacketBlockAction(Position arg_0, atk arg_1, int arg_2, int arg_3) {
+   public PacketBlockAction(Position arg_0, Block arg_1, int arg_2, int arg_3) {
       this.a = arg_0;
       this.b = arg_2;
       this.c = arg_3;
@@ -27,14 +28,14 @@ public class PacketBlockAction implements Packet {
       this.a = in.readPosition();
       this.b = in.readUnsignedByte();
       this.c = in.readUnsignedByte();
-      this.d = atk.c(in.readVarInt() & 4095);
+      this.d = Block.c(in.readVarInt() & 4095);
    }
 
    public void write(PacketByteBuf out) {
       out.writePosition(this.a);
       out.writeByte(this.b);
       out.writeByte(this.c);
-      out.writeVarInt(atk.a(this.d) & 4095);
+      out.writeVarInt(Block.a(this.d) & 4095);
    }
 
    public void handle(PacketHandlerPlayClientbound handler) {
@@ -53,7 +54,7 @@ public class PacketBlockAction implements Packet {
       return this.c;
    }
 
-   public atk d() {
+   public Block d() {
       return this.d;
    }
 

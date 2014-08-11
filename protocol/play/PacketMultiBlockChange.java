@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import net.minecraft.block.Block;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -28,7 +29,7 @@ public class PacketMultiBlockChange implements Packet {
       this.b = new ja[in.readVarInt()];
 
       for(int var2 = 0; var2 < this.b.length; ++var2) {
-         this.b[var2] = new ja(this, in.readShort(), (bdv)atk.d.a(in.readVarInt()));
+         this.b[var2] = new ja(this, in.readShort(), (bdv)Block.blockMap.a(in.readVarInt()));
       }
 
    }
@@ -43,7 +44,7 @@ public class PacketMultiBlockChange implements Packet {
       for(int var4 = 0; var4 < var3; ++var4) {
          ja var5 = var2[var4];
          out.writeShort(var5.b());
-         out.writeVarInt(atk.d.b(var5.c()));
+         out.writeVarInt(Block.blockMap.get(var5.c()));
       }
 
    }

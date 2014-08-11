@@ -2,6 +2,7 @@ package net.minecraft.network.play;
 
 import java.util.List;
 import java.util.UUID;
+import net.minecraft.inventory.Item;
 import net.minecraft.inventory.ItemStack;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -33,7 +34,7 @@ public class PacketSpawnPlayer implements Packet {
       this.f = (byte)((int)(arg_0.y * 256.0F / 360.0F));
       this.g = (byte)((int)(arg_0.z * 256.0F / 360.0F));
       ItemStack var2 = arg_0.bg.h();
-      this.h = var2 == null?0:alj.b(var2.b());
+      this.h = var2 == null?0:Item.b(var2.b());
       this.i = arg_0.G();
    }
 
