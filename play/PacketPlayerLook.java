@@ -11,6 +11,13 @@ public class PacketPlayerLook extends PacketPlayer {
       this.h = true;
    }
 
+   public PacketPlayerLook(float arg_0, float arg_1, boolean arg_2) {
+      this.d = arg_0;
+      this.e = arg_1;
+      this.f = arg_2;
+      this.h = true;
+   }
+
    public void read(PacketByteBuf in) {
       this.d = in.readFloat();
       this.e = in.readFloat();

@@ -45,8 +45,32 @@ public class PacketEntityEffect implements Packet {
       out.writeByte(this.e);
    }
 
+   public boolean a() {
+      return this.d == 32767;
+   }
+
    public void handle(PacketHandlerPlayClientbound handler) {
       handler.handle(this);
+   }
+
+   public int b() {
+      return this.a;
+   }
+
+   public byte c() {
+      return this.b;
+   }
+
+   public byte d() {
+      return this.c;
+   }
+
+   public int e() {
+      return this.d;
+   }
+
+   public boolean f() {
+      return this.e != 0;
    }
 
    // $FF: synthetic method

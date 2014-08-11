@@ -37,6 +37,18 @@ public class PacketEncryptionRequest implements Packet {
       handler.handle(this);
    }
 
+   public String a() {
+      return this.a;
+   }
+
+   public PublicKey b() {
+      return this.b;
+   }
+
+   public byte[] c() {
+      return this.c;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

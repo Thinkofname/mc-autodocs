@@ -32,6 +32,10 @@ public class PacketStatusResponse implements Packet {
       handler.handle(this);
    }
 
+   public no a() {
+      return this.b;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

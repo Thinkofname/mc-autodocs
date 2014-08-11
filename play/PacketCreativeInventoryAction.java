@@ -12,6 +12,13 @@ public class PacketCreativeInventoryAction implements Packet {
    private ItemStack b;
 
 
+   public PacketCreativeInventoryAction() {}
+
+   public PacketCreativeInventoryAction(int arg_0, ItemStack arg_1) {
+      this.a = arg_0;
+      this.b = arg_1 != null?arg_1.k():null;
+   }
+
    public void handle(PacketHandlerPlayServerbound handler) {
       handler.handle(this);
    }

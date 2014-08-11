@@ -44,6 +44,22 @@ public class PacketRespawn implements Packet {
       out.writeString(this.d.a());
    }
 
+   public int a() {
+      return this.a;
+   }
+
+   public vr b() {
+      return this.b;
+   }
+
+   public aqv c() {
+      return this.c;
+   }
+
+   public aqx d() {
+      return this.d;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

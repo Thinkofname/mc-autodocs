@@ -37,6 +37,18 @@ public class PacketUpdateBlockEntity implements Packet {
       handler.handle(this);
    }
 
+   public Position a() {
+      return this.a;
+   }
+
+   public int b() {
+      return this.b;
+   }
+
+   public fm c() {
+      return this.c;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

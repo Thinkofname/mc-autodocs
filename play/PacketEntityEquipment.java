@@ -37,6 +37,18 @@ public class PacketEntityEquipment implements Packet {
       handler.handle(this);
    }
 
+   public ItemStack a() {
+      return this.c;
+   }
+
+   public int b() {
+      return this.a;
+   }
+
+   public int c() {
+      return this.b;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

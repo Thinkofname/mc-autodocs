@@ -28,6 +28,10 @@ public class PacketCamera implements Packet {
       handler.handle(this);
    }
 
+   public wt a(aqn arg_0) {
+      return arg_0.a(this.a);
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

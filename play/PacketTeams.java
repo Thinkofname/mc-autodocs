@@ -114,6 +114,42 @@ public class PacketTeams implements Packet {
       handler.handle(this);
    }
 
+   public String a() {
+      return this.a;
+   }
+
+   public String b() {
+      return this.b;
+   }
+
+   public String c() {
+      return this.c;
+   }
+
+   public String d() {
+      return this.d;
+   }
+
+   public Collection e() {
+      return this.g;
+   }
+
+   public int f() {
+      return this.h;
+   }
+
+   public int g() {
+      return this.i;
+   }
+
+   public int h() {
+      return this.f;
+   }
+
+   public String i() {
+      return this.e;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

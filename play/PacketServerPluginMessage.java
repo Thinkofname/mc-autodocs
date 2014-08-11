@@ -42,6 +42,14 @@ public class PacketServerPluginMessage implements Packet {
       handler.handle(this);
    }
 
+   public String a() {
+      return this.a;
+   }
+
+   public PacketByteBuf b() {
+      return this.b;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

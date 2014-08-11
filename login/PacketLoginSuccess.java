@@ -35,6 +35,10 @@ public class PacketLoginSuccess implements Packet {
       handler.handle(this);
    }
 
+   public GameProfile a() {
+      return this.a;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

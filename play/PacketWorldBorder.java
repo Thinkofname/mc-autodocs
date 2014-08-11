@@ -105,6 +105,38 @@ public class PacketWorldBorder implements Packet {
       handler.handle(this);
    }
 
+   public void a(beu arg_0) {
+      switch(kr.a[this.a.ordinal()]) {
+      case 1:
+         arg_0.a(this.e);
+         break;
+      case 2:
+         arg_0.a(this.f, this.e, this.g);
+         break;
+      case 3:
+         arg_0.c(this.c, this.d);
+         break;
+      case 4:
+         arg_0.c(this.i);
+         break;
+      case 5:
+         arg_0.b(this.h);
+         break;
+      case 6:
+         arg_0.c(this.c, this.d);
+         if(this.g > 0L) {
+            arg_0.a(this.f, this.e, this.g);
+         } else {
+            arg_0.a(this.e);
+         }
+
+         arg_0.a(this.b);
+         arg_0.c(this.i);
+         arg_0.b(this.h);
+      }
+
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

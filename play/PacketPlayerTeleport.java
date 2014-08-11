@@ -49,6 +49,30 @@ public class PacketPlayerTeleport implements Packet {
       handler.handle(this);
    }
 
+   public double a() {
+      return this.a;
+   }
+
+   public double b() {
+      return this.b;
+   }
+
+   public double c() {
+      return this.c;
+   }
+
+   public float d() {
+      return this.d;
+   }
+
+   public float e() {
+      return this.e;
+   }
+
+   public Set f() {
+      return this.f;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

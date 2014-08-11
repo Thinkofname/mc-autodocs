@@ -13,6 +13,13 @@ public class PacketUpdateSign implements Packet {
    private IChatMessage[] b;
 
 
+   public PacketUpdateSign() {}
+
+   public PacketUpdateSign(Position arg_0, IChatMessage[] arg_1) {
+      this.a = arg_0;
+      this.b = new IChatMessage[]{arg_1[0], arg_1[1], arg_1[2], arg_1[3]};
+   }
+
    public void read(PacketByteBuf in) {
       this.a = in.readPosition();
       this.b = new IChatMessage[4];

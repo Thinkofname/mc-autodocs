@@ -13,6 +13,15 @@ public class PacketSteerVehicle implements Packet {
    private boolean d;
 
 
+   public PacketSteerVehicle() {}
+
+   public PacketSteerVehicle(float arg_0, float arg_1, boolean arg_2, boolean arg_3) {
+      this.a = arg_0;
+      this.b = arg_1;
+      this.c = arg_2;
+      this.d = arg_3;
+   }
+
    public void read(PacketByteBuf in) {
       this.a = in.readFloat();
       this.b = in.readFloat();

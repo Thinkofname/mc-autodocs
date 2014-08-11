@@ -33,6 +33,14 @@ public class PacketBlockChange implements Packet {
       handler.handle(this);
    }
 
+   public bdv a() {
+      return this.b;
+   }
+
+   public Position b() {
+      return this.a;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

@@ -29,6 +29,10 @@ public class PacketSignEditorOpen implements Packet {
       out.writePosition(this.a);
    }
 
+   public Position a() {
+      return this.a;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

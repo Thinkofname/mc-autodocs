@@ -36,6 +36,18 @@ public class PacketWindowProperty implements Packet {
       out.writeShort(this.c);
    }
 
+   public int a() {
+      return this.a;
+   }
+
+   public int b() {
+      return this.b;
+   }
+
+   public int c() {
+      return this.c;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

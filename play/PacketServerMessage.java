@@ -37,8 +37,16 @@ public class PacketServerMessage implements Packet {
       handler.handle(this);
    }
 
+   public IChatMessage a() {
+      return this.a;
+   }
+
    public boolean b() {
       return this.b == 1 || this.b == 2;
+   }
+
+   public byte c() {
+      return this.b;
    }
 
    // $FF: synthetic method

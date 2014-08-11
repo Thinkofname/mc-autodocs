@@ -39,6 +39,38 @@ public class PacketEntity implements Packet {
       return "Entity_" + super.toString();
    }
 
+   public wt a(aqn arg_0) {
+      return arg_0.a(this.a);
+   }
+
+   public byte a() {
+      return this.b;
+   }
+
+   public byte b() {
+      return this.c;
+   }
+
+   public byte c() {
+      return this.d;
+   }
+
+   public byte d() {
+      return this.e;
+   }
+
+   public byte e() {
+      return this.f;
+   }
+
+   public boolean f() {
+      return this.h;
+   }
+
+   public boolean g() {
+      return this.g;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

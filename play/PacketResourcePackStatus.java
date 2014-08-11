@@ -12,6 +12,17 @@ public class PacketResourcePackStatus implements Packet {
    private ResourcePackStatus b;
 
 
+   public PacketResourcePackStatus() {}
+
+   public PacketResourcePackStatus(String arg_0, ResourcePackStatus arg_1) {
+      if(arg_0.length() > 40) {
+         arg_0 = arg_0.substring(0, 40);
+      }
+
+      this.a = arg_0;
+      this.b = arg_1;
+   }
+
    public void read(PacketByteBuf in) {
       this.a = in.readString(40);
       this.b = (ResourcePackStatus)in.readEnum(ResourcePackStatus.class);

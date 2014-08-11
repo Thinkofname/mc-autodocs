@@ -10,6 +10,12 @@ public class PacketStatusPing implements Packet {
    private long a;
 
 
+   public PacketStatusPing() {}
+
+   public PacketStatusPing(long arg_0) {
+      this.a = arg_0;
+   }
+
    public void read(PacketByteBuf in) {
       this.a = in.readLong();
    }

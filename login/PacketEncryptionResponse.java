@@ -1,6 +1,8 @@
 package net.minecraft.network.login;
 
+import java.security.Key;
 import java.security.PrivateKey;
+import java.security.PublicKey;
 import javax.crypto.SecretKey;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -12,6 +14,13 @@ public class PacketEncryptionResponse implements Packet {
    private byte[] a = new byte[0];
    private byte[] b = new byte[0];
 
+
+   public PacketEncryptionResponse() {}
+
+   public PacketEncryptionResponse(SecretKey arg_0, PublicKey arg_1, byte[] arg_2) {
+      this.a = ue.a((Key)arg_1, arg_0.getEncoded());
+      this.b = ue.a((Key)arg_1, arg_2);
+   }
 
    public void read(PacketByteBuf in) {
       this.a = in.readByteArray();

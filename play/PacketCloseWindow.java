@@ -10,6 +10,12 @@ public class PacketCloseWindow implements Packet {
    private int a;
 
 
+   public PacketCloseWindow() {}
+
+   public PacketCloseWindow(int arg_0) {
+      this.a = arg_0;
+   }
+
    public void handle(PacketHandlerPlayServerbound handler) {
       handler.handle(this);
    }

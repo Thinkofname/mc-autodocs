@@ -10,6 +10,12 @@ public class PacketHeldItemChange implements Packet {
    private int a;
 
 
+   public PacketHeldItemChange() {}
+
+   public PacketHeldItemChange(int arg_0) {
+      this.a = arg_0;
+   }
+
    public void read(PacketByteBuf in) {
       this.a = in.readShort();
    }

@@ -37,6 +37,14 @@ public class PacketDisplayScoreboard implements Packet {
       handler.handle(this);
    }
 
+   public int a() {
+      return this.a;
+   }
+
+   public String b() {
+      return this.b;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

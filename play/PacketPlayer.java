@@ -17,6 +17,12 @@ public class PacketPlayer implements Packet {
    public boolean h;
 
 
+   public PacketPlayer() {}
+
+   public PacketPlayer(boolean arg_0) {
+      this.f = arg_0;
+   }
+
    public void handle(PacketHandlerPlayServerbound handler) {
       handler.handle(this);
    }

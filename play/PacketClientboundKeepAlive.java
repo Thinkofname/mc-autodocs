@@ -28,6 +28,10 @@ public class PacketClientboundKeepAlive implements Packet {
       out.writeVarInt(this.a);
    }
 
+   public int a() {
+      return this.a;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

@@ -29,6 +29,10 @@ public class PacketSpawnPosition implements Packet {
       handler.handle(this);
    }
 
+   public Position a() {
+      return this.a;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

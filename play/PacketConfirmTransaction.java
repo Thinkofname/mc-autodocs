@@ -36,6 +36,18 @@ public class PacketConfirmTransaction implements Packet {
       out.writeBoolean(this.c);
    }
 
+   public int a() {
+      return this.a;
+   }
+
+   public short b() {
+      return this.b;
+   }
+
+   public boolean c() {
+      return this.c;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

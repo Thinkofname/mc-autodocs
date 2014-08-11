@@ -77,6 +77,26 @@ public class PacketMapChunkBulk implements Packet {
       handler.handle(this);
    }
 
+   public int a(int arg_0) {
+      return this.a[arg_0];
+   }
+
+   public int b(int arg_0) {
+      return this.b[arg_0];
+   }
+
+   public int a() {
+      return this.a.length;
+   }
+
+   public byte[] c(int arg_0) {
+      return this.c[arg_0].a;
+   }
+
+   public int d(int arg_0) {
+      return this.c[arg_0].b;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

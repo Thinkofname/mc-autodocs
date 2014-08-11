@@ -43,6 +43,10 @@ public class PacketChunkData implements Packet {
       handler.handle(this);
    }
 
+   public byte[] a() {
+      return this.c.a;
+   }
+
    public static int a(int arg_0, boolean arg_1, boolean arg_2) {
       int var3 = arg_0 * 8192;
       int var4 = arg_0 * 4096 / 2;
@@ -106,6 +110,22 @@ public class PacketChunkData implements Packet {
       }
 
       return var5;
+   }
+
+   public int b() {
+      return this.a;
+   }
+
+   public int c() {
+      return this.b;
+   }
+
+   public int d() {
+      return this.c.b;
+   }
+
+   public boolean e() {
+      return this.d;
    }
 
    // $FF: synthetic method

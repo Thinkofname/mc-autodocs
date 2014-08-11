@@ -16,6 +16,17 @@ public class PacketClickWindow implements Packet {
    private int f;
 
 
+   public PacketClickWindow() {}
+
+   public PacketClickWindow(int arg_0, int arg_1, int arg_2, int arg_3, ItemStack arg_4, short arg_5) {
+      this.a = arg_0;
+      this.b = arg_1;
+      this.c = arg_2;
+      this.e = arg_4 != null?arg_4.k():null;
+      this.d = arg_5;
+      this.f = arg_3;
+   }
+
    public void handle(PacketHandlerPlayServerbound handler) {
       handler.handle(this);
    }

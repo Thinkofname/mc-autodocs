@@ -14,6 +14,15 @@ public class PacketHandshake implements Packet {
    private Protocols d;
 
 
+   public PacketHandshake() {}
+
+   public PacketHandshake(int arg_0, String arg_1, int arg_2, Protocols arg_3) {
+      this.a = arg_0;
+      this.b = arg_1;
+      this.c = arg_2;
+      this.d = arg_3;
+   }
+
    public void read(PacketByteBuf in) {
       this.a = in.readVarInt();
       this.b = in.readString(255);

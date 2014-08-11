@@ -41,6 +41,22 @@ public class PacketEffect implements Packet {
       handler.handle(this);
    }
 
+   public boolean a() {
+      return this.d;
+   }
+
+   public int b() {
+      return this.a;
+   }
+
+   public int c() {
+      return this.c;
+   }
+
+   public Position d() {
+      return this.b;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

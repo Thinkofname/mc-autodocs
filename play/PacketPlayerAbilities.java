@@ -95,8 +95,16 @@ public class PacketPlayerAbilities implements Packet {
       this.d = arg_0;
    }
 
+   public float e() {
+      return this.e;
+   }
+
    public void a(float arg_0) {
       this.e = arg_0;
+   }
+
+   public float f() {
+      return this.f;
    }
 
    public void b(float arg_0) {

@@ -65,6 +65,46 @@ public class PacketSpawnPlayer implements Packet {
       handler.handle(this);
    }
 
+   public List a() {
+      if(this.j == null) {
+         this.j = this.i.c();
+      }
+
+      return this.j;
+   }
+
+   public int b() {
+      return this.a;
+   }
+
+   public UUID c() {
+      return this.b;
+   }
+
+   public int d() {
+      return this.c;
+   }
+
+   public int e() {
+      return this.d;
+   }
+
+   public int f() {
+      return this.e;
+   }
+
+   public byte g() {
+      return this.f;
+   }
+
+   public byte h() {
+      return this.g;
+   }
+
+   public int i() {
+      return this.h;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

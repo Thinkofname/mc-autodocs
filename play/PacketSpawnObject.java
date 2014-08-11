@@ -109,6 +109,50 @@ public class PacketSpawnObject implements Packet {
       handler.handle(this);
    }
 
+   public int a() {
+      return this.a;
+   }
+
+   public int b() {
+      return this.b;
+   }
+
+   public int c() {
+      return this.c;
+   }
+
+   public int d() {
+      return this.d;
+   }
+
+   public int e() {
+      return this.e;
+   }
+
+   public int f() {
+      return this.f;
+   }
+
+   public int g() {
+      return this.g;
+   }
+
+   public int h() {
+      return this.h;
+   }
+
+   public int i() {
+      return this.i;
+   }
+
+   public int j() {
+      return this.j;
+   }
+
+   public int k() {
+      return this.k;
+   }
+
    public void a(int arg_0) {
       this.b = arg_0;
    }
@@ -131,6 +175,10 @@ public class PacketSpawnObject implements Packet {
 
    public void f(int arg_0) {
       this.g = arg_0;
+   }
+
+   public void g(int arg_0) {
+      this.k = arg_0;
    }
 
    // $FF: synthetic method

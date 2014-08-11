@@ -33,6 +33,14 @@ public class PacketChangeGameState implements Packet {
       handler.handle(this);
    }
 
+   public int a() {
+      return this.b;
+   }
+
+   public float b() {
+      return this.c;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

@@ -39,6 +39,14 @@ public class PacketTimeUpdate implements Packet {
       handler.handle(this);
    }
 
+   public long a() {
+      return this.a;
+   }
+
+   public long b() {
+      return this.b;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

@@ -33,6 +33,14 @@ public class PacketUseBed implements Packet {
       handler.handle(this);
    }
 
+   public agw a(aqn arg_0) {
+      return (agw)arg_0.a(this.a);
+   }
+
+   public Position a() {
+      return this.b;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

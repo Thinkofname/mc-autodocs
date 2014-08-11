@@ -59,6 +59,30 @@ public class PacketOpenWindow implements Packet {
 
    }
 
+   public int a() {
+      return this.a;
+   }
+
+   public String b() {
+      return this.b;
+   }
+
+   public IChatMessage c() {
+      return this.c;
+   }
+
+   public int d() {
+      return this.d;
+   }
+
+   public int e() {
+      return this.e;
+   }
+
+   public boolean f() {
+      return this.d > 0;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

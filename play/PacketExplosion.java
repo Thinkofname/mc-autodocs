@@ -90,6 +90,38 @@ public class PacketExplosion implements Packet {
       handler.handle(this);
    }
 
+   public float a() {
+      return this.f;
+   }
+
+   public float b() {
+      return this.g;
+   }
+
+   public float c() {
+      return this.h;
+   }
+
+   public double d() {
+      return this.a;
+   }
+
+   public double e() {
+      return this.b;
+   }
+
+   public double f() {
+      return this.c;
+   }
+
+   public float g() {
+      return this.d;
+   }
+
+   public List h() {
+      return this.e;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

@@ -47,6 +47,30 @@ public class PacketSoundEffect implements Packet {
       out.writeByte(this.f);
    }
 
+   public String a() {
+      return this.a;
+   }
+
+   public double b() {
+      return (double)((float)this.b / 8.0F);
+   }
+
+   public double c() {
+      return (double)((float)this.c / 8.0F);
+   }
+
+   public double d() {
+      return (double)((float)this.d / 8.0F);
+   }
+
+   public float e() {
+      return this.e;
+   }
+
+   public float f() {
+      return (float)this.f / 63.0F;
+   }
+
    public void handle(PacketHandlerPlayClientbound handler) {
       handler.handle(this);
    }

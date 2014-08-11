@@ -54,6 +54,14 @@ public class PacketWindowItems implements Packet {
       handler.handle(this);
    }
 
+   public int a() {
+      return this.a;
+   }
+
+   public ItemStack[] b() {
+      return this.b;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

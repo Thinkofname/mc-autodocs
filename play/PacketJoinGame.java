@@ -66,6 +66,38 @@ public class PacketJoinGame implements Packet {
       handler.handle(this);
    }
 
+   public int a() {
+      return this.a;
+   }
+
+   public boolean b() {
+      return this.b;
+   }
+
+   public aqv c() {
+      return this.c;
+   }
+
+   public int d() {
+      return this.d;
+   }
+
+   public vr e() {
+      return this.e;
+   }
+
+   public int f() {
+      return this.f;
+   }
+
+   public aqx g() {
+      return this.g;
+   }
+
+   public boolean h() {
+      return this.h;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

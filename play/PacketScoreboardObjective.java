@@ -46,6 +46,22 @@ public class PacketScoreboardObjective implements Packet {
       handler.handle(this);
    }
 
+   public String a() {
+      return this.a;
+   }
+
+   public String b() {
+      return this.b;
+   }
+
+   public int c() {
+      return this.d;
+   }
+
+   public bse d() {
+      return this.c;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

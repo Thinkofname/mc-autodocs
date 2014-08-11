@@ -30,6 +30,14 @@ public class PacketServerDifficulty implements Packet {
       out.writeByte(this.a.a());
    }
 
+   public boolean a() {
+      return this.b;
+   }
+
+   public vr b() {
+      return this.a;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

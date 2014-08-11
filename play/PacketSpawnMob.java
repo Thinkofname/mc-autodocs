@@ -27,7 +27,7 @@ public class PacketSpawnMob implements Packet {
 
    public PacketSpawnMob(xk arg_0) {
       this.a = arg_0.E();
-      this.b = (byte)wz.a(arg_0);
+      this.b = (byte)wz.a((wt)arg_0);
       this.c = ut.c(arg_0.s * 32.0D);
       this.d = ut.c(arg_0.t * 32.0D);
       this.e = ut.c(arg_0.u * 32.0D);
@@ -100,6 +100,58 @@ public class PacketSpawnMob implements Packet {
 
    public void handle(PacketHandlerPlayClientbound handler) {
       handler.handle(this);
+   }
+
+   public List a() {
+      if(this.m == null) {
+         this.m = this.l.c();
+      }
+
+      return this.m;
+   }
+
+   public int b() {
+      return this.a;
+   }
+
+   public int c() {
+      return this.b;
+   }
+
+   public int d() {
+      return this.c;
+   }
+
+   public int e() {
+      return this.d;
+   }
+
+   public int f() {
+      return this.e;
+   }
+
+   public int g() {
+      return this.f;
+   }
+
+   public int h() {
+      return this.g;
+   }
+
+   public int i() {
+      return this.h;
+   }
+
+   public byte j() {
+      return this.i;
+   }
+
+   public byte k() {
+      return this.j;
+   }
+
+   public byte l() {
+      return this.k;
    }
 
    // $FF: synthetic method

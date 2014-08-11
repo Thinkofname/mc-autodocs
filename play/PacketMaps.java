@@ -86,6 +86,28 @@ public class PacketMaps implements Packet {
       handler.handle(this);
    }
 
+   public int a() {
+      return this.a;
+   }
+
+   public void a(bpx arg_0) {
+      arg_0.e = this.b;
+      arg_0.h.clear();
+
+      int var2;
+      for(var2 = 0; var2 < this.c.length; ++var2) {
+         bpw var3 = this.c[var2];
+         arg_0.h.put("icon-" + var2, var3);
+      }
+
+      for(var2 = 0; var2 < this.f; ++var2) {
+         for(int var4 = 0; var4 < this.g; ++var4) {
+            arg_0.f[this.d + var2 + (this.e + var4) * 128] = this.h[var2 + var4 * this.f];
+         }
+      }
+
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

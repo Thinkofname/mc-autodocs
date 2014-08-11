@@ -29,6 +29,10 @@ public class PacketDisconnect implements Packet {
       handler.handle(this);
    }
 
+   public IChatMessage a() {
+      return this.a;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

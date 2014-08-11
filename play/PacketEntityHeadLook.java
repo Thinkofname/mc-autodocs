@@ -32,6 +32,14 @@ public class PacketEntityHeadLook implements Packet {
       handler.handle(this);
    }
 
+   public wt a(aqn arg_0) {
+      return arg_0.a(this.a);
+   }
+
+   public byte a() {
+      return this.b;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

@@ -11,6 +11,13 @@ public class PacketEnchantItem implements Packet {
    private int b;
 
 
+   public PacketEnchantItem() {}
+
+   public PacketEnchantItem(int arg_0, int arg_1) {
+      this.a = arg_0;
+      this.b = arg_1;
+   }
+
    public void handle(PacketHandlerPlayServerbound handler) {
       handler.handle(this);
    }

@@ -159,6 +159,14 @@ public class PacketPlayerListItem implements Packet {
       handler.handle(this);
    }
 
+   public List a() {
+      return this.b;
+   }
+
+   public ListItemAction b() {
+      return this.a;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

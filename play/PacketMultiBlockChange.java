@@ -52,6 +52,10 @@ public class PacketMultiBlockChange implements Packet {
       handler.handle(this);
    }
 
+   public ja[] a() {
+      return this.b;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

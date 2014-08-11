@@ -13,6 +13,18 @@ public class PacketUseEntity implements Packet {
    private brp c;
 
 
+   public PacketUseEntity() {}
+
+   public PacketUseEntity(wt arg_0, InteractType arg_1) {
+      this.a = arg_0.E();
+      this.b = arg_1;
+   }
+
+   public PacketUseEntity(wt arg_0, brp arg_1) {
+      this(arg_0, InteractType.INTERACT_AT);
+      this.c = arg_1;
+   }
+
    public void read(PacketByteBuf in) {
       this.a = in.readVarInt();
       this.b = (InteractType)in.readEnum(InteractType.class);

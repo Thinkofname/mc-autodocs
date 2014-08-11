@@ -14,6 +14,14 @@ public class PacketPlayerDigging implements Packet {
    private DiggingType c;
 
 
+   public PacketPlayerDigging() {}
+
+   public PacketPlayerDigging(DiggingType arg_0, Position arg_1, el arg_2) {
+      this.c = arg_0;
+      this.a = arg_1;
+      this.b = arg_2;
+   }
+
    public void read(PacketByteBuf in) {
       this.c = (DiggingType)in.readEnum(DiggingType.class);
       this.a = in.readPosition();

@@ -11,6 +11,14 @@ public class PacketPlayerPosition extends PacketPlayer {
       this.g = true;
    }
 
+   public PacketPlayerPosition(double arg_0, double arg_2, double var5, boolean var7) {
+      this.a = arg_0;
+      this.b = arg_2;
+      this.c = var5;
+      this.f = var7;
+      this.g = true;
+   }
+
    public void read(PacketByteBuf in) {
       this.a = in.readDouble();
       this.b = in.readDouble();

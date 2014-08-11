@@ -41,6 +41,22 @@ public class PacketSpawnPainting implements Packet {
       handler.handle(this);
    }
 
+   public int a() {
+      return this.a;
+   }
+
+   public Position b() {
+      return this.b;
+   }
+
+   public el c() {
+      return this.c;
+   }
+
+   public String d() {
+      return this.d;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

@@ -28,6 +28,10 @@ public class PacketLoginCompression implements Packet {
       handler.handle(this);
    }
 
+   public int a() {
+      return this.a;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

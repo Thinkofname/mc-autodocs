@@ -10,6 +10,12 @@ public class PacketServerboundKeepAlive implements Packet {
    private int a;
 
 
+   public PacketServerboundKeepAlive() {}
+
+   public PacketServerboundKeepAlive(int arg_0) {
+      this.a = arg_0;
+   }
+
    public void handle(PacketHandlerPlayServerbound handler) {
       handler.handle(this);
    }

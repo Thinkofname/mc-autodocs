@@ -12,6 +12,14 @@ public class PacketCheckTransaction implements Packet {
    private boolean c;
 
 
+   public PacketCheckTransaction() {}
+
+   public PacketCheckTransaction(int arg_0, short arg_1, boolean arg_2) {
+      this.a = arg_0;
+      this.b = arg_1;
+      this.c = arg_2;
+   }
+
    public void handle(PacketHandlerPlayServerbound handler) {
       handler.handle(this);
    }

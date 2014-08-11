@@ -41,6 +41,10 @@ public class PacketTabReply implements Packet {
       handler.handle(this);
    }
 
+   public String[] a() {
+      return this.a;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

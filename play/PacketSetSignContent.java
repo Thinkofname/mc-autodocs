@@ -45,6 +45,14 @@ public class PacketSetSignContent implements Packet {
       handler.handle(this);
    }
 
+   public Position a() {
+      return this.b;
+   }
+
+   public IChatMessage[] b() {
+      return this.c;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

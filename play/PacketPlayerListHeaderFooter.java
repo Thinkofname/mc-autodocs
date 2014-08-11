@@ -32,6 +32,14 @@ public class PacketPlayerListHeaderFooter implements Packet {
       handler.handle(this);
    }
 
+   public IChatMessage a() {
+      return this.a;
+   }
+
+   public IChatMessage b() {
+      return this.b;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {

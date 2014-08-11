@@ -13,6 +13,16 @@ public class PacketClientPluginMessage implements Packet {
    private PacketByteBuf b;
 
 
+   public PacketClientPluginMessage() {}
+
+   public PacketClientPluginMessage(String arg_0, PacketByteBuf arg_1) {
+      this.a = arg_0;
+      this.b = arg_1;
+      if(arg_1.writerIndex() > 32767) {
+         throw new IllegalArgumentException("Payload may not be larger than 32767 bytes");
+      }
+   }
+
    public void read(PacketByteBuf in) {
       this.a = in.readString(20);
       int var2 = in.readableBytes();

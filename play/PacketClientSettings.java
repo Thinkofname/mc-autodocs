@@ -14,6 +14,16 @@ public class PacketClientSettings implements Packet {
    private int e;
 
 
+   public PacketClientSettings() {}
+
+   public PacketClientSettings(String arg_0, int arg_1, agz arg_2, boolean arg_3, int arg_4) {
+      this.a = arg_0;
+      this.b = arg_1;
+      this.c = arg_2;
+      this.d = arg_3;
+      this.e = arg_4;
+   }
+
    public void read(PacketByteBuf in) {
       this.a = in.readString(7);
       this.b = in.readByte();

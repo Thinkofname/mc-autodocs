@@ -80,6 +80,50 @@ public class PacketParticle implements Packet {
 
    }
 
+   public Particle a() {
+      return this.a;
+   }
+
+   public boolean b() {
+      return this.j;
+   }
+
+   public double c() {
+      return (double)this.b;
+   }
+
+   public double d() {
+      return (double)this.c;
+   }
+
+   public double e() {
+      return (double)this.d;
+   }
+
+   public float f() {
+      return this.e;
+   }
+
+   public float g() {
+      return this.f;
+   }
+
+   public float h() {
+      return this.g;
+   }
+
+   public float i() {
+      return this.h;
+   }
+
+   public int j() {
+      return this.i;
+   }
+
+   public int[] k() {
+      return this.k;
+   }
+
    public void handle(PacketHandlerPlayClientbound handler) {
       handler.handle(this);
    }

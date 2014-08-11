@@ -50,6 +50,10 @@ public class PacketStatistics implements Packet {
 
    }
 
+   public Map a() {
+      return this.a;
+   }
+
    // $FF: synthetic method
    // $FF: bridge method
    public void handle(PacketHandler handler) {
