@@ -21,7 +21,7 @@ public class PacketWorldBorder implements Packet {
 
    public PacketWorldBorder() {}
 
-   public PacketWorldBorder(beu arg_0, WorldBorderAction arg_1) {
+   public PacketWorldBorder(bev arg_0, WorldBorderAction arg_1) {
       this.a = arg_1;
       this.c = arg_0.f();
       this.d = arg_0.g();
@@ -105,7 +105,7 @@ public class PacketWorldBorder implements Packet {
       handler.handle(this);
    }
 
-   public void a(beu arg_0) {
+   public void a(bev arg_0) {
       switch(kr.a[this.a.ordinal()]) {
       case 1:
          arg_0.a(this.e);

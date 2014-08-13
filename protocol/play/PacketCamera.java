@@ -12,8 +12,8 @@ public class PacketCamera implements Packet {
 
    public PacketCamera() {}
 
-   public PacketCamera(wt arg_0) {
-      this.a = arg_0.E();
+   public PacketCamera(wu arg_0) {
+      this.a = arg_0.F();
    }
 
    public void read(PacketByteBuf in) {
@@ -28,7 +28,7 @@ public class PacketCamera implements Packet {
       handler.handle(this);
    }
 
-   public wt a(aqn arg_0) {
+   public wu a(aqo arg_0) {
       return arg_0.a(this.a);
    }
 

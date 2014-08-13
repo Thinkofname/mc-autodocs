@@ -13,8 +13,8 @@ public class PacketEntityHeadLook implements Packet {
 
    public PacketEntityHeadLook() {}
 
-   public PacketEntityHeadLook(wt arg_0, byte arg_1) {
-      this.a = arg_0.E();
+   public PacketEntityHeadLook(wu arg_0, byte arg_1) {
+      this.a = arg_0.F();
       this.b = arg_1;
    }
 
@@ -32,7 +32,7 @@ public class PacketEntityHeadLook implements Packet {
       handler.handle(this);
    }
 
-   public wt a(aqn arg_0) {
+   public wu a(aqo arg_0) {
       return arg_0.a(this.a);
    }
 

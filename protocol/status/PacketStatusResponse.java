@@ -10,7 +10,7 @@ import net.minecraft.network.PacketHandlerStatusClientbound;
 
 public class PacketStatusResponse implements Packet {
 
-   private static final Gson a = (new GsonBuilder()).registerTypeAdapter(ns.class, new nt()).registerTypeAdapter(np.class, new nq()).registerTypeAdapter(no.class, new nr()).registerTypeHierarchyAdapter(IChatMessage.class, new ho()).registerTypeHierarchyAdapter(hu.class, new hw()).registerTypeAdapterFactory(new ur()).create();
+   private static final Gson a = (new GsonBuilder()).registerTypeAdapter(ns.class, new nt()).registerTypeAdapter(np.class, new nq()).registerTypeAdapter(no.class, new nr()).registerTypeHierarchyAdapter(IChatMessage.class, new ho()).registerTypeHierarchyAdapter(hu.class, new hw()).registerTypeAdapterFactory(new us()).create();
    private no b;
 
 

@@ -15,12 +15,12 @@ public class PacketEntityAction implements Packet {
 
    public PacketEntityAction() {}
 
-   public PacketEntityAction(wt arg_0, EntityAction arg_1) {
+   public PacketEntityAction(wu arg_0, EntityAction arg_1) {
       this(arg_0, arg_1, 0);
    }
 
-   public PacketEntityAction(wt arg_0, EntityAction arg_1, int arg_2) {
-      this.a = arg_0.E();
+   public PacketEntityAction(wu arg_0, EntityAction arg_1, int arg_2) {
+      this.a = arg_0.F();
       this.b = arg_1;
       this.c = arg_2;
    }

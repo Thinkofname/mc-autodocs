@@ -16,16 +16,16 @@ public class PacketSpawnPainting implements Packet {
 
    public PacketSpawnPainting() {}
 
-   public PacketSpawnPainting(adf arg_0) {
-      this.a = arg_0.E();
-      this.b = arg_0.m();
+   public PacketSpawnPainting(adg arg_0) {
+      this.a = arg_0.F();
+      this.b = arg_0.n();
       this.c = arg_0.b;
       this.d = arg_0.c.B;
    }
 
    public void read(PacketByteBuf in) {
       this.a = in.readVarInt();
-      this.d = in.readString(adg.A);
+      this.d = in.readString(adh.A);
       this.b = in.readPosition();
       this.c = el.b(in.readUnsignedByte());
    }

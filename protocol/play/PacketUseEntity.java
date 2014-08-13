@@ -10,17 +10,17 @@ public class PacketUseEntity implements Packet {
 
    private int a;
    private InteractType b;
-   private brp c;
+   private brq c;
 
 
    public PacketUseEntity() {}
 
-   public PacketUseEntity(wt arg_0, InteractType arg_1) {
-      this.a = arg_0.E();
+   public PacketUseEntity(wu arg_0, InteractType arg_1) {
+      this.a = arg_0.F();
       this.b = arg_1;
    }
 
-   public PacketUseEntity(wt arg_0, brp arg_1) {
+   public PacketUseEntity(wu arg_0, brq arg_1) {
       this(arg_0, InteractType.INTERACT_AT);
       this.c = arg_1;
    }
@@ -29,7 +29,7 @@ public class PacketUseEntity implements Packet {
       this.a = in.readVarInt();
       this.b = (InteractType)in.readEnum(InteractType.class);
       if(this.b == InteractType.INTERACT_AT) {
-         this.c = new brp((double)in.readFloat(), (double)in.readFloat(), (double)in.readFloat());
+         this.c = new brq((double)in.readFloat(), (double)in.readFloat(), (double)in.readFloat());
       }
 
    }
@@ -49,7 +49,7 @@ public class PacketUseEntity implements Packet {
       handler.handle(this);
    }
 
-   public wt a(aqn arg_0) {
+   public wu a(aqo arg_0) {
       return arg_0.a(this.a);
    }
 
@@ -57,7 +57,7 @@ public class PacketUseEntity implements Packet {
       return this.b;
    }
 
-   public brp b() {
+   public brq b() {
       return this.c;
    }
 

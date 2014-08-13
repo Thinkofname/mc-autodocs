@@ -9,17 +9,17 @@ public class PacketJoinGame implements Packet {
 
    private int a;
    private boolean b;
-   private aqv c;
+   private aqw c;
    private int d;
-   private vr e;
+   private vs e;
    private int f;
-   private aqx g;
+   private aqy g;
    private boolean h;
 
 
    public PacketJoinGame() {}
 
-   public PacketJoinGame(int arg_0, aqv arg_1, boolean arg_2, int arg_3, vr arg_4, int arg_5, aqx arg_6, boolean arg_7) {
+   public PacketJoinGame(int arg_0, aqw arg_1, boolean arg_2, int arg_3, vs arg_4, int arg_5, aqy arg_6, boolean arg_7) {
       this.a = arg_0;
       this.d = arg_3;
       this.e = arg_4;
@@ -35,13 +35,13 @@ public class PacketJoinGame implements Packet {
       short var2 = in.readUnsignedByte();
       this.b = (var2 & 8) == 8;
       int var3 = var2 & -9;
-      this.c = aqv.a(var3);
+      this.c = aqw.a(var3);
       this.d = in.readByte();
-      this.e = vr.a(in.readUnsignedByte());
+      this.e = vs.a(in.readUnsignedByte());
       this.f = in.readUnsignedByte();
-      this.g = aqx.a(in.readString(16));
+      this.g = aqy.a(in.readString(16));
       if(this.g == null) {
-         this.g = aqx.b;
+         this.g = aqy.b;
       }
 
       this.h = in.readBoolean();
@@ -74,7 +74,7 @@ public class PacketJoinGame implements Packet {
       return this.b;
    }
 
-   public aqv c() {
+   public aqw c() {
       return this.c;
    }
 
@@ -82,7 +82,7 @@ public class PacketJoinGame implements Packet {
       return this.d;
    }
 
-   public vr e() {
+   public vs e() {
       return this.e;
    }
 
@@ -90,7 +90,7 @@ public class PacketJoinGame implements Packet {
       return this.f;
    }
 
-   public aqx g() {
+   public aqy g() {
       return this.g;
    }
 

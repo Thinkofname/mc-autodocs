@@ -10,7 +10,7 @@ public class PacketMaps implements Packet {
 
    private int a;
    private byte b;
-   private bpw[] c;
+   private bpx[] c;
    private int d;
    private int e;
    private int f;
@@ -23,7 +23,7 @@ public class PacketMaps implements Packet {
    public PacketMaps(int arg_0, byte arg_1, Collection arg_2, byte[] arg_3, int arg_4, int arg_5, int arg_6, int arg_7) {
       this.a = arg_0;
       this.b = arg_1;
-      this.c = (bpw[])arg_2.toArray(new bpw[arg_2.size()]);
+      this.c = (bpx[])arg_2.toArray(new bpx[arg_2.size()]);
       this.d = arg_4;
       this.e = arg_5;
       this.f = arg_6;
@@ -41,11 +41,11 @@ public class PacketMaps implements Packet {
    public void read(PacketByteBuf in) {
       this.a = in.readVarInt();
       this.b = in.readByte();
-      this.c = new bpw[in.readVarInt()];
+      this.c = new bpx[in.readVarInt()];
 
       for(int var2 = 0; var2 < this.c.length; ++var2) {
          short var3 = (short)in.readByte();
-         this.c[var2] = new bpw((byte)(var3 >> 4 & 15), in.readByte(), in.readByte(), (byte)(var3 & 15));
+         this.c[var2] = new bpx((byte)(var3 >> 4 & 15), in.readByte(), in.readByte(), (byte)(var3 & 15));
       }
 
       this.f = in.readUnsignedByte();
@@ -62,11 +62,11 @@ public class PacketMaps implements Packet {
       out.writeVarInt(this.a);
       out.writeByte(this.b);
       out.writeVarInt(this.c.length);
-      bpw[] var2 = this.c;
+      bpx[] var2 = this.c;
       int var3 = var2.length;
 
       for(int var4 = 0; var4 < var3; ++var4) {
-         bpw var5 = var2[var4];
+         bpx var5 = var2[var4];
          out.writeByte((var5.a() & 15) << 4 | var5.d() & 15);
          out.writeByte(var5.b());
          out.writeByte(var5.c());
@@ -90,13 +90,13 @@ public class PacketMaps implements Packet {
       return this.a;
    }
 
-   public void a(bpx arg_0) {
+   public void a(bpy arg_0) {
       arg_0.e = this.b;
       arg_0.h.clear();
 
       int var2;
       for(var2 = 0; var2 < this.c.length; ++var2) {
-         bpw var3 = this.c[var2];
+         bpx var3 = this.c[var2];
          arg_0.h.put("icon-" + var2, var3);
       }
 

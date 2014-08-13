@@ -20,14 +20,14 @@ public class PacketPlayerListItem implements Packet {
 
    public PacketPlayerListItem() {}
 
-   public PacketPlayerListItem(ListItemAction arg_0, qu ... arg_1) {
+   public PacketPlayerListItem(ListItemAction arg_0, qv ... arg_1) {
       this.a = arg_0;
-      qu[] var3 = arg_1;
+      qv[] var3 = arg_1;
       int var4 = arg_1.length;
 
       for(int var5 = 0; var5 < var4; ++var5) {
-         qu var6 = var3[var5];
-         this.b.add(new kj(this, var6.bZ(), var6.h, var6.c.b(), var6.D()));
+         qv var6 = var3[var5];
+         this.b.add(new kj(this, var6.ca(), var6.h, var6.c.b(), var6.E()));
       }
 
    }
@@ -37,8 +37,8 @@ public class PacketPlayerListItem implements Packet {
       Iterator var3 = arg_1.iterator();
 
       while(var3.hasNext()) {
-         qu var4 = (qu)var3.next();
-         this.b.add(new kj(this, var4.bZ(), var4.h, var4.c.b(), var4.D()));
+         qv var4 = (qv)var3.next();
+         this.b.add(new kj(this, var4.ca(), var4.h, var4.c.b(), var4.E()));
       }
 
    }
@@ -50,7 +50,7 @@ public class PacketPlayerListItem implements Packet {
       for(int var3 = 0; var3 < var2; ++var3) {
          GameProfile var4 = null;
          int var5 = 0;
-         aqv var6 = null;
+         aqw var6 = null;
          IChatMessage var7 = null;
          switch(kh.a[this.a.ordinal()]) {
          case 1:
@@ -67,7 +67,7 @@ public class PacketPlayerListItem implements Packet {
                }
             }
 
-            var6 = aqv.a(in.readVarInt());
+            var6 = aqw.a(in.readVarInt());
             var5 = in.readVarInt();
             if(in.readBoolean()) {
                var7 = in.readChat();
@@ -75,7 +75,7 @@ public class PacketPlayerListItem implements Packet {
             break;
          case 2:
             var4 = new GameProfile(in.readUUID(), (String)null);
-            var6 = aqv.a(in.readVarInt());
+            var6 = aqw.a(in.readVarInt());
             break;
          case 3:
             var4 = new GameProfile(in.readUUID(), (String)null);

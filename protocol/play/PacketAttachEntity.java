@@ -14,10 +14,10 @@ public class PacketAttachEntity implements Packet {
 
    public PacketAttachEntity() {}
 
-   public PacketAttachEntity(int arg_0, wt arg_1, wt arg_2) {
+   public PacketAttachEntity(int arg_0, wu arg_1, wu arg_2) {
       this.a = arg_0;
-      this.b = arg_1.E();
-      this.c = arg_2 != null?arg_2.E():-1;
+      this.b = arg_1.F();
+      this.c = arg_2 != null?arg_2.F():-1;
    }
 
    public void read(PacketByteBuf in) {

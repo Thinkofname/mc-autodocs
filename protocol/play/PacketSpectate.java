@@ -29,7 +29,7 @@ public class PacketSpectate implements Packet {
       handler.handle(this);
    }
 
-   public wt a(qr arg_0) {
+   public wu a(qs arg_0) {
       return arg_0.a(this.a);
    }
 
