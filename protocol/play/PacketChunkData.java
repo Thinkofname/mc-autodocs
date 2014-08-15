@@ -1,5 +1,8 @@
 package net.minecraft.network.play;
 
+import com.google.common.collect.Lists;
+import java.util.ArrayList;
+import java.util.Iterator;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -48,9 +51,9 @@ public class PacketChunkData implements Packet {
    }
 
    public static int a(int arg_0, boolean arg_1, boolean arg_2) {
-      int var3 = arg_0 * 8192;
-      int var4 = arg_0 * 4096 / 2;
-      int var5 = arg_1?arg_0 * 4096 / 2:0;
+      int var3 = arg_0 * 2 * 16 * 16 * 16;
+      int var4 = arg_0 * 16 * 16 * 16 / 2;
+      int var5 = arg_1?arg_0 * 16 * 16 * 16 / 2:0;
       int var6 = arg_2?256:0;
       return var3 + var4 + var5 + var6;
    }
@@ -58,58 +61,55 @@ public class PacketChunkData implements Packet {
    public static jq a(bfb arg_0, boolean arg_1, boolean arg_2, int arg_3) {
       bfg[] var4 = arg_0.h();
       jq var5 = new jq();
+      ArrayList var6 = Lists.newArrayList();
 
-      int var6;
-      for(var6 = 0; var6 < var4.length; ++var6) {
-         if(var4[var6] != null && (!arg_1 || !var4[var6].a()) && (arg_3 & 1 << var6) != 0) {
-            var5.b |= 1 << var6;
+      int var7;
+      for(var7 = 0; var7 < var4.length; ++var7) {
+         bfg var8 = var4[var7];
+         if(var8 != null && (!arg_1 || !var8.a()) && (arg_3 & 1 << var7) != 0) {
+            var5.b |= 1 << var7;
+            var6.add(var8);
          }
       }
 
       var5.a = new byte[a(Integer.bitCount(var5.b), arg_2, arg_1)];
-      var6 = 0;
+      var7 = 0;
+      Iterator var15 = var6.iterator();
 
-      int var7;
-      for(var7 = 0; var7 < var4.length; ++var7) {
-         if(var4[var7] != null && (!arg_1 || !var4[var7].a()) && (arg_3 & 1 << var7) != 0) {
-            char[] var8 = var4[var7].g();
-            char[] var9 = var8;
-            int var10 = var8.length;
+      bfg var9;
+      while(var15.hasNext()) {
+         var9 = (bfg)var15.next();
+         char[] var10 = var9.g();
+         char[] var11 = var10;
+         int var12 = var10.length;
 
-            for(int var11 = 0; var11 < var10; ++var11) {
-               char var12 = var9[var11];
-               var5.a[var6++] = (byte)(var12 & 255);
-               var5.a[var6++] = (byte)(var12 >> 8 & 255);
-            }
+         for(int var13 = 0; var13 < var12; ++var13) {
+            char var14 = var11[var13];
+            var5.a[var7++] = (byte)(var14 & 255);
+            var5.a[var7++] = (byte)(var14 >> 8 & 255);
          }
       }
 
-      bez var13;
-      for(var7 = 0; var7 < var4.length; ++var7) {
-         if(var4[var7] != null && (!arg_1 || !var4[var7].a()) && (arg_3 & 1 << var7) != 0) {
-            var13 = var4[var7].h();
-            System.arraycopy(var13.b(), 0, var5.a, var6, var13.b().length);
-            var6 += var13.b().length;
-         }
+      for(var15 = var6.iterator(); var15.hasNext(); var7 = a(var9.h().a(), var5.a, var7)) {
+         var9 = (bfg)var15.next();
       }
 
       if(arg_2) {
-         for(var7 = 0; var7 < var4.length; ++var7) {
-            if(var4[var7] != null && (!arg_1 || !var4[var7].a()) && (arg_3 & 1 << var7) != 0) {
-               var13 = var4[var7].i();
-               System.arraycopy(var13.b(), 0, var5.a, var6, var13.b().length);
-               var6 += var13.b().length;
-            }
+         for(var15 = var6.iterator(); var15.hasNext(); var7 = a(var9.i().a(), var5.a, var7)) {
+            var9 = (bfg)var15.next();
          }
       }
 
       if(arg_1) {
-         byte[] var14 = arg_0.k();
-         System.arraycopy(var14, 0, var5.a, var6, var14.length);
-         int var10000 = var6 + var14.length;
+         a(arg_0.k(), var5.a, var7);
       }
 
       return var5;
+   }
+
+   private static int a(byte[] arg_0, byte[] arg_1, int arg_2) {
+      System.arraycopy(arg_0, 0, arg_1, arg_2, arg_0.length);
+      return arg_2 + arg_0.length;
    }
 
    public int b() {
