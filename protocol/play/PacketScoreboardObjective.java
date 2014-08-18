@@ -9,13 +9,13 @@ public class PacketScoreboardObjective implements Packet {
 
    private String a;
    private String b;
-   private bsf c;
+   private bsi c;
    private int d;
 
 
    public PacketScoreboardObjective() {}
 
-   public PacketScoreboardObjective(brs arg_0, int arg_1) {
+   public PacketScoreboardObjective(brv arg_0, int arg_1) {
       this.a = arg_0.b();
       this.b = arg_0.d();
       this.c = arg_0.c().c();
@@ -27,7 +27,7 @@ public class PacketScoreboardObjective implements Packet {
       this.d = in.readByte();
       if(this.d == 0 || this.d == 2) {
          this.b = in.readString(32);
-         this.c = bsf.a(in.readString(16));
+         this.c = bsi.a(in.readString(16));
       }
 
    }
@@ -58,7 +58,7 @@ public class PacketScoreboardObjective implements Packet {
       return this.d;
    }
 
-   public bsf d() {
+   public bsi d() {
       return this.c;
    }
 

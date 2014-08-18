@@ -16,12 +16,12 @@ public class PacketSpawnGlobalEntity implements Packet {
 
    public PacketSpawnGlobalEntity() {}
 
-   public PacketSpawnGlobalEntity(wu arg_0) {
+   public PacketSpawnGlobalEntity(wv arg_0) {
       this.a = arg_0.F();
-      this.b = uu.c(arg_0.s * 32.0D);
-      this.c = uu.c(arg_0.t * 32.0D);
-      this.d = uu.c(arg_0.u * 32.0D);
-      if(arg_0 instanceof adm) {
+      this.b = uv.c(arg_0.s * 32.0D);
+      this.c = uv.c(arg_0.t * 32.0D);
+      this.d = uv.c(arg_0.u * 32.0D);
+      if(arg_0 instanceof adp) {
          this.e = 1;
       }
 

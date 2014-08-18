@@ -64,11 +64,11 @@ public class PacketByteBuf extends ByteBuf {
    }
 
    public IChatMessage readChat() {
-      return ho.a(this.readString(32767));
+      return hp.a(this.readString(32767));
    }
 
    public void writeChat(IChatMessage arg_0) {
-      this.writeString(ho.a(arg_0));
+      this.writeString(hp.a(arg_0));
    }
 
    public Enum readEnum(Class arg_0) {
@@ -138,12 +138,12 @@ public class PacketByteBuf extends ByteBuf {
       this.writeByte((int)arg_0);
    }
 
-   public void a(fm arg_0) {
+   public void a(fn arg_0) {
       if(arg_0 == null) {
          this.writeByte(0);
       } else {
          try {
-            fy.a(arg_0, (DataOutput)(new ByteBufOutputStream(this)));
+            fz.a(arg_0, (DataOutput)(new ByteBufOutputStream(this)));
          } catch (IOException var3) {
             throw new EncoderException(var3);
          }
@@ -151,14 +151,14 @@ public class PacketByteBuf extends ByteBuf {
 
    }
 
-   public fm h() {
+   public fn h() {
       int var1 = this.readerIndex();
       byte var2 = this.readByte();
       if(var2 == 0) {
          return null;
       } else {
          this.readerIndex(var1);
-         return fy.a((DataInput)(new ByteBufInputStream(this)), new fw(2097152L));
+         return fz.a((DataInput)(new ByteBufInputStream(this)), new fx(2097152L));
       }
    }
 
@@ -169,7 +169,7 @@ public class PacketByteBuf extends ByteBuf {
          this.writeShort(Item.b(arg_0.b()));
          this.writeByte(arg_0.b);
          this.writeShort(arg_0.i());
-         fm var2 = null;
+         fn var2 = null;
          if(arg_0.b().m() || arg_0.b().p()) {
             var2 = arg_0.o();
          }

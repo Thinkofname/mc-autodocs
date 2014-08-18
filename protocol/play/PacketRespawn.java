@@ -8,14 +8,14 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 public class PacketRespawn implements Packet {
 
    private int a;
-   private vs b;
-   private aqw c;
-   private aqy d;
+   private vt b;
+   private aqz c;
+   private arb d;
 
 
    public PacketRespawn() {}
 
-   public PacketRespawn(int arg_0, vs arg_1, aqy arg_2, aqw arg_3) {
+   public PacketRespawn(int arg_0, vt arg_1, arb arg_2, aqz arg_3) {
       this.a = arg_0;
       this.b = arg_1;
       this.c = arg_3;
@@ -28,11 +28,11 @@ public class PacketRespawn implements Packet {
 
    public void read(PacketByteBuf in) {
       this.a = in.readInt();
-      this.b = vs.a(in.readUnsignedByte());
-      this.c = aqw.a(in.readUnsignedByte());
-      this.d = aqy.a(in.readString(16));
+      this.b = vt.a(in.readUnsignedByte());
+      this.c = aqz.a(in.readUnsignedByte());
+      this.d = arb.a(in.readString(16));
       if(this.d == null) {
-         this.d = aqy.b;
+         this.d = arb.b;
       }
 
    }
@@ -48,15 +48,15 @@ public class PacketRespawn implements Packet {
       return this.a;
    }
 
-   public vs b() {
+   public vt b() {
       return this.b;
    }
 
-   public aqw c() {
+   public aqz c() {
       return this.c;
    }
 
-   public aqy d() {
+   public arb d() {
       return this.d;
    }
 

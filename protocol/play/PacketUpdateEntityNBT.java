@@ -8,12 +8,12 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 public class PacketUpdateEntityNBT implements Packet {
 
    private int a;
-   private fm b;
+   private fn b;
 
 
    public PacketUpdateEntityNBT() {}
 
-   public PacketUpdateEntityNBT(int arg_0, fm arg_1) {
+   public PacketUpdateEntityNBT(int arg_0, fn arg_1) {
       this.a = arg_0;
       this.b = arg_1;
    }
@@ -32,11 +32,11 @@ public class PacketUpdateEntityNBT implements Packet {
       handler.handle(this);
    }
 
-   public fm a() {
+   public fn a() {
       return this.b;
    }
 
-   public wu a(aqo arg_0) {
+   public wv a(aqr arg_0) {
       return arg_0.a(this.a);
    }
 

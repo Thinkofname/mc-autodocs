@@ -28,7 +28,7 @@ public class PacketTeams implements Packet {
       this.g = Lists.newArrayList();
    }
 
-   public PacketTeams(brt arg_0, int arg_1) {
+   public PacketTeams(brw arg_0, int arg_1) {
       this.e = NameTagVisibility.ALWAYS.e;
       this.f = -1;
       this.g = Lists.newArrayList();
@@ -49,7 +49,7 @@ public class PacketTeams implements Packet {
 
    }
 
-   public PacketTeams(brt arg_0, Collection arg_1, int arg_2) {
+   public PacketTeams(brw arg_0, Collection arg_1, int arg_2) {
       this.e = NameTagVisibility.ALWAYS.e;
       this.f = -1;
       this.g = Lists.newArrayList();

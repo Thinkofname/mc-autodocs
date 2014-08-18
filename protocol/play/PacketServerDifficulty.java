@@ -7,13 +7,13 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 
 public class PacketServerDifficulty implements Packet {
 
-   private vs a;
+   private vt a;
    private boolean b;
 
 
    public PacketServerDifficulty() {}
 
-   public PacketServerDifficulty(vs arg_0, boolean arg_1) {
+   public PacketServerDifficulty(vt arg_0, boolean arg_1) {
       this.a = arg_0;
       this.b = arg_1;
    }
@@ -23,7 +23,7 @@ public class PacketServerDifficulty implements Packet {
    }
 
    public void read(PacketByteBuf in) {
-      this.a = vs.a(in.readUnsignedByte());
+      this.a = vt.a(in.readUnsignedByte());
    }
 
    public void write(PacketByteBuf out) {
@@ -34,7 +34,7 @@ public class PacketServerDifficulty implements Packet {
       return this.b;
    }
 
-   public vs b() {
+   public vt b() {
       return this.a;
    }
 

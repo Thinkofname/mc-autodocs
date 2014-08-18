@@ -39,7 +39,7 @@ public class PacketEntity implements Packet {
       return "Entity_" + super.toString();
    }
 
-   public wu a(aqo arg_0) {
+   public wv a(aqr arg_0) {
       return arg_0.a(this.a);
    }
 
