@@ -22,7 +22,7 @@ public class PacketMapChunkBulk implements Packet {
       this.a = new int[var2];
       this.b = new int[var2];
       this.c = new jr[var2];
-      this.d = !((bfe)arg_0.get(0)).p().t.p();
+      this.d = !((bfe)arg_0.get(0)).p().t.o();
 
       for(int var3 = 0; var3 < var2; ++var3) {
          bfe var4 = (bfe)arg_0.get(var3);

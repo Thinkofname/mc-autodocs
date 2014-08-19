@@ -22,7 +22,7 @@ public class PacketChunkData implements Packet {
       this.a = arg_0.a;
       this.b = arg_0.b;
       this.d = arg_1;
-      this.c = a(arg_0, arg_1, !arg_0.p().t.p(), arg_2);
+      this.c = a(arg_0, arg_1, !arg_0.p().t.o(), arg_2);
    }
 
    public void read(PacketByteBuf in) {
