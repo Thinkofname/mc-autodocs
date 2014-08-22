@@ -16,7 +16,7 @@ public class PacketUpdateScore implements Packet {
 
    public PacketUpdateScore() {}
 
-   public PacketUpdateScore(brx arg_0) {
+   public PacketUpdateScore(bry arg_0) {
       this.a = arg_0.e();
       this.b = arg_0.d().b();
       this.c = arg_0.c();
@@ -30,7 +30,7 @@ public class PacketUpdateScore implements Packet {
       this.d = ScoreUpdateType.REMOVE;
    }
 
-   public PacketUpdateScore(String arg_0, brv arg_1) {
+   public PacketUpdateScore(String arg_0, brw arg_1) {
       this.a = arg_0;
       this.b = arg_1.b();
       this.c = 0;

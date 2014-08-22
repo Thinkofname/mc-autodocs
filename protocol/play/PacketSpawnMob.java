@@ -19,7 +19,7 @@ public class PacketSpawnMob implements Packet {
    private byte i;
    private byte j;
    private byte k;
-   private xu l;
+   private xv l;
    private List m;
 
 
@@ -80,7 +80,7 @@ public class PacketSpawnMob implements Packet {
       this.f = in.readShort();
       this.g = in.readShort();
       this.h = in.readShort();
-      this.m = xu.b(in);
+      this.m = xv.b(in);
    }
 
    public void write(PacketByteBuf out) {

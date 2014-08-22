@@ -21,7 +21,7 @@ public class PacketSpawnGlobalEntity implements Packet {
       this.b = uv.c(arg_0.s * 32.0D);
       this.c = uv.c(arg_0.t * 32.0D);
       this.d = uv.c(arg_0.u * 32.0D);
-      if(arg_0 instanceof adp) {
+      if(arg_0 instanceof adq) {
          this.e = 1;
       }
 
