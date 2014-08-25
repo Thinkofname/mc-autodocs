@@ -10,13 +10,13 @@ import net.minecraft.network.enums.DiggingType;
 public class PacketPlayerDigging implements Packet {
 
    private Position a;
-   private el b;
+   private ej b;
    private DiggingType c;
 
 
    public PacketPlayerDigging() {}
 
-   public PacketPlayerDigging(DiggingType arg_0, Position arg_1, el arg_2) {
+   public PacketPlayerDigging(DiggingType arg_0, Position arg_1, ej arg_2) {
       this.c = arg_0;
       this.a = arg_1;
       this.b = arg_2;
@@ -25,7 +25,7 @@ public class PacketPlayerDigging implements Packet {
    public void read(PacketByteBuf in) {
       this.c = (DiggingType)in.readEnum(DiggingType.class);
       this.a = in.readPosition();
-      this.b = el.a(in.readUnsignedByte());
+      this.b = ej.a(in.readUnsignedByte());
    }
 
    public void write(PacketByteBuf out) {
@@ -42,7 +42,7 @@ public class PacketPlayerDigging implements Packet {
       return this.a;
    }
 
-   public el b() {
+   public ej b() {
       return this.b;
    }
 

@@ -10,7 +10,7 @@ public class PacketSpawnPainting implements Packet {
 
    private int a;
    private Position b;
-   private el c;
+   private ej c;
    private String d;
 
 
@@ -27,7 +27,7 @@ public class PacketSpawnPainting implements Packet {
       this.a = in.readVarInt();
       this.d = in.readString(adl.A);
       this.b = in.readPosition();
-      this.c = el.b(in.readUnsignedByte());
+      this.c = ej.b(in.readUnsignedByte());
    }
 
    public void write(PacketByteBuf out) {
@@ -49,7 +49,7 @@ public class PacketSpawnPainting implements Packet {
       return this.b;
    }
 
-   public el c() {
+   public ej c() {
       return this.c;
    }
 
