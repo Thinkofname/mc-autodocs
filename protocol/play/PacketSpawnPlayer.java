@@ -25,7 +25,7 @@ public class PacketSpawnPlayer implements Packet {
 
    public PacketSpawnPlayer() {}
 
-   public PacketSpawnPlayer(ahb arg_0) {
+   public PacketSpawnPlayer(ahd arg_0) {
       this.a = arg_0.F();
       this.b = arg_0.cc().getId();
       this.c = uv.c(arg_0.s * 32.0D);

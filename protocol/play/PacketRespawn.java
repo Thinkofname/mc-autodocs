@@ -9,13 +9,13 @@ public class PacketRespawn implements Packet {
 
    private int a;
    private vt b;
-   private ara c;
-   private arc d;
+   private arc c;
+   private are d;
 
 
    public PacketRespawn() {}
 
-   public PacketRespawn(int arg_0, vt arg_1, arc arg_2, ara arg_3) {
+   public PacketRespawn(int arg_0, vt arg_1, are arg_2, arc arg_3) {
       this.a = arg_0;
       this.b = arg_1;
       this.c = arg_3;
@@ -29,10 +29,10 @@ public class PacketRespawn implements Packet {
    public void read(PacketByteBuf in) {
       this.a = in.readInt();
       this.b = vt.a(in.readUnsignedByte());
-      this.c = ara.a(in.readUnsignedByte());
-      this.d = arc.a(in.readString(16));
+      this.c = arc.a(in.readUnsignedByte());
+      this.d = are.a(in.readString(16));
       if(this.d == null) {
-         this.d = arc.b;
+         this.d = are.b;
       }
 
    }
@@ -52,11 +52,11 @@ public class PacketRespawn implements Packet {
       return this.b;
    }
 
-   public ara c() {
+   public arc c() {
       return this.c;
    }
 
-   public arc d() {
+   public are d() {
       return this.d;
    }
 

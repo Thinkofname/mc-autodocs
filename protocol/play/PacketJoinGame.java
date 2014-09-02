@@ -9,17 +9,17 @@ public class PacketJoinGame implements Packet {
 
    private int a;
    private boolean b;
-   private ara c;
+   private arc c;
    private int d;
    private vt e;
    private int f;
-   private arc g;
+   private are g;
    private boolean h;
 
 
    public PacketJoinGame() {}
 
-   public PacketJoinGame(int arg_0, ara arg_1, boolean arg_2, int arg_3, vt arg_4, int arg_5, arc arg_6, boolean arg_7) {
+   public PacketJoinGame(int arg_0, arc arg_1, boolean arg_2, int arg_3, vt arg_4, int arg_5, are arg_6, boolean arg_7) {
       this.a = arg_0;
       this.d = arg_3;
       this.e = arg_4;
@@ -35,13 +35,13 @@ public class PacketJoinGame implements Packet {
       short var2 = in.readUnsignedByte();
       this.b = (var2 & 8) == 8;
       int var3 = var2 & -9;
-      this.c = ara.a(var3);
+      this.c = arc.a(var3);
       this.d = in.readByte();
       this.e = vt.a(in.readUnsignedByte());
       this.f = in.readUnsignedByte();
-      this.g = arc.a(in.readString(16));
+      this.g = are.a(in.readString(16));
       if(this.g == null) {
-         this.g = arc.b;
+         this.g = are.b;
       }
 
       this.h = in.readBoolean();
@@ -74,7 +74,7 @@ public class PacketJoinGame implements Packet {
       return this.b;
    }
 
-   public ara c() {
+   public arc c() {
       return this.c;
    }
 
@@ -90,7 +90,7 @@ public class PacketJoinGame implements Packet {
       return this.f;
    }
 
-   public arc g() {
+   public are g() {
       return this.g;
    }
 

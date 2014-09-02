@@ -32,7 +32,7 @@ public class PacketEntityStatus implements Packet {
       handler.handle(this);
    }
 
-   public wv a(aqs arg_0) {
+   public wv a(aqu arg_0) {
       return arg_0.a(this.a);
    }
 

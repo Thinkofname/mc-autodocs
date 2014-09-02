@@ -8,14 +8,14 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 
 public class PacketMultiBlockChange implements Packet {
 
-   private aqk a;
+   private aqm a;
    private jb[] b;
 
 
    public PacketMultiBlockChange() {}
 
-   public PacketMultiBlockChange(int arg_0, short[] arg_1, bff arg_2) {
-      this.a = new aqk(arg_2.a, arg_2.b);
+   public PacketMultiBlockChange(int arg_0, short[] arg_1, bfh arg_2) {
+      this.a = new aqm(arg_2.a, arg_2.b);
       this.b = new jb[arg_0];
 
       for(int var4 = 0; var4 < this.b.length; ++var4) {
@@ -25,11 +25,11 @@ public class PacketMultiBlockChange implements Packet {
    }
 
    public void read(PacketByteBuf in) {
-      this.a = new aqk(in.readInt(), in.readInt());
+      this.a = new aqm(in.readInt(), in.readInt());
       this.b = new jb[in.readVarInt()];
 
       for(int var2 = 0; var2 < this.b.length; ++var2) {
-         this.b[var2] = new jb(this, in.readShort(), (bea)Block.blockMap.a(in.readVarInt()));
+         this.b[var2] = new jb(this, in.readShort(), (bec)Block.blockMap.a(in.readVarInt()));
       }
 
    }
@@ -64,7 +64,7 @@ public class PacketMultiBlockChange implements Packet {
    }
 
    // $FF: synthetic method
-   public static aqk a(PacketMultiBlockChange arg_0) {
+   public static aqm a(PacketMultiBlockChange arg_0) {
       return arg_0.a;
    }
 }
