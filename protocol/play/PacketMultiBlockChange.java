@@ -8,28 +8,28 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 
 public class PacketMultiBlockChange implements Packet {
 
-   private aqm a;
-   private jb[] b;
+   private aqj a;
+   private jc[] b;
 
 
    public PacketMultiBlockChange() {}
 
-   public PacketMultiBlockChange(int arg_0, short[] arg_1, bfh arg_2) {
-      this.a = new aqm(arg_2.a, arg_2.b);
-      this.b = new jb[arg_0];
+   public PacketMultiBlockChange(int arg_0, short[] arg_1, bff arg_2) {
+      this.a = new aqj(arg_2.a, arg_2.b);
+      this.b = new jc[arg_0];
 
       for(int var4 = 0; var4 < this.b.length; ++var4) {
-         this.b[var4] = new jb(this, arg_1[var4], arg_2);
+         this.b[var4] = new jc(this, arg_1[var4], arg_2);
       }
 
    }
 
    public void read(PacketByteBuf in) {
-      this.a = new aqm(in.readInt(), in.readInt());
-      this.b = new jb[in.readVarInt()];
+      this.a = new aqj(in.readInt(), in.readInt());
+      this.b = new jc[in.readVarInt()];
 
       for(int var2 = 0; var2 < this.b.length; ++var2) {
-         this.b[var2] = new jb(this, in.readShort(), (bec)Block.blockMap.a(in.readVarInt()));
+         this.b[var2] = new jc(this, in.readShort(), (bea)Block.blockMap.a(in.readVarInt()));
       }
 
    }
@@ -38,11 +38,11 @@ public class PacketMultiBlockChange implements Packet {
       out.writeInt(this.a.a);
       out.writeInt(this.a.b);
       out.writeVarInt(this.b.length);
-      jb[] var2 = this.b;
+      jc[] var2 = this.b;
       int var3 = var2.length;
 
       for(int var4 = 0; var4 < var3; ++var4) {
-         jb var5 = var2[var4];
+         jc var5 = var2[var4];
          out.writeShort(var5.b());
          out.writeVarInt(Block.blockMap.get(var5.c()));
       }
@@ -53,7 +53,7 @@ public class PacketMultiBlockChange implements Packet {
       handler.handle(this);
    }
 
-   public jb[] a() {
+   public jc[] a() {
       return this.b;
    }
 
@@ -64,7 +64,7 @@ public class PacketMultiBlockChange implements Packet {
    }
 
    // $FF: synthetic method
-   public static aqm a(PacketMultiBlockChange arg_0) {
+   public static aqj a(PacketMultiBlockChange arg_0) {
       return arg_0.a;
    }
 }

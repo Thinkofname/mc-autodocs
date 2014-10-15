@@ -16,7 +16,7 @@ public class PacketEntityEffect implements Packet {
 
    public PacketEntityEffect() {}
 
-   public PacketEntityEffect(int arg_0, wq arg_1) {
+   public PacketEntityEffect(int arg_0, ws arg_1) {
       this.a = arg_0;
       this.b = (byte)(arg_1.a() & 255);
       this.c = (byte)(arg_1.c() & 255);

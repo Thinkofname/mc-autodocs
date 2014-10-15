@@ -18,8 +18,8 @@ public class PacketEncryptionResponse implements Packet {
    public PacketEncryptionResponse() {}
 
    public PacketEncryptionResponse(SecretKey arg_0, PublicKey arg_1, byte[] arg_2) {
-      this.a = ug.a((Key)arg_1, arg_0.getEncoded());
-      this.b = ug.a((Key)arg_1, arg_2);
+      this.a = ui.a((Key)arg_1, arg_0.getEncoded());
+      this.b = ui.a((Key)arg_1, arg_2);
    }
 
    public void read(PacketByteBuf in) {
@@ -37,11 +37,11 @@ public class PacketEncryptionResponse implements Packet {
    }
 
    public SecretKey a(PrivateKey arg_0) {
-      return ug.a(arg_0, this.a);
+      return ui.a(arg_0, this.a);
    }
 
    public byte[] b(PrivateKey arg_0) {
-      return arg_0 == null?this.b:ug.b(arg_0, this.b);
+      return arg_0 == null?this.b:ui.b(arg_0, this.b);
    }
 
    // $FF: synthetic method

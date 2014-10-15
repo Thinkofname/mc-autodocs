@@ -36,7 +36,7 @@ public class PacketUpdateEntityNBT implements Packet {
       return this.b;
    }
 
-   public wv a(aqu arg_0) {
+   public wx a(aqr arg_0) {
       return arg_0.a(this.a);
    }
 

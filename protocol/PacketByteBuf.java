@@ -64,11 +64,11 @@ public class PacketByteBuf extends ByteBuf {
    }
 
    public IChatMessage readChat() {
-      return hp.a(this.readString(32767));
+      return hq.a(this.readString(32767));
    }
 
    public void writeChat(IChatMessage arg_0) {
-      this.writeString(hp.a(arg_0));
+      this.writeString(hq.a(arg_0));
    }
 
    public Enum readEnum(Class arg_0) {

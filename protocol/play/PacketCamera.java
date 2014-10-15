@@ -12,7 +12,7 @@ public class PacketCamera implements Packet {
 
    public PacketCamera() {}
 
-   public PacketCamera(wv arg_0) {
+   public PacketCamera(wx arg_0) {
       this.a = arg_0.F();
    }
 
@@ -28,7 +28,7 @@ public class PacketCamera implements Packet {
       handler.handle(this);
    }
 
-   public wv a(aqu arg_0) {
+   public wx a(aqr arg_0) {
       return arg_0.a(this.a);
    }
 

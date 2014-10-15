@@ -24,8 +24,8 @@ public class PacketEntityProperties implements Packet {
       Iterator var3 = arg_1.iterator();
 
       while(var3.hasNext()) {
-         xz var4 = (xz)var3.next();
-         this.b.add(new lq(this, var4.a().a(), var4.b(), var4.c()));
+         yc var4 = (yc)var3.next();
+         this.b.add(new lr(this, var4.a().a(), var4.b(), var4.c()));
       }
 
    }
@@ -42,10 +42,10 @@ public class PacketEntityProperties implements Packet {
 
          for(int var9 = 0; var9 < var8; ++var9) {
             UUID var10 = in.readUUID();
-            var7.add(new ya(var10, "Unknown synced attribute modifier", in.readDouble(), in.readByte()));
+            var7.add(new yd(var10, "Unknown synced attribute modifier", in.readDouble(), in.readByte()));
          }
 
-         this.b.add(new lq(this, var4, var5, var7));
+         this.b.add(new lr(this, var4, var5, var7));
       }
 
    }
@@ -56,14 +56,14 @@ public class PacketEntityProperties implements Packet {
       Iterator var2 = this.b.iterator();
 
       while(var2.hasNext()) {
-         lq var3 = (lq)var2.next();
+         lr var3 = (lr)var2.next();
          out.writeString(var3.a());
          out.writeDouble(var3.b());
          out.writeVarInt(var3.c().size());
          Iterator var4 = var3.c().iterator();
 
          while(var4.hasNext()) {
-            ya var5 = (ya)var4.next();
+            yd var5 = (yd)var4.next();
             out.writeUUID(var5.a());
             out.writeDouble(var5.d());
             out.writeByte(var5.c());

@@ -13,7 +13,7 @@ public class PacketRemoveEntityEffect implements Packet {
 
    public PacketRemoveEntityEffect() {}
 
-   public PacketRemoveEntityEffect(int arg_0, wq arg_1) {
+   public PacketRemoveEntityEffect(int arg_0, ws arg_1) {
       this.a = arg_0;
       this.b = arg_1.a();
    }

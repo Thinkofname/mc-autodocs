@@ -17,10 +17,10 @@ public class PacketCombatEvent implements Packet {
 
    public PacketCombatEvent() {}
 
-   public PacketCombatEvent(wg arg_0, CombatEvent arg_1) {
+   public PacketCombatEvent(wi arg_0, CombatEvent arg_1) {
       this.a = arg_1;
-      xm var3 = arg_0.c();
-      switch(kf.a[arg_1.ordinal()]) {
+      xo var3 = arg_0.c();
+      switch(kg.a[arg_1.ordinal()]) {
       case 1:
          this.d = arg_0.f();
          this.c = var3 == null?-1:var3.F();

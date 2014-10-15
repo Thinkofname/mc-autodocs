@@ -23,7 +23,7 @@ public class PacketEncryptionRequest implements Packet {
 
    public void read(PacketByteBuf in) {
       this.a = in.readString(20);
-      this.b = ug.a(in.readByteArray());
+      this.b = ui.a(in.readByteArray());
       this.c = in.readByteArray();
    }
 

@@ -14,7 +14,7 @@ public class PacketEntityMetadata implements Packet {
 
    public PacketEntityMetadata() {}
 
-   public PacketEntityMetadata(int arg_0, xv arg_1, boolean arg_2) {
+   public PacketEntityMetadata(int arg_0, xy arg_1, boolean arg_2) {
       this.a = arg_0;
       if(arg_2) {
          this.b = arg_1.c();
@@ -26,12 +26,12 @@ public class PacketEntityMetadata implements Packet {
 
    public void read(PacketByteBuf in) {
       this.a = in.readVarInt();
-      this.b = xv.b(in);
+      this.b = xy.b(in);
    }
 
    public void write(PacketByteBuf out) {
       out.writeVarInt(this.a);
-      xv.a(this.b, out);
+      xy.a(this.b, out);
    }
 
    public void handle(PacketHandlerPlayClientbound handler) {

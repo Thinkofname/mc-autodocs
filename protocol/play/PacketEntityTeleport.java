@@ -18,11 +18,11 @@ public class PacketEntityTeleport implements Packet {
 
    public PacketEntityTeleport() {}
 
-   public PacketEntityTeleport(wv arg_0) {
+   public PacketEntityTeleport(wx arg_0) {
       this.a = arg_0.F();
-      this.b = uv.c(arg_0.s * 32.0D);
-      this.c = uv.c(arg_0.t * 32.0D);
-      this.d = uv.c(arg_0.u * 32.0D);
+      this.b = ux.c(arg_0.s * 32.0D);
+      this.c = ux.c(arg_0.t * 32.0D);
+      this.d = ux.c(arg_0.u * 32.0D);
       this.e = (byte)((int)(arg_0.y * 256.0F / 360.0F));
       this.f = (byte)((int)(arg_0.z * 256.0F / 360.0F));
       this.g = arg_0.C;

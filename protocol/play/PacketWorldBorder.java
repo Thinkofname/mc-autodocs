@@ -21,7 +21,7 @@ public class PacketWorldBorder implements Packet {
 
    public PacketWorldBorder() {}
 
-   public PacketWorldBorder(bfb arg_0, WorldBorderAction arg_1) {
+   public PacketWorldBorder(bez arg_0, WorldBorderAction arg_1) {
       this.a = arg_1;
       this.c = arg_0.f();
       this.d = arg_0.g();
@@ -35,7 +35,7 @@ public class PacketWorldBorder implements Packet {
 
    public void read(PacketByteBuf in) {
       this.a = (WorldBorderAction)in.readEnum(WorldBorderAction.class);
-      switch(ks.a[this.a.ordinal()]) {
+      switch(kt.a[this.a.ordinal()]) {
       case 1:
          this.e = in.readDouble();
          break;
@@ -69,7 +69,7 @@ public class PacketWorldBorder implements Packet {
 
    public void write(PacketByteBuf out) {
       out.writeEnum(this.a);
-      switch(ks.a[this.a.ordinal()]) {
+      switch(kt.a[this.a.ordinal()]) {
       case 1:
          out.writeDouble(this.e);
          break;
@@ -105,8 +105,8 @@ public class PacketWorldBorder implements Packet {
       handler.handle(this);
    }
 
-   public void a(bfb arg_0) {
-      switch(ks.a[this.a.ordinal()]) {
+   public void a(bez arg_0) {
+      switch(kt.a[this.a.ordinal()]) {
       case 1:
          arg_0.a(this.e);
          break;
