@@ -52,7 +52,7 @@ public enum Protocols {
       return (Integer)((BiMap)this.j.get(arg_0)).inverse().get(arg_1.getClass());
    }
 
-   public Packet a(ProtocolDirection arg_0, int arg_1) {
+   public Packet a(ProtocolDirection arg_0, int arg_1) throws IllegalAccessException, InstantiationException {
       Class var3 = (Class)((BiMap)this.j.get(arg_0)).get(Integer.valueOf(arg_1));
       return var3 == null?null:(Packet)var3.newInstance();
    }

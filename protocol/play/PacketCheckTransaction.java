@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -24,13 +25,13 @@ public class PacketCheckTransaction implements Packet {
       handler.handle(this);
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readByte();
       this.b = in.readShort();
       this.c = in.readByte() != 0;
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeByte(this.a);
       out.writeShort(this.b);
       out.writeByte(this.c?1:0);

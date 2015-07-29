@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -17,7 +18,7 @@ public class PacketPlayerAbilities implements Packet {
 
    public PacketPlayerAbilities() {}
 
-   public PacketPlayerAbilities(agx arg_0) {
+   public PacketPlayerAbilities(wy arg_0) {
       this.a(arg_0.a);
       this.b(arg_0.b);
       this.c(arg_0.c);
@@ -26,7 +27,7 @@ public class PacketPlayerAbilities implements Packet {
       this.b(arg_0.b());
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       byte var2 = in.readByte();
       this.a((var2 & 1) > 0);
       this.b((var2 & 2) > 0);
@@ -36,7 +37,7 @@ public class PacketPlayerAbilities implements Packet {
       this.b(in.readFloat());
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       byte var2 = 0;
       if(this.a()) {
          var2 = (byte)(var2 | 1);

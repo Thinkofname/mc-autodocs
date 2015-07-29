@@ -1,6 +1,7 @@
 package net.minecraft.network.login;
 
 import com.mojang.authlib.GameProfile;
+import java.io.IOException;
 import java.util.UUID;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -18,11 +19,11 @@ public class PacketLoginStart implements Packet {
       this.a = arg_0;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = new GameProfile((UUID)null, in.readString(16));
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeString(this.a.getName());
    }
 

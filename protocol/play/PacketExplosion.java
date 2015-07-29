@@ -1,6 +1,7 @@
 package net.minecraft.network.play;
 
 import com.google.common.collect.Lists;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 import net.minecraft.math.Position;
@@ -23,7 +24,7 @@ public class PacketExplosion implements Packet {
 
    public PacketExplosion() {}
 
-   public PacketExplosion(double arg_0, double arg_2, double arg_4, float var7, List var8, bru var9) {
+   public PacketExplosion(double arg_0, double arg_2, double arg_4, float var7, List var8, awh var9) {
       this.a = arg_0;
       this.b = arg_2;
       this.c = arg_4;
@@ -37,7 +38,7 @@ public class PacketExplosion implements Packet {
 
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = (double)in.readFloat();
       this.b = (double)in.readFloat();
       this.c = (double)in.readFloat();
@@ -60,7 +61,7 @@ public class PacketExplosion implements Packet {
       this.h = in.readFloat();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeFloat((float)this.a);
       out.writeFloat((float)this.b);
       out.writeFloat((float)this.c);

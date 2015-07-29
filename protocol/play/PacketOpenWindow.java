@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.chat.IChatMessage;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -37,7 +38,7 @@ public class PacketOpenWindow implements Packet {
       handler.handle(this);
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readUnsignedByte();
       this.b = in.readString(32);
       this.c = in.readChat();
@@ -48,7 +49,7 @@ public class PacketOpenWindow implements Packet {
 
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeByte(this.a);
       out.writeString(this.b);
       out.writeChat(this.c);

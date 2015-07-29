@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -23,12 +24,12 @@ public class PacketResourcePackStatus implements Packet {
       this.b = arg_1;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readString(40);
       this.b = (ResourcePackStatus)in.readEnum(ResourcePackStatus.class);
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeString(this.a);
       out.writeEnum(this.b);
    }

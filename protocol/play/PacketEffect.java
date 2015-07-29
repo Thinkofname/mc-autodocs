@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.math.Position;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -23,14 +24,14 @@ public class PacketEffect implements Packet {
       this.d = arg_3;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readInt();
       this.b = in.readPosition();
       this.c = in.readInt();
       this.d = in.readBoolean();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeInt(this.a);
       out.writePosition(this.b);
       out.writeInt(this.c);

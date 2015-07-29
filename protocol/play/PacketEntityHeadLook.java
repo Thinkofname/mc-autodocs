@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -13,17 +14,17 @@ public class PacketEntityHeadLook implements Packet {
 
    public PacketEntityHeadLook() {}
 
-   public PacketEntityHeadLook(wx arg_0, byte arg_1) {
+   public PacketEntityHeadLook(pr arg_0, byte arg_1) {
       this.a = arg_0.F();
       this.b = arg_1;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readVarInt();
       this.b = in.readByte();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeVarInt(this.a);
       out.writeByte(this.b);
    }
@@ -32,7 +33,7 @@ public class PacketEntityHeadLook implements Packet {
       handler.handle(this);
    }
 
-   public wx a(aqr arg_0) {
+   public pr a(aen arg_0) {
       return arg_0.a(this.a);
    }
 

@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -9,17 +10,17 @@ public class PacketJoinGame implements Packet {
 
    private int a;
    private boolean b;
-   private aqz c;
+   private aeq$a c;
    private int d;
-   private vv e;
+   private om e;
    private int f;
-   private arb g;
+   private aes g;
    private boolean h;
 
 
    public PacketJoinGame() {}
 
-   public PacketJoinGame(int arg_0, aqz arg_1, boolean arg_2, int arg_3, vv arg_4, int arg_5, arb arg_6, boolean arg_7) {
+   public PacketJoinGame(int arg_0, aeq$a arg_1, boolean arg_2, int arg_3, om arg_4, int arg_5, aes arg_6, boolean arg_7) {
       this.a = arg_0;
       this.d = arg_3;
       this.e = arg_4;
@@ -30,24 +31,24 @@ public class PacketJoinGame implements Packet {
       this.h = arg_7;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readInt();
       short var2 = in.readUnsignedByte();
       this.b = (var2 & 8) == 8;
       int var3 = var2 & -9;
-      this.c = aqz.a(var3);
+      this.c = aeq$a.a(var3);
       this.d = in.readByte();
-      this.e = vv.a(in.readUnsignedByte());
+      this.e = om.a(in.readUnsignedByte());
       this.f = in.readUnsignedByte();
-      this.g = arb.a(in.readString(16));
+      this.g = aes.a(in.readString(16));
       if(this.g == null) {
-         this.g = arb.b;
+         this.g = aes.b;
       }
 
       this.h = in.readBoolean();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeInt(this.a);
       int var2 = this.c.a();
       if(this.b) {
@@ -74,7 +75,7 @@ public class PacketJoinGame implements Packet {
       return this.b;
    }
 
-   public aqz c() {
+   public aeq$a c() {
       return this.c;
    }
 
@@ -82,7 +83,7 @@ public class PacketJoinGame implements Packet {
       return this.d;
    }
 
-   public vv e() {
+   public om e() {
       return this.e;
    }
 
@@ -90,7 +91,7 @@ public class PacketJoinGame implements Packet {
       return this.f;
    }
 
-   public arb g() {
+   public aes g() {
       return this.g;
    }
 

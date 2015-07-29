@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayServerbound;
@@ -19,14 +20,14 @@ public class PacketPlayerPosition extends PacketPlayer {
       this.g = true;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readDouble();
       this.b = in.readDouble();
       this.c = in.readDouble();
       super.read(in);
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeDouble(this.a);
       out.writeDouble(this.b);
       out.writeDouble(this.c);

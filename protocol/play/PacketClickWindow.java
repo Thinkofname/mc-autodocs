@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.inventory.ItemStack;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -31,7 +32,7 @@ public class PacketClickWindow implements Packet {
       handler.handle(this);
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readByte();
       this.b = in.readShort();
       this.c = in.readByte();
@@ -40,7 +41,7 @@ public class PacketClickWindow implements Packet {
       this.e = in.readItemStack();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeByte(this.a);
       out.writeShort(this.b);
       out.writeByte(this.c);

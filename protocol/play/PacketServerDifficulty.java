@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -7,13 +8,13 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 
 public class PacketServerDifficulty implements Packet {
 
-   private vv a;
+   private om a;
    private boolean b;
 
 
    public PacketServerDifficulty() {}
 
-   public PacketServerDifficulty(vv arg_0, boolean arg_1) {
+   public PacketServerDifficulty(om arg_0, boolean arg_1) {
       this.a = arg_0;
       this.b = arg_1;
    }
@@ -22,11 +23,11 @@ public class PacketServerDifficulty implements Packet {
       handler.handle(this);
    }
 
-   public void read(PacketByteBuf in) {
-      this.a = vv.a(in.readUnsignedByte());
+   public void read(PacketByteBuf in) throws IOException {
+      this.a = om.a(in.readUnsignedByte());
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeByte(this.a.a());
    }
 
@@ -34,7 +35,7 @@ public class PacketServerDifficulty implements Packet {
       return this.b;
    }
 
-   public vv b() {
+   public om b() {
       return this.a;
    }
 

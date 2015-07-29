@@ -4,6 +4,7 @@ import com.google.common.base.Objects;
 import com.google.common.collect.Lists;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 import net.minecraft.chat.IChatMessage;
@@ -21,14 +22,14 @@ public class PacketPlayerListItem implements Packet {
 
    public PacketPlayerListItem() {}
 
-   public PacketPlayerListItem(ListItemAction arg_0, qx ... arg_1) {
+   public PacketPlayerListItem(ListItemAction arg_0, lh ... arg_1) {
       this.a = arg_0;
-      qx[] var3 = arg_1;
+      lh[] var3 = arg_1;
       int var4 = arg_1.length;
 
       for(int var5 = 0; var5 < var4; ++var5) {
-         qx var6 = var3[var5];
-         this.b.add(new kl(this, var6.cc(), var6.h, var6.c.b(), var6.E()));
+         lh var6 = var3[var5];
+         this.b.add(new gz$b(this, var6.cf(), var6.h, var6.c.b(), var6.E()));
       }
 
    }
@@ -38,22 +39,22 @@ public class PacketPlayerListItem implements Packet {
       Iterator var3 = arg_1.iterator();
 
       while(var3.hasNext()) {
-         qx var4 = (qx)var3.next();
-         this.b.add(new kl(this, var4.cc(), var4.h, var4.c.b(), var4.E()));
+         lh var4 = (lh)var3.next();
+         this.b.add(new gz$b(this, var4.cf(), var4.h, var4.c.b(), var4.E()));
       }
 
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = (ListItemAction)in.readEnum(ListItemAction.class);
       int var2 = in.readVarInt();
 
       for(int var3 = 0; var3 < var2; ++var3) {
          GameProfile var4 = null;
          int var5 = 0;
-         aqz var6 = null;
+         aeq$a var6 = null;
          IChatMessage var7 = null;
-         switch(kj.a[this.a.ordinal()]) {
+         switch(gz$1.a[this.a.ordinal()]) {
          case 1:
             var4 = new GameProfile(in.readUUID(), in.readString(16));
             int var8 = in.readVarInt();
@@ -68,7 +69,7 @@ public class PacketPlayerListItem implements Packet {
                }
             }
 
-            var6 = aqz.a(in.readVarInt());
+            var6 = aeq$a.a(in.readVarInt());
             var5 = in.readVarInt();
             if(in.readBoolean()) {
                var7 = in.readChat();
@@ -76,7 +77,7 @@ public class PacketPlayerListItem implements Packet {
             break;
          case 2:
             var4 = new GameProfile(in.readUUID(), (String)null);
-            var6 = aqz.a(in.readVarInt());
+            var6 = aeq$a.a(in.readVarInt());
             break;
          case 3:
             var4 = new GameProfile(in.readUUID(), (String)null);
@@ -92,19 +93,19 @@ public class PacketPlayerListItem implements Packet {
             var4 = new GameProfile(in.readUUID(), (String)null);
          }
 
-         this.b.add(new kl(this, var4, var5, var6, var7));
+         this.b.add(new gz$b(this, var4, var5, var6, var7));
       }
 
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeEnum(this.a);
       out.writeVarInt(this.b.size());
       Iterator var2 = this.b.iterator();
 
       while(var2.hasNext()) {
-         kl var3 = (kl)var2.next();
-         switch(kj.a[this.a.ordinal()]) {
+         gz$b var3 = (gz$b)var2.next();
+         switch(gz$1.a[this.a.ordinal()]) {
          case 1:
             out.writeUUID(var3.a().getId());
             out.writeString(var3.a().getName());

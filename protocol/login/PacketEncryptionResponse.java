@@ -1,5 +1,6 @@
 package net.minecraft.network.login;
 
+import java.io.IOException;
 import java.security.Key;
 import java.security.PrivateKey;
 import java.security.PublicKey;
@@ -18,16 +19,16 @@ public class PacketEncryptionResponse implements Packet {
    public PacketEncryptionResponse() {}
 
    public PacketEncryptionResponse(SecretKey arg_0, PublicKey arg_1, byte[] arg_2) {
-      this.a = ui.a((Key)arg_1, arg_0.getEncoded());
-      this.b = ui.a((Key)arg_1, arg_2);
+      this.a = ni.a((Key)arg_1, arg_0.getEncoded());
+      this.b = ni.a((Key)arg_1, arg_2);
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readByteArray();
       this.b = in.readByteArray();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeByteArray(this.a);
       out.writeByteArray(this.b);
    }
@@ -37,11 +38,11 @@ public class PacketEncryptionResponse implements Packet {
    }
 
    public SecretKey a(PrivateKey arg_0) {
-      return ui.a(arg_0, this.a);
+      return ni.a(arg_0, this.a);
    }
 
    public byte[] b(PrivateKey arg_0) {
-      return arg_0 == null?this.b:ui.b(arg_0, this.b);
+      return arg_0 == null?this.b:ni.b(arg_0, this.b);
    }
 
    // $FF: synthetic method

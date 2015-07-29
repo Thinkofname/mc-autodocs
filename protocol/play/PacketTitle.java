@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.chat.IChatMessage;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -34,7 +35,7 @@ public class PacketTitle implements Packet {
       this.e = arg_4;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = (TitleUpdateType)in.readEnum(TitleUpdateType.class);
       if(this.a == TitleUpdateType.TITLE || this.a == TitleUpdateType.SUBTITLE) {
          this.b = in.readChat();
@@ -48,7 +49,7 @@ public class PacketTitle implements Packet {
 
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeEnum(this.a);
       if(this.a == TitleUpdateType.TITLE || this.a == TitleUpdateType.SUBTITLE) {
          out.writeChat(this.b);

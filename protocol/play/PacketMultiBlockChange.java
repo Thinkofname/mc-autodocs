@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.block.Block;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -8,41 +9,41 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 
 public class PacketMultiBlockChange implements Packet {
 
-   private aqj a;
-   private jc[] b;
+   private aeh a;
+   private ga$a[] b;
 
 
    public PacketMultiBlockChange() {}
 
-   public PacketMultiBlockChange(int arg_0, short[] arg_1, bff arg_2) {
-      this.a = new aqj(arg_2.a, arg_2.b);
-      this.b = new jc[arg_0];
+   public PacketMultiBlockChange(int arg_0, short[] arg_1, aok arg_2) {
+      this.a = new aeh(arg_2.a, arg_2.b);
+      this.b = new ga$a[arg_0];
 
       for(int var4 = 0; var4 < this.b.length; ++var4) {
-         this.b[var4] = new jc(this, arg_1[var4], arg_2);
+         this.b[var4] = new ga$a(this, arg_1[var4], arg_2);
       }
 
    }
 
-   public void read(PacketByteBuf in) {
-      this.a = new aqj(in.readInt(), in.readInt());
-      this.b = new jc[in.readVarInt()];
+   public void read(PacketByteBuf in) throws IOException {
+      this.a = new aeh(in.readInt(), in.readInt());
+      this.b = new ga$a[in.readVarInt()];
 
       for(int var2 = 0; var2 < this.b.length; ++var2) {
-         this.b[var2] = new jc(this, in.readShort(), (bea)Block.blockMap.a(in.readVarInt()));
+         this.b[var2] = new ga$a(this, in.readShort(), (anl)Block.blockMap.a(in.readVarInt()));
       }
 
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeInt(this.a.a);
       out.writeInt(this.a.b);
       out.writeVarInt(this.b.length);
-      jc[] var2 = this.b;
+      ga$a[] var2 = this.b;
       int var3 = var2.length;
 
       for(int var4 = 0; var4 < var3; ++var4) {
-         jc var5 = var2[var4];
+         ga$a var5 = var2[var4];
          out.writeShort(var5.b());
          out.writeVarInt(Block.blockMap.get(var5.c()));
       }
@@ -53,7 +54,7 @@ public class PacketMultiBlockChange implements Packet {
       handler.handle(this);
    }
 
-   public jc[] a() {
+   public ga$a[] a() {
       return this.b;
    }
 
@@ -64,7 +65,7 @@ public class PacketMultiBlockChange implements Packet {
    }
 
    // $FF: synthetic method
-   public static aqj a(PacketMultiBlockChange arg_0) {
+   public static aeh a(PacketMultiBlockChange arg_0) {
       return arg_0.a;
    }
 }

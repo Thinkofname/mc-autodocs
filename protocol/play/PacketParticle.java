@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -37,7 +38,7 @@ public class PacketParticle implements Packet {
       this.k = arg_10;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = Particle.a(in.readInt());
       if(this.a == null) {
          this.a = Particle.BARRIER;
@@ -61,7 +62,7 @@ public class PacketParticle implements Packet {
 
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeInt(this.a.c());
       out.writeBoolean(this.j);
       out.writeFloat(this.b);

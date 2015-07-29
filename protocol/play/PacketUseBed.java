@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.math.Position;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -14,17 +15,17 @@ public class PacketUseBed implements Packet {
 
    public PacketUseBed() {}
 
-   public PacketUseBed(aha arg_0, Position arg_1) {
+   public PacketUseBed(xa arg_0, Position arg_1) {
       this.a = arg_0.F();
       this.b = arg_1;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readVarInt();
       this.b = in.readPosition();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeVarInt(this.a);
       out.writePosition(this.b);
    }
@@ -33,8 +34,8 @@ public class PacketUseBed implements Packet {
       handler.handle(this);
    }
 
-   public aha a(aqr arg_0) {
-      return (aha)arg_0.a(this.a);
+   public xa a(aen arg_0) {
+      return (xa)arg_0.a(this.a);
    }
 
    public Position a() {

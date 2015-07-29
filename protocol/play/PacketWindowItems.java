@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import java.util.List;
 import net.minecraft.inventory.ItemStack;
 import net.minecraft.network.Packet;
@@ -26,7 +27,7 @@ public class PacketWindowItems implements Packet {
 
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readUnsignedByte();
       short var2 = in.readShort();
       this.b = new ItemStack[var2];
@@ -37,7 +38,7 @@ public class PacketWindowItems implements Packet {
 
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeByte(this.a);
       out.writeShort(this.b.length);
       ItemStack[] var2 = this.b;

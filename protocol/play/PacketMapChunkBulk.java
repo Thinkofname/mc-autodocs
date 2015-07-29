@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import java.util.List;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -11,7 +12,7 @@ public class PacketMapChunkBulk implements Packet {
 
    private int[] a;
    private int[] b;
-   private js[] c;
+   private go$a[] c;
    private boolean d;
 
 
@@ -21,12 +22,12 @@ public class PacketMapChunkBulk implements Packet {
       int var2 = arg_0.size();
       this.a = new int[var2];
       this.b = new int[var2];
-      this.c = new js[var2];
-      this.d = !((bff)arg_0.get(0)).p().t.o();
+      this.c = new go$a[var2];
+      this.d = !((aok)arg_0.get(0)).p().t.m();
 
       for(int var3 = 0; var3 < var2; ++var3) {
-         bff var4 = (bff)arg_0.get(var3);
-         js var5 = PacketChunkData.a(var4, true, this.d, '\uffff');
+         aok var4 = (aok)arg_0.get(var3);
+         go$a var5 = PacketChunkData.a(var4, true, this.d, '\uffff');
          this.a[var3] = var4.a;
          this.b[var3] = var4.b;
          this.c[var3] = var5;
@@ -34,18 +35,18 @@ public class PacketMapChunkBulk implements Packet {
 
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.d = in.readBoolean();
       int var2 = in.readVarInt();
       this.a = new int[var2];
       this.b = new int[var2];
-      this.c = new js[var2];
+      this.c = new go$a[var2];
 
       int var3;
       for(var3 = 0; var3 < var2; ++var3) {
          this.a[var3] = in.readInt();
          this.b[var3] = in.readInt();
-         this.c[var3] = new js();
+         this.c[var3] = new go$a();
          this.c[var3].b = in.readShort() & '\uffff';
          this.c[var3].a = new byte[PacketChunkData.a(Integer.bitCount(this.c[var3].b), this.d, true)];
       }
@@ -56,7 +57,7 @@ public class PacketMapChunkBulk implements Packet {
 
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeBoolean(this.d);
       out.writeVarInt(this.c.length);
 

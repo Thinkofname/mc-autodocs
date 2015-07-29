@@ -1,36 +1,38 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.math.Position;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayClientbound;
+import net.minecraft.network.enums.BlockFace;
 
 public class PacketSpawnPainting implements Packet {
 
    private int a;
    private Position b;
-   private ej c;
+   private BlockFace c;
    private String d;
 
 
    public PacketSpawnPainting() {}
 
-   public PacketSpawnPainting(adn arg_0) {
+   public PacketSpawnPainting(vc arg_0) {
       this.a = arg_0.F();
       this.b = arg_0.n();
       this.c = arg_0.b;
       this.d = arg_0.c.B;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readVarInt();
-      this.d = in.readString(ado.A);
+      this.d = in.readString(vc$a.A);
       this.b = in.readPosition();
-      this.c = ej.b(in.readUnsignedByte());
+      this.c = BlockFace.b(in.readUnsignedByte());
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeVarInt(this.a);
       out.writeString(this.d);
       out.writePosition(this.b);
@@ -49,7 +51,7 @@ public class PacketSpawnPainting implements Packet {
       return this.b;
    }
 
-   public ej c() {
+   public BlockFace c() {
       return this.c;
    }
 

@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.block.Block;
 import net.minecraft.math.Position;
 import net.minecraft.network.Packet;
@@ -24,14 +25,14 @@ public class PacketBlockAction implements Packet {
       this.d = arg_1;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readPosition();
       this.b = in.readUnsignedByte();
       this.c = in.readUnsignedByte();
       this.d = Block.c(in.readVarInt() & 4095);
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writePosition(this.a);
       out.writeByte(this.b);
       out.writeByte(this.c);

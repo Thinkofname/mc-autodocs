@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -16,7 +17,7 @@ public class PacketTabReply implements Packet {
       this.a = arg_0;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = new String[in.readVarInt()];
 
       for(int var2 = 0; var2 < this.a.length; ++var2) {
@@ -25,7 +26,7 @@ public class PacketTabReply implements Packet {
 
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeVarInt(this.a.length);
       String[] var2 = this.a;
       int var3 = var2.length;

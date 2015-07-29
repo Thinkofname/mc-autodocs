@@ -1,6 +1,7 @@
 package net.minecraft.network.play;
 
 import com.google.common.collect.Lists;
+import java.io.IOException;
 import java.util.Collection;
 import java.util.Iterator;
 import net.minecraft.network.Packet;
@@ -28,7 +29,7 @@ public class PacketTeams implements Packet {
       this.g = Lists.newArrayList();
    }
 
-   public PacketTeams(brx arg_0, int arg_1) {
+   public PacketTeams(awk arg_0, int arg_1) {
       this.e = NameTagVisibility.ALWAYS.e;
       this.f = -1;
       this.g = Lists.newArrayList();
@@ -49,7 +50,7 @@ public class PacketTeams implements Packet {
 
    }
 
-   public PacketTeams(brx arg_0, Collection arg_1, int arg_2) {
+   public PacketTeams(awk arg_0, Collection arg_1, int arg_2) {
       this.e = NameTagVisibility.ALWAYS.e;
       this.f = -1;
       this.g = Lists.newArrayList();
@@ -64,7 +65,7 @@ public class PacketTeams implements Packet {
       }
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readString(16);
       this.h = in.readByte();
       if(this.h == 0 || this.h == 2) {
@@ -86,7 +87,7 @@ public class PacketTeams implements Packet {
 
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeString(this.a);
       out.writeByte(this.h);
       if(this.h == 0 || this.h == 2) {

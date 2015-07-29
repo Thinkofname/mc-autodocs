@@ -1,9 +1,8 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
-import net.minecraft.inventory.Item;
-import net.minecraft.inventory.ItemStack;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -18,27 +17,24 @@ public class PacketSpawnPlayer implements Packet {
    private int e;
    private byte f;
    private byte g;
-   private int h;
-   private xy i;
-   private List j;
+   private qi h;
+   private List i;
 
 
    public PacketSpawnPlayer() {}
 
-   public PacketSpawnPlayer(aha arg_0) {
+   public PacketSpawnPlayer(xa arg_0) {
       this.a = arg_0.F();
-      this.b = arg_0.cc().getId();
-      this.c = ux.c(arg_0.s * 32.0D);
-      this.d = ux.c(arg_0.t * 32.0D);
-      this.e = ux.c(arg_0.u * 32.0D);
+      this.b = arg_0.cf().getId();
+      this.c = nu.c(arg_0.s * 32.0D);
+      this.d = nu.c(arg_0.t * 32.0D);
+      this.e = nu.c(arg_0.u * 32.0D);
       this.f = (byte)((int)(arg_0.y * 256.0F / 360.0F));
       this.g = (byte)((int)(arg_0.z * 256.0F / 360.0F));
-      ItemStack var2 = arg_0.bh.h();
-      this.h = var2 == null?0:Item.b(var2.b());
-      this.i = arg_0.H();
+      this.h = arg_0.H();
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readVarInt();
       this.b = in.readUUID();
       this.c = in.readInt();
@@ -46,11 +42,10 @@ public class PacketSpawnPlayer implements Packet {
       this.e = in.readInt();
       this.f = in.readByte();
       this.g = in.readByte();
-      this.h = in.readShort();
-      this.j = xy.b(in);
+      this.i = qi.b(in);
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeVarInt(this.a);
       out.writeUUID(this.b);
       out.writeInt(this.c);
@@ -58,8 +53,7 @@ public class PacketSpawnPlayer implements Packet {
       out.writeInt(this.e);
       out.writeByte(this.f);
       out.writeByte(this.g);
-      out.writeShort(this.h);
-      this.i.a(out);
+      this.h.a(out);
    }
 
    public void handle(PacketHandlerPlayClientbound handler) {
@@ -67,11 +61,11 @@ public class PacketSpawnPlayer implements Packet {
    }
 
    public List a() {
-      if(this.j == null) {
-         this.j = this.i.c();
+      if(this.i == null) {
+         this.i = this.h.c();
       }
 
-      return this.j;
+      return this.i;
    }
 
    public int b() {
@@ -100,10 +94,6 @@ public class PacketSpawnPlayer implements Packet {
 
    public byte h() {
       return this.g;
-   }
-
-   public int i() {
-      return this.h;
    }
 
    // $FF: synthetic method

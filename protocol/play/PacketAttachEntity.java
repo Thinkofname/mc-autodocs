@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -14,19 +15,19 @@ public class PacketAttachEntity implements Packet {
 
    public PacketAttachEntity() {}
 
-   public PacketAttachEntity(int arg_0, wx arg_1, wx arg_2) {
+   public PacketAttachEntity(int arg_0, pr arg_1, pr arg_2) {
       this.a = arg_0;
       this.b = arg_1.F();
       this.c = arg_2 != null?arg_2.F():-1;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.b = in.readInt();
       this.c = in.readInt();
       this.a = in.readUnsignedByte();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeInt(this.b);
       out.writeInt(this.c);
       out.writeByte(this.a);

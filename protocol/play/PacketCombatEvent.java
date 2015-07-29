@@ -1,5 +1,7 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
+import net.minecraft.chat.IChatMessage;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -12,15 +14,15 @@ public class PacketCombatEvent implements Packet {
    public int b;
    public int c;
    public int d;
-   public String e;
+   public IChatMessage e;
 
 
    public PacketCombatEvent() {}
 
-   public PacketCombatEvent(wi arg_0, CombatEvent arg_1) {
+   public PacketCombatEvent(pb arg_0, CombatEvent arg_1) {
       this.a = arg_1;
-      xo var3 = arg_0.c();
-      switch(kg.a[arg_1.ordinal()]) {
+      qa var3 = arg_0.c();
+      switch(gy$1.a[arg_1.ordinal()]) {
       case 1:
          this.d = arg_0.f();
          this.c = var3 == null?-1:var3.F();
@@ -28,12 +30,12 @@ public class PacketCombatEvent implements Packet {
       case 2:
          this.b = arg_0.h().F();
          this.c = var3 == null?-1:var3.F();
-         this.e = arg_0.b().c();
+         this.e = arg_0.b();
       }
 
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = (CombatEvent)in.readEnum(CombatEvent.class);
       if(this.a == CombatEvent.END_COMBAT) {
          this.d = in.readVarInt();
@@ -41,12 +43,12 @@ public class PacketCombatEvent implements Packet {
       } else if(this.a == CombatEvent.ENTITY_DIED) {
          this.b = in.readVarInt();
          this.c = in.readInt();
-         this.e = in.readString(32767);
+         this.e = in.readChat();
       }
 
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeEnum(this.a);
       if(this.a == CombatEvent.END_COMBAT) {
          out.writeVarInt(this.d);
@@ -54,7 +56,7 @@ public class PacketCombatEvent implements Packet {
       } else if(this.a == CombatEvent.ENTITY_DIED) {
          out.writeVarInt(this.b);
          out.writeInt(this.c);
-         out.writeString(this.e);
+         out.writeChat(this.e);
       }
 
    }

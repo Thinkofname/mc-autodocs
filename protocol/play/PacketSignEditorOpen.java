@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.math.Position;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -21,11 +22,11 @@ public class PacketSignEditorOpen implements Packet {
       handler.handle(this);
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readPosition();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writePosition(this.a);
    }
 

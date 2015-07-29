@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayClientbound;
@@ -19,14 +20,14 @@ public class PacketEntityLook extends PacketEntity {
       this.g = arg_3;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       super.read(in);
       this.e = in.readByte();
       this.f = in.readByte();
       this.g = in.readBoolean();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       super.write(out);
       out.writeByte(this.e);
       out.writeByte(this.f);

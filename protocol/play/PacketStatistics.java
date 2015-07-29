@@ -1,6 +1,7 @@
 package net.minecraft.network.play;
 
 import com.google.common.collect.Maps;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -24,12 +25,12 @@ public class PacketStatistics implements Packet {
       handler.handle(this);
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       int var2 = in.readVarInt();
       this.a = Maps.newHashMap();
 
       for(int var3 = 0; var3 < var2; ++var3) {
-         ts var4 = ua.a(in.readString(32767));
+         my var4 = nc.a(in.readString(32767));
          int var5 = in.readVarInt();
          if(var4 != null) {
             this.a.put(var4, Integer.valueOf(var5));
@@ -38,13 +39,13 @@ public class PacketStatistics implements Packet {
 
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeVarInt(this.a.size());
       Iterator var2 = this.a.entrySet().iterator();
 
       while(var2.hasNext()) {
          Entry var3 = (Entry)var2.next();
-         out.writeString(((ts)var3.getKey()).e);
+         out.writeString(((my)var3.getKey()).e);
          out.writeVarInt(((Integer)var3.getValue()).intValue());
       }
 

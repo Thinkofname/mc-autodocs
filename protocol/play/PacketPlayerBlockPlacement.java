@@ -1,54 +1,51 @@
 package net.minecraft.network.play;
 
-import net.minecraft.inventory.ItemStack;
+import java.io.IOException;
 import net.minecraft.math.Position;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayServerbound;
+import net.minecraft.network.enums.BlockFace;
+import net.minecraft.network.enums.PlayerHand;
 
 public class PacketPlayerBlockPlacement implements Packet {
 
-   private static final Position a = new Position(-1, -1, -1);
-   private Position b;
-   private int c;
-   private ItemStack d;
+   private Position a;
+   private BlockFace b;
+   private PlayerHand c;
+   private float d;
    private float e;
    private float f;
-   private float g;
 
 
    public PacketPlayerBlockPlacement() {}
 
-   public PacketPlayerBlockPlacement(ItemStack arg_0) {
-      this(a, 255, arg_0, 0.0F, 0.0F, 0.0F);
+   public PacketPlayerBlockPlacement(Position arg_0, BlockFace arg_1, PlayerHand arg_2, float arg_3, float arg_4, float arg_5) {
+      this.a = arg_0;
+      this.b = arg_1;
+      this.c = arg_2;
+      this.d = arg_3;
+      this.e = arg_4;
+      this.f = arg_5;
    }
 
-   public PacketPlayerBlockPlacement(Position arg_0, int arg_1, ItemStack arg_2, float arg_3, float arg_4, float arg_5) {
-      this.b = arg_0;
-      this.c = arg_1;
-      this.d = arg_2 != null?arg_2.k():null;
-      this.e = arg_3;
-      this.f = arg_4;
-      this.g = arg_5;
-   }
-
-   public void read(PacketByteBuf in) {
-      this.b = in.readPosition();
-      this.c = in.readUnsignedByte();
-      this.d = in.readItemStack();
+   public void read(PacketByteBuf in) throws IOException {
+      this.a = in.readPosition();
+      this.b = (BlockFace)in.readEnum(BlockFace.class);
+      this.c = (PlayerHand)in.readEnum(PlayerHand.class);
+      this.d = (float)in.readUnsignedByte() / 16.0F;
       this.e = (float)in.readUnsignedByte() / 16.0F;
       this.f = (float)in.readUnsignedByte() / 16.0F;
-      this.g = (float)in.readUnsignedByte() / 16.0F;
    }
 
-   public void write(PacketByteBuf out) {
-      out.writePosition(this.b);
-      out.writeByte(this.c);
-      out.writeItemStack(this.d);
+   public void write(PacketByteBuf out) throws IOException {
+      out.writePosition(this.a);
+      out.writeEnum(this.b);
+      out.writeEnum(this.c);
+      out.writeByte((int)(this.d * 16.0F));
       out.writeByte((int)(this.e * 16.0F));
       out.writeByte((int)(this.f * 16.0F));
-      out.writeByte((int)(this.g * 16.0F));
    }
 
    public void handle(PacketHandlerPlayServerbound handler) {
@@ -56,27 +53,27 @@ public class PacketPlayerBlockPlacement implements Packet {
    }
 
    public Position a() {
+      return this.a;
+   }
+
+   public BlockFace b() {
       return this.b;
    }
 
-   public int b() {
+   public PlayerHand c() {
       return this.c;
    }
 
-   public ItemStack c() {
+   public float d() {
       return this.d;
    }
 
-   public float d() {
+   public float e() {
       return this.e;
    }
 
-   public float e() {
-      return this.f;
-   }
-
    public float f() {
-      return this.g;
+      return this.f;
    }
 
    // $FF: synthetic method
@@ -84,5 +81,4 @@ public class PacketPlayerBlockPlacement implements Packet {
    public void handle(PacketHandler handler) {
       this.handle((PacketHandlerPlayServerbound)handler);
    }
-
 }

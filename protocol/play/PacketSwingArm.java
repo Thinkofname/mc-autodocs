@@ -1,18 +1,37 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayServerbound;
+import net.minecraft.network.enums.PlayerHand;
 
 public class PacketSwingArm implements Packet {
 
-   public void read(PacketByteBuf in) {}
+   private PlayerHand a;
 
-   public void write(PacketByteBuf out) {}
+
+   public PacketSwingArm() {}
+
+   public PacketSwingArm(PlayerHand arg_0) {
+      this.a = arg_0;
+   }
+
+   public void read(PacketByteBuf in) throws IOException {
+      this.a = (PlayerHand)in.readEnum(PlayerHand.class);
+   }
+
+   public void write(PacketByteBuf out) throws IOException {
+      out.writeEnum(this.a);
+   }
 
    public void handle(PacketHandlerPlayServerbound handler) {
       handler.handle(this);
+   }
+
+   public PlayerHand a() {
+      return this.a;
    }
 
    // $FF: synthetic method

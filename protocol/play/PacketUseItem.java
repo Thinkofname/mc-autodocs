@@ -5,35 +5,32 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayServerbound;
+import net.minecraft.network.enums.PlayerHand;
 
-public class PacketChatMessage implements Packet {
+public class PacketUseItem implements Packet {
 
-   private String a;
+   private PlayerHand a;
 
 
-   public PacketChatMessage() {}
+   public PacketUseItem() {}
 
-   public PacketChatMessage(String arg_0) {
-      if(arg_0.length() > 100) {
-         arg_0 = arg_0.substring(0, 100);
-      }
-
+   public PacketUseItem(PlayerHand arg_0) {
       this.a = arg_0;
    }
 
    public void read(PacketByteBuf in) throws IOException {
-      this.a = in.readString(100);
+      this.a = (PlayerHand)in.readEnum(PlayerHand.class);
    }
 
    public void write(PacketByteBuf out) throws IOException {
-      out.writeString(this.a);
+      out.writeEnum(this.a);
    }
 
    public void handle(PacketHandlerPlayServerbound handler) {
       handler.handle(this);
    }
 
-   public String a() {
+   public PlayerHand a() {
       return this.a;
    }
 

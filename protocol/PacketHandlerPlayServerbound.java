@@ -24,6 +24,7 @@ import net.minecraft.network.play.PacketSwingArm;
 import net.minecraft.network.play.PacketTabComplete;
 import net.minecraft.network.play.PacketUpdateSign;
 import net.minecraft.network.play.PacketUseEntity;
+import net.minecraft.network.play.PacketUseItem;
 
 public interface PacketHandlerPlayServerbound extends PacketHandler {
 
@@ -68,6 +69,8 @@ public interface PacketHandlerPlayServerbound extends PacketHandler {
    void handle(PacketUpdateSign var1);
 
    void handle(PacketPlayerBlockPlacement var1);
+
+   void handle(PacketUseItem var1);
 
    void handle(PacketSpectate var1);
 

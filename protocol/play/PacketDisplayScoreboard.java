@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -13,7 +14,7 @@ public class PacketDisplayScoreboard implements Packet {
 
    public PacketDisplayScoreboard() {}
 
-   public PacketDisplayScoreboard(int arg_0, brw arg_1) {
+   public PacketDisplayScoreboard(int arg_0, awj arg_1) {
       this.a = arg_0;
       if(arg_1 == null) {
          this.b = "";
@@ -23,12 +24,12 @@ public class PacketDisplayScoreboard implements Packet {
 
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readByte();
       this.b = in.readString(16);
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeByte(this.a);
       out.writeString(this.b);
    }

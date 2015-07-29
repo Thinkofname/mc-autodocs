@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -22,7 +23,7 @@ public class PacketSteerVehicle implements Packet {
       this.d = arg_3;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readFloat();
       this.b = in.readFloat();
       byte var2 = in.readByte();
@@ -30,7 +31,7 @@ public class PacketSteerVehicle implements Packet {
       this.d = (var2 & 2) > 0;
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeFloat(this.a);
       out.writeFloat(this.b);
       byte var2 = 0;

@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.chat.IChatMessage;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -18,12 +19,12 @@ public class PacketPlayerListHeaderFooter implements Packet {
       this.a = arg_0;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readChat();
       this.b = in.readChat();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeChat(this.a);
       out.writeChat(this.b);
    }

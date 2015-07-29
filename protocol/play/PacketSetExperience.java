@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -20,13 +21,13 @@ public class PacketSetExperience implements Packet {
       this.c = arg_2;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readFloat();
       this.c = in.readVarInt();
       this.b = in.readVarInt();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeFloat(this.a);
       out.writeVarInt(this.c);
       out.writeVarInt(this.b);

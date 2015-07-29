@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -16,7 +17,7 @@ public class PacketUpdateScore implements Packet {
 
    public PacketUpdateScore() {}
 
-   public PacketUpdateScore(bry arg_0) {
+   public PacketUpdateScore(awl arg_0) {
       this.a = arg_0.e();
       this.b = arg_0.d().b();
       this.c = arg_0.c();
@@ -30,14 +31,14 @@ public class PacketUpdateScore implements Packet {
       this.d = ScoreUpdateType.REMOVE;
    }
 
-   public PacketUpdateScore(String arg_0, brw arg_1) {
+   public PacketUpdateScore(String arg_0, awj arg_1) {
       this.a = arg_0;
       this.b = arg_1.b();
       this.c = 0;
       this.d = ScoreUpdateType.REMOVE;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readString(40);
       this.d = (ScoreUpdateType)in.readEnum(ScoreUpdateType.class);
       this.b = in.readString(16);
@@ -47,7 +48,7 @@ public class PacketUpdateScore implements Packet {
 
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeString(this.a);
       out.writeEnum(this.d);
       out.writeString(this.b);

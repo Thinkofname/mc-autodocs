@@ -48,22 +48,24 @@ public enum Particle {
    BLOCK_DUST("BLOCK_DUST", 38, "blockdust_", 38, false, 1),
    WATER_DROP("WATER_DROP", 39, "droplet", 39, false),
    ITEM_TAKE("ITEM_TAKE", 40, "take", 40, false),
-   MOB_APPEARANCE("MOB_APPEARANCE", 41, "mobappearance", 41, true);
-   private final String Q;
-   private final int R;
-   private final boolean S;
+   MOB_APPEARANCE("MOB_APPEARANCE", 41, "mobappearance", 41, true),
+   DRAGON_BREATH("DRAGON_BREATH", 42, "dragonbreath", 42, false),
+   END_ROD("END_ROD", 43, "endRod", 43, false);
+   private final String S;
    private final int T;
-   private static final Map U = Maps.newHashMap();
-   private static final String[] V;
+   private final boolean U;
+   private final int V;
+   private static final Map W = Maps.newHashMap();
+   private static final String[] X;
    // $FF: synthetic field
-   private static final Particle[] W = new Particle[]{EXPLOSION_NORMAL, EXPLOSION_LARGE, EXPLOSION_HUGE, FIREWORKS_SPARK, WATER_BUBBLE, WATER_SPLASH, WATER_WAKE, SUSPENDED, SUSPENDED_DEPTH, CRIT, CRIT_MAGIC, SMOKE_NORMAL, SMOKE_LARGE, SPELL, SPELL_INSTANT, SPELL_MOB, SPELL_MOB_AMBIENT, SPELL_WITCH, DRIP_WATER, DRIP_LAVA, VILLAGER_ANGRY, VILLAGER_HAPPY, TOWN_AURA, NOTE, PORTAL, ENCHANTMENT_TABLE, FLAME, LAVA, FOOTSTEP, CLOUD, REDSTONE, SNOWBALL, SNOW_SHOVEL, SLIME, HEART, BARRIER, ITEM_CRACK, BLOCK_CRACK, BLOCK_DUST, WATER_DROP, ITEM_TAKE, MOB_APPEARANCE};
+   private static final Particle[] Y = new Particle[]{EXPLOSION_NORMAL, EXPLOSION_LARGE, EXPLOSION_HUGE, FIREWORKS_SPARK, WATER_BUBBLE, WATER_SPLASH, WATER_WAKE, SUSPENDED, SUSPENDED_DEPTH, CRIT, CRIT_MAGIC, SMOKE_NORMAL, SMOKE_LARGE, SPELL, SPELL_INSTANT, SPELL_MOB, SPELL_MOB_AMBIENT, SPELL_WITCH, DRIP_WATER, DRIP_LAVA, VILLAGER_ANGRY, VILLAGER_HAPPY, TOWN_AURA, NOTE, PORTAL, ENCHANTMENT_TABLE, FLAME, LAVA, FOOTSTEP, CLOUD, REDSTONE, SNOWBALL, SNOW_SHOVEL, SLIME, HEART, BARRIER, ITEM_CRACK, BLOCK_CRACK, BLOCK_DUST, WATER_DROP, ITEM_TAKE, MOB_APPEARANCE, DRAGON_BREATH, END_ROD};
 
 
    private Particle(String arg_0, int arg_1, String arg_2, int arg_3, boolean arg_4, int arg_5) {
-      this.Q = arg_2;
-      this.R = arg_3;
-      this.S = arg_4;
-      this.T = arg_5;
+      this.S = arg_2;
+      this.T = arg_3;
+      this.U = arg_4;
+      this.V = arg_5;
    }
 
    private Particle(String arg_0, int arg_1, String arg_2, int arg_3, boolean arg_4) {
@@ -71,31 +73,31 @@ public enum Particle {
    }
 
    public static String[] a() {
-      return V;
+      return X;
    }
 
    public String b() {
-      return this.Q;
-   }
-
-   public int c() {
-      return this.R;
-   }
-
-   public int d() {
-      return this.T;
-   }
-
-   public boolean e() {
       return this.S;
    }
 
+   public int c() {
+      return this.T;
+   }
+
+   public int d() {
+      return this.V;
+   }
+
+   public boolean e() {
+      return this.U;
+   }
+
    public boolean f() {
-      return this.T > 0;
+      return this.V > 0;
    }
 
    public static Particle a(int arg_0) {
-      return (Particle)U.get(Integer.valueOf(arg_0));
+      return (Particle)W.get(Integer.valueOf(arg_0));
    }
 
    static {
@@ -105,12 +107,12 @@ public enum Particle {
 
       for(int var3 = 0; var3 < var2; ++var3) {
          Particle var4 = var1[var3];
-         U.put(Integer.valueOf(var4.c()), var4);
+         W.put(Integer.valueOf(var4.c()), var4);
          if(!var4.b().endsWith("_")) {
             var0.add(var4.b());
          }
       }
 
-      V = (String[])var0.toArray(new String[var0.size()]);
+      X = (String[])var0.toArray(new String[var0.size()]);
    }
 }

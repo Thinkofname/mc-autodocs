@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -16,15 +17,15 @@ public class PacketSpawnExperienceOrb implements Packet {
 
    public PacketSpawnExperienceOrb() {}
 
-   public PacketSpawnExperienceOrb(xm arg_0) {
+   public PacketSpawnExperienceOrb(px arg_0) {
       this.a = arg_0.F();
-      this.b = ux.c(arg_0.s * 32.0D);
-      this.c = ux.c(arg_0.t * 32.0D);
-      this.d = ux.c(arg_0.u * 32.0D);
+      this.b = nu.c(arg_0.s * 32.0D);
+      this.c = nu.c(arg_0.t * 32.0D);
+      this.d = nu.c(arg_0.u * 32.0D);
       this.e = arg_0.j();
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readVarInt();
       this.b = in.readInt();
       this.c = in.readInt();
@@ -32,7 +33,7 @@ public class PacketSpawnExperienceOrb implements Packet {
       this.e = in.readShort();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeVarInt(this.a);
       out.writeInt(this.b);
       out.writeInt(this.c);

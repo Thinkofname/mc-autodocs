@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import java.util.List;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -14,7 +15,7 @@ public class PacketEntityMetadata implements Packet {
 
    public PacketEntityMetadata() {}
 
-   public PacketEntityMetadata(int arg_0, xy arg_1, boolean arg_2) {
+   public PacketEntityMetadata(int arg_0, qi arg_1, boolean arg_2) {
       this.a = arg_0;
       if(arg_2) {
          this.b = arg_1.c();
@@ -24,14 +25,14 @@ public class PacketEntityMetadata implements Packet {
 
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readVarInt();
-      this.b = xy.b(in);
+      this.b = qi.b(in);
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeVarInt(this.a);
-      xy.a(this.b, out);
+      qi.a(this.b, out);
    }
 
    public void handle(PacketHandlerPlayClientbound handler) {

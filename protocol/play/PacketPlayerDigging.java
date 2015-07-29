@@ -1,34 +1,36 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.math.Position;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.network.PacketHandlerPlayServerbound;
+import net.minecraft.network.enums.BlockFace;
 import net.minecraft.network.enums.DiggingType;
 
 public class PacketPlayerDigging implements Packet {
 
    private Position a;
-   private ej b;
+   private BlockFace b;
    private DiggingType c;
 
 
    public PacketPlayerDigging() {}
 
-   public PacketPlayerDigging(DiggingType arg_0, Position arg_1, ej arg_2) {
+   public PacketPlayerDigging(DiggingType arg_0, Position arg_1, BlockFace arg_2) {
       this.c = arg_0;
       this.a = arg_1;
       this.b = arg_2;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.c = (DiggingType)in.readEnum(DiggingType.class);
       this.a = in.readPosition();
-      this.b = ej.a(in.readUnsignedByte());
+      this.b = BlockFace.a(in.readUnsignedByte());
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeEnum(this.c);
       out.writePosition(this.a);
       out.writeByte(this.b.a());
@@ -42,7 +44,7 @@ public class PacketPlayerDigging implements Packet {
       return this.a;
    }
 
-   public ej b() {
+   public BlockFace b() {
       return this.b;
    }
 

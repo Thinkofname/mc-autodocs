@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -15,7 +16,7 @@ public class PacketEntityVelocity implements Packet {
 
    public PacketEntityVelocity() {}
 
-   public PacketEntityVelocity(wx arg_0) {
+   public PacketEntityVelocity(pr arg_0) {
       this(arg_0.F(), arg_0.v, arg_0.w, arg_0.x);
    }
 
@@ -51,14 +52,14 @@ public class PacketEntityVelocity implements Packet {
       this.d = (int)(var6 * 8000.0D);
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readVarInt();
       this.b = in.readShort();
       this.c = in.readShort();
       this.d = in.readShort();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeVarInt(this.a);
       out.writeShort(this.b);
       out.writeShort(this.c);

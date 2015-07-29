@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.block.Block;
 import net.minecraft.math.Position;
 import net.minecraft.network.Packet;
@@ -10,22 +11,22 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 public class PacketBlockChange implements Packet {
 
    private Position a;
-   private bea b;
+   private anl b;
 
 
    public PacketBlockChange() {}
 
-   public PacketBlockChange(aqr arg_0, Position arg_1) {
+   public PacketBlockChange(aen arg_0, Position arg_1) {
       this.a = arg_1;
       this.b = arg_0.p(arg_1);
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readPosition();
-      this.b = (bea)Block.blockMap.a(in.readVarInt());
+      this.b = (anl)Block.blockMap.a(in.readVarInt());
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writePosition(this.a);
       out.writeVarInt(Block.blockMap.get(this.b));
    }
@@ -34,7 +35,7 @@ public class PacketBlockChange implements Packet {
       handler.handle(this);
    }
 
-   public bea a() {
+   public anl a() {
       return this.b;
    }
 

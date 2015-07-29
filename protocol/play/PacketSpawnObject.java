@@ -1,5 +1,7 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
+import java.util.UUID;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -8,7 +10,7 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 public class PacketSpawnObject implements Packet {
 
    private int a;
-   private int b;
+   private UUID b;
    private int c;
    private int d;
    private int e;
@@ -18,91 +20,59 @@ public class PacketSpawnObject implements Packet {
    private int i;
    private int j;
    private int k;
+   private int l;
 
 
    public PacketSpawnObject() {}
 
-   public PacketSpawnObject(wx arg_0, int arg_1) {
+   public PacketSpawnObject(pr arg_0, int arg_1) {
       this(arg_0, arg_1, 0);
    }
 
-   public PacketSpawnObject(wx arg_0, int arg_1, int arg_2) {
+   public PacketSpawnObject(pr arg_0, int arg_1, int arg_2) {
       this.a = arg_0.F();
-      this.b = ux.c(arg_0.s * 32.0D);
-      this.c = ux.c(arg_0.t * 32.0D);
-      this.d = ux.c(arg_0.u * 32.0D);
-      this.h = ux.d(arg_0.z * 256.0F / 360.0F);
-      this.i = ux.d(arg_0.y * 256.0F / 360.0F);
-      this.j = arg_1;
-      this.k = arg_2;
-      if(arg_2 > 0) {
-         double var4 = arg_0.v;
-         double var6 = arg_0.w;
-         double var8 = arg_0.x;
-         double var10 = 3.9D;
-         if(var4 < -var10) {
-            var4 = -var10;
-         }
-
-         if(var6 < -var10) {
-            var6 = -var10;
-         }
-
-         if(var8 < -var10) {
-            var8 = -var10;
-         }
-
-         if(var4 > var10) {
-            var4 = var10;
-         }
-
-         if(var6 > var10) {
-            var6 = var10;
-         }
-
-         if(var8 > var10) {
-            var8 = var10;
-         }
-
-         this.e = (int)(var4 * 8000.0D);
-         this.f = (int)(var6 * 8000.0D);
-         this.g = (int)(var8 * 8000.0D);
-      }
-
+      this.b = arg_0.aM();
+      this.c = nu.c(arg_0.s * 32.0D);
+      this.d = nu.c(arg_0.t * 32.0D);
+      this.e = nu.c(arg_0.u * 32.0D);
+      this.i = nu.d(arg_0.z * 256.0F / 360.0F);
+      this.j = nu.d(arg_0.y * 256.0F / 360.0F);
+      this.k = arg_1;
+      this.l = arg_2;
+      double var4 = 3.9D;
+      this.f = (int)(nu.a(arg_0.v, -3.9D, 3.9D) * 8000.0D);
+      this.g = (int)(nu.a(arg_0.w, -3.9D, 3.9D) * 8000.0D);
+      this.h = (int)(nu.a(arg_0.x, -3.9D, 3.9D) * 8000.0D);
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readVarInt();
-      this.j = in.readByte();
-      this.b = in.readInt();
+      this.b = in.readUUID();
+      this.k = in.readByte();
       this.c = in.readInt();
       this.d = in.readInt();
-      this.h = in.readByte();
+      this.e = in.readInt();
       this.i = in.readByte();
-      this.k = in.readInt();
-      if(this.k > 0) {
-         this.e = in.readShort();
-         this.f = in.readShort();
-         this.g = in.readShort();
-      }
-
+      this.j = in.readByte();
+      this.l = in.readInt();
+      this.f = in.readShort();
+      this.g = in.readShort();
+      this.h = in.readShort();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeVarInt(this.a);
-      out.writeByte(this.j);
-      out.writeInt(this.b);
+      out.writeUUID(this.b);
+      out.writeByte(this.k);
       out.writeInt(this.c);
       out.writeInt(this.d);
-      out.writeByte(this.h);
+      out.writeInt(this.e);
       out.writeByte(this.i);
-      out.writeInt(this.k);
-      if(this.k > 0) {
-         out.writeShort(this.e);
-         out.writeShort(this.f);
-         out.writeShort(this.g);
-      }
-
+      out.writeByte(this.j);
+      out.writeInt(this.l);
+      out.writeShort(this.f);
+      out.writeShort(this.g);
+      out.writeShort(this.h);
    }
 
    public void handle(PacketHandlerPlayClientbound handler) {
@@ -113,7 +83,7 @@ public class PacketSpawnObject implements Packet {
       return this.a;
    }
 
-   public int b() {
+   public UUID b() {
       return this.b;
    }
 
@@ -153,32 +123,36 @@ public class PacketSpawnObject implements Packet {
       return this.k;
    }
 
-   public void a(int arg_0) {
-      this.b = arg_0;
+   public int l() {
+      return this.l;
    }
 
-   public void b(int arg_0) {
+   public void a(int arg_0) {
       this.c = arg_0;
    }
 
-   public void c(int arg_0) {
+   public void b(int arg_0) {
       this.d = arg_0;
    }
 
-   public void d(int arg_0) {
+   public void c(int arg_0) {
       this.e = arg_0;
    }
 
-   public void e(int arg_0) {
+   public void d(int arg_0) {
       this.f = arg_0;
    }
 
-   public void f(int arg_0) {
+   public void e(int arg_0) {
       this.g = arg_0;
    }
 
+   public void f(int arg_0) {
+      this.h = arg_0;
+   }
+
    public void g(int arg_0) {
-      this.k = arg_0;
+      this.l = arg_0;
    }
 
    // $FF: synthetic method

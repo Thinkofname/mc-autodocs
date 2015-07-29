@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import java.util.UUID;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -17,11 +18,11 @@ public class PacketSpectate implements Packet {
       this.a = arg_0;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readUUID();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeUUID(this.a);
    }
 
@@ -29,7 +30,7 @@ public class PacketSpectate implements Packet {
       handler.handle(this);
    }
 
-   public wx a(qu arg_0) {
+   public pr a(lg arg_0) {
       return arg_0.a(this.a);
    }
 

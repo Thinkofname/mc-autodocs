@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.math.Position;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -24,7 +25,7 @@ public class PacketTabComplete implements Packet {
       this.b = arg_1;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readString(32767);
       boolean var2 = in.readBoolean();
       if(var2) {
@@ -33,7 +34,7 @@ public class PacketTabComplete implements Packet {
 
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeString(StringUtils.substring(this.a, 0, 32767));
       boolean var2 = this.b != null;
       out.writeBoolean(var2);

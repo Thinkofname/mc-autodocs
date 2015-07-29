@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -26,10 +27,10 @@ public class PacketSoundEffect implements Packet {
       this.d = (int)(arg_5 * 8.0D);
       this.e = var8;
       this.f = (int)(var9 * 63.0F);
-      var9 = ux.a(var9, 0.0F, 255.0F);
+      var9 = nu.a(var9, 0.0F, 255.0F);
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readString(256);
       this.b = in.readInt();
       this.c = in.readInt();
@@ -38,7 +39,7 @@ public class PacketSoundEffect implements Packet {
       this.f = in.readUnsignedByte();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeString(this.a);
       out.writeInt(this.b);
       out.writeInt(this.c);

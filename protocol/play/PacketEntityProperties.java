@@ -1,6 +1,7 @@
 package net.minecraft.network.play;
 
 import com.google.common.collect.Lists;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -24,13 +25,13 @@ public class PacketEntityProperties implements Packet {
       Iterator var3 = arg_1.iterator();
 
       while(var3.hasNext()) {
-         yc var4 = (yc)var3.next();
-         this.b.add(new lr(this, var4.a().a(), var4.b(), var4.c()));
+         ql var4 = (ql)var3.next();
+         this.b.add(new ia$a(this, var4.a().a(), var4.b(), var4.c()));
       }
 
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readVarInt();
       int var2 = in.readInt();
 
@@ -42,28 +43,28 @@ public class PacketEntityProperties implements Packet {
 
          for(int var9 = 0; var9 < var8; ++var9) {
             UUID var10 = in.readUUID();
-            var7.add(new yd(var10, "Unknown synced attribute modifier", in.readDouble(), in.readByte()));
+            var7.add(new qm(var10, "Unknown synced attribute modifier", in.readDouble(), in.readByte()));
          }
 
-         this.b.add(new lr(this, var4, var5, var7));
+         this.b.add(new ia$a(this, var4, var5, var7));
       }
 
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeVarInt(this.a);
       out.writeInt(this.b.size());
       Iterator var2 = this.b.iterator();
 
       while(var2.hasNext()) {
-         lr var3 = (lr)var2.next();
+         ia$a var3 = (ia$a)var2.next();
          out.writeString(var3.a());
          out.writeDouble(var3.b());
          out.writeVarInt(var3.c().size());
          Iterator var4 = var3.c().iterator();
 
          while(var4.hasNext()) {
-            yd var5 = (yd)var4.next();
+            qm var5 = (qm)var4.next();
             out.writeUUID(var5.a());
             out.writeDouble(var5.d());
             out.writeByte(var5.c());

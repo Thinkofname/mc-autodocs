@@ -23,7 +23,7 @@ public class PacketClientPluginMessage implements Packet {
       }
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readString(20);
       int var2 = in.readableBytes();
       if(var2 >= 0 && var2 <= 32767) {
@@ -33,7 +33,7 @@ public class PacketClientPluginMessage implements Packet {
       }
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeString(this.a);
       out.writeBytes((ByteBuf)this.b);
    }

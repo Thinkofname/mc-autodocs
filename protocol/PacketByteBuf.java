@@ -63,12 +63,12 @@ public class PacketByteBuf extends ByteBuf {
       this.writeLong(arg_0.g());
    }
 
-   public IChatMessage readChat() {
-      return hq.a(this.readString(32767));
+   public IChatMessage readChat() throws IOException {
+      return eu$a.a(this.readString(32767));
    }
 
-   public void writeChat(IChatMessage arg_0) {
-      this.writeString(hq.a(arg_0));
+   public void writeChat(IChatMessage arg_0) throws IOException {
+      this.writeString(eu$a.a(arg_0));
    }
 
    public Enum readEnum(Class arg_0) {
@@ -138,12 +138,12 @@ public class PacketByteBuf extends ByteBuf {
       this.writeByte((int)arg_0);
    }
 
-   public void a(fn arg_0) {
+   public void a(dn arg_0) {
       if(arg_0 == null) {
          this.writeByte(0);
       } else {
          try {
-            fz.a(arg_0, (DataOutput)(new ByteBufOutputStream(this)));
+            dx.a(arg_0, (DataOutput)(new ByteBufOutputStream(this)));
          } catch (IOException var3) {
             throw new EncoderException(var3);
          }
@@ -151,14 +151,14 @@ public class PacketByteBuf extends ByteBuf {
 
    }
 
-   public fn h() {
+   public dn h() throws IOException {
       int var1 = this.readerIndex();
       byte var2 = this.readByte();
       if(var2 == 0) {
          return null;
       } else {
          this.readerIndex(var1);
-         return fz.a((DataInput)(new ByteBufInputStream(this)), new fx(2097152L));
+         return dx.a((DataInput)(new ByteBufInputStream(this)), new dw(2097152L));
       }
    }
 
@@ -169,7 +169,7 @@ public class PacketByteBuf extends ByteBuf {
          this.writeShort(Item.b(arg_0.b()));
          this.writeByte(arg_0.b);
          this.writeShort(arg_0.i());
-         fn var2 = null;
+         dn var2 = null;
          if(arg_0.b().m() || arg_0.b().p()) {
             var2 = arg_0.o();
          }
@@ -179,13 +179,13 @@ public class PacketByteBuf extends ByteBuf {
 
    }
 
-   public ItemStack readItemStack() {
+   public ItemStack readItemStack() throws IOException {
       ItemStack var1 = null;
       short var2 = this.readShort();
       if(var2 >= 0) {
          byte var3 = this.readByte();
          short var4 = this.readShort();
-         var1 = new ItemStack(Item.b(var2), var3, var4);
+         var1 = new ItemStack(Item.c(var2), var3, var4);
          var1.d(this.h());
       }
 
@@ -411,11 +411,11 @@ public class PacketByteBuf extends ByteBuf {
       return this.a.getBytes(arg_0, arg_1);
    }
 
-   public ByteBuf getBytes(int arg_0, OutputStream arg_1, int arg_2) {
+   public ByteBuf getBytes(int arg_0, OutputStream arg_1, int arg_2) throws IOException {
       return this.a.getBytes(arg_0, arg_1, arg_2);
    }
 
-   public int getBytes(int arg_0, GatheringByteChannel arg_1, int arg_2) {
+   public int getBytes(int arg_0, GatheringByteChannel arg_1, int arg_2) throws IOException {
       return this.a.getBytes(arg_0, arg_1, arg_2);
    }
 
@@ -479,11 +479,11 @@ public class PacketByteBuf extends ByteBuf {
       return this.a.setBytes(arg_0, arg_1);
    }
 
-   public int setBytes(int arg_0, InputStream arg_1, int arg_2) {
+   public int setBytes(int arg_0, InputStream arg_1, int arg_2) throws IOException {
       return this.a.setBytes(arg_0, arg_1, arg_2);
    }
 
-   public int setBytes(int arg_0, ScatteringByteChannel arg_1, int arg_2) {
+   public int setBytes(int arg_0, ScatteringByteChannel arg_1, int arg_2) throws IOException {
       return this.a.setBytes(arg_0, arg_1, arg_2);
    }
 
@@ -575,11 +575,11 @@ public class PacketByteBuf extends ByteBuf {
       return this.a.readBytes(arg_0);
    }
 
-   public ByteBuf readBytes(OutputStream arg_0, int arg_1) {
+   public ByteBuf readBytes(OutputStream arg_0, int arg_1) throws IOException {
       return this.a.readBytes(arg_0, arg_1);
    }
 
-   public int readBytes(GatheringByteChannel arg_0, int arg_1) {
+   public int readBytes(GatheringByteChannel arg_0, int arg_1) throws IOException {
       return this.a.readBytes(arg_0, arg_1);
    }
 
@@ -647,11 +647,11 @@ public class PacketByteBuf extends ByteBuf {
       return this.a.writeBytes(arg_0);
    }
 
-   public int writeBytes(InputStream arg_0, int arg_1) {
+   public int writeBytes(InputStream arg_0, int arg_1) throws IOException {
       return this.a.writeBytes(arg_0, arg_1);
    }
 
-   public int writeBytes(ScatteringByteChannel arg_0, int arg_1) {
+   public int writeBytes(ScatteringByteChannel arg_0, int arg_1) throws IOException {
       return this.a.writeBytes(arg_0, arg_1);
    }
 

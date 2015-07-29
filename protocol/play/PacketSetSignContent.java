@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.chat.IChatMessage;
 import net.minecraft.math.Position;
 import net.minecraft.network.Packet;
@@ -9,20 +10,20 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 
 public class PacketSetSignContent implements Packet {
 
-   private aqr a;
+   private aen a;
    private Position b;
    private IChatMessage[] c;
 
 
    public PacketSetSignContent() {}
 
-   public PacketSetSignContent(aqr arg_0, Position arg_1, IChatMessage[] arg_2) {
+   public PacketSetSignContent(aen arg_0, Position arg_1, IChatMessage[] arg_2) {
       this.a = arg_0;
       this.b = arg_1;
       this.c = new IChatMessage[]{arg_2[0], arg_2[1], arg_2[2], arg_2[3]};
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.b = in.readPosition();
       this.c = new IChatMessage[4];
 
@@ -32,7 +33,7 @@ public class PacketSetSignContent implements Packet {
 
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writePosition(this.b);
 
       for(int var2 = 0; var2 < 4; ++var2) {

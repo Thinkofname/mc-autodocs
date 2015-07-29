@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.math.Position;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -10,24 +11,24 @@ public class PacketUpdateBlockEntity implements Packet {
 
    private Position a;
    private int b;
-   private fn c;
+   private dn c;
 
 
    public PacketUpdateBlockEntity() {}
 
-   public PacketUpdateBlockEntity(Position arg_0, int arg_1, fn arg_2) {
+   public PacketUpdateBlockEntity(Position arg_0, int arg_1, dn arg_2) {
       this.a = arg_0;
       this.b = arg_1;
       this.c = arg_2;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readPosition();
       this.b = in.readUnsignedByte();
       this.c = in.h();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writePosition(this.a);
       out.writeByte((byte)this.b);
       out.a(this.c);
@@ -45,7 +46,7 @@ public class PacketUpdateBlockEntity implements Packet {
       return this.b;
    }
 
-   public fn c() {
+   public dn c() {
       return this.c;
    }
 

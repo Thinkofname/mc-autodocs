@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -21,7 +22,7 @@ public class PacketWorldBorder implements Packet {
 
    public PacketWorldBorder() {}
 
-   public PacketWorldBorder(bez arg_0, WorldBorderAction arg_1) {
+   public PacketWorldBorder(aoe arg_0, WorldBorderAction arg_1) {
       this.a = arg_1;
       this.c = arg_0.f();
       this.d = arg_0.g();
@@ -33,9 +34,9 @@ public class PacketWorldBorder implements Packet {
       this.h = arg_0.p();
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = (WorldBorderAction)in.readEnum(WorldBorderAction.class);
-      switch(kt.a[this.a.ordinal()]) {
+      switch(hg$1.a[this.a.ordinal()]) {
       case 1:
          this.e = in.readDouble();
          break;
@@ -67,9 +68,9 @@ public class PacketWorldBorder implements Packet {
 
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeEnum(this.a);
-      switch(kt.a[this.a.ordinal()]) {
+      switch(hg$1.a[this.a.ordinal()]) {
       case 1:
          out.writeDouble(this.e);
          break;
@@ -105,8 +106,8 @@ public class PacketWorldBorder implements Packet {
       handler.handle(this);
    }
 
-   public void a(bez arg_0) {
-      switch(kt.a[this.a.ordinal()]) {
+   public void a(aoe arg_0) {
+      switch(hg$1.a[this.a.ordinal()]) {
       case 1:
          arg_0.a(this.e);
          break;

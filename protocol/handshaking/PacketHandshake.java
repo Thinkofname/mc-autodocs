@@ -1,5 +1,6 @@
 package net.minecraft.network.handshaking;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -23,14 +24,14 @@ public class PacketHandshake implements Packet {
       this.d = arg_3;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readVarInt();
       this.b = in.readString(255);
       this.c = in.readUnsignedShort();
       this.d = Protocols.a(in.readVarInt());
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeVarInt(this.a);
       out.writeString(this.b);
       out.writeShort(this.c);

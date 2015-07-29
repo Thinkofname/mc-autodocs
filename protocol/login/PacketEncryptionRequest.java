@@ -1,5 +1,6 @@
 package net.minecraft.network.login;
 
+import java.io.IOException;
 import java.security.PublicKey;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -21,13 +22,13 @@ public class PacketEncryptionRequest implements Packet {
       this.c = arg_2;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readString(20);
-      this.b = ui.a(in.readByteArray());
+      this.b = ni.a(in.readByteArray());
       this.c = in.readByteArray();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeString(this.a);
       out.writeByteArray(this.b.getEncoded());
       out.writeByteArray(this.c);

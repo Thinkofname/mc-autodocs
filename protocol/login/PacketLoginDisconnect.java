@@ -1,5 +1,6 @@
 package net.minecraft.network.login;
 
+import java.io.IOException;
 import net.minecraft.chat.IChatMessage;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -17,11 +18,11 @@ public class PacketLoginDisconnect implements Packet {
       this.a = arg_0;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readChat();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeChat(this.a);
    }
 

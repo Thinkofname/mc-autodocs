@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -16,9 +17,9 @@ public class PacketEntityEffect implements Packet {
 
    public PacketEntityEffect() {}
 
-   public PacketEntityEffect(int arg_0, ws arg_1) {
+   public PacketEntityEffect(int arg_0, pl arg_1) {
       this.a = arg_0;
-      this.b = (byte)(arg_1.a() & 255);
+      this.b = (byte)(pk.a(arg_1.a()) & 255);
       this.c = (byte)(arg_1.c() & 255);
       if(arg_1.b() > 32767) {
          this.d = 32767;
@@ -26,10 +27,10 @@ public class PacketEntityEffect implements Packet {
          this.d = arg_1.b();
       }
 
-      this.e = (byte)(arg_1.f()?1:0);
+      this.e = (byte)(arg_1.e()?1:0);
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readVarInt();
       this.b = in.readByte();
       this.c = in.readByte();
@@ -37,7 +38,7 @@ public class PacketEntityEffect implements Packet {
       this.e = in.readByte();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeVarInt(this.a);
       out.writeByte(this.b);
       out.writeByte(this.c);

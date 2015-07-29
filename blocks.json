@@ -1806,98 +1806,98 @@
   "51:0": {
     "plugin": "minecraft",
     "name": "fire",
-    "state": "age=0,alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false",
-    "modelState": "alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false"
+    "state": "age=0,east=false,north=false,south=false,up=false,west=false",
+    "modelState": "east=false,north=false,south=false,up=false,west=false"
   },
   "51:1": {
     "plugin": "minecraft",
     "name": "fire",
-    "state": "age=1,alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false",
-    "modelState": "alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false"
+    "state": "age=1,east=false,north=false,south=false,up=false,west=false",
+    "modelState": "east=false,north=false,south=false,up=false,west=false"
   },
   "51:2": {
     "plugin": "minecraft",
     "name": "fire",
-    "state": "age=2,alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false",
-    "modelState": "alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false"
+    "state": "age=2,east=false,north=false,south=false,up=false,west=false",
+    "modelState": "east=false,north=false,south=false,up=false,west=false"
   },
   "51:3": {
     "plugin": "minecraft",
     "name": "fire",
-    "state": "age=3,alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false",
-    "modelState": "alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false"
+    "state": "age=3,east=false,north=false,south=false,up=false,west=false",
+    "modelState": "east=false,north=false,south=false,up=false,west=false"
   },
   "51:4": {
     "plugin": "minecraft",
     "name": "fire",
-    "state": "age=4,alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false",
-    "modelState": "alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false"
+    "state": "age=4,east=false,north=false,south=false,up=false,west=false",
+    "modelState": "east=false,north=false,south=false,up=false,west=false"
   },
   "51:5": {
     "plugin": "minecraft",
     "name": "fire",
-    "state": "age=5,alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false",
-    "modelState": "alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false"
+    "state": "age=5,east=false,north=false,south=false,up=false,west=false",
+    "modelState": "east=false,north=false,south=false,up=false,west=false"
   },
   "51:6": {
     "plugin": "minecraft",
     "name": "fire",
-    "state": "age=6,alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false",
-    "modelState": "alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false"
+    "state": "age=6,east=false,north=false,south=false,up=false,west=false",
+    "modelState": "east=false,north=false,south=false,up=false,west=false"
   },
   "51:7": {
     "plugin": "minecraft",
     "name": "fire",
-    "state": "age=7,alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false",
-    "modelState": "alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false"
+    "state": "age=7,east=false,north=false,south=false,up=false,west=false",
+    "modelState": "east=false,north=false,south=false,up=false,west=false"
   },
   "51:8": {
     "plugin": "minecraft",
     "name": "fire",
-    "state": "age=8,alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false",
-    "modelState": "alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false"
+    "state": "age=8,east=false,north=false,south=false,up=false,west=false",
+    "modelState": "east=false,north=false,south=false,up=false,west=false"
   },
   "51:9": {
     "plugin": "minecraft",
     "name": "fire",
-    "state": "age=9,alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false",
-    "modelState": "alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false"
+    "state": "age=9,east=false,north=false,south=false,up=false,west=false",
+    "modelState": "east=false,north=false,south=false,up=false,west=false"
   },
   "51:10": {
     "plugin": "minecraft",
     "name": "fire",
-    "state": "age=10,alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false",
-    "modelState": "alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false"
+    "state": "age=10,east=false,north=false,south=false,up=false,west=false",
+    "modelState": "east=false,north=false,south=false,up=false,west=false"
   },
   "51:11": {
     "plugin": "minecraft",
     "name": "fire",
-    "state": "age=11,alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false",
-    "modelState": "alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false"
+    "state": "age=11,east=false,north=false,south=false,up=false,west=false",
+    "modelState": "east=false,north=false,south=false,up=false,west=false"
   },
   "51:12": {
     "plugin": "minecraft",
     "name": "fire",
-    "state": "age=12,alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false",
-    "modelState": "alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false"
+    "state": "age=12,east=false,north=false,south=false,up=false,west=false",
+    "modelState": "east=false,north=false,south=false,up=false,west=false"
   },
   "51:13": {
     "plugin": "minecraft",
     "name": "fire",
-    "state": "age=13,alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false",
-    "modelState": "alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false"
+    "state": "age=13,east=false,north=false,south=false,up=false,west=false",
+    "modelState": "east=false,north=false,south=false,up=false,west=false"
   },
   "51:14": {
     "plugin": "minecraft",
     "name": "fire",
-    "state": "age=14,alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false",
-    "modelState": "alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false"
+    "state": "age=14,east=false,north=false,south=false,up=false,west=false",
+    "modelState": "east=false,north=false,south=false,up=false,west=false"
   },
   "51:15": {
     "plugin": "minecraft",
     "name": "fire",
-    "state": "age=15,alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false",
-    "modelState": "alt=false,east=false,flip=false,north=false,south=false,upper=2,west=false"
+    "state": "age=15,east=false,north=false,south=false,up=false,west=false",
+    "modelState": "east=false,north=false,south=false,up=false,west=false"
   },
   "52:0": {
     "plugin": "minecraft",
@@ -6954,43 +6954,61 @@
   "175:0": {
     "plugin": "minecraft",
     "name": "double_plant",
-    "state": "half=lower,variant=sunflower",
+    "state": "facing=east,half=lower,variant=sunflower",
     "modelState": "half=lower"
   },
   "175:1": {
     "plugin": "minecraft",
     "name": "double_plant",
-    "state": "half=lower,variant=syringa",
+    "state": "facing=east,half=lower,variant=syringa",
     "modelState": "half=lower"
   },
   "175:2": {
     "plugin": "minecraft",
     "name": "double_plant",
-    "state": "half=lower,variant=double_grass",
+    "state": "facing=east,half=lower,variant=double_grass",
     "modelState": "half=lower"
   },
   "175:3": {
     "plugin": "minecraft",
     "name": "double_plant",
-    "state": "half=lower,variant=double_fern",
+    "state": "facing=east,half=lower,variant=double_fern",
     "modelState": "half=lower"
   },
   "175:4": {
     "plugin": "minecraft",
     "name": "double_plant",
-    "state": "half=lower,variant=double_rose",
+    "state": "facing=east,half=lower,variant=double_rose",
     "modelState": "half=lower"
   },
   "175:5": {
     "plugin": "minecraft",
     "name": "double_plant",
-    "state": "half=lower,variant=paeonia",
+    "state": "facing=east,half=lower,variant=paeonia",
     "modelState": "half=lower"
   },
   "175:8": {
     "plugin": "minecraft",
     "name": "double_plant",
-    "state": "half=upper,variant=paeonia",
+    "state": "facing=south,half=upper,variant=paeonia",
+    "modelState": "half=upper"
+  },
+  "175:9": {
+    "plugin": "minecraft",
+    "name": "double_plant",
+    "state": "facing=west,half=upper,variant=paeonia",
+    "modelState": "half=upper"
+  },
+  "175:10": {
+    "plugin": "minecraft",
+    "name": "double_plant",
+    "state": "facing=north,half=upper,variant=paeonia",
+    "modelState": "half=upper"
+  },
+  "175:11": {
+    "plugin": "minecraft",
+    "name": "double_plant",
+    "state": "facing=east,half=upper,variant=paeonia",
     "modelState": "half=upper"
   },
   "176:0": {
@@ -8148,5 +8166,234 @@
     "name": "dark_oak_door",
     "state": "facing=east,half=upper,hinge=right,open=false,powered=true",
     "modelState": "facing=east,half=upper,hinge=right,open=false"
+  },
+  "198:0": {
+    "plugin": "minecraft",
+    "name": "end_rod",
+    "state": "facing=down",
+    "modelState": "facing=down"
+  },
+  "198:1": {
+    "plugin": "minecraft",
+    "name": "end_rod",
+    "state": "facing=up",
+    "modelState": "facing=up"
+  },
+  "198:2": {
+    "plugin": "minecraft",
+    "name": "end_rod",
+    "state": "facing=north",
+    "modelState": "facing=north"
+  },
+  "198:3": {
+    "plugin": "minecraft",
+    "name": "end_rod",
+    "state": "facing=south",
+    "modelState": "facing=south"
+  },
+  "198:4": {
+    "plugin": "minecraft",
+    "name": "end_rod",
+    "state": "facing=west",
+    "modelState": "facing=west"
+  },
+  "198:5": {
+    "plugin": "minecraft",
+    "name": "end_rod",
+    "state": "facing=east",
+    "modelState": "facing=east"
+  },
+  "199:0": {
+    "plugin": "minecraft",
+    "name": "chorus_plant",
+    "state": "down=false,east=false,north=false,south=false,up=false,west=false",
+    "modelState": "down=false,east=false,north=false,south=false,up=false,west=false"
+  },
+  "200:0": {
+    "plugin": "minecraft",
+    "name": "chorus_flower",
+    "state": "age=0",
+    "modelState": "age=0"
+  },
+  "200:1": {
+    "plugin": "minecraft",
+    "name": "chorus_flower",
+    "state": "age=1",
+    "modelState": "age=1"
+  },
+  "200:2": {
+    "plugin": "minecraft",
+    "name": "chorus_flower",
+    "state": "age=2",
+    "modelState": "age=2"
+  },
+  "200:3": {
+    "plugin": "minecraft",
+    "name": "chorus_flower",
+    "state": "age=3",
+    "modelState": "age=3"
+  },
+  "200:4": {
+    "plugin": "minecraft",
+    "name": "chorus_flower",
+    "state": "age=4",
+    "modelState": "age=4"
+  },
+  "200:5": {
+    "plugin": "minecraft",
+    "name": "chorus_flower",
+    "state": "age=5",
+    "modelState": "age=5"
+  },
+  "201:0": {
+    "plugin": "minecraft",
+    "name": "purpur_block",
+    "modelState": "normal"
+  },
+  "202:0": {
+    "plugin": "minecraft",
+    "name": "purpur_pillar",
+    "state": "axis=y",
+    "modelState": "axis=y"
+  },
+  "202:4": {
+    "plugin": "minecraft",
+    "name": "purpur_pillar",
+    "state": "axis=x",
+    "modelState": "axis=x"
+  },
+  "202:8": {
+    "plugin": "minecraft",
+    "name": "purpur_pillar",
+    "state": "axis=z",
+    "modelState": "axis=z"
+  },
+  "203:0": {
+    "plugin": "minecraft",
+    "name": "purpur_stairs",
+    "state": "facing=east,half=bottom,shape=outer_right",
+    "modelState": "facing=east,half=bottom,shape=outer_right"
+  },
+  "203:1": {
+    "plugin": "minecraft",
+    "name": "purpur_stairs",
+    "state": "facing=west,half=bottom,shape=outer_right",
+    "modelState": "facing=west,half=bottom,shape=outer_right"
+  },
+  "203:2": {
+    "plugin": "minecraft",
+    "name": "purpur_stairs",
+    "state": "facing=south,half=bottom,shape=outer_right",
+    "modelState": "facing=south,half=bottom,shape=outer_right"
+  },
+  "203:3": {
+    "plugin": "minecraft",
+    "name": "purpur_stairs",
+    "state": "facing=north,half=bottom,shape=outer_right",
+    "modelState": "facing=north,half=bottom,shape=outer_right"
+  },
+  "203:4": {
+    "plugin": "minecraft",
+    "name": "purpur_stairs",
+    "state": "facing=east,half=top,shape=outer_right",
+    "modelState": "facing=east,half=top,shape=outer_right"
+  },
+  "203:5": {
+    "plugin": "minecraft",
+    "name": "purpur_stairs",
+    "state": "facing=west,half=top,shape=outer_right",
+    "modelState": "facing=west,half=top,shape=outer_right"
+  },
+  "203:6": {
+    "plugin": "minecraft",
+    "name": "purpur_stairs",
+    "state": "facing=south,half=top,shape=outer_right",
+    "modelState": "facing=south,half=top,shape=outer_right"
+  },
+  "203:7": {
+    "plugin": "minecraft",
+    "name": "purpur_stairs",
+    "state": "facing=north,half=top,shape=outer_right",
+    "modelState": "facing=north,half=top,shape=outer_right"
+  },
+  "204:0": {
+    "plugin": "minecraft",
+    "name": "purpur_double_slab",
+    "state": "variant=default",
+    "modelState": "variant=default"
+  },
+  "205:0": {
+    "plugin": "minecraft",
+    "name": "purpur_slab",
+    "state": "half=bottom,variant=default",
+    "modelState": "half=bottom,variant=default"
+  },
+  "205:8": {
+    "plugin": "minecraft",
+    "name": "purpur_slab",
+    "state": "half=top,variant=default",
+    "modelState": "half=top,variant=default"
+  },
+  "206:0": {
+    "plugin": "minecraft",
+    "name": "end_bricks",
+    "modelState": "normal"
+  },
+  "207:0": {
+    "plugin": "minecraft",
+    "name": "beetroots",
+    "state": "age=0",
+    "modelState": "age=0"
+  },
+  "207:1": {
+    "plugin": "minecraft",
+    "name": "beetroots",
+    "state": "age=1",
+    "modelState": "age=1"
+  },
+  "207:2": {
+    "plugin": "minecraft",
+    "name": "beetroots",
+    "state": "age=2",
+    "modelState": "age=2"
+  },
+  "207:3": {
+    "plugin": "minecraft",
+    "name": "beetroots",
+    "state": "age=3",
+    "modelState": "age=3"
+  },
+  "208:0": {
+    "plugin": "minecraft",
+    "name": "grass_path",
+    "modelState": "normal"
+  },
+  "209:0": {
+    "plugin": "minecraft",
+    "name": "end_gateway"
+  },
+  "255:0": {
+    "plugin": "minecraft",
+    "name": "structure_block",
+    "state": "mode=save",
+    "modelState": "mode=save"
+  },
+  "255:1": {
+    "plugin": "minecraft",
+    "name": "structure_block",
+    "state": "mode=load",
+    "modelState": "mode=load"
+  },
+  "255:2": {
+    "plugin": "minecraft",
+    "name": "structure_block",
+    "state": "mode=corner",
+    "modelState": "mode=corner"
+  },
+  "255:3": {
+    "plugin": "minecraft",
+    "name": "structure_block",
+    "state": "mode=data",
+    "modelState": "mode=data"
   }
 }

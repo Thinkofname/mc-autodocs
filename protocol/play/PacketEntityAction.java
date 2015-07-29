@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -15,23 +16,23 @@ public class PacketEntityAction implements Packet {
 
    public PacketEntityAction() {}
 
-   public PacketEntityAction(wx arg_0, EntityAction arg_1) {
+   public PacketEntityAction(pr arg_0, EntityAction arg_1) {
       this(arg_0, arg_1, 0);
    }
 
-   public PacketEntityAction(wx arg_0, EntityAction arg_1, int arg_2) {
+   public PacketEntityAction(pr arg_0, EntityAction arg_1, int arg_2) {
       this.a = arg_0.F();
       this.b = arg_1;
       this.c = arg_2;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readVarInt();
       this.b = (EntityAction)in.readEnum(EntityAction.class);
       this.c = in.readVarInt();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeVarInt(this.a);
       out.writeEnum(this.b);
       out.writeVarInt(this.c);

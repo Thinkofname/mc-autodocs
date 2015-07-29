@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.PacketHandler;
@@ -12,15 +13,15 @@ public class PacketCamera implements Packet {
 
    public PacketCamera() {}
 
-   public PacketCamera(wx arg_0) {
+   public PacketCamera(pr arg_0) {
       this.a = arg_0.F();
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readVarInt();
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeVarInt(this.a);
    }
 
@@ -28,7 +29,7 @@ public class PacketCamera implements Packet {
       handler.handle(this);
    }
 
-   public wx a(aqr arg_0) {
+   public pr a(aen arg_0) {
       return arg_0.a(this.a);
    }
 

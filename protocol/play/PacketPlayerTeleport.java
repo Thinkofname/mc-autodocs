@@ -1,5 +1,6 @@
 package net.minecraft.network.play;
 
+import java.io.IOException;
 import java.util.Set;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -27,22 +28,22 @@ public class PacketPlayerTeleport implements Packet {
       this.f = var9;
    }
 
-   public void read(PacketByteBuf in) {
+   public void read(PacketByteBuf in) throws IOException {
       this.a = in.readDouble();
       this.b = in.readDouble();
       this.c = in.readDouble();
       this.d = in.readFloat();
       this.e = in.readFloat();
-      this.f = ik.a(in.readUnsignedByte());
+      this.f = fi$a.a(in.readUnsignedByte());
    }
 
-   public void write(PacketByteBuf out) {
+   public void write(PacketByteBuf out) throws IOException {
       out.writeDouble(this.a);
       out.writeDouble(this.b);
       out.writeDouble(this.c);
       out.writeFloat(this.d);
       out.writeFloat(this.e);
-      out.writeByte(ik.a(this.f));
+      out.writeByte(fi$a.a(this.f));
    }
 
    public void handle(PacketHandlerPlayClientbound handler) {
