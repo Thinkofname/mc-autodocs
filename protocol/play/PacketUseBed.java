@@ -34,7 +34,7 @@ public class PacketUseBed implements Packet {
       handler.handle(this);
    }
 
-   public xa a(aen arg_0) {
+   public xa a(aeo arg_0) {
       return (xa)arg_0.a(this.a);
    }
 

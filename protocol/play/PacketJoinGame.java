@@ -10,17 +10,17 @@ public class PacketJoinGame implements Packet {
 
    private int a;
    private boolean b;
-   private aeq$a c;
+   private aer$a c;
    private int d;
    private om e;
    private int f;
-   private aes g;
+   private aet g;
    private boolean h;
 
 
    public PacketJoinGame() {}
 
-   public PacketJoinGame(int arg_0, aeq$a arg_1, boolean arg_2, int arg_3, om arg_4, int arg_5, aes arg_6, boolean arg_7) {
+   public PacketJoinGame(int arg_0, aer$a arg_1, boolean arg_2, int arg_3, om arg_4, int arg_5, aet arg_6, boolean arg_7) {
       this.a = arg_0;
       this.d = arg_3;
       this.e = arg_4;
@@ -36,13 +36,13 @@ public class PacketJoinGame implements Packet {
       short var2 = in.readUnsignedByte();
       this.b = (var2 & 8) == 8;
       int var3 = var2 & -9;
-      this.c = aeq$a.a(var3);
+      this.c = aer$a.a(var3);
       this.d = in.readByte();
       this.e = om.a(in.readUnsignedByte());
       this.f = in.readUnsignedByte();
-      this.g = aes.a(in.readString(16));
+      this.g = aet.a(in.readString(16));
       if(this.g == null) {
-         this.g = aes.b;
+         this.g = aet.b;
       }
 
       this.h = in.readBoolean();
@@ -75,7 +75,7 @@ public class PacketJoinGame implements Packet {
       return this.b;
    }
 
-   public aeq$a c() {
+   public aer$a c() {
       return this.c;
    }
 
@@ -91,7 +91,7 @@ public class PacketJoinGame implements Packet {
       return this.f;
    }
 
-   public aes g() {
+   public aet g() {
       return this.g;
    }
 

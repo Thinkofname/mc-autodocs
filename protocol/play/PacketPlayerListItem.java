@@ -52,7 +52,7 @@ public class PacketPlayerListItem implements Packet {
       for(int var3 = 0; var3 < var2; ++var3) {
          GameProfile var4 = null;
          int var5 = 0;
-         aeq$a var6 = null;
+         aer$a var6 = null;
          IChatMessage var7 = null;
          switch(gz$1.a[this.a.ordinal()]) {
          case 1:
@@ -69,7 +69,7 @@ public class PacketPlayerListItem implements Packet {
                }
             }
 
-            var6 = aeq$a.a(in.readVarInt());
+            var6 = aer$a.a(in.readVarInt());
             var5 = in.readVarInt();
             if(in.readBoolean()) {
                var7 = in.readChat();
@@ -77,7 +77,7 @@ public class PacketPlayerListItem implements Packet {
             break;
          case 2:
             var4 = new GameProfile(in.readUUID(), (String)null);
-            var6 = aeq$a.a(in.readVarInt());
+            var6 = aer$a.a(in.readVarInt());
             break;
          case 3:
             var4 = new GameProfile(in.readUUID(), (String)null);

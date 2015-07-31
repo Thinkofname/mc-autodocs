@@ -14,7 +14,7 @@ public class PacketDisplayScoreboard implements Packet {
 
    public PacketDisplayScoreboard() {}
 
-   public PacketDisplayScoreboard(int arg_0, awj arg_1) {
+   public PacketDisplayScoreboard(int arg_0, awk arg_1) {
       this.a = arg_0;
       if(arg_1 == null) {
          this.b = "";

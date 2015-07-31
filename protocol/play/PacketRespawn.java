@@ -10,13 +10,13 @@ public class PacketRespawn implements Packet {
 
    private int a;
    private om b;
-   private aeq$a c;
-   private aes d;
+   private aer$a c;
+   private aet d;
 
 
    public PacketRespawn() {}
 
-   public PacketRespawn(int arg_0, om arg_1, aes arg_2, aeq$a arg_3) {
+   public PacketRespawn(int arg_0, om arg_1, aet arg_2, aer$a arg_3) {
       this.a = arg_0;
       this.b = arg_1;
       this.c = arg_3;
@@ -30,10 +30,10 @@ public class PacketRespawn implements Packet {
    public void read(PacketByteBuf in) throws IOException {
       this.a = in.readInt();
       this.b = om.a(in.readUnsignedByte());
-      this.c = aeq$a.a(in.readUnsignedByte());
-      this.d = aes.a(in.readString(16));
+      this.c = aer$a.a(in.readUnsignedByte());
+      this.d = aet.a(in.readString(16));
       if(this.d == null) {
-         this.d = aes.b;
+         this.d = aet.b;
       }
 
    }
@@ -53,11 +53,11 @@ public class PacketRespawn implements Packet {
       return this.b;
    }
 
-   public aeq$a c() {
+   public aer$a c() {
       return this.c;
    }
 
-   public aes d() {
+   public aet d() {
       return this.d;
    }
 

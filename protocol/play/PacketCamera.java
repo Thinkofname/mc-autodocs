@@ -29,7 +29,7 @@ public class PacketCamera implements Packet {
       handler.handle(this);
    }
 
-   public pr a(aen arg_0) {
+   public pr a(aeo arg_0) {
       return arg_0.a(this.a);
    }
 

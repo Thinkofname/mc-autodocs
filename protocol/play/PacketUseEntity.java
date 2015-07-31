@@ -12,7 +12,7 @@ public class PacketUseEntity implements Packet {
 
    private int a;
    private InteractType b;
-   private awh c;
+   private awi c;
    private PlayerHand d;
 
 
@@ -29,7 +29,7 @@ public class PacketUseEntity implements Packet {
       this.d = arg_1;
    }
 
-   public PacketUseEntity(pr arg_0, PlayerHand arg_1, awh arg_2) {
+   public PacketUseEntity(pr arg_0, PlayerHand arg_1, awi arg_2) {
       this.a = arg_0.F();
       this.b = InteractType.INTERACT_AT;
       this.d = arg_1;
@@ -40,7 +40,7 @@ public class PacketUseEntity implements Packet {
       this.a = in.readVarInt();
       this.b = (InteractType)in.readEnum(InteractType.class);
       if(this.b == InteractType.INTERACT_AT) {
-         this.c = new awh((double)in.readFloat(), (double)in.readFloat(), (double)in.readFloat());
+         this.c = new awi((double)in.readFloat(), (double)in.readFloat(), (double)in.readFloat());
       }
 
       if(this.b == InteractType.INTERACT || this.b == InteractType.INTERACT_AT) {
@@ -68,7 +68,7 @@ public class PacketUseEntity implements Packet {
       handler.handle(this);
    }
 
-   public pr a(aen arg_0) {
+   public pr a(aeo arg_0) {
       return arg_0.a(this.a);
    }
 
@@ -80,7 +80,7 @@ public class PacketUseEntity implements Packet {
       return this.d;
    }
 
-   public awh c() {
+   public awi c() {
       return this.c;
    }
 
