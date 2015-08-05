@@ -24,7 +24,7 @@ public class PacketExplosion implements Packet {
 
    public PacketExplosion() {}
 
-   public PacketExplosion(double arg_0, double arg_2, double arg_4, float var7, List var8, awi var9) {
+   public PacketExplosion(double arg_0, double arg_2, double arg_4, float var7, List var8, axe var9) {
       this.a = arg_0;
       this.b = arg_2;
       this.c = arg_4;

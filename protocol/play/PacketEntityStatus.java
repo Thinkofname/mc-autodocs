@@ -14,7 +14,7 @@ public class PacketEntityStatus implements Packet {
 
    public PacketEntityStatus() {}
 
-   public PacketEntityStatus(pr arg_0, byte arg_1) {
+   public PacketEntityStatus(qa arg_0, byte arg_1) {
       this.a = arg_0.F();
       this.b = arg_1;
    }
@@ -33,7 +33,7 @@ public class PacketEntityStatus implements Packet {
       handler.handle(this);
    }
 
-   public pr a(aeo arg_0) {
+   public qa a(afk arg_0) {
       return arg_0.a(this.a);
    }
 

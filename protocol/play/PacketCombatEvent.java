@@ -19,9 +19,9 @@ public class PacketCombatEvent implements Packet {
 
    public PacketCombatEvent() {}
 
-   public PacketCombatEvent(pb arg_0, CombatEvent arg_1) {
+   public PacketCombatEvent(pk arg_0, CombatEvent arg_1) {
       this.a = arg_1;
-      qa var3 = arg_0.c();
+      qj var3 = arg_0.c();
       switch(gy$1.a[arg_1.ordinal()]) {
       case 1:
          this.d = arg_0.f();

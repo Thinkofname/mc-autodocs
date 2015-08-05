@@ -25,13 +25,13 @@ public class PacketSpawnObject implements Packet {
 
    public PacketSpawnObject() {}
 
-   public PacketSpawnObject(pr arg_0, int arg_1) {
+   public PacketSpawnObject(qa arg_0, int arg_1) {
       this(arg_0, arg_1, 0);
    }
 
-   public PacketSpawnObject(pr arg_0, int arg_1, int arg_2) {
+   public PacketSpawnObject(qa arg_0, int arg_1, int arg_2) {
       this.a = arg_0.F();
-      this.b = arg_0.aM();
+      this.b = arg_0.aN();
       this.c = nu.c(arg_0.s * 32.0D);
       this.d = nu.c(arg_0.t * 32.0D);
       this.e = nu.c(arg_0.u * 32.0D);

@@ -15,7 +15,7 @@ public class PacketUseBed implements Packet {
 
    public PacketUseBed() {}
 
-   public PacketUseBed(xa arg_0, Position arg_1) {
+   public PacketUseBed(xw arg_0, Position arg_1) {
       this.a = arg_0.F();
       this.b = arg_1;
    }
@@ -34,8 +34,8 @@ public class PacketUseBed implements Packet {
       handler.handle(this);
    }
 
-   public xa a(aeo arg_0) {
-      return (xa)arg_0.a(this.a);
+   public xw a(afk arg_0) {
+      return (xw)arg_0.a(this.a);
    }
 
    public Position a() {

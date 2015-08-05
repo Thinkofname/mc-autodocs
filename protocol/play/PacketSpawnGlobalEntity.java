@@ -17,12 +17,12 @@ public class PacketSpawnGlobalEntity implements Packet {
 
    public PacketSpawnGlobalEntity() {}
 
-   public PacketSpawnGlobalEntity(pr arg_0) {
+   public PacketSpawnGlobalEntity(qa arg_0) {
       this.a = arg_0.F();
       this.b = nu.c(arg_0.s * 32.0D);
       this.c = nu.c(arg_0.t * 32.0D);
       this.d = nu.c(arg_0.u * 32.0D);
-      if(arg_0 instanceof vi) {
+      if(arg_0 instanceof we) {
          this.e = 1;
       }
 

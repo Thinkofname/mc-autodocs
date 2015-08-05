@@ -10,15 +10,15 @@ public class PacketClientSettings implements Packet {
 
    private String a;
    private int b;
-   private xa$b c;
+   private xw$b c;
    private boolean d;
    private int e;
-   private pz f;
+   private qi f;
 
 
    public PacketClientSettings() {}
 
-   public PacketClientSettings(String arg_0, int arg_1, xa$b arg_2, boolean arg_3, int arg_4, pz arg_5) {
+   public PacketClientSettings(String arg_0, int arg_1, xw$b arg_2, boolean arg_3, int arg_4, qi arg_5) {
       this.a = arg_0;
       this.b = arg_1;
       this.c = arg_2;
@@ -30,10 +30,10 @@ public class PacketClientSettings implements Packet {
    public void read(PacketByteBuf in) throws IOException {
       this.a = in.readString(7);
       this.b = in.readByte();
-      this.c = (xa$b)in.readEnum(xa$b.class);
+      this.c = (xw$b)in.readEnum(xw$b.class);
       this.d = in.readBoolean();
       this.e = in.readUnsignedByte();
-      this.f = (pz)in.readEnum(pz.class);
+      this.f = (qi)in.readEnum(qi.class);
    }
 
    public void write(PacketByteBuf out) throws IOException {
@@ -53,7 +53,7 @@ public class PacketClientSettings implements Packet {
       return this.a;
    }
 
-   public xa$b c() {
+   public xw$b c() {
       return this.c;
    }
 
@@ -65,7 +65,7 @@ public class PacketClientSettings implements Packet {
       return this.e;
    }
 
-   public pz f() {
+   public qi f() {
       return this.f;
    }
 
