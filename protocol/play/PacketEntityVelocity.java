@@ -16,7 +16,7 @@ public class PacketEntityVelocity implements Packet {
 
    public PacketEntityVelocity() {}
 
-   public PacketEntityVelocity(qa arg_0) {
+   public PacketEntityVelocity(qg arg_0) {
       this(arg_0.F(), arg_0.v, arg_0.w, arg_0.x);
    }
 

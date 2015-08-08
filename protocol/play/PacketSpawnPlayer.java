@@ -17,21 +17,21 @@ public class PacketSpawnPlayer implements Packet {
    private int e;
    private byte f;
    private byte g;
-   private qr h;
+   private qx h;
    private List i;
 
 
    public PacketSpawnPlayer() {}
 
-   public PacketSpawnPlayer(xw arg_0) {
+   public PacketSpawnPlayer(yd arg_0) {
       this.a = arg_0.F();
-      this.b = arg_0.cf().getId();
+      this.b = arg_0.cg().getId();
       this.c = nu.c(arg_0.s * 32.0D);
       this.d = nu.c(arg_0.t * 32.0D);
       this.e = nu.c(arg_0.u * 32.0D);
       this.f = (byte)((int)(arg_0.y * 256.0F / 360.0F));
       this.g = (byte)((int)(arg_0.z * 256.0F / 360.0F));
-      this.h = arg_0.H();
+      this.h = arg_0.I();
    }
 
    public void read(PacketByteBuf in) throws IOException {
@@ -42,7 +42,7 @@ public class PacketSpawnPlayer implements Packet {
       this.e = in.readInt();
       this.f = in.readByte();
       this.g = in.readByte();
-      this.i = qr.b(in);
+      this.i = qx.b(in);
    }
 
    public void write(PacketByteBuf out) throws IOException {

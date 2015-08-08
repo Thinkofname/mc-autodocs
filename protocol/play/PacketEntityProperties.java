@@ -25,7 +25,7 @@ public class PacketEntityProperties implements Packet {
       Iterator var3 = arg_1.iterator();
 
       while(var3.hasNext()) {
-         qu var4 = (qu)var3.next();
+         ra var4 = (ra)var3.next();
          this.b.add(new ia$a(this, var4.a().a(), var4.b(), var4.c()));
       }
 
@@ -43,7 +43,7 @@ public class PacketEntityProperties implements Packet {
 
          for(int var9 = 0; var9 < var8; ++var9) {
             UUID var10 = in.readUUID();
-            var7.add(new qv(var10, "Unknown synced attribute modifier", in.readDouble(), in.readByte()));
+            var7.add(new rb(var10, "Unknown synced attribute modifier", in.readDouble(), in.readByte()));
          }
 
          this.b.add(new ia$a(this, var4, var5, var7));
@@ -64,7 +64,7 @@ public class PacketEntityProperties implements Packet {
          Iterator var4 = var3.c().iterator();
 
          while(var4.hasNext()) {
-            qv var5 = (qv)var4.next();
+            rb var5 = (rb)var4.next();
             out.writeUUID(var5.a());
             out.writeDouble(var5.d());
             out.writeByte(var5.c());

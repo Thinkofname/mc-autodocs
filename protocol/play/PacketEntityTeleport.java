@@ -19,7 +19,7 @@ public class PacketEntityTeleport implements Packet {
 
    public PacketEntityTeleport() {}
 
-   public PacketEntityTeleport(qa arg_0) {
+   public PacketEntityTeleport(qg arg_0) {
       this.a = arg_0.F();
       this.b = nu.c(arg_0.s * 32.0D);
       this.c = nu.c(arg_0.t * 32.0D);

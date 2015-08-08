@@ -17,7 +17,7 @@ public class PacketSpawnExperienceOrb implements Packet {
 
    public PacketSpawnExperienceOrb() {}
 
-   public PacketSpawnExperienceOrb(qg arg_0) {
+   public PacketSpawnExperienceOrb(qm arg_0) {
       this.a = arg_0.F();
       this.b = nu.c(arg_0.s * 32.0D);
       this.c = nu.c(arg_0.t * 32.0D);
