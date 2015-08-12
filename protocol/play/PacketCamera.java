@@ -13,7 +13,7 @@ public class PacketCamera implements Packet {
 
    public PacketCamera() {}
 
-   public PacketCamera(qg arg_0) {
+   public PacketCamera(qq arg_0) {
       this.a = arg_0.F();
    }
 
@@ -29,7 +29,7 @@ public class PacketCamera implements Packet {
       handler.handle(this);
    }
 
-   public qg a(afr arg_0) {
+   public qq a(agc arg_0) {
       return arg_0.a(this.a);
    }
 

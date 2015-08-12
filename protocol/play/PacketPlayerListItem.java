@@ -29,7 +29,7 @@ public class PacketPlayerListItem implements Packet {
 
       for(int var5 = 0; var5 < var4; ++var5) {
          lh var6 = var3[var5];
-         this.b.add(new gz$b(this, var6.cg(), var6.h, var6.c.b(), var6.E()));
+         this.b.add(new gz$b(this, var6.ci(), var6.h, var6.c.b(), var6.E()));
       }
 
    }
@@ -40,7 +40,7 @@ public class PacketPlayerListItem implements Packet {
 
       while(var3.hasNext()) {
          lh var4 = (lh)var3.next();
-         this.b.add(new gz$b(this, var4.cg(), var4.h, var4.c.b(), var4.E()));
+         this.b.add(new gz$b(this, var4.ci(), var4.h, var4.c.b(), var4.E()));
       }
 
    }
@@ -52,7 +52,7 @@ public class PacketPlayerListItem implements Packet {
       for(int var3 = 0; var3 < var2; ++var3) {
          GameProfile var4 = null;
          int var5 = 0;
-         afu$a var6 = null;
+         agf$a var6 = null;
          IChatMessage var7 = null;
          switch(gz$1.a[this.a.ordinal()]) {
          case 1:
@@ -69,7 +69,7 @@ public class PacketPlayerListItem implements Packet {
                }
             }
 
-            var6 = afu$a.a(in.readVarInt());
+            var6 = agf$a.a(in.readVarInt());
             var5 = in.readVarInt();
             if(in.readBoolean()) {
                var7 = in.readChat();
@@ -77,7 +77,7 @@ public class PacketPlayerListItem implements Packet {
             break;
          case 2:
             var4 = new GameProfile(in.readUUID(), (String)null);
-            var6 = afu$a.a(in.readVarInt());
+            var6 = agf$a.a(in.readVarInt());
             break;
          case 3:
             var4 = new GameProfile(in.readUUID(), (String)null);

@@ -14,7 +14,7 @@ public class PacketAnimation implements Packet {
 
    public PacketAnimation() {}
 
-   public PacketAnimation(qg arg_0, int arg_1) {
+   public PacketAnimation(qq arg_0, int arg_1) {
       this.a = arg_0.F();
       this.b = arg_1;
    }

@@ -11,19 +11,19 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 public class PacketBlockChange implements Packet {
 
    private Position a;
-   private aop b;
+   private apb b;
 
 
    public PacketBlockChange() {}
 
-   public PacketBlockChange(afr arg_0, Position arg_1) {
+   public PacketBlockChange(agc arg_0, Position arg_1) {
       this.a = arg_1;
       this.b = arg_0.p(arg_1);
    }
 
    public void read(PacketByteBuf in) throws IOException {
       this.a = in.readPosition();
-      this.b = (aop)Block.blockMap.a(in.readVarInt());
+      this.b = (apb)Block.blockMap.a(in.readVarInt());
    }
 
    public void write(PacketByteBuf out) throws IOException {
@@ -35,7 +35,7 @@ public class PacketBlockChange implements Packet {
       handler.handle(this);
    }
 
-   public aop a() {
+   public apb a() {
       return this.b;
    }
 

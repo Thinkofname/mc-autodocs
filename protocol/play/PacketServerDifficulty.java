@@ -8,13 +8,13 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 
 public class PacketServerDifficulty implements Packet {
 
-   private pb a;
+   private pl a;
    private boolean b;
 
 
    public PacketServerDifficulty() {}
 
-   public PacketServerDifficulty(pb arg_0, boolean arg_1) {
+   public PacketServerDifficulty(pl arg_0, boolean arg_1) {
       this.a = arg_0;
       this.b = arg_1;
    }
@@ -24,7 +24,7 @@ public class PacketServerDifficulty implements Packet {
    }
 
    public void read(PacketByteBuf in) throws IOException {
-      this.a = pb.a(in.readUnsignedByte());
+      this.a = pl.a(in.readUnsignedByte());
    }
 
    public void write(PacketByteBuf out) throws IOException {
@@ -35,7 +35,7 @@ public class PacketServerDifficulty implements Packet {
       return this.b;
    }
 
-   public pb b() {
+   public pl b() {
       return this.a;
    }
 

@@ -9,14 +9,14 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 public class PacketRespawn implements Packet {
 
    private int a;
-   private pb b;
-   private afu$a c;
-   private afw d;
+   private pl b;
+   private agf$a c;
+   private agh d;
 
 
    public PacketRespawn() {}
 
-   public PacketRespawn(int arg_0, pb arg_1, afw arg_2, afu$a arg_3) {
+   public PacketRespawn(int arg_0, pl arg_1, agh arg_2, agf$a arg_3) {
       this.a = arg_0;
       this.b = arg_1;
       this.c = arg_3;
@@ -29,11 +29,11 @@ public class PacketRespawn implements Packet {
 
    public void read(PacketByteBuf in) throws IOException {
       this.a = in.readInt();
-      this.b = pb.a(in.readUnsignedByte());
-      this.c = afu$a.a(in.readUnsignedByte());
-      this.d = afw.a(in.readString(16));
+      this.b = pl.a(in.readUnsignedByte());
+      this.c = agf$a.a(in.readUnsignedByte());
+      this.d = agh.a(in.readString(16));
       if(this.d == null) {
-         this.d = afw.b;
+         this.d = agh.b;
       }
 
    }
@@ -49,15 +49,15 @@ public class PacketRespawn implements Packet {
       return this.a;
    }
 
-   public pb b() {
+   public pl b() {
       return this.b;
    }
 
-   public afu$a c() {
+   public agf$a c() {
       return this.c;
    }
 
-   public afw d() {
+   public agh d() {
       return this.d;
    }
 

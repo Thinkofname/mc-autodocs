@@ -25,7 +25,7 @@ public class PacketBossBar implements Packet {
 
    public PacketBossBar() {}
 
-   public PacketBossBar(BossBarAction arg_0, ow arg_1) {
+   public PacketBossBar(BossBarAction arg_0, pg arg_1) {
       this.b = arg_0;
       this.a = arg_1.d();
       this.c = arg_1.e();
