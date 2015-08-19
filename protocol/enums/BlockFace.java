@@ -4,7 +4,7 @@ import com.google.common.collect.Maps;
 import java.util.Map;
 import java.util.Random;
 
-public enum BlockFace implements ny {
+public enum BlockFace implements oc {
 
    DOWN("DOWN", 0, 0, 1, -1, "down", cq$b.NEGATIVE, cq$a.Y, new df(0, -1, 0)),
    UP("UP", 1, 1, 0, -1, "up", cq$b.POSITIVE, cq$a.Y, new df(0, 1, 0)),
@@ -165,15 +165,15 @@ public enum BlockFace implements ny {
    }
 
    public static BlockFace a(int arg_0) {
-      return n[nu.a(arg_0 % n.length)];
+      return n[ny.a(arg_0 % n.length)];
    }
 
    public static BlockFace b(int arg_0) {
-      return o[nu.a(arg_0 % o.length)];
+      return o[ny.a(arg_0 % o.length)];
    }
 
    public static BlockFace a(double arg_0) {
-      return b(nu.c(arg_0 / 90.0D + 0.5D) & 3);
+      return b(ny.c(arg_0 / 90.0D + 0.5D) & 3);
    }
 
    public static BlockFace a(Random arg_0) {

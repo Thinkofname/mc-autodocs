@@ -63,11 +63,11 @@ public class PacketByteBuf extends ByteBuf {
       this.writeLong(arg_0.g());
    }
 
-   public IChatMessage readChat() throws IOException {
+   public IChatMessage readChat() {
       return eu$a.a(this.readString(32767));
    }
 
-   public void writeChat(IChatMessage arg_0) throws IOException {
+   public void writeChat(IChatMessage arg_0) {
       this.writeString(eu$a.a(arg_0));
    }
 
@@ -151,14 +151,19 @@ public class PacketByteBuf extends ByteBuf {
 
    }
 
-   public dn h() throws IOException {
+   public dn h() {
       int var1 = this.readerIndex();
       byte var2 = this.readByte();
       if(var2 == 0) {
          return null;
       } else {
          this.readerIndex(var1);
-         return dx.a((DataInput)(new ByteBufInputStream(this)), new dw(2097152L));
+
+         try {
+            return dx.a((DataInput)(new ByteBufInputStream(this)), new dw(2097152L));
+         } catch (IOException var4) {
+            throw new EncoderException(var4);
+         }
       }
    }
 
@@ -179,7 +184,7 @@ public class PacketByteBuf extends ByteBuf {
 
    }
 
-   public ItemStack readItemStack() throws IOException {
+   public ItemStack readItemStack() {
       ItemStack var1 = null;
       short var2 = this.readShort();
       if(var2 >= 0) {

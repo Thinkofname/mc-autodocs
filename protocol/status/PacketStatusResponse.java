@@ -11,7 +11,7 @@ import net.minecraft.network.PacketHandlerStatusClientbound;
 
 public class PacketStatusResponse implements Packet {
 
-   private static final Gson a = (new GsonBuilder()).registerTypeAdapter(jt$c.class, new jt$c$a()).registerTypeAdapter(jt$a.class, new jt$a$a()).registerTypeAdapter(jt.class, new jt$b()).registerTypeHierarchyAdapter(IChatMessage.class, new eu$a()).registerTypeHierarchyAdapter(ez.class, new ez$a()).registerTypeAdapterFactory(new nt()).create();
+   private static final Gson a = (new GsonBuilder()).registerTypeAdapter(jt$c.class, new jt$c$a()).registerTypeAdapter(jt$a.class, new jt$a$a()).registerTypeAdapter(jt.class, new jt$b()).registerTypeHierarchyAdapter(IChatMessage.class, new eu$a()).registerTypeHierarchyAdapter(ez.class, new ez$a()).registerTypeAdapterFactory(new nx()).create();
    private jt b;
 
 
@@ -22,7 +22,7 @@ public class PacketStatusResponse implements Packet {
    }
 
    public void read(PacketByteBuf in) throws IOException {
-      this.b = (jt)nk.a(a, in.readString(32767), jt.class);
+      this.b = (jt)no.a(a, in.readString(32767), jt.class);
    }
 
    public void write(PacketByteBuf out) throws IOException {

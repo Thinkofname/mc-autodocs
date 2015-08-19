@@ -23,10 +23,10 @@ public class PacketMapChunkBulk implements Packet {
       this.a = new int[var2];
       this.b = new int[var2];
       this.c = new go$a[var2];
-      this.d = !((aqa)arg_0.get(0)).p().t.m();
+      this.d = !((aqi)arg_0.get(0)).q().t.m();
 
       for(int var3 = 0; var3 < var2; ++var3) {
-         aqa var4 = (aqa)arg_0.get(var3);
+         aqi var4 = (aqi)arg_0.get(var3);
          go$a var5 = PacketChunkData.a(var4, true, this.d, '\uffff');
          this.a[var3] = var4.a;
          this.b[var3] = var4.b;

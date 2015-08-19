@@ -12,24 +12,24 @@ public class PacketUseEntity implements Packet {
 
    private int a;
    private InteractType b;
-   private axx c;
+   private ayg c;
    private PlayerHand d;
 
 
    public PacketUseEntity() {}
 
-   public PacketUseEntity(qq arg_0) {
+   public PacketUseEntity(qv arg_0) {
       this.a = arg_0.F();
       this.b = InteractType.ATTACK;
    }
 
-   public PacketUseEntity(qq arg_0, PlayerHand arg_1) {
+   public PacketUseEntity(qv arg_0, PlayerHand arg_1) {
       this.a = arg_0.F();
       this.b = InteractType.INTERACT;
       this.d = arg_1;
    }
 
-   public PacketUseEntity(qq arg_0, PlayerHand arg_1, axx arg_2) {
+   public PacketUseEntity(qv arg_0, PlayerHand arg_1, ayg arg_2) {
       this.a = arg_0.F();
       this.b = InteractType.INTERACT_AT;
       this.d = arg_1;
@@ -40,7 +40,7 @@ public class PacketUseEntity implements Packet {
       this.a = in.readVarInt();
       this.b = (InteractType)in.readEnum(InteractType.class);
       if(this.b == InteractType.INTERACT_AT) {
-         this.c = new axx((double)in.readFloat(), (double)in.readFloat(), (double)in.readFloat());
+         this.c = new ayg((double)in.readFloat(), (double)in.readFloat(), (double)in.readFloat());
       }
 
       if(this.b == InteractType.INTERACT || this.b == InteractType.INTERACT_AT) {
@@ -68,7 +68,7 @@ public class PacketUseEntity implements Packet {
       handler.handle(this);
    }
 
-   public qq a(agc arg_0) {
+   public qv a(agk arg_0) {
       return arg_0.a(this.a);
    }
 
@@ -80,7 +80,7 @@ public class PacketUseEntity implements Packet {
       return this.d;
    }
 
-   public axx c() {
+   public ayg c() {
       return this.c;
    }
 

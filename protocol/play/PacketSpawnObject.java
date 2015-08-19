@@ -25,24 +25,24 @@ public class PacketSpawnObject implements Packet {
 
    public PacketSpawnObject() {}
 
-   public PacketSpawnObject(qq arg_0, int arg_1) {
+   public PacketSpawnObject(qv arg_0, int arg_1) {
       this(arg_0, arg_1, 0);
    }
 
-   public PacketSpawnObject(qq arg_0, int arg_1, int arg_2) {
+   public PacketSpawnObject(qv arg_0, int arg_1, int arg_2) {
       this.a = arg_0.F();
       this.b = arg_0.aP();
-      this.c = nu.c(arg_0.s * 32.0D);
-      this.d = nu.c(arg_0.t * 32.0D);
-      this.e = nu.c(arg_0.u * 32.0D);
-      this.i = nu.d(arg_0.z * 256.0F / 360.0F);
-      this.j = nu.d(arg_0.y * 256.0F / 360.0F);
+      this.c = ny.c(arg_0.s * 32.0D);
+      this.d = ny.c(arg_0.t * 32.0D);
+      this.e = ny.c(arg_0.u * 32.0D);
+      this.i = ny.d(arg_0.z * 256.0F / 360.0F);
+      this.j = ny.d(arg_0.y * 256.0F / 360.0F);
       this.k = arg_1;
       this.l = arg_2;
       double var4 = 3.9D;
-      this.f = (int)(nu.a(arg_0.v, -3.9D, 3.9D) * 8000.0D);
-      this.g = (int)(nu.a(arg_0.w, -3.9D, 3.9D) * 8000.0D);
-      this.h = (int)(nu.a(arg_0.x, -3.9D, 3.9D) * 8000.0D);
+      this.f = (int)(ny.a(arg_0.v, -3.9D, 3.9D) * 8000.0D);
+      this.g = (int)(ny.a(arg_0.w, -3.9D, 3.9D) * 8000.0D);
+      this.h = (int)(ny.a(arg_0.x, -3.9D, 3.9D) * 8000.0D);
    }
 
    public void read(PacketByteBuf in) throws IOException {

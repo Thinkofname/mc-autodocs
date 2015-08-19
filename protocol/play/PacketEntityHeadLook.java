@@ -14,7 +14,7 @@ public class PacketEntityHeadLook implements Packet {
 
    public PacketEntityHeadLook() {}
 
-   public PacketEntityHeadLook(qq arg_0, byte arg_1) {
+   public PacketEntityHeadLook(qv arg_0, byte arg_1) {
       this.a = arg_0.F();
       this.b = arg_1;
    }
@@ -33,7 +33,7 @@ public class PacketEntityHeadLook implements Packet {
       handler.handle(this);
    }
 
-   public qq a(agc arg_0) {
+   public qv a(agk arg_0) {
       return arg_0.a(this.a);
    }
 

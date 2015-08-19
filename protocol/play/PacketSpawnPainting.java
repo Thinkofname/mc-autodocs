@@ -18,7 +18,7 @@ public class PacketSpawnPainting implements Packet {
 
    public PacketSpawnPainting() {}
 
-   public PacketSpawnPainting(wp arg_0) {
+   public PacketSpawnPainting(wu arg_0) {
       this.a = arg_0.F();
       this.b = arg_0.m();
       this.c = arg_0.b;
@@ -27,7 +27,7 @@ public class PacketSpawnPainting implements Packet {
 
    public void read(PacketByteBuf in) throws IOException {
       this.a = in.readVarInt();
-      this.d = in.readString(wp$a.A);
+      this.d = in.readString(wu$a.A);
       this.b = in.readPosition();
       this.c = BlockFace.b(in.readUnsignedByte());
    }

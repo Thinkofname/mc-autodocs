@@ -9,35 +9,35 @@ import net.minecraft.network.PacketHandlerPlayClientbound;
 public class PacketRemoveEntityEffect implements Packet {
 
    private int a;
-   private qj b;
+   private qo b;
 
 
    public PacketRemoveEntityEffect() {}
 
-   public PacketRemoveEntityEffect(int arg_0, qj arg_1) {
+   public PacketRemoveEntityEffect(int arg_0, qo arg_1) {
       this.a = arg_0;
       this.b = arg_1;
    }
 
    public void read(PacketByteBuf in) throws IOException {
       this.a = in.readVarInt();
-      this.b = qj.a(in.readUnsignedByte());
+      this.b = qo.a(in.readUnsignedByte());
    }
 
    public void write(PacketByteBuf out) throws IOException {
       out.writeVarInt(this.a);
-      out.writeByte(qj.a(this.b));
+      out.writeByte(qo.a(this.b));
    }
 
    public void handle(PacketHandlerPlayClientbound handler) {
       handler.handle(this);
    }
 
-   public qq a(agc arg_0) {
+   public qv a(agk arg_0) {
       return arg_0.a(this.a);
    }
 
-   public qj a() {
+   public qo a() {
       return this.b;
    }
 

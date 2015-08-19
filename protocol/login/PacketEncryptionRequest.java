@@ -24,7 +24,7 @@ public class PacketEncryptionRequest implements Packet {
 
    public void read(PacketByteBuf in) throws IOException {
       this.a = in.readString(20);
-      this.b = ni.a(in.readByteArray());
+      this.b = nm.a(in.readByteArray());
       this.c = in.readByteArray();
    }
 

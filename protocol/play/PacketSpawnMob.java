@@ -22,22 +22,22 @@ public class PacketSpawnMob implements Packet {
    private byte j;
    private byte k;
    private byte l;
-   private rh m;
+   private kb m;
    private List n;
 
 
    public PacketSpawnMob() {}
 
-   public PacketSpawnMob(qz arg_0) {
+   public PacketSpawnMob(re arg_0) {
       this.a = arg_0.F();
       this.b = arg_0.aP();
-      this.c = (byte)qs.a((qq)arg_0);
-      this.d = nu.c(arg_0.s * 32.0D);
-      this.e = nu.c(arg_0.t * 32.0D);
-      this.f = nu.c(arg_0.u * 32.0D);
+      this.c = (byte)qx.a((qv)arg_0);
+      this.d = ny.c(arg_0.s * 32.0D);
+      this.e = ny.c(arg_0.t * 32.0D);
+      this.f = ny.c(arg_0.u * 32.0D);
       this.j = (byte)((int)(arg_0.y * 256.0F / 360.0F));
       this.k = (byte)((int)(arg_0.z * 256.0F / 360.0F));
-      this.l = (byte)((int)(arg_0.aN * 256.0F / 360.0F));
+      this.l = (byte)((int)(arg_0.aO * 256.0F / 360.0F));
       double var2 = 3.9D;
       double var4 = arg_0.v;
       double var6 = arg_0.w;
@@ -85,7 +85,7 @@ public class PacketSpawnMob implements Packet {
       this.g = in.readShort();
       this.h = in.readShort();
       this.i = in.readShort();
-      this.n = rh.b(in);
+      this.n = kb.b(in);
    }
 
    public void write(PacketByteBuf out) throws IOException {

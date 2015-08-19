@@ -19,11 +19,11 @@ public class PacketChunkData implements Packet {
 
    public PacketChunkData() {}
 
-   public PacketChunkData(aqa arg_0, boolean arg_1, int arg_2) {
+   public PacketChunkData(aqi arg_0, boolean arg_1, int arg_2) {
       this.a = arg_0.a;
       this.b = arg_0.b;
       this.d = arg_1;
-      this.c = a(arg_0, arg_1, !arg_0.p().t.m(), arg_2);
+      this.c = a(arg_0, arg_1, !arg_0.q().t.m(), arg_2);
    }
 
    public void read(PacketByteBuf in) throws IOException {
@@ -59,14 +59,14 @@ public class PacketChunkData implements Packet {
       return var3 + var4 + var5 + var6;
    }
 
-   public static go$a a(aqa arg_0, boolean arg_1, boolean arg_2, int arg_3) {
-      aqb[] var4 = arg_0.h();
+   public static go$a a(aqi arg_0, boolean arg_1, boolean arg_2, int arg_3) {
+      aqj[] var4 = arg_0.h();
       go$a var5 = new go$a();
       ArrayList var6 = Lists.newArrayList();
 
       int var7;
       for(var7 = 0; var7 < var4.length; ++var7) {
-         aqb var8 = var4[var7];
+         aqj var8 = var4[var7];
          if(var8 != null && (!arg_1 || !var8.a()) && (arg_3 & 1 << var7) != 0) {
             var5.b |= 1 << var7;
             var6.add(var8);
@@ -77,9 +77,9 @@ public class PacketChunkData implements Packet {
       var7 = 0;
       Iterator var15 = var6.iterator();
 
-      aqb var9;
+      aqj var9;
       while(var15.hasNext()) {
-         var9 = (aqb)var15.next();
+         var9 = (aqj)var15.next();
          char[] var10 = var9.g();
          char[] var11 = var10;
          int var12 = var10.length;
@@ -92,17 +92,17 @@ public class PacketChunkData implements Packet {
       }
 
       for(var15 = var6.iterator(); var15.hasNext(); var7 = a(var9.h().a(), var5.a, var7)) {
-         var9 = (aqb)var15.next();
+         var9 = (aqj)var15.next();
       }
 
       if(arg_2) {
          for(var15 = var6.iterator(); var15.hasNext(); var7 = a(var9.i().a(), var5.a, var7)) {
-            var9 = (aqb)var15.next();
+            var9 = (aqj)var15.next();
          }
       }
 
       if(arg_1) {
-         a(arg_0.k(), var5.a, var7);
+         a(arg_0.l(), var5.a, var7);
       }
 
       return var5;
